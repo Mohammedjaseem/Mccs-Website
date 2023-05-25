@@ -1,0 +1,330 @@
+/* Extra small devices (portrait phones, less than 576px) */
+/* CSS rules for extra small devices */
+body {
+    font-family: 'Nunito';
+}
+
+.border-pink {
+    border-color: #cd3db6 !important;
+}
+
+.letter-space-095 {
+    letter-spacing: 0.095em;
+}
+
+.font-size-6 {
+    font-size: 2.5vw;
+}
+
+.font-size-5 {
+    font-size: 4vw;
+}
+
+.font-size-4 {
+    font-size: 4vw;
+}
+
+.font-size-3 {
+    font-size: 5vw;
+}
+
+.font-size-2 {
+    font-size: calc(3vw + 2rem);
+}
+
+.font-size-1 {
+    font-size: 6vw;
+}
+
+#about-image-card-1 {
+    max-width: 700px;
+}
+
+#about-image-card-1 {
+    max-width: 600px;
+}
+
+.background-card {
+    z-index: 0;
+    height: 300px;
+}
+
+.left-rounded-30 {
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+.rounded-30 {
+    border-radius: 30px;
+}
+
+.rounded-15 {
+    border-radius: 15px;
+}
+
+.bg-sky-blue {
+    background-color: #e4f3ff;
+}
+
+.z-index-1 {
+    z-index: 1000 !important;
+}
+
+.text-light-blue {
+    color: #50a2fd;
+}
+
+.text-orange {
+    color: #f6986c;
+}
+
+.text-brown-75 {
+    color: rgb(110, 97, 91);
+}
+
+.card-active {
+    border: 0;
+    box-shadow: -5px 12px 12px 12px rgba(0, 0, 0, 0.25);
+}
+
+.card-width {
+    max-width: 22rem;
+}
+
+.news-date {
+    bottom: 1rem;
+    left: 1rem;
+    background-color: #fe6f68;
+    color: #fff;
+}
+
+.card-width-min {
+    min-width: 24rem;
+}
+
+.bg-bitter-sweet {
+    background-color: #fe6f68;
+}
+
+.bg-tropical-indigo {
+    background-color: #aa80f6;
+}
+
+.bg-medium-aquamarine {
+    background-color: #79cea4;
+}
+
+.image-container {
+    width: 130px;
+    height: 130px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container img {
+    min-width: 130px !important;
+    min-height: 130px !important;
+    object-fit: cover;
+}
+
+.image-container-center {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container-center img {
+    min-width: 200px !important;
+    min-height: 200px !important;
+    object-fit: cover;
+}
+
+.quote {
+    font-size: 45px;
+    font-family: arial;
+    color: #e9ae10;
+}
+
+.text-tropical-indigo {
+    color: #aa80f6;
+}
+
+.text-algae-green {
+    color: #88d9af;
+}
+
+.gallery-image-container {
+    height: 250px;
+    max-width: 450px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery-image-container img {
+    min-width: 250px !important;
+    min-height: 250px !important;
+    object-fit: cover;
+}
+
+.line {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 10px;
+    background-color: #52af07;
+}
+
+.z-intex {
+    z-index: 1;
+}
+
+.line-bg-1 {
+    background-color: #fe6f68;
+}
+
+.line-bg-2 {
+    background-color: #aa80f6;
+}
+
+.line-bg-3 {
+    background-color: #79cea4;
+}
+
+#bootcamp-image-card {
+    max-width: 700px;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+
+    /* CSS rules for small devices */
+    .font-size-5 {
+        font-size: 3.5vw;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+    /* CSS rules for medium devices */
+    .font-size-5 {
+        font-size: 2vw;
+    }
+
+    .font-size-4 {
+        font-size: 2.5vw;
+    }
+
+    .font-size-3 {
+        font-size: 3.2vw;
+    }
+
+    .font-size-2 {
+        font-size: calc(4vw+2.5rem);
+    }
+
+    .font-size-1 {
+        font-size: 5vw;
+    }
+
+    .card-width {
+        max-width: 18rem;
+    }
+
+    .card-width-min {
+        min-width: auto;
+    }
+
+    #response-section {
+        background-image: url('./images/background-3.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    .line-bg-md-1 {
+        background-color: #fe6f68;
+    }
+
+    .line-bg-md-2 {
+        background-color: #aa80f6;
+    }
+
+    .line-bg-md-3 {
+        background-color: #79cea4;
+    }
+
+    .line-bg-md-4 {
+        background-color: #fe6f68;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+    /* CSS rules for large devices */
+    .font-size-6 {
+        font-size: 2vw;
+    }
+
+    .font-size-5 {
+        font-size: 2vw;
+    }
+
+    .font-size-3 {
+        font-size: 3.5vw;
+    }
+
+    .font-size-1 {
+        font-size: 5vw;
+    }
+
+    .line-bg-lg-1 {
+        background-color: #fe6f68;
+    }
+
+    .line-bg-lg-2 {
+        background-color: #aa80f6;
+    }
+
+    .line-bg-lg-3 {
+        background-color: #79cea4;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+    /* CSS rules for extra large devices */
+    .bg-xl-none {
+        background-color: rgba(255, 255, 255, 0);
+    }
+
+    #news-section {
+        background-image: url('./images/background-1.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    #event-section {
+        background-image: url('./images/background-2.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+}
+
+/* Extra extra large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+
+    /* CSS rules for extra extra large devices */
+    .font-size-3 {
+        font-size: 4vw;
+    }
+}
