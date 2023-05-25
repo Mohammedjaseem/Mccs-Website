@@ -201,6 +201,14 @@ body {
 #bootcamp-image-card {
     max-width: 700px;
 }
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 576px) {
+
+    /* CSS rules for extra small devices */
+    .logo {
+        max-width: 250px;
+    }
+}
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
