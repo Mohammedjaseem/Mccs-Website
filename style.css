@@ -214,6 +214,14 @@ body {
     }
 }
 
+@media (max-width: 500px) {
+
+    /* CSS rules for extra small devices */
+    .card-width-min {
+        min-width: 16rem;
+    }
+}
+
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
 
