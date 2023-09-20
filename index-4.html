@@ -29,7 +29,48 @@
 
     <link rel="stylesheet" href="assets/css/responsive.css" />
     <link rel="icon" type="image/png" href="assets/images/favicon.png" />
-    <title>Sanu - College University HTML Template</title>
+
+    <title>Home | MCCS</title>
+    <style>
+      #notification-container li {
+        list-style-type: none;
+        margin: 0px;
+        color: white;
+        font-weight: 600;
+      }
+      .modal-header {
+        display: none; /* Hide the default modal header */
+      }
+      .modal-content {
+        position: relative;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        width: 100%;
+        pointer-events: auto;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        border-radius: 1rem;
+        box-shadow: 3px 4px 5px 0px rgba(0, 0, 0, 0.38);
+        outline: 0;
+      }
+      #modalIcon {
+        padding: 20px 0px;
+      }
+      .modal-close {
+        color: #111d5e;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        font-size: 40px;
+        border-radius: 50px;
+        padding: 0px 17px !important;
+        background: #fff;
+        cursor: pointer;
+      }
+    </style>
   </head>
   <body>
     <div class="preloader-area">
@@ -42,13 +83,17 @@
       </div>
     </div>
 
-    <div class="top-header-area">
+    <div class="top-header-area d-none d-lg-block">
       <div class="container-fluid">
         <div class="row align-items-center">
           <div class="col-lg-6 col-md-6">
-            <div class="header-left-content">
-              <p>Get the latest updates and Sanu's response to COVID-19</p>
-            </div>
+            <ul
+              style="margin: 0px"
+              class="notification"
+              id="notification-container"
+            >
+              Loading...
+            </ul>
           </div>
           <div class="col-lg-6 col-md-6">
             <div class="header-right-content">
@@ -256,34 +301,11 @@
                   <a href="contact-us.html" class="nav-link">Contact Us</a>
                 </li>
               </ul>
-              <div class="others-options">
-                <div class="icon">
-                  <i
-                    class="ri-menu-3-fill"
-                    data-bs-toggle="modal"
-                    data-bs-target="#sidebarModal"
-                  ></i>
-                </div>
-              </div>
             </div>
           </nav>
         </div>
       </div>
-      <div class="others-option-for-responsive">
-        <div class="container">
-          <div class="dot-menu">
-            <div class="inner">
-              <div class="icon">
-                <i
-                  class="ri-menu-3-fill"
-                  data-bs-toggle="modal"
-                  data-bs-target="#sidebarModal"
-                ></i>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <div class="others-option-for-responsive"></div>
     </div>
 
     <div
@@ -440,9 +462,8 @@
             <div class="slider-content style2">
               <h1>Welcome to MCCS</h1>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipiscing elit. Ut elit
-                tellus luctus nec ullamcorper mattis pulvinar dapibus dolor sit
-                amet consec
+                What Course will your life Take? Own your future by learning new
+                skills at MCCS. You will get more than learning.
               </p>
               <a href="courses.html" class="default-btn btn"
                 >Start a Journey <i class="flaticon-next"></i
@@ -468,12 +489,8 @@
                 <div class="icon">
                   <i class="flaticon-college"></i>
                 </div>
-                <a href="academics-details.html"><h3>Lifelong learning</h3></a>
-                <a
-                  href="academics-details.html"
-                  class="read-more-btn white-color"
-                  >Graduate Education<i class="flaticon-next"></i
-                ></a>
+                <a><h3>Campus Life</h3></a>
+                <a class="read-more-btn white-color">Overall in here</a>
               </div>
             </div>
           </div>
@@ -489,12 +506,8 @@
                 <div class="icon">
                   <i class="flaticon-student-with-graduation-cap"></i>
                 </div>
-                <a href="academics-details.html"><h3>Graduate Education</h3></a>
-                <a
-                  href="academics-details.html"
-                  class="read-more-btn white-color"
-                  >Graduate Education<i class="flaticon-next"></i
-                ></a>
+                <a><h3>Courses</h3></a>
+                <a class="read-more-btn white-color">BCA, BSc & More</a>
               </div>
             </div>
           </div>
@@ -508,16 +521,10 @@
             <div class="single-education-card bg-3">
               <div class="edication-content">
                 <div class="icon">
-                  <i class="flaticon-college-graduation"></i>
+                  <i class="flaticon-athletics"></i>
                 </div>
-                <a href="academics-details.html"
-                  ><h3>Undergraduate Education</h3></a
-                >
-                <a
-                  href="academics-details.html"
-                  class="read-more-btn white-color"
-                  >Graduate Education<i class="flaticon-next"></i
-                ></a>
+                <a><h3>Activity</h3></a>
+                <a class="read-more-btn white-color">Clubs & More</a>
               </div>
             </div>
           </div>
@@ -531,16 +538,22 @@
             <div class="single-education-card bg-4">
               <div class="edication-content">
                 <div class="icon">
-                  <i class="flaticon-athletics"></i>
+                  <span
+                    ><img
+                      style="max-height: 75px; padding-bottom: 20px"
+                      src="assets/images/molecular.png"
+                      alt=""
+                  /></span>
                 </div>
-                <a href="academics-details.html"
-                  ><h3>University Athletics Life</h3></a
+                <a target="_blank" href="http://mccs.conext.in/"
+                  ><h3>Connectivity</h3></a
                 >
                 <a
-                  href="academics-details.html"
+                  target="_blank"
+                  href="http://mccs.conext.in/"
                   class="read-more-btn white-color"
-                  >Graduate Education<i class="flaticon-next"></i
-                ></a>
+                  >MCCS Connect</a
+                >
               </div>
             </div>
           </div>
@@ -564,10 +577,10 @@
               <div class="campus-title">
                 <h2>Campus Information</h2>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tem incid idunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim ven iam quis nostrud xerci tation ulla mco
-                  laboris nisi ut
+                  What Course will your life Take? Own your future by learning
+                  new skills at MCCS. you will get more than learning.
+                  Mid-Plains Community College Campuses With Pharmacy & Dental
+                  college across the academic city you’re always inspired.
                 </p>
               </div>
               <div class="list">
@@ -580,11 +593,23 @@
                       </li>
                       <li>
                         <i class="ri-check-fill"></i>
-                        <p>Doctoral Degrees</p>
+                        <p>Academic Excellence</p>
                       </li>
                       <li>
                         <i class="ri-check-fill"></i>
-                        <p>Alumni & Giving</p>
+                        <p>Modernized Infrastructure</p>
+                      </li>
+                      <li>
+                        <i class="ri-check-fill"></i>
+                        <p>Well resourced Library</p>
+                      </li>
+                      <li>
+                        <i class="ri-check-fill"></i>
+                        <p>Qualified and Experienced Faculty</p>
+                      </li>
+                      <li>
+                        <i class="ri-check-fill"></i>
+                        <p>Holistic Development</p>
                       </li>
                     </ul>
                   </div>
@@ -592,15 +617,27 @@
                     <ul>
                       <li>
                         <i class="ri-check-fill"></i>
-                        <p>Undergraduate</p>
+                        <p>Hostel Facility</p>
                       </li>
                       <li>
                         <i class="ri-check-fill"></i>
-                        <p>International Hubs</p>
+                        <p>Industrial Visits</p>
                       </li>
                       <li>
                         <i class="ri-check-fill"></i>
-                        <p>Global Students</p>
+                        <p>Placement Assistance</p>
+                      </li>
+                      <li>
+                        <i class="ri-check-fill"></i>
+                        <p>Bus Conveyance</p>
+                      </li>
+                      <li>
+                        <i class="ri-check-fill"></i>
+                        <p>Co-curricular Activities</p>
+                      </li>
+                      <li>
+                        <i class="ri-check-fill"></i>
+                        <p>National Service Scheme</p>
                       </li>
                     </ul>
                   </div>
@@ -638,7 +675,7 @@
                   </div>
                 </div>
               </div>
-              <a href="campus-life.html" class="default-btn btn"
+              <a href="contact-us.html" class="default-btn btn"
                 >Start your application<i class="flaticon-next"></i
               ></a>
             </div>
@@ -1747,7 +1784,26 @@
       <i class="ri-arrow-up-s-line"></i>
       <i class="ri-arrow-up-s-line"></i>
     </div>
+    <div
+      class="modal fade"
+      id="form"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content px-md-4 p-sm-3 p-4">
+          <!-- Modal Close Button -->
+          <span class="modal-close" data-dismiss="modal fade">&times;</span>
 
+          <!-- Modal Content that gets replaced -->
+          <div id="modalContent">
+            <div id="modalIcon" class="fa"></div>
+          </div>
+        </div>
+      </div>
+    </div>
     <script
       data-cfasync="false"
       src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
@@ -1777,5 +1833,74 @@
     <script src="assets/js/ajaxchimp.min.js"></script>
 
     <script src="assets/js/custom.js"></script>
+
+    <script>
+      // Define the API URL to fetch notification data
+      const apiUrl =
+        "https://app.conext.in/Notifications/api/latest-mccs-top-bar-notification/";
+
+      // Reference to the notification container
+      const notificationContainer = document.getElementById(
+        "notification-container"
+      );
+
+      // Store the notification data and current index
+      let notifications = [];
+      let currentIndex = 0;
+
+      // Function to fetch and update notification data
+      async function fetchAndUpdateNotifications() {
+        try {
+          const response = await fetch(apiUrl);
+          notifications = await response.json();
+
+          // Call the updateNotification function initially
+          updateNotification();
+
+          // Set an interval to update notifications every 1.5 seconds
+          setInterval(updateNotification, 4500);
+        } catch (error) {
+          console.error("Error fetching notifications:", error);
+        }
+      }
+
+      // Function to update the notification text
+      function updateNotification() {
+        if (notifications.length > 0) {
+          const list = notificationContainer;
+          list.innerHTML = `<li>${notifications[currentIndex].notification}</li>`;
+          currentIndex = (currentIndex + 1) % notifications.length;
+        }
+      }
+
+      // Call the fetchAndUpdateNotifications function initially
+      fetchAndUpdateNotifications();
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        fetch(
+          "https://app.conext.in/Notifications/api/latest-mccs-notification/"
+        )
+          .then((response) => response.json())
+          .then((data) => {
+            if (Array.isArray(data) && data.length > 0 && data[0].poster) {
+              const modalIcon = document.getElementById("modalIcon");
+
+              modalIcon.innerHTML = `<img src="${data[0].poster}" alt="Icon" class="img-fluid" />`;
+
+              $("#form").modal("show"); // Show the modal
+            }
+          })
+          .catch((error) => {
+            console.error("Error fetching data:", error);
+          });
+      });
+      const modalCloseButton = document.querySelector(".modal-close");
+
+      modalCloseButton.addEventListener("click", function () {
+        // Trigger the modal show action
+        $("#form").modal("hide");
+      });
+    </script>
   </body>
 </html>
