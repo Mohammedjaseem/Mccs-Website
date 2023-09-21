@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="zxx">
-  <!-- Mirrored from templates.hibootstrap.com/sanu/default/events.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Sep 2023 14:20:57 GMT -->
+  <!-- Mirrored from templates.hibootstrap.com/sanu/default/campus-life.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Sep 2023 14:20:39 GMT -->
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -27,10 +27,33 @@
     <link rel="stylesheet" href="assets/css/style.css" />
 
     <link rel="stylesheet" href="assets/css/dark.css" />
-
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.7/dist/sweetalert2.min.css"
+    />
     <link rel="stylesheet" href="assets/css/responsive.css" />
     <link rel="icon" type="image/png" href="assets/images/favicon.png" />
     <title>Sanu - College University HTML Template</title>
+    <style>
+      .loading-animation {
+        border: 4px solid #f3f3f3;
+        border-top: 4px solid #084f8c;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        animation: spin 2s linear infinite;
+        margin: 20px auto;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
   </head>
   <body>
     <div class="preloader-area">
@@ -125,7 +148,9 @@
                   </ul>
                 </li>
                 <li class="nav-item">
-                  <a href="#" class="nav-link dropdown-toggle"> Pages </a>
+                  <a href="#" class="nav-link dropdown-toggle active">
+                    Pages
+                  </a>
                   <ul class="dropdown-menu">
                     <li class="nav-item">
                       <a href="graduate-admission.html" class="nav-link"
@@ -133,7 +158,7 @@
                       >
                     </li>
                     <li class="nav-item">
-                      <a href="campus-life.html" class="nav-link"
+                      <a href="campus-life.html" class="nav-link active"
                         >Campus Life</a
                       >
                     </li>
@@ -242,12 +267,10 @@
                   </ul>
                 </li>
                 <li class="nav-item">
-                  <a href="#" class="nav-link dropdown-toggle active">
-                    Events
-                  </a>
+                  <a href="#" class="nav-link dropdown-toggle"> Events </a>
                   <ul class="dropdown-menu">
                     <li class="nav-item">
-                      <a href="events.html" class="nav-link active">Events</a>
+                      <a href="events.html" class="nav-link">Events</a>
                     </li>
                     <li class="nav-item">
                       <a href="events-details.html" class="nav-link"
@@ -303,7 +326,7 @@
           </button>
           <div class="modal-body">
             <a href="index.html">
-              <img src="assets/images/logo.png" class="main-logo" alt="logo" />
+              <img src="assets/images/logo.png" alt="logo" class="main-logo" />
               <img
                 src="assets/images/white-logo.png"
                 class="white-logo"
@@ -330,10 +353,10 @@
                 <li>
                   <i class="ri-mail-line"></i
                   ><a
-                    href="https://templates.hibootstrap.com/cdn-cgi/l/email-protection#28404d444447685b49465d064b4745"
+                    href="https://templates.hibootstrap.com/cdn-cgi/l/email-protection#462e232a2a2906352728336825292b"
                     ><span
                       class="__cf_email__"
-                      data-cfemail="0f676a6363604f7c6e617a216c6062"
+                      data-cfemail="ec8489808083ac9f8d8299c28f8381"
                       >[email&#160;protected]</span
                     ></a
                   >
@@ -440,199 +463,141 @@
     <div class="page-banner-area bg-2">
       <div class="container">
         <div class="page-banner-content">
-          <h1>Events</h1>
+          <h1>MCCS Gallery</h1>
           <ul>
             <li><a href="index.html">Home</a></li>
-            <li>Pages</li>
-            <li>Events</li>
+            <li>MCCS Gallery</li>
           </ul>
         </div>
       </div>
     </div>
 
-    <div class="events-area pt-100 pb-70">
+    <div class="campus-life-area pt-100 pb-70">
       <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-4 col-md-6">
-            <div class="single-events-card style-4">
-              <div class="events-image">
-                <a href="events-details.html"
-                  ><img src="assets/images/events/events-1.jpg" alt="Image"
-                /></a>
-                <div class="date">
-                  <span>28</span>
-                  <p>Mar</p>
-                </div>
-              </div>
-              <div class="events-content">
-                <div class="admin">
-                  <p>
-                    <a href="events-details.html"
-                      ><i class="flaticon-student-with-graduation-cap"></i
-                      >Raymond Salazar</a
-                    >
-                  </p>
-                </div>
-                <a href="events-details.html"
-                  ><h3>Planning And Facilitating Effective Meetings</h3></a
-                >
-              </div>
-            </div>
+        <div class="d-flex justify-content-between align-items-start">
+          <div class="section-title-snaps">
+            <h2>Snaps By Staff & Students</h2>
           </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="single-events-card style-4">
-              <div class="events-image">
-                <a href="events-details.html"
-                  ><img src="assets/images/events/events-2.jpg" alt="Image"
-                /></a>
-                <div class="date">
-                  <span>29</span>
-                  <p>Mar</p>
-                </div>
-              </div>
-              <div class="events-content">
-                <div class="admin">
-                  <p>
-                    <a href="events-details.html"
-                      ><i class="flaticon-student-with-graduation-cap"></i
-                      >Raymond Salazar</a
-                    >
-                  </p>
-                </div>
-                <a href="events-details.html"
-                  ><h3>Regular WordPress Meetup In New Jersey, USA</h3></a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="single-events-card style-4">
-              <div class="events-image">
-                <a href="events-details.html"
-                  ><img src="assets/images/events/events-3.jpg" alt="Image"
-                /></a>
-                <div class="date">
-                  <span>30</span>
-                  <p>Mar</p>
-                </div>
-              </div>
-              <div class="events-content">
-                <div class="admin">
-                  <p>
-                    <a href="events-details.html"
-                      ><i class="flaticon-student-with-graduation-cap"></i
-                      >Raymond Salazar</a
-                    >
-                  </p>
-                </div>
-                <a href="events-details.html"
-                  ><h3>Monday Night Concert In Lake View,Mountain City</h3></a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="single-events-card style-4">
-              <div class="events-image">
-                <a href="events-details.html"
-                  ><img src="assets/images/events/events-4.jpg" alt="Image"
-                /></a>
-                <div class="date">
-                  <span>30</span>
-                  <p>Mar</p>
-                </div>
-              </div>
-              <div class="events-content">
-                <div class="admin">
-                  <p>
-                    <a href="events-details.html"
-                      ><i class="flaticon-student-with-graduation-cap"></i
-                      >Raymond Salazar</a
-                    >
-                  </p>
-                </div>
-                <a href="events-details.html"
-                  ><h3>
-                    University Admissions Could Face Emergency Controls
-                  </h3></a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="single-events-card style-4">
-              <div class="events-image">
-                <a href="events-details.html"
-                  ><img src="assets/images/events/events-5.jpg" alt="Image"
-                /></a>
-                <div class="date">
-                  <span>30</span>
-                  <p>Mar</p>
-                </div>
-              </div>
-              <div class="events-content">
-                <div class="admin">
-                  <p>
-                    <a href="events-details.html"
-                      ><i class="flaticon-student-with-graduation-cap"></i
-                      >Raymond Salazar</a
-                    >
-                  </p>
-                </div>
-                <a href="events-details.html"
-                  ><h3>
-                    The Complete Digital Marketing Course - 12 Courses In 1
-                  </h3></a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="single-events-card style-4">
-              <div class="events-image">
-                <a href="events-details.html"
-                  ><img src="assets/images/events/events-6.jpg" alt="Image"
-                /></a>
-                <div class="date">
-                  <span>30</span>
-                  <p>Mar</p>
-                </div>
-              </div>
-              <div class="events-content">
-                <div class="admin">
-                  <p>
-                    <a href="events-details.html"
-                      ><i class="flaticon-student-with-graduation-cap"></i
-                      >Raymond Salazar</a
-                    >
-                  </p>
-                </div>
-                <a href="events-details.html"
-                  ><h3>
-                    The Python Mega Course: Build 10 Real World Applications
-                  </h3></a
-                >
-              </div>
-            </div>
-          </div>
+          <a href="add-memory.html" class="default-btn btn"
+            >Add Images <i class="flaticon-next"></i
+          ></a>
         </div>
-        <div class="paginations">
-          <ul>
-            <li>
-              <a href="events-details.html"><i class="flaticon-back"></i></a>
-            </li>
-            <li><a href="events-details.html">01</a></li>
-            <li><a href="events-details.html">02</a></li>
-            <li><a href="events-details.html">03</a></li>
-            <li>
-              <a href="events.html" class="active"
-                ><i class="flaticon-next"></i
-              ></a>
-            </li>
-          </ul>
+
+        <div id="loadingAnimation" class="loading-animation"></div>
+        <div
+          class="row justify-content-center"
+          id="portfolio-container"
+          style="display: none"
+        ></div>
+      </div>
+    </div>
+
+    <!-- <div class="campus-safety-area pt-100 pb-70 bg-f4f6f9">
+      <div class="container">
+        <div class="section-title">
+          <h2>Campus Safety</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipiscing elit ut elit
+            tellus luctus nec ullamcorper mattis
+          </p>
+        </div>
+        <div class="counter-area">
+          <div class="row">
+            <div class="col">
+              <div class="counter-card">
+                <h1>
+                  <span class="odometer" data-count="65">00</span>
+                  <span class="target">+</span>
+                </h1>
+                <p>Years Of Experience</p>
+              </div>
+            </div>
+            <div class="col">
+              <div class="counter-card">
+                <h1>
+                  <span class="odometer" data-count="30">00</span>
+                  <span class="target heading-color">k</span>
+                  <span class="target">+</span>
+                </h1>
+                <p>Global Students</p>
+              </div>
+            </div>
+            <div class="col">
+              <div class="counter-card">
+                <h1>
+                  <span class="odometer" data-count="52">00</span>
+                  <span class="target">+</span>
+                </h1>
+                <p>Student Nationalities</p>
+              </div>
+            </div>
+            <div class="col">
+              <div class="counter-card">
+                <h1>
+                  <span class="odometer" data-count="70">00</span>
+                  <span class="target">%</span>
+                </h1>
+                <p>International Students</p>
+              </div>
+            </div>
+            <div class="col">
+              <div class="counter-card">
+                <h1>
+                  <span class="odometer" data-count="12">00</span>
+                  <span class="target">+</span>
+                </h1>
+                <p>Different Majors</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+
+    <div class="student-life-area pt-100 pb-70">
+      <div class="container">
+        <div class="section-title">
+          <h2>Student Life</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipiscing elit ut elit
+            tellus luctus nec ullamcorper mattis
+          </p>
+        </div>
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="student-life-card">
+              <img
+                src="assets/images/stundent-life/student-life-1.jpg"
+                alt="Image"
+              />
+              <div class="tags">
+                <p>Athletics</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="student-life-card">
+              <img
+                src="assets/images/stundent-life/student-life-2.jpg"
+                alt="Image"
+              />
+              <div class="tags">
+                <p>Fitness Center</p>
+              </div>
+            </div>
+            <div class="student-life-card">
+              <img
+                src="assets/images/stundent-life/student-life-3.jpg"
+                alt="Image"
+              />
+              <div class="tags">
+                <p>Health and Wellness</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
 
     <div class="footer-area pt-100 pb-70">
       <div class="container">
@@ -651,10 +616,10 @@
                   <li><a href="tel:+01987655567685">+01-9876-5556-7685 </a></li>
                   <li>
                     <a
-                      href="https://templates.hibootstrap.com/cdn-cgi/l/email-protection#68090c050106281b09061d460d0c1d"
+                      href="https://templates.hibootstrap.com/cdn-cgi/l/email-protection#8beaefe6e2e5cbf8eae5fea5eeeffe"
                       ><span
                         class="__cf_email__"
-                        data-cfemail="81e0e5ece8efc1f2e0eff4afe4e5f4"
+                        data-cfemail="e48580898d8aa497858a91ca818091"
                         >[email&#160;protected]</span
                       ></a
                     >
@@ -801,7 +766,104 @@
     <script src="assets/js/ajaxchimp.min.js"></script>
 
     <script src="assets/js/custom.js"></script>
+    <script>
+      // Function to fetch data from the API
+      function fetchDataFromApi() {
+        loadingAnimation.style.display = "block";
+        document.getElementById("portfolio-container").style.display = "none";
+        fetch("https://app.conext.in/Events/gallery/")
+          .then((response) => response.json())
+          .then((data) => {
+            displayData(data);
+            loadingAnimation.style.display = "none";
+            document.getElementById("portfolio-container").style.display =
+              "block";
+          })
+          .catch((error) => {
+            loadingAnimation.style.display = "none";
+            console.error("Error fetching data:", error);
+          });
+      }
+      function formatDate(date) {
+        timestamp = date;
+        const parsedDate = new Date(timestamp);
+
+        const options = { day: "numeric", month: "long", year: "numeric" };
+        const formattedDate = parsedDate.toLocaleDateString("en-US", options);
+        return formattedDate;
+      }
+      // Function to dynamically display data in reverse order
+      function displayData(items) {
+        const portfolioContainer = document.getElementById(
+          "portfolio-container"
+        );
+
+        // Create a row container for the items
+        const rowContainer = document.createElement("div");
+        rowContainer.className = "row";
+
+        items.forEach((item, index) => {
+          item.pictures.forEach((picture) => {
+            const portfolioItem = document.createElement("div");
+            portfolioItem.className = `col-lg-4 col-md-6`;
+            portfolioItem.innerHTML = `
+                    
+                    <div class="single-campus-card">
+                        <div class="img">
+                            <a class="image-link"
+                            ><img
+                                src="${picture.uploaded_image_url}"
+                                alt="Image"
+                                style="height:350px;object-fit: cover; width:100%"
+                            />
+                            <div class="overlay">
+                                <h3 class="heading">${item.title}</h3>
+                                <p class="subtitle">
+                                <span class="by"><b>By:</b> ${
+                                  item.full_name
+                                }</span><br /><span
+                                    class="on"
+                                    ><b>Uploaded On:</b> ${formatDate(
+                                      item.added_on
+                                    )}</span
+                                >
+                                </p>
+                            </div></a
+                            >
+                        </div>
+                    </div>
+                    
+                    `;
+            rowContainer.appendChild(portfolioItem);
+          });
+        });
+
+        // Append the row container to the portfolio container
+        portfolioContainer.appendChild(rowContainer);
+      }
+
+      // Call the function to fetch and display data when the DOM is loaded
+      document.addEventListener("DOMContentLoaded", fetchDataFromApi);
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.7/dist/sweetalert2.all.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", notify);
+      function notify() {
+        Swal.fire({
+          title: "Add image",
+          text: "Do you have an image to add?",
+          showCancelButton: true,
+          confirmButtonColor: "#3085d6",
+          cancelButtonColor: "#d33",
+          confirmButtonText: "Yes",
+        }).then((result) => {
+          if (result.isConfirmed) {
+            window.location.href = "add-memory.html";
+          }
+        });
+      }
+    </script>
   </body>
 
-  <!-- Mirrored from templates.hibootstrap.com/sanu/default/events.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Sep 2023 14:20:58 GMT -->
+  <!-- Mirrored from templates.hibootstrap.com/sanu/default/campus-life.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Sep 2023 14:20:42 GMT -->
 </html>
