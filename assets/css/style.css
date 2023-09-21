@@ -863,6 +863,7 @@ textarea{
     margin:-10px auto 40px;
     position:relative
 }
+
 .section-title.style2{
     text-align:left;
     margin-left:0;
@@ -4002,7 +4003,7 @@ textarea{
     top:0
 }
 .page-banner-content ul li:last-child{
-    color:#084F8C;
+    color:#50A2FD;
     padding-right:0
 }
 .page-banner-content ul li:last-child::before{
@@ -4654,4 +4655,55 @@ textarea{
 .coming-soon-area .coming-soon .newsletter-form .validation-danger{
     color:#e60808;
     padding-top:7px
+}
+.single-campus-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.img {
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.image-link:hover .overlay {
+    opacity: 1;
+}
+.heading{
+    padding-bottom: 10px;
+}
+.heading,
+.subtitle {
+    color: white;
+    text-align: center;
+    margin: 0;
+}
+.subtitle .by{
+    padding: 0px;
+    line-height: .5;
+}
+.subtitle .on{
+    display: block;
+    padding: 0px;
+    line-height: .5;
+}
+.section-title-snaps h2 {
+    font-size: 45px;
+    text-align: left;
+    margin: -10px auto 40px;
+    position: relative
 }
