@@ -771,7 +771,7 @@
       function fetchDataFromApi() {
         loadingAnimation.style.display = "block";
         document.getElementById("portfolio-container").style.display = "none";
-        fetch("https://app.conext.in/Events/gallery/")
+        fetch("https://app.conext.in/Events/Mccs/gallery/")
           .then((response) => response.json())
           .then((data) => {
             displayData(data);
