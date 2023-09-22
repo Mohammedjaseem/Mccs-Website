@@ -2989,10 +2989,10 @@ textarea{
     text-align:right;
     margin-bottom:20px
 }
-.single-events-card .events-content .admin p a{
-    color:#555
+.single-events-card .events-content .admin p {
+    color:#084F8C
 }
-.single-events-card .events-content .admin p a i{
+.single-events-card .events-content .admin p  i{
     color:#084F8C;
     padding-right:7px
 }
@@ -3685,12 +3685,12 @@ textarea{
     color:#084F8C
 }
 .related-post-area{
-    padding:30px;
+    padding:0px 10px;
     background-color:#f4f6f9;
     margin-bottom:30px
 }
 .related-post-area h3{
-    font-size:22px;
+    font-size:30px;
     margin-bottom:20px
 }
 .related-post-area .related-post-box{
