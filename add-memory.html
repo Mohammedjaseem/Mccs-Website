@@ -29,13 +29,36 @@
 
     <link rel="stylesheet" href="assets/css/responsive.css" />
     <link rel="icon" type="image/png" href="assets/images/favicon.png" />
-    <title>Sanu - College University HTML Template</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.7/dist/sweetalert2.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Add Memories | MCCS</title>
     <style>
       #notification-container li {
         list-style-type: none;
         margin: 0px;
         color: white;
         font-weight: 600;
+      }
+      .select-with-arrow {
+        position: relative;
+        justify-content: center;
+      }
+
+      .select-with-arrow::after {
+        content: "\f0d7"; /* Unicode character for the arrow (FontAwesome) */
+        font-family: FontAwesome;
+        position: absolute;
+        top: 65%;
+        right: 20px;
+        /* Adjust the position of the arrow */
+        transform: translateY(-50%);
+        pointer-events: none;
       }
     </style>
   </head>
@@ -452,77 +475,82 @@
       </div>
     </div>
 
-    <div class="page-banner-area bg-2">
+    <div class="register-area pt-70 pb-70">
       <div class="container">
-        <div class="page-banner-content">
-          <h1>Register</h1>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li>Register</li>
-          </ul>
+        <div class="section-title">
+          <h2>ADD YOUR MEMORY</h2>
+          <p>WE WILL UPDATE IT SOON</p>
         </div>
-      </div>
-    </div>
-
-    <div class="register-area pt-100 pb-70">
-      <div class="container">
         <div class="register">
-          <h3>Register</h3>
-          <form>
+          <h3>Upload</h3>
+          <form id="galleryForm">
             <div class="row">
               <div class="col-lg-12">
                 <div class="form-group">
                   <input
-                    type="email"
-                    id="email"
-                    class="form-control"
-                    placeholder="Phone Or Email Address*"
-                  />
-                </div>
-              </div>
-              <div class="col-lg-6 col-md-6">
-                <div class="form-group">
-                  <input
                     type="text"
-                    id="name"
+                    id="full_name"
                     class="form-control"
-                    placeholder="First Name*"
-                  />
-                </div>
-              </div>
-              <div class="col-lg-6 col-md-6">
-                <div class="form-group">
-                  <input
-                    type="text"
-                    id="lname"
-                    class="form-control"
-                    placeholder="Last Name*"
+                    placeholder="Full Name*"
+                    required
                   />
                 </div>
               </div>
               <div class="col-lg-12">
                 <div class="form-group">
                   <input
-                    type="password"
-                    id="password2"
+                    type="text"
+                    id="title"
                     class="form-control"
-                    placeholder="Password*"
+                    placeholder="Image Title*"
+                    required
                   />
                 </div>
               </div>
               <div class="col-lg-12">
-                <div class="form-group">
-                  <input
-                    type="password"
-                    id="password3"
+                <div class="form-group select-with-arrow">
+                  <label>Choose Gallery Type</label>
+                  <select
+                    style="height: calc(3.25rem + 2px)"
                     class="form-control"
-                    placeholder="Confirm Password*"
-                  />
+                    id="gallery_type"
+                  >
+                    <option>Life at MCCS</option>
+                    <option>Arts</option>
+                    <option>Sports</option>
+                    <option>Graduation</option>
+                    <option>Outing</option>
+                    <option>Coffee Lab</option>
+                    <option>College Tour</option>
+                    <option>Clubs</option>
+                    <option>Programs</option>
+                    <option>MCCS Events</option>
+                  </select>
                 </div>
+              </div>
+              <div class="col-lg-12">
+                <div class="form-group">
+                  <p>
+                    <label for="files">You can pick multiple images:</label
+                    ><br />
+                    <input
+                      type="file"
+                     name="images[]"
+                     id="uploaded_images"
+                      class="form-control2"
+          
+                     multiple accept="image/*"
+                      required
+                    />
+                  </p>
+                  
+                </div>
+                <div class="progress-bar" style="display: none;">
+  <div id="progressBar"></div>
               </div>
             </div>
-            <button type="submit" class="default-btn btn active">
-              Register
+            <button id="submit-button"  name="submit" onclick="submitForm()"  type="submit" class="default-btn btn active">
+              Submit
             </button>
           </form>
         </div>
@@ -696,6 +724,7 @@
     <script src="assets/js/ajaxchimp.min.js"></script>
 
     <script src="assets/js/custom.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.7/dist/sweetalert2.all.min.js"></script>
     <script>
       // Define the API URL to fetch notification data
       const apiUrl =
@@ -738,5 +767,141 @@
       // Call the fetchAndUpdateNotifications function initially
       fetchAndUpdateNotifications();
     </script>
+    
+    <script>
+  // Function to handle form submission
+  function submitForm() {
+
+    // Get form data
+const formElement = document.getElementById("galleryForm");
+const name = document.getElementById('full_name').value;
+  const title = document.getElementById('title').value;
+    const formData = new FormData(formElement);
+    formData.append('full_name', name);
+  formData.append('title', title);
+    // Map the selected gallery type to its corresponding API value
+    const galleryTypeSelect = document.getElementById("gallery_type");
+    const selectedGalleryType = galleryTypeSelect.value;
+    const galleryTypeMapping = {
+      "Life at MCCS": "life_at_mccs",
+      "Arts": "arts",
+      "Sports": "sports",
+      "Graduation": "graduation",
+      "Outing": "outing",
+      "Coffee Lab": "coffee_lab",
+      "College Tour": "college_tour",
+      "Clubs": "clubs",
+      "Programs": "programs",
+      "MCCS Events": "mccs_events"
+    };
+    const mappedGalleryType = galleryTypeMapping[selectedGalleryType];
+
+    // Set the mapped gallery type in the form data
+    formData.set("gallery_type", mappedGalleryType);
+
+    // Get the input element for images
+    const imageInput = document.getElementById("uploaded_images");
+
+    // Check if multiple images are selected
+    if (imageInput.files.length > 1) {
+      // If multiple images are selected, append each file to the form data
+      for (let i = 0; i < imageInput.files.length; i++) {
+        formData.append("uploaded_images", imageInput.files[i]);
+      }
+    } else if (imageInput.files.length === 1) {
+      // If only one image is selected, append the single file to the form data
+      formData.append("uploaded_images", imageInput.files[0]);
+    }
+    if (!name || !title || !selectedGalleryType || imageInput.files.length === 0) {
+    return; // Prevent form submission if validation fails
+  }
+ function showCustomAlert(popupId) {
+    if (popupId==='successPopup') {
+      Swal.fire(
+  'SuccessFul!',
+  'Your image uploaded successfully',
+  'success'
+).then(() => {
+          const submitButton = document.getElementById("submit-button");
+  submitButton.disabled = false;
+  submitButton.innerHTML = 'Send';
+  document.getElementById('galleryForm').reset();
+        });
+    } else {
+      Swal.fire({
+  icon: 'error',
+  title: 'Failed!',
+  text: 'Something went wrong! Try again',
+}).then(() => {
+          const submitButton = document.getElementById("submit-button");
+  submitButton.disabled = false;
+  submitButton.innerHTML = 'Send';
+        });
+    }
+  }
+
+
+   const progressBar = document.getElementById("progressBar");
+  progressBar.style.width = "0";
+  progressBar.parentElement.style.display = "block";
+showLoading();
+function showLoading() {
+  const submitButton = document.getElementById("submit-button");
+  submitButton.disabled = true;
+  submitButton.innerHTML = 'Uploading please wait...';
+}
+
+function hideLoading(string) {
+  const submitButton = document.getElementById("submit-button");
+  submitButton.disabled = false;
+  submitButton.innerHTML = string;
+  document.getElementById("progressBar").parentElement.style.display = "none";
+}
+    // Make a POST request to the API endpoint
+   const xhr = new XMLHttpRequest();
+
+  // Set up the progress event listener to update the progress bar
+  xhr.upload.addEventListener("progress", function (event) {
+    if (event.lengthComputable) {
+      const progress = (event.loaded / event.total) * 100;
+      progressBar.style.width = progress + "%";
+    }
+  });
+
+  xhr.open("POST", "https://app.conext.in/Events/Mccs/add_gallery/");
+  xhr.onload = function () {
+    if ((xhr.status === 200 || xhr.status === 201) && xhr.readyState === XMLHttpRequest.DONE) {
+      progressBar.parentElement.style.display = "none";
+       showCustomAlert('successPopup');
+        hideLoading('Successful');
+          console.log(xhr, 'ohjkhjkj')
+    } else {
+      progressBar.parentElement.style.display = "none";
+        showCustomAlert('failPopup');
+         hideLoading('Failed!!!');
+         console.log(xhr, 'sdfasdfas')
+    }
+  };
+
+  xhr.onerror = function () {
+    progressBar.parentElement.style.display = "none";
+    hideLoading('Failed!!!');
+    showCustomAlert("failPopup");
+  };
+
+  xhr.send(formData);
+  }
+
+  // Add event listener to the form's submit event
+   const formElement = document.getElementById("galleryForm");
+formElement.addEventListener("submit", (event) => {
+  event.preventDefault(); // Prevent the default form submission behavior
+  submitForm();
+  });
+    
+    // Function to show the custom alert popup
+  
+
+</script>
   </body>
 </html>
