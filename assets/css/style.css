@@ -4707,3 +4707,11 @@ textarea{
     margin: -10px auto 40px;
     position: relative
 }
+@media only screen and (max-width: 992px){
+.section-title-snaps h2 {
+        font-size: 32px;
+        text-align: left;
+        margin: -10px auto 40px;
+        position: relative
+    }
+}

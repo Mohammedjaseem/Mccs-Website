@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="zxx">
-  <!-- Mirrored from templates.hibootstrap.com/sanu/default/faq.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Sep 2023 14:20:53 GMT -->
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -31,6 +30,14 @@
     <link rel="stylesheet" href="assets/css/responsive.css" />
     <link rel="icon" type="image/png" href="assets/images/favicon.png" />
     <title>Sanu - College University HTML Template</title>
+    <style>
+      #notification-container li {
+        list-style-type: none;
+        margin: 0px;
+        color: white;
+        font-weight: 600;
+      }
+    </style>
   </head>
   <body>
     <div class="preloader-area">
@@ -43,13 +50,17 @@
       </div>
     </div>
 
-    <div class="top-header-area">
-      <div class="container">
+    <div class="top-header-area d-none d-lg-block">
+      <div class="container-fluid">
         <div class="row align-items-center">
           <div class="col-lg-6 col-md-6">
-            <div class="header-left-content">
-              <p>Get the latest updates and Sanu's response to COVID-19</p>
-            </div>
+            <ul
+              style="margin: 0px; color: #fff"
+              class="notification"
+              id="notification-container"
+            >
+              Loading...
+            </ul>
           </div>
           <div class="col-lg-6 col-md-6">
             <div class="header-right-content">
@@ -177,16 +188,20 @@
                       </ul>
                     </li>
                     <li class="nav-item">
-                      <a href="faq.html" class="nav-link active">FAQ</a>
+                      <a href="faq.html" class="nav-link">FAQ</a>
                     </li>
                     <li class="nav-item">
-                      <a href="#" class="nav-link dropdown-toggle"> Users </a>
+                      <a href="#" class="nav-link dropdown-toggle active">
+                        Users
+                      </a>
                       <ul class="dropdown-menu">
                         <li class="nav-item">
                           <a href="login.html" class="nav-link">Login</a>
                         </li>
                         <li class="nav-item">
-                          <a href="register.html" class="nav-link">Register</a>
+                          <a href="register.html" class="nav-link active"
+                            >Register</a
+                          >
                         </li>
                         <li class="nav-item">
                           <a href="recover-password.html" class="nav-link"
@@ -330,10 +345,10 @@
                 <li>
                   <i class="ri-mail-line"></i
                   ><a
-                    href="https://templates.hibootstrap.com/cdn-cgi/l/email-protection#78101d141417380b19160d561b1715"
+                    href="https://templates.hibootstrap.com/cdn-cgi/l/email-protection#2d45484141426d5e4c4358034e4240"
                     ><span
                       class="__cf_email__"
-                      data-cfemail="c3aba6afafac83b0a2adb6eda0acae"
+                      data-cfemail="d7bfb2bbbbb897a4b6b9a2f9b4b8ba"
                       >[email&#160;protected]</span
                     ></a
                   >
@@ -440,172 +455,76 @@
     <div class="page-banner-area bg-2">
       <div class="container">
         <div class="page-banner-content">
-          <h1>FAQs</h1>
+          <h1>Register</h1>
           <ul>
             <li><a href="index.html">Home</a></li>
-            <li>FAQs</li>
+            <li>Register</li>
           </ul>
         </div>
       </div>
     </div>
 
-    <div class="faq-area ptb-100">
+    <div class="register-area pt-100 pb-70">
       <div class="container">
-        <div class="row align-items-center">
-          <div class="col-lg-6">
-            <div class="faq-image pr-20">
-              <img src="assets/images/faq-img.jpg" alt="Image" />
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="faq-left-content pl-20">
-              <div class="faq-title">
-                <h2>Need To Ask Some Questions Or Check Questions</h2>
-                <p>
-                  There are many variations of passages of Lorem Ipsum
-                  available, but the majority in injected humour, randomised
-                  words don't look believable
-                </p>
+        <div class="register">
+          <h3>Register</h3>
+          <form>
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="form-group">
+                  <input
+                    type="email"
+                    id="email"
+                    class="form-control"
+                    placeholder="Phone Or Email Address*"
+                  />
+                </div>
               </div>
-              <div class="accordion" id="accordionExample">
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingOne">
-                    <button
-                      class="accordion-button"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseOne"
-                      aria-expanded="true"
-                      aria-controls="collapseOne"
-                    >
-                      1. Is a phone call considered Sanu?
-                    </button>
-                  </h2>
-                  <div
-                    id="collapseOne"
-                    class="accordion-collapse collapse show"
-                    aria-labelledby="headingOne"
-                    data-bs-parent="#accordionExample"
-                  >
-                    <div class="accordion-body">
-                      There are many variations of passages of Lorem Ipsum
-                      available, the many variations of passages of Lorem Ipsum
-                      available, majority have injected humour, randomised words
-                      don't look believable.
-                    </div>
-                  </div>
+              <div class="col-lg-6 col-md-6">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    id="name"
+                    class="form-control"
+                    placeholder="First Name*"
+                  />
                 </div>
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingTwo">
-                    <button
-                      class="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseTwo"
-                      aria-expanded="false"
-                      aria-controls="collapseTwo"
-                    >
-                      2. What equipment do you need for Sanu?
-                    </button>
-                  </h2>
-                  <div
-                    id="collapseTwo"
-                    class="accordion-collapse collapse"
-                    aria-labelledby="headingTwo"
-                    data-bs-parent="#accordionExample"
-                  >
-                    <div class="accordion-body">
-                      There are many variations of passages of Lorem Ipsum
-                      available, the many variations of passages of Lorem Ipsum
-                      available, majority have injected humour, randomised words
-                      don't look believable.
-                    </div>
-                  </div>
+              </div>
+              <div class="col-lg-6 col-md-6">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    id="lname"
+                    class="form-control"
+                    placeholder="Last Name*"
+                  />
                 </div>
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingThree">
-                    <button
-                      class="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseThree"
-                      aria-expanded="false"
-                      aria-controls="collapseThree"
-                    >
-                      3. Can you use FaceTime for Sanu?
-                    </button>
-                  </h2>
-                  <div
-                    id="collapseThree"
-                    class="accordion-collapse collapse"
-                    aria-labelledby="headingThree"
-                    data-bs-parent="#accordionExample"
-                  >
-                    <div class="accordion-body">
-                      There are many variations of passages of Lorem Ipsum
-                      available, the many variations of passages of Lorem Ipsum
-                      available, majority have injected humour, randomised words
-                      don't look believable.
-                    </div>
-                  </div>
+              </div>
+              <div class="col-lg-12">
+                <div class="form-group">
+                  <input
+                    type="password"
+                    id="password2"
+                    class="form-control"
+                    placeholder="Password*"
+                  />
                 </div>
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingFour">
-                    <button
-                      class="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseFour"
-                      aria-expanded="false"
-                      aria-controls="collapseFour"
-                    >
-                      4. How do I get started with Sanu?
-                    </button>
-                  </h2>
-                  <div
-                    id="collapseFour"
-                    class="accordion-collapse collapse"
-                    aria-labelledby="headingFour"
-                    data-bs-parent="#accordionExample"
-                  >
-                    <div class="accordion-body">
-                      There are many variations of passages of Lorem Ipsum
-                      available, the many variations of passages of Lorem Ipsum
-                      available, majority have injected humour, randomised words
-                      don't look believable.
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingFive">
-                    <button
-                      class="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseFive"
-                      aria-expanded="false"
-                      aria-controls="collapseFive"
-                    >
-                      4. How do I get started with Sanu?
-                    </button>
-                  </h2>
-                  <div
-                    id="collapseFive"
-                    class="accordion-collapse collapse"
-                    aria-labelledby="headingFive"
-                    data-bs-parent="#accordionExample"
-                  >
-                    <div class="accordion-body">
-                      There are many variations of passages of Lorem Ipsum
-                      available, the many variations of passages of Lorem Ipsum
-                      available, majority have injected humour, randomised words
-                      don't look believable.
-                    </div>
-                  </div>
+              </div>
+              <div class="col-lg-12">
+                <div class="form-group">
+                  <input
+                    type="password"
+                    id="password3"
+                    class="form-control"
+                    placeholder="Confirm Password*"
+                  />
                 </div>
               </div>
             </div>
-          </div>
+            <button type="submit" class="default-btn btn active">
+              Register
+            </button>
+          </form>
         </div>
       </div>
     </div>
@@ -627,10 +546,10 @@
                   <li><a href="tel:+01987655567685">+01-9876-5556-7685 </a></li>
                   <li>
                     <a
-                      href="https://templates.hibootstrap.com/cdn-cgi/l/email-protection#7213161f1b1c3201131c075c171607"
+                      href="https://templates.hibootstrap.com/cdn-cgi/l/email-protection#dfbebbb2b6b19facbeb1aaf1babbaa"
                       ><span
                         class="__cf_email__"
-                        data-cfemail="c4a5a0a9adaa84b7a5aab1eaa1a0b1"
+                        data-cfemail="7d1c191014133d0e1c130853181908"
                         >[email&#160;protected]</span
                       ></a
                     >
@@ -777,7 +696,47 @@
     <script src="assets/js/ajaxchimp.min.js"></script>
 
     <script src="assets/js/custom.js"></script>
-  </body>
+    <script>
+      // Define the API URL to fetch notification data
+      const apiUrl =
+        "https://app.conext.in/Notifications/api/latest-mccs-top-bar-notification/";
 
-  <!-- Mirrored from templates.hibootstrap.com/sanu/default/faq.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Sep 2023 14:20:54 GMT -->
+      // Reference to the notification container
+      const notificationContainer = document.getElementById(
+        "notification-container"
+      );
+
+      // Store the notification data and current index
+      let notifications = [];
+      let currentIndex = 0;
+
+      // Function to fetch and update notification data
+      async function fetchAndUpdateNotifications() {
+        try {
+          const response = await fetch(apiUrl);
+          notifications = await response.json();
+
+          // Call the updateNotification function initially
+          updateNotification();
+
+          // Set an interval to update notifications every 1.5 seconds
+          setInterval(updateNotification, 4500);
+        } catch (error) {
+          console.error("Error fetching notifications:", error);
+        }
+      }
+
+      // Function to update the notification text
+      function updateNotification() {
+        if (notifications.length > 0) {
+          const list = notificationContainer;
+          list.innerHTML = `<li>${notifications[currentIndex].notification}</li>`;
+          currentIndex = (currentIndex + 1) % notifications.length;
+        }
+      }
+
+      // Call the fetchAndUpdateNotifications function initially
+      fetchAndUpdateNotifications();
+    </script>
+  </body>
 </html>

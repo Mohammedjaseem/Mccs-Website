@@ -88,7 +88,7 @@
         <div class="row align-items-center">
           <div class="col-lg-6 col-md-6">
             <ul
-              style="margin: 0px"
+              style="margin: 0px; color: #fff"
               class="notification"
               id="notification-container"
             >
@@ -1839,6 +1839,32 @@
     <script src="assets/js/custom.js"></script>
 
     <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        fetch(
+          "https://app.conext.in/Notifications/api/latest-mccs-notification/"
+        )
+          .then((response) => response.json())
+          .then((data) => {
+            if (Array.isArray(data) && data.length > 0 && data[0].poster) {
+              const modalIcon = document.getElementById("modalIcon");
+
+              modalIcon.innerHTML = `<img src="${data[0].poster}" alt="Icon" class="img-fluid" />`;
+
+              $("#form").modal("show"); // Show the modal
+            }
+          })
+          .catch((error) => {
+            console.error("Error fetching data:", error);
+          });
+      });
+      const modalCloseButton = document.querySelector(".modal-close");
+
+      modalCloseButton.addEventListener("click", function () {
+        // Trigger the modal show action
+        $("#form").modal("hide");
+      });
+    </script>
+    <script>
       // Define the API URL to fetch notification data
       const apiUrl =
         "https://app.conext.in/Notifications/api/latest-mccs-top-bar-notification/";
@@ -1879,32 +1905,6 @@
 
       // Call the fetchAndUpdateNotifications function initially
       fetchAndUpdateNotifications();
-    </script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        fetch(
-          "https://app.conext.in/Notifications/api/latest-mccs-notification/"
-        )
-          .then((response) => response.json())
-          .then((data) => {
-            if (Array.isArray(data) && data.length > 0 && data[0].poster) {
-              const modalIcon = document.getElementById("modalIcon");
-
-              modalIcon.innerHTML = `<img src="${data[0].poster}" alt="Icon" class="img-fluid" />`;
-
-              $("#form").modal("show"); // Show the modal
-            }
-          })
-          .catch((error) => {
-            console.error("Error fetching data:", error);
-          });
-      });
-      const modalCloseButton = document.querySelector(".modal-close");
-
-      modalCloseButton.addEventListener("click", function () {
-        // Trigger the modal show action
-        $("#form").modal("hide");
-      });
     </script>
   </body>
 </html>
