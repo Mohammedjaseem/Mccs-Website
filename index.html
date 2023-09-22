@@ -29,19 +29,110 @@
 
     <link rel="stylesheet" href="assets/css/responsive.css" />
     <link rel="icon" type="image/png" href="assets/images/favicon.png" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-      crossorigin="anonymous"
-    />
-    <title>Sanu - College University HTML Template</title>
+
+    <title>Home | MCCS</title>
     <style>
       #notification-container li {
         list-style-type: none;
         margin: 0px;
         color: white;
         font-weight: 600;
+      }
+      .loading-animation {
+        border: 4px solid #f3f3f3;
+        border-top: 4px solid #084f8c;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        animation: spin 2s linear infinite;
+        margin: 20px auto;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      .event-animation {
+        border: 4px solid #d4d4d4;
+        border-top: 4px solid #084f8c;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        animation: spin 2s linear infinite;
+        margin: 20px auto;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      .modal-header {
+        display: none; /* Hide the default modal header */
+      }
+      .modal-content {
+        position: relative;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        width: 100%;
+        pointer-events: auto;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        border-radius: 1rem;
+        box-shadow: 3px 4px 5px 0px rgba(0, 0, 0, 0.38);
+        outline: 0;
+      }
+      #modalIcon {
+        padding: 20px 0px;
+      }
+      .modal-close {
+        color: #111d5e;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        font-size: 40px;
+        border-radius: 50px;
+        padding: 0px 17px !important;
+        background: #fff;
+        cursor: pointer;
+      }
+
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+
+      .gallery-img:hover .overlay {
+        opacity: 1;
+      }
+      .gal-head {
+        padding-bottom: 10px;
+      }
+      .gal-head {
+        color: white;
+        text-align: center;
+        margin: 0;
       }
     </style>
   </head>
@@ -60,9 +151,13 @@
       <div class="container-fluid">
         <div class="row align-items-center">
           <div class="col-lg-6 col-md-6">
-            <div class="header-left-content">
-              <p>Get the latest updates and Sanu's response to COVID-19</p>
-            </div>
+            <ul
+              style="margin: 0px; color: #fff"
+              class="notification"
+              id="notification-container"
+            >
+              Loading...
+            </ul>
           </div>
           <div class="col-lg-6 col-md-6">
             <div class="header-right-content">
@@ -81,12 +176,12 @@
       </div>
     </div>
 
-    <div class="navbar-area nav-bg-1">
+    <div class="navbar-area nav-bg-2">
       <div class="mobile-responsive-nav">
         <div class="container">
           <div class="mobile-responsive-menu">
             <div class="logo">
-              <a href="index.html">
+              <a href="index-3.html">
                 <img
                   src="assets/images/logo.png"
                   class="main-logo"
@@ -105,10 +200,11 @@
       <div class="desktop-nav">
         <div class="container-fluid">
           <nav class="navbar navbar-expand-md navbar-light">
-            <a class="navbar-brand" href="index.html">
+            <a class="navbar-brand" href="index-3.html">
+              <img src="assets/images/logo.png" class="main-logo" alt="logo" />
               <img
                 src="assets/images/white-logo.png"
-                class="main-logo"
+                class="white-logo"
                 alt="logo"
               />
             </a>
@@ -121,7 +217,7 @@
                   <a href="#" class="nav-link dropdown-toggle active"> Home </a>
                   <ul class="dropdown-menu">
                     <li class="nav-item">
-                      <a href="index.html" class="nav-link active">Home One</a>
+                      <a href="index.html" class="nav-link">Home One</a>
                     </li>
                     <li class="nav-item">
                       <a href="index-2.html" class="nav-link">Home Two</a>
@@ -130,7 +226,9 @@
                       <a href="index-3.html" class="nav-link">Home Three</a>
                     </li>
                     <li class="nav-item">
-                      <a href="index-4.html" class="nav-link">Home Four</a>
+                      <a href="index-4.html" class="nav-link active"
+                        >Home Four</a
+                      >
                     </li>
                     <li class="nav-item">
                       <a href="index-5.html" class="nav-link">Home Five</a>
@@ -271,34 +369,11 @@
                   <a href="contact-us.html" class="nav-link">Contact Us</a>
                 </li>
               </ul>
-              <div class="others-options">
-                <div class="icon">
-                  <i
-                    class="ri-menu-3-fill"
-                    data-bs-toggle="modal"
-                    data-bs-target="#sidebarModal"
-                  ></i>
-                </div>
-              </div>
             </div>
           </nav>
         </div>
       </div>
-      <div class="others-option-for-responsive">
-        <div class="container">
-          <div class="dot-menu">
-            <div class="inner">
-              <div class="icon">
-                <i
-                  class="ri-menu-3-fill"
-                  data-bs-toggle="modal"
-                  data-bs-target="#sidebarModal"
-                ></i>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <div class="others-option-for-responsive"></div>
     </div>
 
     <div
@@ -341,10 +416,10 @@
                 <li>
                   <i class="ri-mail-line"></i
                   ><a
-                    href="https://templates.hibootstrap.com/cdn-cgi/l/email-protection#79111c151516390a18170c571a1614"
+                    href="https://templates.hibootstrap.com/cdn-cgi/l/email-protection#abc3cec7c7c4ebd8cac5de85c8c4c6"
                     ><span
                       class="__cf_email__"
-                      data-cfemail="2149444d4d4e6152404f540f424e4c"
+                      data-cfemail="b8d0ddd4d4d7f8cbd9d6cd96dbd7d5"
                       >[email&#160;protected]</span
                     ></a
                   >
@@ -448,136 +523,106 @@
       </div>
     </div>
 
-    <div class="banner-area pb-100">
-      <div class="container-fluid">
-        <div class="hero-slider owl-carousel owl-theme" data-slider-id="1">
-          <div class="slider-item banner-bg-1">
-            <div class="slider-content">
-              <h1>Explore Your Potential & Talents In Sanu</h1>
+    <div class="banner-area">
+      <div class>
+        <div class="slider-item banner-bg-7">
+          <div class="container-fluid">
+            <div class="slider-content style2">
+              <h1>Welcome to MCCS</h1>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipiscing elit. Ut elit
-                tellus luctus nec ullamcorper mattis pulvinar dapibus dolor sit
-                amet consec
+                What Course will your life Take? Own your future by learning new
+                skills at MCCS. You will get more than learning.
               </p>
               <a href="courses.html" class="default-btn btn"
                 >Start a Journey <i class="flaticon-next"></i
               ></a>
             </div>
           </div>
-          <div class="slider-item banner-bg-2">
-            <div class="slider-content">
-              <h1>Explore Your Creativity & Talent With Sanu</h1>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipiscing elit. Ut elit
-                tellus luctus nec ullamcorper mattis pulvinar dapibus dolor sit
-                amet consec
-              </p>
-              <a href="courses.html" class="default-btn btn"
-                >Start a Journey <i class="flaticon-next"></i
-              ></a>
-            </div>
-          </div>
-          <div class="slider-item banner-bg-3">
-            <div class="slider-content">
-              <h1>Start Your Beautiful & Bright Future From Here</h1>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipiscing elit. Ut elit
-                tellus luctus nec ullamcorper mattis pulvinar dapibus dolor sit
-                amet consec
-              </p>
-              <a href="courses.html" class="default-btn btn"
-                >Start a Journey <i class="flaticon-next"></i
-              ></a>
-            </div>
-          </div>
-        </div>
-        <div class="owl-thumbs" data-slider-id="1">
-          <button class="owl-thumb-item">
-            <img src="assets/images/banner/thumb-1.jpg" alt="Images" />
-          </button>
-          <button class="owl-thumb-item">
-            <img src="assets/images/banner/thumb-2.jpg" alt="Images" />
-          </button>
-          <button class="owl-thumb-item">
-            <img src="assets/images/banner/thumb-3.jpg" alt="Images" />
-          </button>
         </div>
       </div>
     </div>
 
-    <div class="academic-area pt-100 pb-70">
-      <div class="container">
-        <div class="section-title">
-          <h2>Academics</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipiscing elit ut elit
-            tellus luctus nec ullamcorper mattis
-          </p>
-        </div>
-        <div class="row justify-content-center">
+    <div class="eduction-area pb-70">
+      <div class="container-fluid p-0">
+        <div class="row g-0">
           <div
-            class="col-lg-4 col-md-6"
+            class="col-lg-3 col-md-6"
             data-aos="fade-up"
             data-aos-duration="1200"
             data-aos-delay="200"
             data-aos-once="true"
           >
-            <div class="single-academics-card">
-              <div class="academic-top-content">
-                <i class="flaticon-college-graduation"></i>
-                <a href="academics-details.html"
-                  ><h3>Undergraduate Education</h3></a
-                >
+            <div class="single-education-card bg-1">
+              <div class="edication-content">
+                <div class="icon">
+                  <i class="flaticon-college"></i>
+                </div>
+                <a><h3>Campus Life</h3></a>
+                <a class="read-more-btn white-color">Overall in here</a>
               </div>
-              <p>
-                Lorem ipsum dolor sit amet consectetur ad piscing elit ut elit
-                tellus luctus nec dolor sit amet consec teturul
-              </p>
-              <a href="academics-details.html" class="read-more-btn"
-                >Undergraduate Education<i class="flaticon-next"></i
-              ></a>
             </div>
           </div>
           <div
-            class="col-lg-4 col-md-6"
+            class="col-lg-3 col-md-6"
             data-aos="fade-up"
             data-aos-duration="1200"
             data-aos-delay="400"
             data-aos-once="true"
           >
-            <div class="single-academics-card">
-              <div class="academic-top-content">
-                <i class="flaticon-graduation"></i>
-                <a href="academics-details.html"><h3>Graduate Education</h3></a>
+            <div class="single-education-card bg-2">
+              <div class="edication-content">
+                <div class="icon">
+                  <i class="flaticon-student-with-graduation-cap"></i>
+                </div>
+                <a><h3>Courses</h3></a>
+                <a class="read-more-btn white-color">BCA, BSc & More</a>
               </div>
-              <p>
-                Lorem ipsum dolor sit amet consectetur ad piscing elit ut elit
-                tellus luctus nec dolor sit amet consec teturul
-              </p>
-              <a href="academics-details.html" class="read-more-btn"
-                >Graduate Education<i class="flaticon-next"></i
-              ></a>
             </div>
           </div>
           <div
-            class="col-lg-4 col-md-6"
+            class="col-lg-3 col-md-6"
             data-aos="fade-up"
             data-aos-duration="1200"
             data-aos-delay="600"
             data-aos-once="true"
           >
-            <div class="single-academics-card">
-              <div class="academic-top-content">
-                <i class="flaticon-writing-tool"></i>
-                <a href="academics-details.html"><h3>Lifelong learning</h3></a>
+            <div class="single-education-card bg-3">
+              <div class="edication-content">
+                <div class="icon">
+                  <i class="flaticon-athletics"></i>
+                </div>
+                <a><h3>Activity</h3></a>
+                <a class="read-more-btn white-color">Clubs & More</a>
               </div>
-              <p>
-                Lorem ipsum dolor sit amet consectetur ad piscing elit ut elit
-                tellus luctus nec dolor sit amet consec teturul
-              </p>
-              <a href="academics-details.html" class="read-more-btn"
-                >Lifelong learning<i class="flaticon-next"></i
-              ></a>
+            </div>
+          </div>
+          <div
+            class="col-lg-3 col-md-6"
+            data-aos="fade-up"
+            data-aos-duration="1200"
+            data-aos-delay="800"
+            data-aos-once="true"
+          >
+            <div class="single-education-card bg-4">
+              <div class="edication-content">
+                <div class="icon">
+                  <span
+                    ><img
+                      style="max-height: 75px; padding-bottom: 20px"
+                      src="assets/images/molecular.png"
+                      alt=""
+                  /></span>
+                </div>
+                <a target="_blank" href="http://mccs.conext.in/"
+                  ><h3>Connectivity</h3></a
+                >
+                <a
+                  target="_blank"
+                  href="http://mccs.conext.in/"
+                  class="read-more-btn white-color"
+                  >MCCS Connect</a
+                >
+              </div>
             </div>
           </div>
         </div>
@@ -587,21 +632,23 @@
     <div class="campus-information-area pb-70">
       <div class="container">
         <div class="row align-items-center">
-          <div
-            class="col-lg-6"
-            data-aos="fade-right"
-            data-aos-easing="ease-in-sine"
-            data-aos-duration="1300"
-            data-aos-once="true"
-          >
-            <div class="campus-content pr-20">
+          <div class="col-lg-6">
+            <div class="campus-image">
+              <img
+                src="assets/images/campus-information/campus-2.jpg"
+                alt="Image"
+              />
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="campus-content style-2">
               <div class="campus-title">
                 <h2>Campus Information</h2>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tem incid idunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim ven iam quis nostrud xerci tation ulla mco
-                  laboris nisi ut
+                  What Course will your life Take? Own your future by learning
+                  new skills at MCCS. you will get more than learning.
+                  Mid-Plains Community College Campuses With Pharmacy & Dental
+                  college across the academic city you’re always inspired.
                 </p>
               </div>
               <div class="list">
@@ -614,15 +661,23 @@
                       </li>
                       <li>
                         <i class="ri-check-fill"></i>
-                        <p>Programs</p>
+                        <p>Academic Excellence</p>
                       </li>
                       <li>
                         <i class="ri-check-fill"></i>
-                        <p>Doctoral Degrees</p>
+                        <p>Modernized Infrastructure</p>
                       </li>
                       <li>
                         <i class="ri-check-fill"></i>
-                        <p>Alumni & Giving</p>
+                        <p>Well resourced Library</p>
+                      </li>
+                      <li>
+                        <i class="ri-check-fill"></i>
+                        <p>Qualified and Experienced Faculty</p>
+                      </li>
+                      <li>
+                        <i class="ri-check-fill"></i>
+                        <p>Holistic Development</p>
                       </li>
                     </ul>
                   </div>
@@ -630,19 +685,27 @@
                     <ul>
                       <li>
                         <i class="ri-check-fill"></i>
-                        <p>Undergraduate</p>
+                        <p>Hostel Facility</p>
                       </li>
                       <li>
                         <i class="ri-check-fill"></i>
-                        <p>International Hubs</p>
+                        <p>Industrial Visits</p>
                       </li>
                       <li>
                         <i class="ri-check-fill"></i>
-                        <p>Doctoral Degrees</p>
+                        <p>Placement Assistance</p>
                       </li>
                       <li>
                         <i class="ri-check-fill"></i>
-                        <p>Global Students</p>
+                        <p>Bus Conveyance</p>
+                      </li>
+                      <li>
+                        <i class="ri-check-fill"></i>
+                        <p>Co-curricular Activities</p>
+                      </li>
+                      <li>
+                        <i class="ri-check-fill"></i>
+                        <p>National Service Scheme</p>
                       </li>
                     </ul>
                   </div>
@@ -680,30 +743,16 @@
                   </div>
                 </div>
               </div>
-              <a href="campus-life.html" class="default-btn btn"
+              <a href="contact-us.html" class="default-btn btn"
                 >Start your application<i class="flaticon-next"></i
               ></a>
-            </div>
-          </div>
-          <div
-            class="col-lg-6"
-            data-aos="fade-up"
-            data-aos-easing="ease-in-sine"
-            data-aos-duration="1300"
-            data-aos-once="true"
-          >
-            <div class="campus-image pl-20">
-              <img
-                src="assets/images/campus-information/campus-1.jpg"
-                alt="Image"
-              />
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="courses-area ptb-100 bg-f4f6f9">
+    <div class="courses-area pt-100 pb-70 bg-f4f6f9">
       <div class="container">
         <div class="section-title">
           <h2>Free Courses</h2>
@@ -712,122 +761,259 @@
             tellus luctus nec ullamcorper mattis
           </p>
         </div>
-        <div class="row justify-content-center">
-          <div
-            class="col-lg-4 col-md-6"
-            data-aos="fade-up"
-            data-aos-duration="1200"
-            data-aos-delay="200"
-            data-aos-once="true"
-          >
-            <div class="single-courses-card">
-              <div class="courses-img">
-                <a href="courses-details.html"
-                  ><img src="assets/images/courses/courses-1.jpg" alt="Image"
-                /></a>
+        <div class="courses-slider style-2 owl-carousel owl-theme">
+          <div class="single-courses-card style3">
+            <div class="courses-img">
+              <a href="courses-details.html"
+                ><img src="assets/images/courses/courses-1.jpg" alt="Image"
+              /></a>
+            </div>
+            <div class="courses-content">
+              <div class="list-1">
+                <ul class="d-flex justify-content-between">
+                  <li><i class="flaticon-graduation"></i>321</li>
+                  <li><i class="flaticon-bubble-chat"></i>1.2k</li>
+                </ul>
               </div>
-              <div class="courses-content">
-                <div class="admin-profile">
-                  <img src="assets/images/courses/admin-1.jpg" alt="Image" />
-                  <p>With <a href="courses-details.html">Jessica Hamson</a></p>
-                </div>
-                <a href="courses-details.html"
-                  ><h3>Python Programming For Data Science</h3></a
-                >
-                <div class="bottom-content">
-                  <ul class="d-flex justify-content-between">
-                    <li>
-                      <ul>
-                        <li><i class="flaticon-graduation"></i>321</li>
-                        <li><i class="flaticon-bubble-chat"></i>1.2k</li>
-                      </ul>
-                    </li>
-                    <li><a href="#">Free</a></li>
-                  </ul>
-                </div>
+              <a href="courses-details.html"
+                ><h3>Python Programming For Data Science</h3></a
+              >
+              <div class="admin-profile">
+                <img src="assets/images/courses/admin-1.jpg" alt="Image" />
+                <p>With <a href="courses-details.html">Jessica Hamson</a></p>
+              </div>
+              <div class="bottom-content">
+                <ul class="d-flex justify-content-between">
+                  <li>
+                    <ul>
+                      <li><i class="ri-star-fill"></i></li>
+                      <li><i class="ri-star-fill"></i></li>
+                      <li><i class="ri-star-fill"></i></li>
+                      <li class="blank"><i class="ri-star-line"></i></li>
+                      <li class="blank"><i class="ri-star-line"></i></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Free</a></li>
+                </ul>
               </div>
             </div>
           </div>
-          <div
-            class="col-lg-4 col-md-6"
-            data-aos="fade-up"
-            data-aos-duration="1200"
-            data-aos-delay="400"
-            data-aos-once="true"
-          >
-            <div class="single-courses-card">
-              <div class="courses-img">
-                <a href="courses-details.html"
-                  ><img src="assets/images/courses/courses-2.jpg" alt="Image"
-                /></a>
+          <div class="single-courses-card style3">
+            <div class="courses-img">
+              <a href="courses-details.html"
+                ><img src="assets/images/courses/courses-2.jpg" alt="Image"
+              /></a>
+            </div>
+            <div class="courses-content">
+              <div class="list-1">
+                <ul class="d-flex justify-content-between">
+                  <li><i class="flaticon-graduation"></i>321</li>
+                  <li><i class="flaticon-bubble-chat"></i>1.2k</li>
+                </ul>
               </div>
-              <div class="courses-content">
-                <div class="admin-profile">
-                  <img src="assets/images/courses/admin-2.jpg" alt="Image" />
-                  <p>
-                    With <a href="courses-details.html">Christoph Baldwin</a>
-                  </p>
-                </div>
-                <a href="courses-details.html"
-                  ><h3>Databases: Advanced Topics In SQL And Athers</h3></a
-                >
-                <div class="bottom-content">
-                  <ul class="d-flex justify-content-between">
-                    <li>
-                      <ul>
-                        <li><i class="flaticon-graduation"></i>321</li>
-                        <li><i class="flaticon-bubble-chat"></i>1.2k</li>
-                      </ul>
-                    </li>
-                    <li><a href="#">Free</a></li>
-                  </ul>
-                </div>
+              <a href="courses-details.html"
+                ><h3>Databases: Advanced Topics In SQL</h3></a
+              >
+              <div class="admin-profile">
+                <img src="assets/images/courses/admin-2.jpg" alt="Image" />
+                <p>With <a href="courses-details.html">Christoph Baldwin</a></p>
+              </div>
+              <div class="bottom-content">
+                <ul class="d-flex justify-content-between">
+                  <li>
+                    <ul>
+                      <li><i class="ri-star-fill"></i></li>
+                      <li><i class="ri-star-fill"></i></li>
+                      <li><i class="ri-star-fill"></i></li>
+                      <li class="blank"><i class="ri-star-line"></i></li>
+                      <li class="blank"><i class="ri-star-line"></i></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Free</a></li>
+                </ul>
               </div>
             </div>
           </div>
-          <div
-            class="col-lg-4 col-md-6"
-            data-aos="fade-up"
-            data-aos-duration="1200"
-            data-aos-delay="600"
-            data-aos-once="true"
-          >
-            <div class="single-courses-card">
-              <div class="courses-img">
-                <a href="courses-details.html"
-                  ><img src="assets/images/courses/courses-3.jpg" alt="Image"
-                /></a>
+          <div class="single-courses-card style3">
+            <div class="courses-img">
+              <a href="courses-details.html"
+                ><img src="assets/images/courses/courses-3.jpg" alt="Image"
+              /></a>
+            </div>
+            <div class="courses-content">
+              <div class="list-1">
+                <ul class="d-flex justify-content-between">
+                  <li><i class="flaticon-graduation"></i>321</li>
+                  <li><i class="flaticon-bubble-chat"></i>1.2k</li>
+                </ul>
               </div>
-              <div class="courses-content">
-                <div class="admin-profile">
-                  <img src="assets/images/courses/admin-3.jpg" alt="Image" />
-                  <p>With <a href="courses-details.html">Morgen Matthias</a></p>
-                </div>
-                <a href="courses-details.html"
-                  ><h3>Analyzing Data With MS Excel & Excel</h3></a
-                >
-                <div class="bottom-content">
-                  <ul class="d-flex justify-content-between">
-                    <li>
-                      <ul>
-                        <li><i class="flaticon-graduation"></i>321</li>
-                        <li><i class="flaticon-bubble-chat"></i>1.2k</li>
-                      </ul>
-                    </li>
-                    <li><a href="#">Free</a></li>
-                  </ul>
-                </div>
+              <a href="courses-details.html"
+                ><h3>Analyzing Data With MS Excel & Excel</h3></a
+              >
+              <div class="admin-profile">
+                <img src="assets/images/courses/admin-3.jpg" alt="Image" />
+                <p>With <a href="courses-details.html">Morgen Matthias</a></p>
+              </div>
+              <div class="bottom-content">
+                <ul class="d-flex justify-content-between">
+                  <li>
+                    <ul>
+                      <li><i class="ri-star-fill"></i></li>
+                      <li><i class="ri-star-fill"></i></li>
+                      <li><i class="ri-star-fill"></i></li>
+                      <li class="blank"><i class="ri-star-line"></i></li>
+                      <li class="blank"><i class="ri-star-line"></i></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Free</a></li>
+                </ul>
               </div>
             </div>
           </div>
-        </div>
-        <div class="more-courses text-center">
-          <p>
-            Select From Hundreds of Options
-            <a href="courses.html" class="read-more-btn active"
-              >More on Courses <i class="flaticon-next"></i
-            ></a>
-          </p>
+          <div class="single-courses-card style3">
+            <div class="courses-img">
+              <a href="courses-details.html"
+                ><img src="assets/images/courses/courses-1.jpg" alt="Image"
+              /></a>
+            </div>
+            <div class="courses-content">
+              <div class="list-1">
+                <ul class="d-flex justify-content-between">
+                  <li><i class="flaticon-graduation"></i>321</li>
+                  <li><i class="flaticon-bubble-chat"></i>1.2k</li>
+                </ul>
+              </div>
+              <a href="courses-details.html"
+                ><h3>Python Programming For Data Science</h3></a
+              >
+              <div class="admin-profile">
+                <img src="assets/images/courses/admin-1.jpg" alt="Image" />
+                <p>With <a href="courses-details.html">Jessica Hamson</a></p>
+              </div>
+              <div class="bottom-content">
+                <ul class="d-flex justify-content-between">
+                  <li>
+                    <ul>
+                      <li><i class="ri-star-fill"></i></li>
+                      <li><i class="ri-star-fill"></i></li>
+                      <li><i class="ri-star-fill"></i></li>
+                      <li class="blank"><i class="ri-star-line"></i></li>
+                      <li class="blank"><i class="ri-star-line"></i></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Free</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="single-courses-card style3">
+            <div class="courses-img">
+              <a href="courses-details.html"
+                ><img src="assets/images/courses/courses-2.jpg" alt="Image"
+              /></a>
+            </div>
+            <div class="courses-content">
+              <div class="list-1">
+                <ul class="d-flex justify-content-between">
+                  <li><i class="flaticon-graduation"></i>321</li>
+                  <li><i class="flaticon-bubble-chat"></i>1.2k</li>
+                </ul>
+              </div>
+              <a href="courses-details.html"
+                ><h3>Databases: Advanced Topics In SQL</h3></a
+              >
+              <div class="admin-profile">
+                <img src="assets/images/courses/admin-2.jpg" alt="Image" />
+                <p>With <a href="courses-details.html">Christoph Baldwin</a></p>
+              </div>
+              <div class="bottom-content">
+                <ul class="d-flex justify-content-between">
+                  <li>
+                    <ul>
+                      <li><i class="ri-star-fill"></i></li>
+                      <li><i class="ri-star-fill"></i></li>
+                      <li><i class="ri-star-fill"></i></li>
+                      <li class="blank"><i class="ri-star-line"></i></li>
+                      <li class="blank"><i class="ri-star-line"></i></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Free</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="single-courses-card style3">
+            <div class="courses-img">
+              <a href="courses-details.html"
+                ><img src="assets/images/courses/courses-3.jpg" alt="Image"
+              /></a>
+            </div>
+            <div class="courses-content">
+              <div class="list-1">
+                <ul class="d-flex justify-content-between">
+                  <li><i class="flaticon-graduation"></i>321</li>
+                  <li><i class="flaticon-bubble-chat"></i>1.2k</li>
+                </ul>
+              </div>
+              <a href="courses-details.html"
+                ><h3>Analyzing Data With MS Excel & Excel</h3></a
+              >
+              <div class="admin-profile">
+                <img src="assets/images/courses/admin-3.jpg" alt="Image" />
+                <p>With <a href="courses-details.html">Morgen Matthias</a></p>
+              </div>
+              <div class="bottom-content">
+                <ul class="d-flex justify-content-between">
+                  <li>
+                    <ul>
+                      <li><i class="ri-star-fill"></i></li>
+                      <li><i class="ri-star-fill"></i></li>
+                      <li><i class="ri-star-fill"></i></li>
+                      <li class="blank"><i class="ri-star-line"></i></li>
+                      <li class="blank"><i class="ri-star-line"></i></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Free</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="single-courses-card style3">
+            <div class="courses-img">
+              <a href="courses-details.html"
+                ><img src="assets/images/courses/courses-2.jpg" alt="Image"
+              /></a>
+            </div>
+            <div class="courses-content">
+              <div class="list-1">
+                <ul class="d-flex justify-content-between">
+                  <li><i class="flaticon-graduation"></i>321</li>
+                  <li><i class="flaticon-bubble-chat"></i>1.2k</li>
+                </ul>
+              </div>
+              <a href="courses-details.html"
+                ><h3>Databases: Advanced Topics In SQL</h3></a
+              >
+              <div class="admin-profile">
+                <img src="assets/images/courses/admin-2.jpg" alt="Image" />
+                <p>With <a href="courses-details.html">Christoph Baldwin</a></p>
+              </div>
+              <div class="bottom-content">
+                <ul class="d-flex justify-content-between">
+                  <li>
+                    <ul>
+                      <li><i class="ri-star-fill"></i></li>
+                      <li><i class="ri-star-fill"></i></li>
+                      <li><i class="ri-star-fill"></i></li>
+                      <li class="blank"><i class="ri-star-line"></i></li>
+                      <li class="blank"><i class="ri-star-line"></i></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Free</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -835,128 +1021,48 @@
     <div class="campus-life-area ptb-100">
       <div class="container">
         <div class="section-title">
-          <h2>Campus Life</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipiscing elit ut elit
-            tellus luctus nec ullamcorper mattis
-          </p>
+          <h2>MCCS Gallery</h2>
+          <p><a href="gallery.html">Visit Gallery Page</a></p>
         </div>
-        <div class="row justify-content-center">
-          <div
-            class="col-lg-4 col-md-6"
-            data-aos="fade-up"
-            data-aos-duration="1200"
-            data-aos-delay="200"
-            data-aos-once="true"
-          >
-            <div class="single-campus-card">
-              <div class="img">
-                <a href="campus-life.html"
-                  ><img
-                    src="assets/images/campus-life/campus-life-1.jpg"
-                    alt="Image"
-                /></a>
-              </div>
-              <div class="campus-content">
-                <span>Art & Culture</span>
-                <a href="campus-life.html"
-                  ><h3>Art, Exercise And Escapism In Nature</h3></a
-                >
-              </div>
-            </div>
-          </div>
-          <div
-            class="col-lg-4 col-md-6"
-            data-aos="fade-up"
-            data-aos-duration="1200"
-            data-aos-delay="400"
-            data-aos-once="true"
-          >
-            <div class="single-campus-card">
-              <div class="img">
-                <a href="campus-life.html"
-                  ><img
-                    src="assets/images/campus-life/campus-life-2.jpg"
-                    alt="Image"
-                /></a>
-              </div>
-              <div class="campus-content">
-                <span>Athletics & Fitness</span>
-                <a href="campus-life.html"
-                  ><h3>Improve Athletic Performance Tips From Sanu</h3></a
-                >
-              </div>
-            </div>
-          </div>
-          <div
-            class="col-lg-4 col-md-6"
-            data-aos="fade-up"
-            data-aos-duration="1200"
-            data-aos-delay="600"
-            data-aos-once="true"
-          >
-            <div class="single-campus-card">
-              <div class="img">
-                <a href="campus-life.html"
-                  ><img
-                    src="assets/images/campus-life/campus-life-3.jpg"
-                    alt="Image"
-                /></a>
-              </div>
-              <div class="campus-content">
-                <span>Student Life</span>
-                <a href="campus-life.html"
-                  ><h3>Why I Changed My Mind About Career Connections</h3></a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="more-campus text-center">
-          <p>
-            Select From Hundreds of Options.
-            <a href="campus-life.html" class="read-more-btn active"
-              >More on Campus Life <i class="flaticon-next"></i
-            ></a>
-          </p>
-        </div>
+        <div id="loadingAnimation" class="loading-animation"></div>
+        <div
+          class="row justify-content-center"
+          id="portfolio-container"
+          style="display: none"
+        ></div>
       </div>
     </div>
 
-    <div class="admisssion-area bg-f4f6f9 ptb-100">
+    <div class="admisssion-area ptb-100 admission-bg">
       <div class="container">
-        <div class="admission-content">
-          <div class="section-title">
-            <h2>Sanu Admission</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipiscing elit ut elit
-              tellus luctus nec ullamcorper mattis
-            </p>
-          </div>
-          <div class="admission-image">
-            <img src="assets/images/admission/admission-1.jpg" alt="Image" />
-            <div class="icon">
-              <a
-                class="popup-youtube play-btn"
-                href="https://www.youtube.com/watch?v=6WQCJx_vEX4"
-                ><i class="ri-play-fill"></i
+        <div class="row align-items-center">
+          <div class="col-lg-6 col-md-6">
+            <div class="admission-left-content">
+              <h2>You're Learning Free Started Today!</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipiscing elit ut elit
+                tellus luctus nec ullamcorper mattis
+              </p>
+              <a href="admission.html" class="default-btn btn"
+                >More on admission<i class="flaticon-next"></i
               ></a>
             </div>
           </div>
-          <div class="query text-center">
-            <p>
-              If You Have Any Query or Facing any Problem Please Contact Us Via
-              Email
-            </p>
-            <a href="admission.html" class="default-btn btn"
-              >More on admission<i class="flaticon-next"></i
-            ></a>
+          <div class="col-lg-6 col-md-6">
+            <div class="admission-right-content">
+              <ul>
+                <li><p>Watch Video</p></li>
+                <li>
+                  <div class="icon"></div>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="health-care-area ptb-100">
+    <div class="health-care-area pt-100 pb-70 bg-f4f6f9">
       <div class="container">
         <div class="section-title">
           <h2>Health Care</h2>
@@ -965,109 +1071,80 @@
             tellus luctus nec ullamcorper mattis
           </p>
         </div>
-        <div class="row justify-content-center">
-          <div
-            class="col-lg-4 col-md-6"
-            data-aos="fade-up"
-            data-aos-duration="1200"
-            data-aos-delay="200"
-            data-aos-once="true"
-          >
-            <div class="single-health-care-card">
-              <div class="img">
-                <a href="health-care-details.html"
-                  ><img
-                    src="assets/images/health-care/health-care-1.jpg"
-                    alt="Image"
-                /></a>
-              </div>
-              <div class="health-care-content">
-                <a href="health-care-details.html"
-                  ><h3>Happiness Begins With Good Health</h3></a
-                >
-                <p>
-                  Lorem ipsum dolor sit amet con sec teturo adip iscing elit sed
-                  do eiusmod tempor insi didunt ut labore et dolore
-                </p>
-                <a href="health-care.html" class="read-more-btn"
-                  >Read More on healthcare<i class="flaticon-next"></i
-                ></a>
-              </div>
+        <div class="health-care-slider owl-carousel owl-theme">
+          <div class="single-health-care-card style-3">
+            <div class="img">
+              <a href="health-care-details.html"
+                ><img
+                  src="assets/images/health-care/health-care-5.jpg"
+                  alt="Image"
+              /></a>
+            </div>
+            <div class="health-care-content">
+              <a href="health-care-details.html"
+                ><h3>Happiness begins with good health</h3></a
+              >
+              <a href="health-care.html" class="read-more-btn"
+                >Read More on healthcare<i class="flaticon-next"></i
+              ></a>
             </div>
           </div>
-          <div
-            class="col-lg-4 col-md-6"
-            data-aos="fade-up"
-            data-aos-duration="1200"
-            data-aos-delay="400"
-            data-aos-once="true"
-          >
-            <div class="single-health-care-card">
-              <div class="img">
-                <a href="health-care-details.html"
-                  ><img
-                    src="assets/images/health-care/health-care-2.jpg"
-                    alt="Image"
-                /></a>
-              </div>
-              <div class="health-care-content">
-                <a href="health-care-details.html"
-                  ><h3>When Life Depends on Medical Technology</h3></a
-                >
-                <p>
-                  Lorem ipsum dolor sit amet con sec teturo adip iscing elit sed
-                  do eiusmod tempor insi didunt ut labore et dolore
-                </p>
-                <a href="health-care.html" class="read-more-btn"
-                  >Read More on healthcare<i class="flaticon-next"></i
-                ></a>
-              </div>
+          <div class="single-health-care-card style-3">
+            <div class="img">
+              <a href="health-care-details.html"
+                ><img
+                  src="assets/images/health-care/health-care-6.jpg"
+                  alt="Image"
+              /></a>
+            </div>
+            <div class="health-care-content">
+              <a href="health-care-details.html"
+                ><h3>When Life Depends on Medical Technology</h3></a
+              >
+              <a href="health-care.html" class="read-more-btn"
+                >Read More on healthcare<i class="flaticon-next"></i
+              ></a>
             </div>
           </div>
-          <div
-            class="col-lg-4 col-md-6"
-            data-aos="fade-up"
-            data-aos-duration="1200"
-            data-aos-delay="600"
-            data-aos-once="true"
-          >
-            <div class="single-health-care-card">
-              <div class="img">
-                <a href="health-care-details.html"
-                  ><img
-                    src="assets/images/health-care/health-care-3.jpg"
-                    alt="Image"
-                /></a>
-              </div>
-              <div class="health-care-content">
-                <a href="health-care-details.html"
-                  ><h3>
-                    Making A Meaningful Difference In Patients’ lives.
-                  </h3></a
-                >
-                <p>
-                  Lorem ipsum dolor sit amet con sec teturo adip iscing elit sed
-                  do eiusmod tempor insi didunt ut labore et dolore
-                </p>
-                <a href="health-care.html" class="read-more-btn"
-                  >Read More on healthcare<i class="flaticon-next"></i
-                ></a>
-              </div>
+          <div class="single-health-care-card style-3">
+            <div class="img">
+              <a href="health-care-details.html"
+                ><img
+                  src="assets/images/health-care/health-care-7.jpg"
+                  alt="Image"
+              /></a>
+            </div>
+            <div class="health-care-content">
+              <a href="health-care-details.html"
+                ><h3>Making a meaningful difference in patients’ lives.</h3></a
+              >
+              <a href="health-care.html" class="read-more-btn"
+                >Read More on healthcare<i class="flaticon-next"></i
+              ></a>
             </div>
           </div>
-        </div>
-        <div class="more-health-care text-center">
-          <p>
-            Select From Hundreds of Options.
-            <a href="health-care.html" class="read-more-btn active"
-              >More on healthcare<i class="flaticon-next"></i
-            ></a>
-          </p>
+          <div class="single-health-care-card style-3">
+            <div class="img">
+              <a href="health-care-details.html"
+                ><img
+                  src="assets/images/health-care/health-care-6.jpg"
+                  alt="Image"
+              /></a>
+            </div>
+            <div class="health-care-content">
+              <a href="health-care-details.html"
+                ><h3>When Life Depends on Medical Technology</h3></a
+              >
+              <a href="health-care.html" class="read-more-btn"
+                >Read More on healthcare<i class="flaticon-next"></i
+              ></a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="events-area bg-f4f6f9 ptb-100">
+    <div class="events-area pt-100 pb-70">
       <div class="container">
         <div class="section-title">
           <h2>Events</h2>
@@ -1076,257 +1153,168 @@
             tellus luctus nec ullamcorper mattis
           </p>
         </div>
-        <div class="row justify-content-center">
-          <div
-            class="col-lg-4 col-md-6"
-            data-aos="fade-up"
-            data-aos-duration="1200"
-            data-aos-delay="200"
-            data-aos-once="true"
-          >
-            <div class="single-events-card">
-              <div class="events-image">
-                <a href="events-details.html"
-                  ><img src="assets/images/events/events-1.jpg" alt="Image"
-                /></a>
-                <div class="date">
-                  <span>28</span>
-                  <p>Mar</p>
-                </div>
-              </div>
-              <div class="events-content">
-                <div class="admin">
-                  <p>
-                    <a href="events-details.html"
-                      ><i class="flaticon-student-with-graduation-cap"></i
-                      >Raymond Salazar</a
-                    >
-                  </p>
-                </div>
-                <a href="events-details.html"
-                  ><h3>Planning And Facilitating Effective Meetings</h3></a
-                >
+        <div class="events-slider owl-carousel owl-theme">
+          <div class="single-events-card style-3 mlr-5">
+            <div class="events-image">
+              <a href="events-details.html"
+                ><img src="assets/images/events/events-1.jpg" alt="Image"
+              /></a>
+            </div>
+            <div class="events-content">
+              <a href="events-details.html"
+                ><h3>Planning and Facilitating Effective Meetings</h3></a
+              >
+              <p>
+                Lorem ipsum dolor sit amet cons ectetur ad elit tellus luctus
+                nec ullamc
+              </p>
+              <div class="date-and-read-more">
+                <ul class="d-flex justify-content-between">
+                  <li>
+                    <p><i class="ri-calendar-2-line"></i>April 11,2022</p>
+                  </li>
+                  <li>
+                    <a href="events-details.html" class="read-more-btn active"
+                      >Read Article<i class="flaticon-next"></i
+                    ></a>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
-          <div
-            class="col-lg-4 col-md-6"
-            data-aos="fade-up"
-            data-aos-duration="1200"
-            data-aos-delay="400"
-            data-aos-once="true"
-          >
-            <div class="single-events-card">
-              <div class="events-image">
-                <a href="events-details.html"
-                  ><img src="assets/images/events/events-2.jpg" alt="Image"
-                /></a>
-                <div class="date">
-                  <span>29</span>
-                  <p>Mar</p>
-                </div>
-              </div>
-              <div class="events-content">
-                <div class="admin">
-                  <p>
-                    <a href="events-details.html"
-                      ><i class="flaticon-student-with-graduation-cap"></i
-                      >Raymond Salazar</a
-                    >
-                  </p>
-                </div>
-                <a href="events-details.html"
-                  ><h3>Regular WordPress Meetup In New Jersey, USA</h3></a
-                >
+          <div class="single-events-card style-3 mlr-5">
+            <div class="events-image">
+              <a href="events-details.html"
+                ><img src="assets/images/events/events-2.jpg" alt="Image"
+              /></a>
+            </div>
+            <div class="events-content">
+              <a href="events-details.html"
+                ><h3>Regular WordPress Meetup In New Jersey, USA</h3></a
+              >
+              <p>
+                Lorem ipsum dolor sit amet cons ectetur ad elit tellus luctus
+                nec ullamc
+              </p>
+              <div class="date-and-read-more">
+                <ul class="d-flex justify-content-between">
+                  <li>
+                    <p><i class="ri-calendar-2-line"></i>April 11,2022</p>
+                  </li>
+                  <li>
+                    <a href="events-details.html" class="read-more-btn active"
+                      >Read Article<i class="flaticon-next"></i
+                    ></a>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
-          <div
-            class="col-lg-4 col-md-6"
-            data-aos="fade-up"
-            data-aos-duration="1200"
-            data-aos-delay="600"
-            data-aos-once="true"
-          >
-            <div class="single-events-card">
-              <div class="events-image">
-                <a href="events-details.html"
-                  ><img src="assets/images/events/events-3.jpg" alt="Image"
-                /></a>
-                <div class="date">
-                  <span>30</span>
-                  <p>Mar</p>
-                </div>
-              </div>
-              <div class="events-content">
-                <div class="admin">
-                  <p>
-                    <a href="events-details.html"
-                      ><i class="flaticon-student-with-graduation-cap"></i
-                      >Raymond Salazar</a
-                    >
-                  </p>
-                </div>
-                <a href="events-details.html"
-                  ><h3>Monday Night Concert In Lake View,Mountain City</h3></a
-                >
+          <div class="single-events-card style-3 mlr-5">
+            <div class="events-image">
+              <a href="events-details.html"
+                ><img src="assets/images/events/events-3.jpg" alt="Image"
+              /></a>
+            </div>
+            <div class="events-content">
+              <a href="events-details.html"
+                ><h3>Monday Night Concert In Lake View,Mountain City</h3></a
+              >
+              <p>
+                Lorem ipsum dolor sit amet cons ectetur ad elit tellus luctus
+                nec ullamc
+              </p>
+              <div class="date-and-read-more">
+                <ul class="d-flex justify-content-between">
+                  <li>
+                    <p><i class="ri-calendar-2-line"></i>April 11,2022</p>
+                  </li>
+                  <li>
+                    <a href="events-details.html" class="read-more-btn active"
+                      >Read Article<i class="flaticon-next"></i
+                    ></a>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
-        </div>
-        <div class="more-health-care text-center">
-          <p>
-            Select From Hundreds of Options.
-            <a href="health-care.html" class="read-more-btn active"
-              >More on Events<i class="flaticon-next"></i
-            ></a>
-          </p>
+          <div class="single-events-card style-3 mlr-5">
+            <div class="events-image">
+              <a href="events-details.html"
+                ><img src="assets/images/events/events-1.jpg" alt="Image"
+              /></a>
+            </div>
+            <div class="events-content">
+              <a href="events-details.html"
+                ><h3>Planning and Facilitating Effective Meetings</h3></a
+              >
+              <p>
+                Lorem ipsum dolor sit amet cons ectetur ad elit tellus luctus
+                nec ullamc
+              </p>
+              <div class="date-and-read-more">
+                <ul class="d-flex justify-content-between">
+                  <li>
+                    <p><i class="ri-calendar-2-line"></i>April 11,2022</p>
+                  </li>
+                  <li>
+                    <a href="events-details.html" class="read-more-btn active"
+                      >Read Article<i class="flaticon-next"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="podcasts-area pt-100 pb-70">
+    <div class="podcasts-area pt-100 pb-70 bg-f4f6f9">
       <div class="container">
         <div class="row">
           <div class="col-lg-8">
             <div class="section-title style2">
-              <h2>Our Podcasts</h2>
+              <h2 id="event-heading">MCCS Events</h2>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipiscing elit ut elit
-                tellus luctus nec ullamcorper mattis
+                Experience the most memorable and entertaining event series at
+                the <b>MCCS</b>. Stay updated with our upcoming events and don't
+                miss out!
               </p>
             </div>
-            <div
-              class="single-podcasts-card"
-              data-aos="fade-up"
-              data-aos-duration="1200"
-              data-aos-delay="200"
-              data-aos-once="true"
-            >
-              <div class="row align-items-center">
-                <div class="col-lg-5 col-md-5">
-                  <div class="podcasts-image">
-                    <img
-                      src="assets/images/podcasts/podcasts-1.jpg"
-                      alt="Image"
-                    />
-                  </div>
-                </div>
-                <div class="col-lg-7 col-md-7">
-                  <div class="podcast-content">
-                    <span>Episode:1</span>
-                    <h3>How To Build Websites That Resonate</h3>
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur adipiscing elit ut
-                      elit tellus luctus nec ullamcorper mattis
-                    </p>
-                    <div class="play-icon">
-                      <a
-                        class="popup-youtube play-btn"
-                        href="https://www.youtube.com/watch?v=6WQCJx_vEX4"
-                        ><i class="ri-play-fill"></i
-                        ><span>play Episode</span></a
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              class="single-podcasts-card"
-              data-aos="fade-up"
-              data-aos-duration="1200"
-              data-aos-delay="400"
-              data-aos-once="true"
-            >
-              <div class="row align-items-center">
-                <div class="col-lg-5 col-md-5">
-                  <div class="podcasts-image">
-                    <img
-                      src="assets/images/podcasts/podcasts-2.jpg"
-                      alt="Image"
-                    />
-                  </div>
-                </div>
-                <div class="col-lg-7 col-md-7">
-                  <div class="podcast-content">
-                    <span>Episode:199</span>
-                    <h3>How To Create A Nice Wesite</h3>
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur adipiscing elit ut
-                      elit tellus luctus nec ullamcorper mattis
-                    </p>
-                    <div class="play-icon">
-                      <a
-                        class="popup-youtube play-btn"
-                        href="https://www.youtube.com/watch?v=6WQCJx_vEX4"
-                        ><i class="ri-play-fill"></i
-                        ><span>play Episode</span></a
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              class="single-podcasts-card"
-              data-aos="fade-up"
-              data-aos-duration="1200"
-              data-aos-delay="600"
-              data-aos-once="true"
-            >
-              <div class="row align-items-center">
-                <div class="col-lg-5 col-md-5">
-                  <div class="podcasts-image">
-                    <img
-                      src="assets/images/podcasts/podcasts-3.jpg"
-                      alt="Image"
-                    />
-                  </div>
-                </div>
-                <div class="col-lg-7 col-md-7">
-                  <div class="podcast-content">
-                    <span>Episode:1</span>
-                    <h3>How To Use Technology To Adapt</h3>
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur adipiscing elit ut
-                      elit tellus luctus nec ullamcorper mattis
-                    </p>
-                    <div class="play-icon">
-                      <a
-                        class="popup-youtube play-btn"
-                        href="https://www.youtube.com/watch?v=6WQCJx_vEX4"
-                        ><i class="ri-play-fill"></i
-                        ><span>play Episode</span></a
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <div id="EventAnimation" class="event-animation"></div>
+            <div class="row" id="event-calender"></div>
+
+            <a href="events.html" class="default-btn btn"
+              >View All Events<i class="flaticon-next"></i
+            ></a>
           </div>
           <div class="col-lg-4">
-            <div class="categories">
-              <h3>Categories</h3>
+            <div class="categories style-2">
+              <h3>Quick Links</h3>
               <ul>
                 <li>
-                  <a href="#"><i class="flaticon-briefcase"></i>Business</a>
-                </li>
-                <li>
-                  <a href="#"><i class="flaticon-fashion"></i>Fashion</a>
-                </li>
-                <li>
-                  <a href="#"><i class="flaticon-writing-tool"></i>writing</a>
-                </li>
-                <li>
-                  <a href="#"
-                    ><i class="flaticon-web-development"></i>Development</a
+                  <a target="_blank" href="http://mccs.conext.in/"
+                    >MCCS Connect</a
                   >
                 </li>
                 <li>
-                  <a href="#"
-                    ><i class="flaticon-audio-speaker"></i>Marketing</a
-                  >
+                  <a href="#">Achievements</a>
+                </li>
+                <li>
+                  <a href="#">Facilities</a>
+                </li>
+                <li>
+                  <a href="#">Clubs</a>
+                </li>
+                <li>
+                  <a href="#">NAAC</a>
+                </li>
+                <li>
+                  <a href="#">Library</a>
+                </li>
+                <li>
+                  <a href="gallery.html">Gallery</a>
                 </li>
               </ul>
             </div>
@@ -1349,15 +1337,18 @@
                 <div id="validator-newsletter" class="form-result"></div>
               </form>
             </div>
+            <!-- <a href="events.html" class="default-btn btn"
+              >View All Events<i class="flaticon-next"></i
+            ></a> -->
           </div>
         </div>
       </div>
     </div>
 
-    <div class="students-stories-area bg-f4f6f9 pt-100 pb-70">
+    <div class="students-stories-area pt-100 pb-70">
       <div class="container">
         <div class="section-title">
-          <h2>Check Student Stories</h2>
+          <h2>Check Student stories</h2>
           <p>
             Lorem ipsum dolor sit amet consectetur adipiscing elit ut elit
             tellus luctus nec ullamcorper mattis
@@ -1371,7 +1362,7 @@
             data-aos-delay="200"
             data-aos-once="true"
           >
-            <div class="single-stories-card">
+            <div class="single-stories-card style2">
               <div class="stories-content">
                 <h3>Why I choose Sanu_Freshman Student</h3>
               </div>
@@ -1390,7 +1381,7 @@
             data-aos-delay="400"
             data-aos-once="true"
           >
-            <div class="single-stories-card">
+            <div class="single-stories-card style2">
               <div class="stories-content">
                 <h3>Why I choose Sanu University And Teachers</h3>
               </div>
@@ -1409,7 +1400,7 @@
             data-aos-delay="600"
             data-aos-once="true"
           >
-            <div class="single-stories-card">
+            <div class="single-stories-card style2">
               <div class="stories-content">
                 <h3>Why I choose Sanu Campus And Environment</h3>
               </div>
@@ -1425,7 +1416,7 @@
       </div>
     </div>
 
-    <div class="lates-news-area ptb-100">
+    <div class="lates-news-area pt-100 pb-70 bg-f4f6f9">
       <div class="container">
         <div class="section-title">
           <h2>Latest News</h2>
@@ -1434,86 +1425,96 @@
             tellus luctus nec ullamcorper mattis
           </p>
         </div>
-        <div class="row justify-content-center">
-          <div
-            class="col-lg-4 col-md-6"
-            data-aos="fade-up"
-            data-aos-duration="1200"
-            data-aos-delay="200"
-            data-aos-once="true"
-          >
-            <div class="single-news-card">
-              <div class="news-img">
-                <a href="news-details.html"
-                  ><img src="assets/images/news/news-1.jpg" alt="Image"
-                /></a>
-              </div>
-              <div class="news-content">
-                <div class="list">
-                  <ul>
-                    <li>
-                      <i class="flaticon-user"></i>By
-                      <a href="news-details.html">Admin</a>
-                    </li>
-                    <li><i class="flaticon-tag"></i>Social Sciences</li>
-                  </ul>
+        <div class="row justify-content-center align-items-center">
+          <div class="col-lg-7">
+            <div
+              class="single-news-card style3"
+              data-aos="fade-up"
+              data-aos-duration="1200"
+              data-aos-delay="200"
+              data-aos-once="true"
+            >
+              <div class="row align-items-center">
+                <div class="col-lg-5 col-md-5">
+                  <div class="news-img">
+                    <a href="news-details.html"
+                      ><img src="assets/images/news/news-1.jpg" alt="Image"
+                    /></a>
+                  </div>
                 </div>
-                <a href="news-details.html"
-                  ><h3>
-                    Professor Tom Comments On The Volunteer B. Snack Brand
-                  </h3></a
-                >
-                <a href="news-details.html" class="read-more-btn"
-                  >Read More<i class="flaticon-next"></i
-                ></a>
+                <div class="col-lg-7 col-md-7">
+                  <div class="news-content">
+                    <div class="list">
+                      <ul>
+                        <li>
+                          <i class="flaticon-user"></i>By
+                          <a href="news-details.html">Admin</a>
+                        </li>
+                        <li><i class="flaticon-tag"></i>Social Sciences</li>
+                      </ul>
+                    </div>
+                    <a href="news-details.html"
+                      ><h3>
+                        Professor Tom Comments On The Volunteer B. Snack Brand
+                      </h3></a
+                    >
+                    <a href="news-details.html" class="read-more-btn"
+                      >read More<i class="flaticon-next"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="single-news-card style3"
+              data-aos="fade-up"
+              data-aos-duration="1200"
+              data-aos-delay="400"
+              data-aos-once="true"
+            >
+              <div class="row align-items-center">
+                <div class="col-lg-5 col-md-5">
+                  <div class="news-img">
+                    <a href="news-details.html"
+                      ><img src="assets/images/news/news-2.jpg" alt="Image"
+                    /></a>
+                  </div>
+                </div>
+                <div class="col-lg-7 col-md-7">
+                  <div class="news-content">
+                    <div class="list">
+                      <ul>
+                        <li>
+                          <i class="flaticon-user"></i>By
+                          <a href="news-details.html">Admin</a>
+                        </li>
+                        <li><i class="flaticon-tag"></i>Social Sciences</li>
+                      </ul>
+                    </div>
+                    <a href="news-details.html"
+                      ><h3>
+                        How To Use Technology To Adapt Your Talent To The World
+                      </h3></a
+                    >
+                    <a href="news-details.html" class="read-more-btn"
+                      >read More<i class="flaticon-next"></i
+                    ></a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
           <div
-            class="col-lg-4 col-md-6"
-            data-aos="fade-up"
-            data-aos-duration="1200"
-            data-aos-delay="400"
-            data-aos-once="true"
-          >
-            <div class="single-news-card">
-              <div class="news-img">
-                <a href="news-details.html"
-                  ><img src="assets/images/news/news-2.jpg" alt="Image"
-                /></a>
-              </div>
-              <div class="news-content">
-                <div class="list">
-                  <ul>
-                    <li>
-                      <i class="flaticon-user"></i>By
-                      <a href="news-details.html">Admin</a>
-                    </li>
-                    <li><i class="flaticon-tag"></i>Social Sciences</li>
-                  </ul>
-                </div>
-                <a href="news-details.html"
-                  ><h3>
-                    How To Use Technology To Adapt Your Talent To The World
-                  </h3></a
-                >
-                <a href="news-details.html" class="read-more-btn"
-                  >Read More<i class="flaticon-next"></i
-                ></a>
-              </div>
-            </div>
-          </div>
-          <div
-            class="col-lg-4 col-md-6"
+            class="col-lg-5 col-md-6"
             data-aos="fade-up"
             data-aos-duration="1200"
             data-aos-delay="600"
             data-aos-once="true"
           >
-            <div class="single-news-card">
+            <div class="single-news-card style2">
               <div class="news-img">
                 <a href="news-details.html"
-                  ><img src="assets/images/news/news-3.jpg" alt="Image"
+                  ><img src="assets/images/news/news-4.jpg" alt="Image"
                 /></a>
               </div>
               <div class="news-content">
@@ -1528,26 +1529,15 @@
                 </div>
                 <a href="news-details.html"
                   ><h3>
-                    Here Are The Things To Look For When Selecting An Online
-                    Course
+                    Here Are The Things To Look For When Selecting Course
                   </h3></a
                 >
                 <a href="news-details.html" class="read-more-btn"
-                  >Read More<i class="flaticon-next"></i
+                  >read More<i class="flaticon-next"></i
                 ></a>
               </div>
             </div>
           </div>
-        </div>
-        <div class="more-latest-news text-center">
-          <p>
-            Select From Hundreds of Options.<a
-              href="latest-news.html"
-              class="read-more-btn active"
-            >
-              More on News<i class="flaticon-next"></i
-            ></a>
-          </p>
         </div>
       </div>
     </div>
@@ -1569,10 +1559,10 @@
                   <li><a href="tel:+01987655567685">+01-9876-5556-7685 </a></li>
                   <li>
                     <a
-                      href="https://templates.hibootstrap.com/cdn-cgi/l/email-protection#5e3f3a3337301e2d3f302b703b3a2b"
+                      href="https://templates.hibootstrap.com/cdn-cgi/l/email-protection#ec8d88818582ac9f8d8299c2898899"
                       ><span
                         class="__cf_email__"
-                        data-cfemail="4322272e2a2d0330222d366d262736"
+                        data-cfemail="3352575e5a5d7340525d461d565746"
                         >[email&#160;protected]</span
                       ></a
                     >
@@ -1689,7 +1679,26 @@
       <i class="ri-arrow-up-s-line"></i>
       <i class="ri-arrow-up-s-line"></i>
     </div>
+    <div
+      class="modal fade"
+      id="form"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content px-md-4 p-sm-3 p-4">
+          <!-- Modal Close Button -->
+          <span class="modal-close" data-dismiss="modal fade">&times;</span>
 
+          <!-- Modal Content that gets replaced -->
+          <div id="modalContent">
+            <div id="modalIcon" class="fa"></div>
+          </div>
+        </div>
+      </div>
+    </div>
     <script
       data-cfasync="false"
       src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
@@ -1719,6 +1728,33 @@
     <script src="assets/js/ajaxchimp.min.js"></script>
 
     <script src="assets/js/custom.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        fetch(
+          "https://app.conext.in/Notifications/api/latest-mccs-notification/"
+        )
+          .then((response) => response.json())
+          .then((data) => {
+            if (Array.isArray(data) && data.length > 0 && data[0].poster) {
+              const modalIcon = document.getElementById("modalIcon");
+
+              modalIcon.innerHTML = `<img src="${data[0].poster}" alt="Icon" class="img-fluid" />`;
+
+              $("#form").modal("show"); // Show the modal
+            }
+          })
+          .catch((error) => {
+            console.error("Error fetching data:", error);
+          });
+      });
+      const modalCloseButton = document.querySelector(".modal-close");
+
+      modalCloseButton.addEventListener("click", function () {
+        // Trigger the modal show action
+        $("#form").modal("hide");
+      });
+    </script>
     <script>
       // Define the API URL to fetch notification data
       const apiUrl =
@@ -1760,6 +1796,197 @@
 
       // Call the fetchAndUpdateNotifications function initially
       fetchAndUpdateNotifications();
+    </script>
+    <script>
+      // Function to fetch data from the API
+      function fetchDataFromApi() {
+        loadingAnimation.style.display = "block";
+        document.getElementById("portfolio-container").style.display = "none";
+        fetch("https://app.conext.in/Events/Mccs/HomeGallery/")
+          .then((response) => response.json())
+          .then((data) => {
+            displayData(data);
+            loadingAnimation.style.display = "none";
+            document.getElementById("portfolio-container").style.display =
+              "block";
+          })
+          .catch((error) => {
+            loadingAnimation.style.display = "none";
+            console.error("Error fetching data:", error);
+          });
+      }
+      function formatDate(date) {
+        timestamp = date;
+        const parsedDate = new Date(timestamp);
+
+        const options = { day: "numeric", month: "long", year: "numeric" };
+        const formattedDate = parsedDate.toLocaleDateString("en-US", options);
+        return formattedDate;
+      }
+      // Function to dynamically display data in reverse order
+      function displayData(items) {
+        const portfolioContainer = document.getElementById(
+          "portfolio-container"
+        );
+
+        // Create a row container for the items
+        const rowContainer = document.createElement("div");
+        rowContainer.className = "row";
+
+        items.forEach((item, index) => {
+          const portfolioItem = document.createElement("div");
+          portfolioItem.className = `col-lg-3 col-md-6`;
+          portfolioItem.innerHTML = `
+                    
+                    <div class="single-campus-card">
+                     
+                        <div class="img gallery-img"> <a class="gallery-img" href="gallery.html"
+                            >
+                            <img
+                                src="${item.uploaded_image_url}"
+                                alt="Image"
+                                style="height:300px;object-fit: cover; width:100%"
+                            />
+                              <div class="overlay">
+                              <h4 class="gal-head">Visit Gallery</h4>  
+                                
+                            </div>
+                           </a
+                            >
+                        </div>
+                       
+                    </div>
+                    
+                    `;
+          rowContainer.appendChild(portfolioItem);
+        });
+
+        // Append the row container to the portfolio container
+        portfolioContainer.appendChild(rowContainer);
+      }
+
+      // Call the function to fetch and display data when the DOM is loaded
+      document.addEventListener("DOMContentLoaded", fetchDataFromApi);
+    </script>
+    <script>
+      const eventListElement = document.getElementById("event-calender");
+      const evenHeadElement = document.getElementById("event-heading");
+
+      // API endpoint URLs
+      const apiUrlUpcomingEvents =
+        "https://app.conext.in/Events/Mccs_upcoming_events/";
+      const apiUrlLatestEvents =
+        "https://app.conext.in/Events/Mccs_last_10_events";
+      function formatDate(date) {
+        timestamp = date;
+        const parsedDate = new Date(timestamp);
+
+        const options = { day: "numeric", month: "short", year: "numeric" };
+        const formattedDate = parsedDate.toLocaleDateString("en-US", options);
+        return formattedDate;
+      }
+
+      // Fetch data from the API for Upcoming Events
+      fetch(apiUrlUpcomingEvents)
+        .then((response) => response.json())
+        .then((upcomingEventsData) => {
+          evenHeadElement.innerHTML = "MCCS Upcoming Events";
+          if (upcomingEventsData.length > 0) {
+            const upcomingEventsHTML = upcomingEventsData
+              .slice(0, 3)
+              .map(
+                (event) => `
+      <div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200" data-aos-once="true">
+        <div class="single-podcasts-card style3">
+          <div class="podcasts-image">
+            <img class="event_poster" src="${
+              event.event_poster
+            }" alt="Image" style="max-height: 250px; width:100%;object-fit:cover;"/>
+          </div>
+          <div class="podcast-content" style="background-color: #fff;box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.05);padding:15px 20px">
+            <h3 style="margin-bottom: 5px" class="event_name">${
+              event.event_name
+            }</h3>
+            <p style="font-size: 14px" class="event_short_descp">${
+              event.event_short_descp
+            }</p>
+
+            <div class="date d-flex align-items-center justify-content-between">
+              <span class="event_date" style="font-size:13px;"><i class="ri-calendar-2-line"></i> ${formatDate(
+                event.event_date
+              )}</span>
+              <span class="event_cordinator" style="font-size:13px;"><i class="flaticon-user"></i> <b>Cordinator:</b> ${
+                event.event_cordinator
+              }</span>
+              
+            </div>
+            <div class="date d-flex align-items-center justify-content-end">
+              <span class="conducted_by" style="font-size:13px;"><i class="flaticon-tag"></i><b> Conducted By:</b> ${
+                event.conducted_by
+              }</span>
+            </div>
+          </div>
+        </div>
+      </div>`
+              )
+              .join("");
+            eventListElement.innerHTML = upcomingEventsHTML;
+            document.getElementById("EventAnimation").style.display = "none";
+          } else {
+            // Fetch data from the API for Latest Events when there are no upcoming events
+            fetch(apiUrlLatestEvents)
+              .then((response) => response.json())
+              .then((latestEventsData) => {
+                evenHeadElement.innerHTML = "MCCS Latest Events";
+                const latestEventsHTML = latestEventsData
+                  .slice(0, 3)
+                  .map(
+                    (event) => `
+      <div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200" data-aos-once="true">
+        <div class="single-podcasts-card style3">
+          <div class="podcasts-image">
+            <img class="event_poster" src="${
+              event.event_poster
+            }" alt="Image" style="max-height: 250px; width:100%;object-fit:cover;"/>
+          </div>
+          <div class="podcast-content" style="background-color: #fff;box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.05);padding:15px 20px">
+            <h3 style="margin-bottom: 5px" class="event_name">${
+              event.event_name
+            }</h3>
+            <p style="font-size: 14px" class="event_short_descp">${
+              event.event_short_descp
+            }</p>
+<div class="date d-flex align-items-center justify-content-between">
+              <span class="event_date" style="font-size:13px;"><i class="ri-calendar-2-line"></i> ${formatDate(
+                event.event_date
+              )}</span>
+              <span class="event_cordinator" style="font-size:13px;"><i class="flaticon-user"></i> <b>Cordinator:</b> ${
+                event.event_cordinator
+              }</span>
+              
+            </div>
+            <div class="date d-flex align-items-center justify-content-start">
+              <span class="conducted_by" style="font-size:13px;"><i class="flaticon-tag"></i><b> Conducted By:</b> ${
+                event.conducted_by
+              }</span>
+            </div>
+          </div>
+        </div>
+      </div>`
+                  )
+                  .join("");
+                eventListElement.innerHTML = latestEventsHTML;
+                document.getElementById("EventAnimation").style.display =
+                  "none";
+              })
+              .catch((error) => {
+                console.error("Error fetching latest events data:", error);
+              });
+          }
+        })
+        .catch((error) => {
+          console.error("Error fetching upcoming events data:", error);
+        });
     </script>
   </body>
 </html>
