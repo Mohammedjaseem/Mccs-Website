@@ -1891,7 +1891,7 @@
         .then((response) => response.json())
         .then((upcomingEventsData) => {
           evenHeadElement.innerHTML = "MCCS Upcoming Events";
-          if (upcomingEventsData.length === 5) {
+          if (upcomingEventsData.length > 0) {
             const upcomingEventsHTML = upcomingEventsData
               .slice(0, 3)
               .map(
