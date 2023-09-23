@@ -29,7 +29,16 @@
 
     <link rel="stylesheet" href="assets/css/responsive.css" />
     <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+
     <title>Sanu - College University HTML Template</title>
+    <style>
+      #notification-container li {
+        list-style-type: none;
+        margin: 0px;
+        color: white;
+        font-weight: 600;
+      }
+    </style>
   </head>
   <body>
     <div class="preloader-area">
@@ -42,13 +51,17 @@
       </div>
     </div>
 
-    <div class="top-header-area">
-      <div class="container">
+    <div class="top-header-area d-none d-lg-block">
+      <div class="container-fluid">
         <div class="row align-items-center">
           <div class="col-lg-6 col-md-6">
-            <div class="header-left-content">
-              <p>Get the latest updates and Sanu's response to COVID-19</p>
-            </div>
+            <ul
+              style="margin: 0px; color: #fff"
+              class="notification"
+              id="notification-container"
+            >
+              Loading...
+            </ul>
           </div>
           <div class="col-lg-6 col-md-6">
             <div class="header-right-content">
@@ -848,10 +861,6 @@
       <i class="ri-arrow-up-s-line"></i>
     </div>
 
-    <script
-      data-cfasync="false"
-      src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
-    ></script>
     <script src="assets/js/jquery.min.js"></script>
 
     <script src="assets/js/bootstrap.bundle.min.js"></script>
@@ -877,5 +886,47 @@
     <script src="assets/js/ajaxchimp.min.js"></script>
 
     <script src="assets/js/custom.js"></script>
+    <script>
+      // Define the API URL to fetch notification data
+      const apiUrl =
+        "https://app.conext.in/Notifications/api/latest-mccs-top-bar-notification/";
+
+      // Reference to the notification container
+      const notificationContainer = document.getElementById(
+        "notification-container"
+      );
+
+      // Store the notification data and current index
+      let notifications = [];
+      let currentIndex = 0;
+
+      // Function to fetch and update notification data
+      async function fetchAndUpdateNotifications() {
+        try {
+          const response = await fetch(apiUrl);
+          notifications = await response.json();
+
+          // Call the updateNotification function initially
+          updateNotification();
+
+          // Set an interval to update notifications every 1.5 seconds
+          setInterval(updateNotification, 4500);
+        } catch (error) {
+          console.error("Error fetching notifications:", error);
+        }
+      }
+
+      // Function to update the notification text
+      function updateNotification() {
+        if (notifications.length > 0) {
+          const list = notificationContainer;
+          list.innerHTML = `<li>${notifications[currentIndex].notification}</li>`;
+          currentIndex = (currentIndex + 1) % notifications.length;
+        }
+      }
+
+      // Call the fetchAndUpdateNotifications function initially
+      fetchAndUpdateNotifications();
+    </script>
   </body>
 </html>

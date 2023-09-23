@@ -30,7 +30,34 @@
 
     <link rel="stylesheet" href="assets/css/responsive.css" />
     <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+
     <title>Sanu - College University HTML Template</title>
+    <style>
+      #notification-container li {
+        list-style-type: none;
+        margin: 0px;
+        color: white;
+        font-weight: 600;
+      }
+      .loading-animation {
+        border: 4px solid #f3f3f3;
+        border-top: 4px solid #084f8c;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        animation: spin 2s linear infinite;
+        margin: 20px auto;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
   </head>
   <body>
     <div class="preloader-area">
@@ -43,13 +70,17 @@
       </div>
     </div>
 
-    <div class="top-header-area">
-      <div class="container">
+    <div class="top-header-area d-none d-lg-block">
+      <div class="container-fluid">
         <div class="row align-items-center">
           <div class="col-lg-6 col-md-6">
-            <div class="header-left-content">
-              <p>Get the latest updates and Sanu's response to COVID-19</p>
-            </div>
+            <ul
+              style="margin: 0px; color: #fff"
+              class="notification"
+              id="notification-container"
+            >
+              Loading...
+            </ul>
           </div>
           <div class="col-lg-6 col-md-6">
             <div class="header-right-content">
@@ -452,171 +483,9 @@
 
     <div class="events-area pt-100 pb-70">
       <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-4 col-md-6">
-            <div class="single-events-card style-4">
-              <div class="events-image">
-                <a href="events-details.html"
-                  ><img src="assets/images/events/events-1.jpg" alt="Image"
-                /></a>
-                <div class="date">
-                  <span>28</span>
-                  <p>Mar</p>
-                </div>
-              </div>
-              <div class="events-content">
-                <div class="admin">
-                  <p>
-                    <a href="events-details.html"
-                      ><i class="flaticon-student-with-graduation-cap"></i
-                      >Raymond Salazar</a
-                    >
-                  </p>
-                </div>
-                <a href="events-details.html"
-                  ><h3>Planning And Facilitating Effective Meetings</h3></a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="single-events-card style-4">
-              <div class="events-image">
-                <a href="events-details.html"
-                  ><img src="assets/images/events/events-2.jpg" alt="Image"
-                /></a>
-                <div class="date">
-                  <span>29</span>
-                  <p>Mar</p>
-                </div>
-              </div>
-              <div class="events-content">
-                <div class="admin">
-                  <p>
-                    <a href="events-details.html"
-                      ><i class="flaticon-student-with-graduation-cap"></i
-                      >Raymond Salazar</a
-                    >
-                  </p>
-                </div>
-                <a href="events-details.html"
-                  ><h3>Regular WordPress Meetup In New Jersey, USA</h3></a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="single-events-card style-4">
-              <div class="events-image">
-                <a href="events-details.html"
-                  ><img src="assets/images/events/events-3.jpg" alt="Image"
-                /></a>
-                <div class="date">
-                  <span>30</span>
-                  <p>Mar</p>
-                </div>
-              </div>
-              <div class="events-content">
-                <div class="admin">
-                  <p>
-                    <a href="events-details.html"
-                      ><i class="flaticon-student-with-graduation-cap"></i
-                      >Raymond Salazar</a
-                    >
-                  </p>
-                </div>
-                <a href="events-details.html"
-                  ><h3>Monday Night Concert In Lake View,Mountain City</h3></a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="single-events-card style-4">
-              <div class="events-image">
-                <a href="events-details.html"
-                  ><img src="assets/images/events/events-4.jpg" alt="Image"
-                /></a>
-                <div class="date">
-                  <span>30</span>
-                  <p>Mar</p>
-                </div>
-              </div>
-              <div class="events-content">
-                <div class="admin">
-                  <p>
-                    <a href="events-details.html"
-                      ><i class="flaticon-student-with-graduation-cap"></i
-                      >Raymond Salazar</a
-                    >
-                  </p>
-                </div>
-                <a href="events-details.html"
-                  ><h3>
-                    University Admissions Could Face Emergency Controls
-                  </h3></a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="single-events-card style-4">
-              <div class="events-image">
-                <a href="events-details.html"
-                  ><img src="assets/images/events/events-5.jpg" alt="Image"
-                /></a>
-                <div class="date">
-                  <span>30</span>
-                  <p>Mar</p>
-                </div>
-              </div>
-              <div class="events-content">
-                <div class="admin">
-                  <p>
-                    <a href="events-details.html"
-                      ><i class="flaticon-student-with-graduation-cap"></i
-                      >Raymond Salazar</a
-                    >
-                  </p>
-                </div>
-                <a href="events-details.html"
-                  ><h3>
-                    The Complete Digital Marketing Course - 12 Courses In 1
-                  </h3></a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="single-events-card style-4">
-              <div class="events-image">
-                <a href="events-details.html"
-                  ><img src="assets/images/events/events-6.jpg" alt="Image"
-                /></a>
-                <div class="date">
-                  <span>30</span>
-                  <p>Mar</p>
-                </div>
-              </div>
-              <div class="events-content">
-                <div class="admin">
-                  <p>
-                    <a href="events-details.html"
-                      ><i class="flaticon-student-with-graduation-cap"></i
-                      >Raymond Salazar</a
-                    >
-                  </p>
-                </div>
-                <a href="events-details.html"
-                  ><h3>
-                    The Python Mega Course: Build 10 Real World Applications
-                  </h3></a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="paginations">
+        <div id="loadingAnimation" class="loading-animation"></div>
+        <div class="row justify-content-center" id="event-container"></div>
+        <!-- <div class="paginations">
           <ul>
             <li>
               <a href="events-details.html"><i class="flaticon-back"></i></a>
@@ -630,7 +499,7 @@
               ></a>
             </li>
           </ul>
-        </div>
+        </div> -->
       </div>
     </div>
 
@@ -772,10 +641,6 @@
       <i class="ri-arrow-up-s-line"></i>
     </div>
 
-    <script
-      data-cfasync="false"
-      src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
-    ></script>
     <script src="assets/js/jquery.min.js"></script>
 
     <script src="assets/js/bootstrap.bundle.min.js"></script>
@@ -801,6 +666,138 @@
     <script src="assets/js/ajaxchimp.min.js"></script>
 
     <script src="assets/js/custom.js"></script>
+    <script>
+      // Define the API URL to fetch notification data
+      const apiUrl =
+        "https://app.conext.in/Notifications/api/latest-mccs-top-bar-notification/";
+
+      // Reference to the notification container
+      const notificationContainer = document.getElementById(
+        "notification-container"
+      );
+
+      // Store the notification data and current index
+      let notifications = [];
+      let currentIndex = 0;
+
+      // Function to fetch and update notification data
+      async function fetchAndUpdateNotifications() {
+        try {
+          const response = await fetch(apiUrl);
+          notifications = await response.json();
+
+          // Call the updateNotification function initially
+          updateNotification();
+
+          // Set an interval to update notifications every 1.5 seconds
+          setInterval(updateNotification, 4500);
+        } catch (error) {
+          console.error("Error fetching notifications:", error);
+        }
+      }
+
+      // Function to update the notification text
+      function updateNotification() {
+        if (notifications.length > 0) {
+          const list = notificationContainer;
+          list.innerHTML = `<li>${notifications[currentIndex].notification}</li>`;
+          currentIndex = (currentIndex + 1) % notifications.length;
+        }
+      }
+
+      // Call the fetchAndUpdateNotifications function initially
+      fetchAndUpdateNotifications();
+    </script>
+    <script>
+      // Function to fetch data from the API
+      function fetchDataFromApi() {
+        loadingAnimation.style.display = "block";
+        document.getElementById("event-container").style.display = "none";
+        fetch("https://app.conext.in/Events/Mccs_all_events")
+          .then((response) => response.json())
+          .then((data) => {
+            displayData(data);
+            loadingAnimation.style.display = "none";
+            document.getElementById("event-container").style.display = "block";
+          })
+          .catch((error) => {
+            loadingAnimation.style.display = "none";
+            console.error("Error fetching data:", error);
+          });
+      }
+      function formatDate(date) {
+        timestamp = date;
+        const parsedDate = new Date(timestamp);
+
+        const options = { day: "numeric", month: "short", year: "numeric" };
+        const formattedDate = parsedDate.toLocaleDateString("en-US", options);
+        return formattedDate;
+      }
+      // Function to dynamically display data in reverse order
+      function displayData(items) {
+        const portfolioContainer = document.getElementById("event-container");
+
+        // Create a row container for the items
+        const rowContainer = document.createElement("div");
+        rowContainer.className = "row";
+
+        items.forEach((item, index) => {
+          const inputString = formatDate(item.event_date);
+          const parts = inputString.split(",").map((part) => part.trim());
+
+          // Extract date and year from the parts array
+          const datePart = parts[0]; // "Sept 28"
+          const yearPart = parts[1]; // "2023"
+
+          // Split the datePart by spaces to separate the month and day
+          const dateParts = datePart.split(" ");
+          const month = dateParts[0]; // "Sept"
+          const day = dateParts[1]; // "28"
+
+          // Reformat the date as "28 Sep"
+          const formattedDate = `${day} ${month}`;
+          const portfolioItem = document.createElement("div");
+          portfolioItem.className = `col-lg-4 col-md-6`;
+          portfolioItem.innerHTML = `
+                    
+                   
+            <div class="single-events-card style-4">
+              <div class="events-image">
+               <img style="max-height:300px;width:100%;object-fit:cover;" src="${item.event_poster}" alt="Image"
+                />
+                <div class="date">
+                  <span>${formattedDate}</span>
+                  <p>${yearPart}</p>
+                </div>
+              </div>
+              <div class="events-content">
+                  <div class="admin"></div>
+                <h3>${item.event_name}</h3>
+                <p>
+                  ${item.event_short_descp}
+                </p>
+                <div class="admin">
+                   <p style="text-align: left">
+                    <i class="flaticon-student-with-graduation-cap"></i>
+                    <b>Cordinator:</b> ${item.event_cordinator}
+                  <br/>
+                    <i class="flaticon-tag"></i> <b>Department: </b> ${item.conducted_by}
+                  </p>
+                  
+                </div>
+              </div>
+            </div>
+                    `;
+          rowContainer.appendChild(portfolioItem);
+        });
+
+        // Append the row container to the portfolio container
+        portfolioContainer.appendChild(rowContainer);
+      }
+
+      // Call the function to fetch and display data when the DOM is loaded
+      document.addEventListener("DOMContentLoaded", fetchDataFromApi);
+    </script>
   </body>
 
   <!-- Mirrored from templates.hibootstrap.com/sanu/default/events.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Sep 2023 14:20:58 GMT -->
