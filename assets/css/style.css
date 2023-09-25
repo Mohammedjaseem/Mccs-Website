@@ -4742,3 +4742,11 @@ textarea{
     background-color: #163877;
     width: 0;
   }
+  @media only screen and (max-width: 992px) {
+    .pb-md-40 {
+            margin-bottom: 30px;
+        }
+}
+table tr th {
+    background-color: #111d5e;
+}

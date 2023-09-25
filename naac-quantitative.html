@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zxx">
+  <!-- Mirrored from templates.hibootstrap.com/sanu/default/campus-life.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Sep 2023 14:20:39 GMT -->
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -37,6 +38,94 @@
         margin: 0px;
         color: white;
         font-weight: 600;
+      }
+      #loading-animation {
+        display: flex;
+        text-align: center;
+        align-self: center;
+        align-items: center;
+        justify-content: center;
+      }
+      table {
+        width: 100%;
+        min-width: 600px;
+
+        overflow: hidden;
+      }
+      .doc_file i {
+        color: #545454;
+        font-size: 22px;
+      }
+      .doc_file i:hover {
+        color: #50a2fd;
+      }
+      th,
+      td {
+        border: 2px solid #e6e6e6;
+        border-color: #e6e6e6;
+        padding: 10px;
+        text-align: center;
+      }
+      th {
+        border-color: #e6e6e6;
+        color: #fff;
+        padding: 15px;
+        font-size: 18px;
+      }
+      th:nth-child(2) {
+        width: 50vw;
+        max-width: 50vw;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        vertical-align: middle;
+      }
+      th:nth-child(3) {
+        width: 15vw;
+        max-width: 12vw;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        vertical-align: middle;
+      }
+      table tr:nth-child(even) {
+        color: #949494;
+      }
+      td a {
+        color: #545454;
+      }
+      td a:hover {
+        color: #50a2fd;
+      }
+      @media screen and (max-width: 767px) {
+        th:nth-child(3) {
+          width: 45vw;
+          max-width: 45vw;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          vertical-align: middle;
+        }
+        th {
+          font-size: 14px;
+        }
+        td {
+          font-size: 12px;
+        }
+        .table-wrapper {
+          overflow: auto; /* Enable vertical scrolling when content overflows */
+        }
+        th:nth-child(2) {
+          width: 75vw;
+          max-width: 75vw;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+
+        #dynamic-table {
+          overflow: hidden; /* Hide overflowing content of the table */
+        }
       }
     </style>
   </head>
@@ -102,7 +191,7 @@
         </div>
       </div>
       <div class="desktop-nav">
-        <div class="container-fluid">
+        <div class="container">
           <nav class="navbar navbar-expand-md navbar-light">
             <a class="navbar-brand" href="index.html">
               <img
@@ -147,7 +236,7 @@
                       >
                     </li>
                     <li class="nav-item">
-                      <a href="campus-life.html" class="nav-link"
+                      <a href="campus-life.html" class="nav-link active"
                         >Campus Life</a
                       >
                     </li>
@@ -223,7 +312,7 @@
                       >
                     </li>
                     <li class="nav-item">
-                      <a href="404.html" class="nav-link active">404 Page</a>
+                      <a href="404.html" class="nav-link">404 Page</a>
                     </li>
                   </ul>
                 </li>
@@ -291,7 +380,7 @@
           </button>
           <div class="modal-body">
             <a href="index.html">
-              <img src="assets/images/logo.png" class="main-logo" alt="logo" />
+              <img src="assets/images/logo.png" alt="logo" class="main-logo" />
               <img
                 src="assets/images/white-logo.png"
                 class="white-logo"
@@ -318,10 +407,10 @@
                 <li>
                   <i class="ri-mail-line"></i
                   ><a
-                    href="https://templates.hibootstrap.com/cdn-cgi/l/email-protection#2149444d4d4e6152404f540f424e4c"
+                    href="https://templates.hibootstrap.com/cdn-cgi/l/email-protection#462e232a2a2906352728336825292b"
                     ><span
                       class="__cf_email__"
-                      data-cfemail="80e8e5ececefc0f3e1eef5aee3efed"
+                      data-cfemail="ec8489808083ac9f8d8299c28f8381"
                       >[email&#160;protected]</span
                     ></a
                   >
@@ -424,34 +513,30 @@
         </div>
       </div>
     </div>
-
-    <div class="page-banner-area bg-2">
-      <div class="container-fluid">
-        <div class="page-banner-content">
-          <h1>404 Error</h1>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li>404 Error</li>
-          </ul>
-        </div>
-      </div>
+    <div class="pt-100 section-title">
+      <h2>NAAC Quantitative</h2>
     </div>
 
-    <div class="error-area ptb-100">
+    <div class="campus-life-area pb-70">
       <div class="container">
-        <div class="top-content">
-          <ul>
-            <li>4</li>
-            <li>0</li>
-            <li>4</li>
-          </ul>
+        <div id="loading-animation" class="loading" style="display: none">
+          <i class="fas fa-spinner fa-spin"></i>&nbsp; Loading...
         </div>
-        <h2>Error 404 : Page Not Found</h2>
-        <p>
-          The page you are looking for might have been removed had its name
-          changed or is temporarily unavailable.
-        </p>
-        <a href="index.html" class="btn default-btn">Back To Homepage</a>
+        <div class="table-wrapper">
+          <table id="dynamic-table" style="display: none">
+            <thead>
+              <tr>
+                <th>CRITERIA</th>
+                <th>TITLE</th>
+                <th>LAST UPDATED</th>
+                <th>VIEW PDF</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Table body rows will be added here dynamically -->
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
 
@@ -472,10 +557,10 @@
                   <li><a href="tel:+01987655567685">+01-9876-5556-7685 </a></li>
                   <li>
                     <a
-                      href="https://templates.hibootstrap.com/cdn-cgi/l/email-protection#b6d7d2dbdfd8f6c5d7d8c398d3d2c3"
+                      href="https://templates.hibootstrap.com/cdn-cgi/l/email-protection#8beaefe6e2e5cbf8eae5fea5eeeffe"
                       ><span
                         class="__cf_email__"
-                        data-cfemail="7011141d191e3003111e055e151405"
+                        data-cfemail="e48580898d8aa497858a91ca818091"
                         >[email&#160;protected]</span
                       ></a
                     >
@@ -618,7 +703,6 @@
     <script src="assets/js/ajaxchimp.min.js"></script>
 
     <script src="assets/js/custom.js"></script>
-
     <script>
       // Define the API URL to fetch notification data
       const apiUrl =
@@ -661,5 +745,69 @@
       // Call the fetchAndUpdateNotifications function initially
       fetchAndUpdateNotifications();
     </script>
+    <script>
+      const apiUrlNaac =
+        "https://app.conext.in/Docs/Mccs/naac-files/ListQuantitative";
+
+      function formatDate(dateString) {
+        const date = new Date(dateString);
+        const options = { year: "numeric", month: "long", day: "numeric" };
+        return date.toLocaleDateString("en-US", options);
+      }
+
+      function populateTable(apiData) {
+        const tableBody = document.querySelector("#dynamic-table tbody");
+
+        apiData.forEach((item) => {
+          const formattedDate = formatDate(item.updated_on);
+          const row = `
+                <tr>
+                    <td class="sub_crt" style="color: #000;"><b>${item.criteria.sub_crt}</b></td>
+                    <td class="title"><a class="doc_file" target="_blank" href="${item.doc_file}"><b>${item.title}</b></a></td>
+                    <td class="updated_on" style="color: #000;font-weight:300">${formattedDate}</td>
+              <td class="view_pdf"><a class="doc_file" target="_blank" href="${item.doc_file}"><i class="flaticon-pdf-file"></i></a></td>
+                </tr>
+            `;
+          tableBody.insertAdjacentHTML("beforeend", row);
+        });
+      }
+      showLoadingAnimation();
+
+      function showLoadingAnimation() {
+        const loadingAnimation = document.getElementById("loading-animation");
+        loadingAnimation.style.display = "block";
+      }
+
+      // Hide loading animation and show the table when the API request is complete
+      function hideLoadingAnimation() {
+        const loadingAnimation = document.getElementById("loading-animation");
+        loadingAnimation.style.display = "none";
+        const tableAnimation = document.getElementById("dynamic-table");
+        tableAnimation.style.display = "block";
+      }
+
+      // Show message when there is no data in the API response
+      function showNoDataMessage() {
+        const noDataMessage = document.getElementById("no-data-message");
+        noDataMessage.style.display = "block";
+      }
+      fetch(apiUrlNaac)
+        .then((response) => response.json())
+        .then((data) => {
+          hideLoadingAnimation();
+          if (data && data.length > 0) {
+            populateTable(data);
+          } else {
+            showNoDataMessage();
+          }
+        })
+        .catch((error) => {
+          console.error("Error fetching data:", error);
+          hideLoadingAnimation();
+          showNoDataMessage();
+        });
+    </script>
   </body>
+
+  <!-- Mirrored from templates.hibootstrap.com/sanu/default/campus-life.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Sep 2023 14:20:42 GMT -->
 </html>
