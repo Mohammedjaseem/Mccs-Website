@@ -35,6 +35,9 @@ img{
 .pb-70{
     padding-bottom:70px
 }
+.pb-20{
+    padding-bottom:20px
+}
 .pt-70{
     padding-top:70px
 }
@@ -67,7 +70,7 @@ img{
     margin-top:5px
 }
 h1,h2,h3,h4,h5,h6{
-    color:#111d5e;
+    color:#192f59;
     font-family:"source serif pro",serif;
     font-weight:700
 }
@@ -163,13 +166,13 @@ textarea{
    max-height: 76px;
 }
 .navbar-area.nav-bg-2 .desktop-nav .navbar-nav .nav-item a{
-    color:#111d5e
+    color:#192f59
 }
 .navbar-area.nav-bg-2 .desktop-nav .others-options .icon{
-    color:#111d5e
+    color:#192f59
 }
 .nav-bg-1{
-    background-color:#111d5e
+    background-color:#192f59
 }
 .nav-bg-2{
     background-color:#fff
@@ -241,7 +244,7 @@ textarea{
     margin-left:0
 }
 .desktop-nav .navbar .navbar-nav .nav-item:hover a,.desktop-nav .navbar .navbar-nav .nav-item:focus a,.desktop-nav .navbar .navbar-nav .nav-item.active a{
-    color:#084F8C
+    color:#acacac
 }
 .desktop-nav .navbar .navbar-nav .nav-item .dropdown-menu{
     box-shadow:0 0 20px 3px rgba(0,0,0,.05);
@@ -533,7 +536,7 @@ textarea{
     margin-bottom:8px
 }
 .others-option-for-responsive .others-options ul li .call-now a{
-    color:#111d5e;
+    color:#192f59;
     font-weight:500
 }
 .others-option-for-responsive .others-options ul li .default-btn{
@@ -678,7 +681,7 @@ textarea{
     border-radius:50%
 }
 .modal.right .modal-content button.close i:hover{
-    background-color:#111d5e
+    background-color:#192f59
 }
 .modal.right.fade .modal-dialog{
     right:-320px;
@@ -770,7 +773,7 @@ textarea{
 }
 .sidebarModal.modal .modal-body .sidebar-social-list li i:hover{
     transform:translateY(-5px);
-    background-color:#111d5e;
+    background-color:#192f59;
     color:#fff
 }
 .sidebarModal.modal .modal-body .contact-form{
@@ -816,7 +819,7 @@ textarea{
 .default-btn::before{
     position:absolute;
     content:"";
-    background-color:#111d5e;
+    background-color:#192f59;
     height:100%;
     width:100%;
     border-radius:30px;
@@ -836,7 +839,7 @@ textarea{
     box-shadow:none
 }
 .read-more-btn{
-    color:#111d5e;
+    color:#192f59;
     font-weight:500;
     font-size:15px;
     transition:all ease .5s;
@@ -867,7 +870,7 @@ textarea{
     position:relative
 }
 
-.section-title.style2{
+.section-title2{
     text-align:left;
     margin-left:0;
     margin-right:auto
@@ -896,7 +899,7 @@ textarea{
     color:#fff
 }
 .banner-area{
-    background-color:#111d5e;
+    background-color:#192f59;
     overflow:hidden
 }
 .banner-area .container-fluid{
@@ -959,7 +962,7 @@ textarea{
     padding:50px
 }
 .slider-content.style2 h1{
-    color:#111d5e
+    color:#192f59
 }
 .slider-content.style2 p{
     color:#555
@@ -1569,12 +1572,12 @@ textarea{
     margin-bottom:5px
 }
 .single-education-card .edication-content .read-more-btn:hover{
-    color:#111d5e
+    color:#192f59
 }
 .single-education-card::before{
     position:absolute;
     content:"";
-    background:#111d5e;
+    background:#192f59;
     height:100%;
     width:100%;
     top:0;
@@ -1648,7 +1651,7 @@ textarea{
     top:4px
 }
 .counter-card h1 .target.heading-color{
-    color:#111d5e;
+    color:#192f59;
     font-size:60px;
     margin-left:-4px
 }
@@ -1891,7 +1894,7 @@ textarea{
     border:1px solid #eee;
     display:inline-block;
     transition:all ease .5s;
-    color:#111d5e;
+    color:#192f59;
     font-size:18px;
     box-shadow:0 0 20px 3px rgba(0,0,0,.05)
 }
@@ -1942,7 +1945,7 @@ textarea{
     color:#084F8C
 }
 .courses-details .courses-card .list ul li span{
-    color:#111d5e;
+    color:#192f59;
     font-weight:500
 }
 .courses-details .courses-card .list ul li i{
@@ -1963,7 +1966,7 @@ textarea{
     border:none
 }
 .description .nav-tabs .nav-link{
-    color:#111d5e;
+    color:#192f59;
     padding-bottom:10px;
     padding:15px 30px;
     font-weight:600;
@@ -2098,7 +2101,7 @@ textarea{
     transition:all ease .5s
 }
 .instructor .instructor-content .social ul li a:hover{
-    background-color:#111d5e;
+    background-color:#192f59;
     color:#fff
 }
 .review-form h3{
@@ -2307,7 +2310,7 @@ textarea{
 .enroll-courses .list ul li span{
     position:absolute;
     left:0;
-    color:#111d5e;
+    color:#192f59;
     font-weight:600
 }
 .enroll-courses .list ul li:last-child{
@@ -2732,7 +2735,7 @@ textarea{
     margin-bottom:17px
 }
 .single-program-card .program-content h3 a{
-    color:#111d5e;
+    color:#192f59;
     transition:all ease .5s
 }
 .single-program-card .program-content h3 a:hover{
@@ -3805,7 +3808,7 @@ textarea{
 .tags-and-share .tags ul li span{
     font-size:18px;
     font-weight:500;
-    color:#111d5e;
+    color:#192f59;
     margin-right:5px
 }
 .tags-and-share .tags ul li a{
@@ -3837,7 +3840,7 @@ textarea{
 .tags-and-share .share ul li span{
     font-size:18px;
     font-weight:500;
-    color:#111d5e;
+    color:#192f59;
     margin-right:15px
 }
 .tags-and-share .share ul li a{
@@ -3856,7 +3859,8 @@ textarea{
     color:#fff
 }
 .footer-area{
-    background-color:#111d5e;
+    background-color:#181818;
+    border-color:#363636 ;
     position:relative;
     z-index:1
 }
@@ -3922,7 +3926,7 @@ textarea{
     color:#084F8C
 }
 .copyright-area{
-    background-color:#1f2c75
+    background-color:#202020
 }
 .copyright{
     padding:30px 0
@@ -3933,8 +3937,8 @@ textarea{
 .copyright .copy p{
     color:#cacaca
 }
-.copyright .copy p a{
-    color:#084F8C
+.copyright .copy p a {
+    color: #50A2FD
 }
 .copyright .social-content ul{
     padding-left:0;
@@ -4018,6 +4022,7 @@ textarea{
     color:#50A2FD;
     padding-right:0
 }
+
 .page-banner-content ul li:last-child::before{
     display:none
 }
@@ -4299,7 +4304,7 @@ textarea{
 }
 .go-top:hover{
     color:#fff;
-    background:#111d5e
+    background:#192f59
 }
 .go-top:hover::before{
     opacity:1;
@@ -4360,7 +4365,7 @@ textarea{
 .accordion .accordion-item .accordion-button{
     border:none;
     background-color:transparent;
-    color:#111d5e;
+    color:#192f59;
     font-size:18px;
     font-weight:700;
     position:relative;
@@ -4377,7 +4382,7 @@ textarea{
     background-image:unset;
     content:"";
     font-size:20px;
-    color:#111d5e;
+    color:#192f59;
     text-align:center;
     content:"\ea13";
     font-family:remixicon!important;
@@ -4515,7 +4520,7 @@ textarea{
 }
 .privacy-content .list ul li{
     font-weight:600;
-    color:#111d5e;
+    color:#192f59;
     position:relative;
     padding-left:20px;
     list-style-type:none;
@@ -4547,7 +4552,7 @@ textarea{
 }
 .condition-content .list ul li{
     font-weight:600;
-    color:#111d5e;
+    color:#192f59;
     position:relative;
     padding-left:20px;
     list-style-type:none;
@@ -4578,7 +4583,7 @@ textarea{
     font-family:"source serif pro",serif
 }
 .error-area .top-content ul li:first-child{
-    color:#111d5e
+    color:#192f59
 }
 .error-area .top-content ul li:last-child{
     color:#555
@@ -4748,5 +4753,55 @@ textarea{
         }
 }
 table tr th {
-    background-color: #111d5e;
+    background-color: #084F8C;
 }
+.footer-logo-area img{
+    max-width: 70%;
+}
+ th,
+ td {
+     border: 2px solid #e6e6e6;
+     border-color: #e6e6e6;
+     padding: 10px;
+     text-align: center;
+ }
+ td{
+    color: #949494;
+ }
+
+ th {
+     border-color: #e6e6e6;
+     color: #fff;
+     padding: 15px;
+     font-size: 18px;
+ }
+ table {
+     width: 100%;
+     min-width: 600px;
+
+     overflow: hidden;
+ }
+
+ th:nth-child(2) {
+     width: 60vw;
+     white-space: nowrap;
+     overflow: hidden;
+     text-overflow: ellipsis;
+     vertical-align: middle;
+ }
+
+
+ table tr:nth-child(even) {
+     background-color: #f9f9f9;
+ }
+ table tr:nth-child(odd) {
+     background-color: #f3f3f3;
+ }
+
+ td a {
+     color: #545454;
+ }
+
+ td a:hover {
+     color: #50a2fd;
+ }
