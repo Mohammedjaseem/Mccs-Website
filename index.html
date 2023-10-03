@@ -34,7 +34,6 @@
         animation: spin 2s linear infinite;
         margin: 20px auto;
       }
-
       @keyframes spin {
         0% {
           transform: rotate(0deg);
@@ -67,7 +66,6 @@
       }
       .modal-content {
         position: relative;
-        display: -ms-flexbox;
         display: flex;
         -ms-flex-direction: column;
         flex-direction: column;
@@ -94,7 +92,6 @@
         background: #fff;
         cursor: pointer;
       }
-
       .overlay {
         position: absolute;
         top: 0;
@@ -121,6 +118,9 @@
         text-align: center;
         margin: 0;
       }
+      .single-courses-card .courses-content .admin-profile {
+        padding-left: 0px;
+      }
     </style>
   </head>
   <body>
@@ -133,7 +133,6 @@
         </div>
       </div>
     </div>
-
     <div class="top-header-area d-none d-lg-block">
       <div class="container-fluid">
         <div class="row align-items-center">
@@ -162,7 +161,6 @@
         </div>
       </div>
     </div>
-
     <div class="navbar-area nav-bg-2">
       <div class="mobile-responsive-nav">
         <div class="container">
@@ -204,107 +202,49 @@
                   <a href="#" class="nav-link active"> Home </a>
                 </li>
                 <li class="nav-item">
-                  <a href="#" class="nav-link dropdown-toggle"> Academics </a>
+                  <a class="nav-link dropdown-toggle"> Academics </a>
                   <ul class="dropdown-menu">
                     <li class="nav-item">
-                      <a href="graduate-admission.html" class="nav-link"
-                        >Graduate Admission</a
-                      >
+                      <a href="facilities.html" class="nav-link">Faciliites</a>
                     </li>
                     <li class="nav-item">
                       <a href="library.html" class="nav-link">Library</a>
                     </li>
                     <li class="nav-item">
-                      <a href="alumni.html" class="nav-link">Alumni</a>
-                    </li>
-                    <li class="nav-item">
-                      <a href="#" class="nav-link dropdown-toggle">
-                        Academics
-                      </a>
-                      <ul class="dropdown-menu">
-                        <li class="nav-item">
-                          <a href="academics.html" class="nav-link"
-                            >Academics</a
-                          >
-                        </li>
-                        <li class="nav-item">
-                          <a href="academics-details.html" class="nav-link"
-                            >Academics Details</a
-                          >
-                        </li>
-                      </ul>
-                    </li>
-                    <li class="nav-item">
-                      <a href="#" class="nav-link dropdown-toggle">
-                        Latest News
-                      </a>
-                      <ul class="dropdown-menu">
-                        <li class="nav-item">
-                          <a href="latest-news.html" class="nav-link"
-                            >Our Latest News</a
-                          >
-                        </li>
-                        <li class="nav-item">
-                          <a href="news-details.html" class="nav-link"
-                            >News Details</a
-                          >
-                        </li>
-                      </ul>
-                    </li>
-                    <li class="nav-item">
-                      <a href="faq.html" class="nav-link">FAQ</a>
-                    </li>
-                    <li class="nav-item">
-                      <a href="#" class="nav-link dropdown-toggle"> Users </a>
-                      <ul class="dropdown-menu">
-                        <li class="nav-item">
-                          <a href="login.html" class="nav-link">Login</a>
-                        </li>
-                        <li class="nav-item">
-                          <a href="register.html" class="nav-link">Register</a>
-                        </li>
-                        <li class="nav-item">
-                          <a href="recover-password.html" class="nav-link"
-                            >Recover Password</a
-                          >
-                        </li>
-                      </ul>
-                    </li>
-                    <li class="nav-item">
-                      <a href="privacy-policy.html" class="nav-link"
-                        >Privacy Policy</a
+                      <a href="achievements.html" class="nav-link"
+                        >Achievements</a
                       >
                     </li>
                     <li class="nav-item">
-                      <a href="terms-conditions.html" class="nav-link"
-                        >Terms And Conditions</a
-                      >
-                    </li>
-                    <li class="nav-item">
-                      <a href="coming-soon.html" class="nav-link"
-                        >Coming Soon</a
-                      >
-                    </li>
-                    <li class="nav-item">
-                      <a href="404.html" class="nav-link">404 Page</a>
+                      <a href="women-cell.html" class="nav-link">Women Cell</a>
                     </li>
                   </ul>
                 </li>
                 <li class="nav-item">
-                  <a href="#" class="nav-link dropdown-toggle"> Courses </a>
+                  <a class="nav-link dropdown-toggle"> Department</a>
                   <ul class="dropdown-menu">
                     <li class="nav-item">
-                      <a href="courses.html" class="nav-link">Courses</a>
+                      <a href="biochemistry.html" class="nav-link"
+                        >Biochemistry</a
+                      >
                     </li>
                     <li class="nav-item">
-                      <a href="biochemistry.html" class="nav-link"
-                        >Courses Details</a
+                      <a href="computer-science.html" class="nav-link"
+                        >Computer Science</a
                       >
+                    </li>
+                    <li class="nav-item">
+                      <a href="microbiology.html" class="nav-link"
+                        >Microbiology</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a href="psychology.html" class="nav-link">Psychology</a>
                     </li>
                   </ul>
                 </li>
                 <li class="nav-item">
-                  <a href="#" class="nav-link dropdown-toggle"> NAAC</a>
+                  <a class="nav-link dropdown-toggle"> NAAC</a>
                   <ul class="dropdown-menu">
                     <li class="nav-item">
                       <a href="naac-qualitative.html" class="nav-link"
@@ -319,15 +259,19 @@
                   </ul>
                 </li>
                 <li class="nav-item">
-                  <a href="#" class="nav-link dropdown-toggle"> Events </a>
+                  <a class="nav-link dropdown-toggle"> Activities </a>
                   <ul class="dropdown-menu">
+                    <li class="nav-item">
+                      <a href="gallery.html" class="nav-link">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="news-page.html" class="nav-link">MCCS News</a>
+                    </li>
                     <li class="nav-item">
                       <a href="events.html" class="nav-link">Events</a>
                     </li>
                     <li class="nav-item">
-                      <a href="events-details.html" class="nav-link"
-                        >Events Details</a
-                      >
+                      <a href="clubs.html" class="nav-link">Clubs</a>
                     </li>
                   </ul>
                 </li>
@@ -488,7 +432,6 @@
         </div>
       </div>
     </div>
-
     <div class="banner-area">
       <div class>
         <div class="slider-item banner-bg-7">
@@ -500,14 +443,13 @@
                 skills at MCCS. You will get more than learning.
               </p>
               <a href="courses.html" class="default-btn btn"
-                >Start a Journey <i class="flaticon-next"></i
+                >Request an enquiry <i class="flaticon-next"></i
               ></a>
             </div>
           </div>
         </div>
       </div>
     </div>
-
     <div class="eduction-area pb-70">
       <div class="container-fluid p-0">
         <div class="row g-0">
@@ -594,16 +536,12 @@
         </div>
       </div>
     </div>
-
     <div class="campus-information-area">
       <div class="container">
         <div class="row align-items-center">
           <div class="col-lg-6">
             <div class="campus-image">
-              <img
-                src="assets/images/campus-information/campus-2.jpg"
-                alt="Image"
-              />
+              <img src="assets/images/banner/mccs1.png" alt="Image" />
             </div>
           </div>
           <div class="col-lg-6">
@@ -701,7 +639,7 @@
                   <div class="col-lg-4 col-4">
                     <div class="counter-card">
                       <h1>
-                        <span class="odometer" data-count="1000">00</span>
+                        <span class="odometer" data-count="3195">00</span>
                         <span class="target">+</span>
                       </h1>
                       <p>Books</p>
@@ -710,15 +648,14 @@
                 </div>
               </div>
               <a href="contact-us.html" class="default-btn btn"
-                >Start your application<i class="flaticon-next"></i
+                >Apply Now<i class="flaticon-next"></i
               ></a>
             </div>
           </div>
         </div>
       </div>
     </div>
-
-    <div class="campus-life-area ptb-100">
+    <div class="campus-life-area ptb-100" id="gallery-container">
       <div class="container">
         <div class="section-title">
           <h2>MCCS Gallery</h2>
@@ -732,26 +669,24 @@
         ></div>
       </div>
     </div>
-
     <div class="admisssion-area ptb-100 admission-bg">
       <div class="container">
         <div class="row align-items-center">
           <div class="col-lg-6 col-md-6">
             <div class="admission-left-content">
-              <h2>You're Learning Free Started Today!</h2>
+              <h2>Secure your future with us</h2>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipiscing elit ut elit
-                tellus luctus nec ullamcorper mattis
+                Choose a course from our various options and secure your career
+                with the quality of eduction we provide.
               </p>
               <a href="admission.html" class="default-btn btn"
-                >More on admission<i class="flaticon-next"></i
+                >Appy Now<i class="flaticon-next"></i
               ></a>
             </div>
           </div>
         </div>
       </div>
     </div>
-
     <!-- <div class="health-care-area pt-100 pb-70 bg-f4f6f9">
       <div class="container">
         <div class="section-title">
@@ -842,72 +777,24 @@
         <div class="courses-slider style-2 owl-carousel owl-theme">
           <div class="single-courses-card style3">
             <div class="courses-content">
-              <a><h3>Biochemistry</h3></a>
-              <p>
-                What our students talk about us. Hear from our students. What
-                our students talk about us. Hear from our students. What our
-                students talk about us. Hear from our students. What our
-                students talk about us. Hear from our students.
-              </p>
-              <div class="admin-profile" style="margin-top: 20px">
-                <img src="assets/images/courses/admin-1.jpg" alt="Image" />
-                <p><a>Jessica Hamson</a></p>
-              </div>
-              <div class="bottom-content">
-                <ul class="d-flex justify-content-between">
-                  <li>
-                    <ul>
-                      <li><i class="ri-star-fill"></i></li>
-                      <li><i class="ri-star-fill"></i></li>
-                      <li><i class="ri-star-fill"></i></li>
-                      <li class="blank"><i class="ri-star-line"></i></li>
-                      <li class="blank"><i class="ri-star-line"></i></li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="single-courses-card style3">
-            <div class="courses-content">
-              <a><h3>Psychology</h3></a>
-              <p>
-                What our students talk about us. Hear from our students. What
-                our students talk about us. Hear from our students. What our
-                students talk about us. Hear from our students. What our
-                students talk about us. Hear from our students.
-              </p>
-              <div class="admin-profile" style="margin-top: 20px">
-                <img src="assets/images/courses/admin-2.jpg" alt="Image" />
-                <p><a>Christoph Baldwin</a></p>
-              </div>
-              <div class="bottom-content">
-                <ul class="d-flex justify-content-between">
-                  <li>
-                    <ul>
-                      <li><i class="ri-star-fill"></i></li>
-                      <li><i class="ri-star-fill"></i></li>
-                      <li><i class="ri-star-fill"></i></li>
-                      <li class="blank"><i class="ri-star-line"></i></li>
-                      <li class="blank"><i class="ri-star-line"></i></li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="single-courses-card style3">
-            <div class="courses-content">
               <a><h3>Computer Application</h3></a>
               <p>
-                What our students talk about us. Hear from our students. What
-                our students talk about us. Hear from our students. What our
-                students talk about us. Hear from our students. What our
-                students talk about us. Hear from our students.
+                Hello, I'm Ameer Suhaib, and my three-year journey at Malabar
+                College of Commerce and Science (2020-23) has been truly
+                transformative that I have experienced significant personal and
+                professional growth, guided by the inspiring leadership of
+                Principal Prasad Sir, who has created a positive and supportive
+                learning environment for all students. Beyond the classroom,
+                engaging in college union activities brought unforgettable
+                moments and valuable life lessons. These experiences have helped
+                me to develop my leadership and teamwork skills, and they have
+                also given me the opportunity to meet new people and make new
+                friends.I am truly grateful for my time at the College. It has
+                been an unforgettable experience that I will cherish for a
+                lifetime.
               </p>
               <div class="admin-profile" style="margin-top: 20px">
-                <img src="assets/images/courses/admin-3.jpg" alt="Image" />
-                <p><a>Morgen Matthias</a></p>
+                <p><a>Ameer Suhaib C</a></p>
               </div>
               <div class="bottom-content">
                 <ul class="d-flex justify-content-between">
@@ -928,13 +815,16 @@
             <div class="courses-content">
               <a><h3>Food Technology</h3></a>
               <p>
-                What our students talk about us. Hear from our students. What
-                our students talk about us. Hear from our students. What our
-                students talk about us. Hear from our students. What our
-                students talk about us. Hear from our students.
+                I am a second year BSc. Food Technology student. In my 2 years
+                at this college I had learnt many things and have greatly
+                improved my knowledge. Our college MCCS is well equipped with
+                good infrastructure, classroom, administrative staffs,
+                laboratories etc and the atmosphere is very healthy and
+                pleasent.Teachers are also well educated and friendly. Lab
+                facilities are also satisfying and our clg has a splendid
+                library which provides all kinds of books.
               </p>
               <div class="admin-profile" style="margin-top: 20px">
-                <img src="assets/images/courses/admin-1.jpg" alt="Image" />
                 <p><a>Jessica Hamson</a></p>
               </div>
               <div class="bottom-content">
@@ -954,16 +844,83 @@
           </div>
           <div class="single-courses-card style3">
             <div class="courses-content">
-              <a><h3>Chemistry</h3></a>
+              <a><h3>Microbiology</h3></a>
               <p>
-                What our students talk about us. Hear from our students. What
-                our students talk about us. Hear from our students. What our
-                students talk about us. Hear from our students. What our
-                students talk about us. Hear from our students.
+                I am Thabsheera pass out of 2020-23 batch from Malabar college
+                of commerce and science, Manoor. It has been a great journey of
+                my academic excellence with the support of my teachers and
+                friends. It gives me pleasure to say with pride that i have
+                competed my bachelor degree in microbiology from Malabar
+                college. It's not just about academics, also build good
+                memories, friendships and preparing for the future. I had the
+                support of all my teachers and friends. Thanks for the support
+                and guidance & Thank you Malabar college.
               </p>
               <div class="admin-profile" style="margin-top: 20px">
-                <img src="assets/images/courses/admin-2.jpg" alt="Image" />
+                <p><a>Thabsheera AA</a></p>
+              </div>
+              <div class="bottom-content">
+                <ul class="d-flex justify-content-between">
+                  <li>
+                    <ul>
+                      <li><i class="ri-star-fill"></i></li>
+                      <li><i class="ri-star-fill"></i></li>
+                      <li><i class="ri-star-fill"></i></li>
+                      <li class="blank"><i class="ri-star-line"></i></li>
+                      <li class="blank"><i class="ri-star-line"></i></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="single-courses-card style3">
+            <div class="courses-content">
+              <a><h3>Biochemistry</h3></a>
+              <p>
+                Malabar college of commerce and science at Manoor are one of the
+                best colleges under Calicut University. Classrooms were well
+                maintained. The college library is providing all subject books .
+                The facilities are good and helpful to the students and they
+                have well qualified teachers in the college campus. As I am a
+                graduate in BSc Biochemistry from this reputed college, I had a
+                great experience through out my journey . Lab facilities in the
+                college is also very satisfying.
+              </p>
+              <div class="admin-profile" style="margin-top: 20px">
                 <p><a>Christoph Baldwin</a></p>
+              </div>
+              <div class="bottom-content">
+                <ul class="d-flex justify-content-between">
+                  <li>
+                    <ul>
+                      <li><i class="ri-star-fill"></i></li>
+                      <li><i class="ri-star-fill"></i></li>
+                      <li><i class="ri-star-fill"></i></li>
+                      <li class="blank"><i class="ri-star-line"></i></li>
+                      <li class="blank"><i class="ri-star-line"></i></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="single-courses-card style3">
+            <div class="courses-content">
+              <a><h3>English</h3></a>
+              <p>
+                Here my experience has given me a chance to sharpen my skills in
+                my field of choice. Iam thankful to our teachers for making
+                learning my passion, to enhance my skills more, taught me
+                valuable knowledge about this diverse world and people and
+                concepts in general and eventfully will enable me to hopefully
+                become more successful in life. The facilities in MCCS is very
+                satisfying. And well esatblished library helps to attain good
+                knowledge. The lab is also good.Not only for learning but the
+                campus vibe of MCCS is also lovely.
+              </p>
+              <div class="admin-profile" style="margin-top: 20px">
+                <p><a>Nahida</a></p>
               </div>
               <div class="bottom-content">
                 <ul class="d-flex justify-content-between">
@@ -983,10 +940,8 @@
         </div>
       </div>
     </div>
-
-    <div class="students-stories-area pt-100 pb-70">
-      <div id="AchiAnimation" class="loading-animation"></div>
-      <div class="container" id="achi-container" style="display: none">
+    <div class="students-stories-area pt-100 pb-70" id="achi-container">
+      <div class="container">
         <div class="section-title">
           <h2>Our Achievements</h2>
         </div>
@@ -1059,8 +1014,8 @@
           </div>
         </div>
       </div>
+      <div id="AchiAnimation" class="loading-animation"></div>
     </div>
-
     <!-- <div class="events-area pt-100 pb-70">
       <div class="container">
         <div class="section-title">
@@ -1186,8 +1141,7 @@
         </div>
       </div>
     </div> -->
-
-    <div class="podcasts-area pt-100 pb-20 bg-f4f6f9">
+    <div class="podcasts-area pb-20 bg-f4f6f9">
       <div class="container">
         <div class="row">
           <div class="col-lg-8">
@@ -1261,8 +1215,7 @@
         </div>
       </div>
     </div>
-
-    <div class="lates-news-area pt-100 pb-70 bg-f4f6f9">
+    <div class="lates-news-area pb-70 bg-f4f6f9">
       <div class="container">
         <div class="section-title">
           <h2>Latest News</h2>
@@ -1387,30 +1340,71 @@
         </div>
       </div>
     </div>
-
-    <div class="footer-area pt-100 pb-70">
+    <div class="footer-area pt-70">
       <div class="container">
         <div class="row">
-          <div class="col-lg-4 col-sm-6">
+          <div class="col-lg-5 col-sm-6">
             <div class="footer-logo-area">
               <a href="index.html"
                 ><img src="assets/images/white-logo.png" alt="Image"
               /></a>
               <p>
-                Sanu University was established by J.H Merthon in 1810 for the
-                public benefit. Afterwards, it is recognized globally
+                Manoor - Chekanoor Road, <br />
+                Manoor, Edappal, Malappuram, <br />
+                Kerala 679578
               </p>
               <div class="contact-list">
                 <ul>
-                  <li><a href="tel:+01987655567685">+01-9876-5556-7685 </a></li>
                   <li>
-                    <a
-                      href="https://templates.hibootstrap.com/cdn-cgi/l/email-protection#ec8d88818582ac9f8d8299c2898899"
+                    <a href="tel:+917034999995">Phone: +91 7034 999 995</a>
+                  </li>
+                  <li>
+                    <a href="mailto:info@macity.edu.in" target="_blank"
                       ><span
                         class="__cf_email__"
-                        data-cfemail="3352575e5a5d7340525d461d565746"
-                        >[email&#160;protected]</span
+                        data-cfemail="afcecbc2c6c1efdccec1da81cacbda"
+                        >Mail: info@macity.edu.in</span
                       ></a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-2 col-sm-6">
+            <div class="footer-widjet new-widget">
+              <h3>Quick Links</h3>
+              <div class="list">
+                <ul>
+                  <li><a href="about.html">About Us</a></li>
+                  <li><a href="gallery.html">Gallery</a></li>
+                  <li><a href="facilities.html">Facilities</a></li>
+                  <li><a href="library.html">Library</a></li>
+                  <li><a href="events.html">Events</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-2 col-sm-6">
+            <div class="footer-widjet">
+              <h3>Social Media</h3>
+              <div class="list">
+                <ul>
+                  <li>
+                    <a href="www.facebook.com" target="_blank">Facebook</a>
+                  </li>
+                  <li>
+                    <a href="www.instagram.com" target="_blank">Instagram</a>
+                  </li>
+                  <li>
+                    <a href="www.linkedin.in" target="_blank">LinkedIn</a>
+                  </li>
+                  <li><a href="www.youtube.com" target="_blank">Youtube</a></li>
+                  <li>
+                    <a
+                      href="https://maps.app.goo.gl/4FQMpHruJVVh5eeT7"
+                      target="_blank"
+                      >Google</a
                     >
                   </li>
                 </ul>
@@ -1419,52 +1413,16 @@
           </div>
           <div class="col-lg-3 col-sm-6">
             <div class="footer-widjet">
-              <h3>Campus Life</h3>
+              <h3>Location</h3>
               <div class="list">
-                <ul>
-                  <li><a href="campus-life.html">Accessibility</a></li>
-                  <li><a href="campus-life.html">Financial Aid</a></li>
-                  <li><a href="campus-life.html">Food Services</a></li>
-                  <li><a href="campus-life.html">Housing</a></li>
-                  <li>
-                    <a href="campus-life.html">Information Technologies</a>
-                  </li>
-                  <li><a href="campus-life.html">Student Life</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-sm-6">
-            <div class="footer-widjet">
-              <h3>Our Campus</h3>
-              <div class="list">
-                <ul>
-                  <li><a href="campus-life.html">Acedemic</a></li>
-                  <li>
-                    <a href="campus-life.html">Planning & AdminiStartion</a>
-                  </li>
-                  <li><a href="campus-life.html">Campus Safety</a></li>
-                  <li>
-                    <a href="campus-life.html">Office of the Chancellor</a>
-                  </li>
-                  <li><a href="campus-life.html">Facility Services</a></li>
-                  <li><a href="campus-life.html">Human Resources</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-2 col-sm-6">
-            <div class="footer-widjet">
-              <h3>Academics</h3>
-              <div class="list">
-                <ul>
-                  <li><a href="academics.html">Canvas</a></li>
-                  <li><a href="academics.html">Catalyst</a></li>
-                  <li><a href="academics.html">Library</a></li>
-                  <li><a href="academics.html">Time Schedule</a></li>
-                  <li><a href="academics.html">Apply For Admissions</a></li>
-                  <li><a href="academics.html">Pay My Tuition</a></li>
-                </ul>
+                <iframe
+                  width="100%"
+                  height="300"
+                  style="border: 0"
+                  loading="lazy"
+                  allowfullscreen
+                  src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJPc1YxbC5pzsRqtCafmf8d68&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
+                ></iframe>
               </div>
             </div>
           </div>
@@ -1474,7 +1432,6 @@
         </div>
       </div>
     </div>
-
     <div class="copyright-area">
       <div class="container">
         <div class="copyright">
@@ -1517,7 +1474,6 @@
         </div>
       </div>
     </div>
-
     <div class="go-top">
       <i class="ri-arrow-up-s-line"></i>
       <i class="ri-arrow-up-s-line"></i>
@@ -1542,7 +1498,6 @@
         </div>
       </div>
     </div>
-
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/jquery.meanmenu.js"></script>
@@ -1556,7 +1511,6 @@
     <script src="assets/js/contact-form-script.js"></script>
     <script src="assets/js/ajaxchimp.min.js"></script>
     <script src="assets/js/custom.js"></script>
-
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         fetch(
@@ -1592,11 +1546,9 @@
       const notificationContainer = document.getElementById(
         "notification-container"
       );
-
       // Store the notification data and current index
       let notifications = [];
       let currentIndex = 0;
-
       // Function to fetch and update notification data
       async function fetchAndUpdateNotifications() {
         try {
@@ -1612,7 +1564,6 @@
           console.error("Error fetching notifications:", error);
         }
       }
-
       // Function to update the notification text
       function updateNotification() {
         if (notifications.length > 0) {
@@ -1621,7 +1572,6 @@
           currentIndex = (currentIndex + 1) % notifications.length;
         }
       }
-
       // Call the fetchAndUpdateNotifications function initially
       fetchAndUpdateNotifications();
     </script>
@@ -1637,6 +1587,11 @@
             loadingAnimation.style.display = "none";
             document.getElementById("portfolio-container").style.display =
               "block";
+
+            if (data.length === 0) {
+              document.getElementById("gallery-container").style.display =
+                "none";
+            }
           })
           .catch((error) => {
             loadingAnimation.style.display = "none";
@@ -1646,7 +1601,6 @@
       function formatDate(date) {
         timestamp = date;
         const parsedDate = new Date(timestamp);
-
         const options = { day: "numeric", month: "long", year: "numeric" };
         const formattedDate = parsedDate.toLocaleDateString("en-US", options);
         return formattedDate;
@@ -1656,7 +1610,6 @@
         const portfolioContainer = document.getElementById(
           "portfolio-container"
         );
-
         // Create a row container for the items
         const rowContainer = document.createElement("div");
         rowContainer.className = "row";
@@ -1664,10 +1617,8 @@
         items.forEach((item, index) => {
           const portfolioItem = document.createElement("div");
           portfolioItem.className = `col-lg-3 col-md-6`;
-          portfolioItem.innerHTML = `
-                    
+          portfolioItem.innerHTML = `       
                     <div class="single-campus-card">
-                     
                         <div class="img gallery-img"> <a class="gallery-img" href="gallery.html"
                             >
                             <img
@@ -1677,14 +1628,11 @@
                             />
                               <div class="overlay">
                               <h4 class="gal-head">Visit Gallery</h4>  
-                                
                             </div>
                            </a
                             >
                         </div>
-                       
                     </div>
-                    
                     `;
           rowContainer.appendChild(portfolioItem);
         });
@@ -1830,7 +1778,6 @@
           return [];
         }
       }
-
       // Function to update the src attributes of the first 6 img elements based on class names
       async function updateImageSources() {
         const data = await fetchGalleryData();
@@ -1852,7 +1799,9 @@
           }
         }
         document.getElementById("AchiAnimation").style.display = "none";
-        document.getElementById("achi-container").style.display = "block";
+        if (data.length === 0) {
+          document.getElementById("achi-container").style.display = "none";
+        }
       }
 
       // Call the function to update image sources when the page is loaded
