@@ -47,18 +47,28 @@
         justify-content: center;
       }
       table {
+        align-items: center;
+        align-self: center;
+        align-content: center;
         width: 100%;
         min-width: 600px;
         overflow: hidden;
       }
 
       th:nth-child(2) {
-        width: 50vw;
-        max-width: 50vw;
+        width: 55vw;
+        max-width: 55vw;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
         vertical-align: middle;
+      }
+      th,
+      td {
+        border: 2px solid #e6e6e6;
+        border-color: #e6e6e6;
+        padding: 10px;
+        text-align: center !important;
       }
       .doc_file i {
         color: #545454;
@@ -238,7 +248,7 @@
                   </ul>
                 </li>
                 <li class="nav-item">
-                  <a href="#" class="nav-link dropdown-toggle"> NAAC</a>
+                  <a href="#" class="nav-link dropdown-toggle active"> NAAC</a>
                   <ul class="dropdown-menu">
                     <li class="nav-item">
                       <a href="naac-qualitative.html" class="nav-link"
@@ -253,15 +263,19 @@
                   </ul>
                 </li>
                 <li class="nav-item">
-                  <a href="#" class="nav-link dropdown-toggle"> Events </a>
+                  <a href="#" class="nav-link dropdown-toggle"> Activities </a>
                   <ul class="dropdown-menu">
+                    <li class="nav-item">
+                      <a href="gallery.html" class="nav-link">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="news-page.html" class="nav-link">MCCS News</a>
+                    </li>
                     <li class="nav-item">
                       <a href="events.html" class="nav-link">Events</a>
                     </li>
                     <li class="nav-item">
-                      <a href="events-details.html" class="nav-link"
-                        >Events Details</a
-                      >
+                      <a href="clubs.html" class="nav-link">Clubs</a>
                     </li>
                   </ul>
                 </li>
@@ -688,7 +702,7 @@
         const loadingAnimation = document.getElementById("loading-animation");
         loadingAnimation.style.display = "none";
         const tableAnimation = document.getElementById("dynamic-table");
-        tableAnimation.style.display = "block";
+        tableAnimation.style.display = "inline-table";
       }
 
       // Show message when there is no data in the API response
