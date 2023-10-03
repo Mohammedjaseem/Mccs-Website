@@ -938,7 +938,7 @@ textarea{
     background-image:url(../images/banner/banner-img6.jpg)
 }
 .slider-item.banner-bg-7{
-    background-image:url(../images/banner/banner-img7.jpg)
+    background-image:url(../images/banner/mdc4.jpg)
 }
 .slider-item.banner-bg-8{
     background-image:url(../images/banner/banner-img8.jpg)
@@ -2110,9 +2110,6 @@ textarea{
 .review-form .form-group{
     margin-bottom:30px
 }
-.review-form .form-group label{
-    mn:7px
-}
 .single-reviews-card{
     position:relative;
     padding:30px;
@@ -2668,6 +2665,9 @@ textarea{
     left:0
 }
 .submit{
+    column-gap:  10px;
+    align-items: center;
+    justify-content: space-around;
     padding-bottom:35px;
     margin-bottom:30px;
     border-bottom:1px solid #eee
@@ -4751,6 +4751,7 @@ textarea{
             margin-bottom: 30px;
         }
 }
+
 table tr th {
     background-color: #084F8C;
 }
@@ -4762,7 +4763,6 @@ table tr th {
      border: 2px solid #e6e6e6;
      border-color: #e6e6e6;
      padding: 10px;
-     text-align: center;
  }
  td{
     color: #949494;
@@ -4781,13 +4781,7 @@ table tr th {
      overflow: hidden;
  }
 
- th:nth-child(2) {
-     width: 60vw;
-     white-space: nowrap;
-     overflow: hidden;
-     text-overflow: ellipsis;
-     vertical-align: middle;
- }
+
 
 
  table tr:nth-child(even) {
@@ -4803,4 +4797,14 @@ table tr th {
 
  td a:hover {
      color: #50a2fd;
- }
+ } 
+  @media (max-width: 992px) {
+.submit {
+    align-items: start !important;
+    justify-content: space-between !important;
+        margin-top: 25px !important;
+        margin-bottom: 10px;
+        padding-bottom: 0px;
+        border-bottom: 1px solid #eee
+    }
+}
