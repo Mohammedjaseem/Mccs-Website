@@ -3881,9 +3881,9 @@ textarea{
     right:0;
     z-index:-1
 }
+
 .footer-logo-area{
-    margin-bottom:30px
-}
+margin-bottom: 30px;}
 .footer-logo-area img{
     margin-bottom:20px
 }
@@ -3891,9 +3891,13 @@ textarea{
     margin-bottom:25px;
     color:#fff
 }
+
 .footer-logo-area .contact-list ul{
-    padding-left:0;
+    padding-left:0px;
     margin-bottom:0
+}
+.footer-logo-area .contact-list ul li a:hover{
+    color:#50A2FD;
 }
 .footer-logo-area .contact-list ul li{
     list-style-type:none;
@@ -4753,6 +4757,9 @@ textarea{
     background-color: #163877;
     width: 0;
   }
+  .footer-logo-area img {
+      width: 70%;
+  }
   @media only screen and (max-width: 992px) {
     .pb-md-40 {
             margin-bottom: 30px;
@@ -4814,4 +4821,23 @@ table tr th {
         padding-bottom: 0px;
         border-bottom: 1px solid #eee
     }
+        .footer-area .new-widget {
+            padding-top: 30px;
+        }
+}
+  @media (min-width: 992px) {
+.footer-logo-area p {
+        padding-left: 30px;
+        margin-left: 30px;
+
+    }
+           
+        .footer-logo-area .contact-list ul {
+            padding-left: 30px;
+            margin-bottom: 0
+        }
+                .footer-logo-area .contact-list {
+                    margin-left: 30px;
+        
+                }
 }
