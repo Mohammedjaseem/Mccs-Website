@@ -1,13 +1,8 @@
 @import "https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&amp;display=swap";
 @import "https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap";
-html{
-    width: 100%;
-}
-ol,
-ul {
-    padding-right: 2rem !important;
-}
+
 body{
+ 
     color:#555;
     font-family:poppins,sans-serif;
     font-size:15px;
@@ -127,6 +122,22 @@ textarea{
     font-size:14px
 }
 .header-right-content{
+    text-align:left
+}
+    .top-bar-button{
+        display: inline-block;
+        font-weight: bold;
+        padding-left: 23px;
+        padding-right: 23px;
+        margin-left: 25px;
+        background: #50A2FD;
+        color: #fff;
+        padding-top: 18px;
+        margin-top: -18px;
+        padding-bottom: 19px;
+        margin-bottom: -19px;
+    }
+.header-left-content{
     text-align:right
 }
 .header-right-content .list ul{
@@ -138,6 +149,10 @@ textarea{
     margin-right:25px
 }
 .header-right-content .list ul li a{
+    color:#d0d0d0;
+    font-size:14px
+}
+.header-right-content .list ul li a:hover{
     color:#fff;
     font-size:14px
 }
@@ -147,8 +162,6 @@ textarea{
 
 .navbar-area{
     position:relative;
-    padding-top:15px;
-    padding-bottom:15px
 }
 .navbar-area.is-sticky{
     top:0;
@@ -1701,7 +1714,7 @@ textarea{
 }
 .single-courses-card .courses-content .admin-profile{
     position:relative;
-    padding-left:80px;
+    /* padding-left:80px; */
     padding-bottom:35px;
     margin-bottom:20px
 }
@@ -1822,7 +1835,7 @@ textarea{
 .courses-slider.owl-theme .owl-nav [class*=owl-]{
     position:absolute;
     bottom:30px;
-    left:-80px;
+    left:-50px;
     top:50%;
     transform:translateY(-50%);
     background-color:#fff;
@@ -1840,7 +1853,7 @@ textarea{
     left:-1px
 }
 .courses-slider.owl-theme .owl-nav [class*=owl-].owl-next{
-    right:-80px;
+    right:-50px;
     left:auto
 }
 .courses-slider.owl-theme .owl-nav [class*=owl-].owl-next i{
@@ -3698,10 +3711,12 @@ textarea{
     margin-bottom:30px
 }
 .related-post-area h3{
+    margin-left: 10px;
     font-size:30px;
     margin-bottom:20px
 }
 .related-post-area .related-post-box{
+    margin-left: 10px;
     padding-bottom:15px;
     margin-bottom:15px;
     border-bottom:1px solid #d4d3d3
@@ -3942,7 +3957,8 @@ margin-bottom: 30px;}
     padding:30px 0
 }
 .copyright .copy{
-    text-align:right
+    text-align:left;
+    padding-left: 40px;
 }
 .copyright .copy p{
     color:#cacaca
@@ -4551,7 +4567,8 @@ margin-bottom: 30px;}
 .condition-content h4{
     font-size:24px;
     font-weight:700;
-    margin-bottom:15px
+    margin-bottom:15px;
+    padding-top:20px
 }
 .condition-content p{
     margin-bottom:25px
@@ -4813,6 +4830,9 @@ table tr th {
      color: #50a2fd;
  } 
   @media (max-width: 992px) {
+    .copyright .copy {
+            padding-left: 0px;
+        }
 .submit {
     align-items: start !important;
     justify-content: space-between !important;
