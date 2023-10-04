@@ -39,6 +39,24 @@
         color: white;
         font-weight: 600;
       }
+      .notification-list {
+        display: inline-block;
+        max-height: 20px;
+        overflow: hidden;
+        position: relative;
+        max-height: 20px;
+      }
+      ul.notification-list {
+        margin-bottom: 0px !important;
+      }
+      @keyframes marquee-up {
+        0% {
+          transform: translateY(0);
+        }
+        100% {
+          transform: translateY(-100%);
+        }
+      }
     </style>
   </head>
   <body>
