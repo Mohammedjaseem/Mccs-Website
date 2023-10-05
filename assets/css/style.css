@@ -3691,22 +3691,27 @@ textarea{
     margin-bottom:10px
 }
 .category-list ul li a{
+    font-weight: 700;
     color:#555;
     transition:all ease .5s
 }
-.category-list ul li i{
+.category-list ul li span{
+    font-weight: 300;
     position:absolute;
-    right:0;
-    font-size:22px
+    text-align: left;
+    left:7rem;
+}
+.category-list ul li span b{
+    font-weight: 500;
 }
 .category-list ul li:last-child{
-    margin-bottom:0
+    margin-bottom:0px
 }
 .category-list ul li:hover a{
     color:#084F8C
 }
 .related-post-area{
-    padding:0px 10px;
+    padding:0px 20px;
     background-color:#f4f6f9;
     margin-bottom:30px
 }
@@ -3722,10 +3727,18 @@ textarea{
     border-bottom:1px solid #d4d3d3
 }
 .related-post-area .related-post-box .related-post-content{
+    text-align: justify;
     position:relative;
     padding-left:105px;
     padding-top:10px;
     padding-bottom:10px
+}
+.related-post-area .related-post-box .related-post-content2{
+    text-align: justify;
+    position:relative;
+padding-left: 0px !important;
+    padding-top:10px;
+    padding-bottom:30px
 }
 .related-post-area .related-post-box .related-post-content h4{
     font-size:16px;
@@ -4166,7 +4179,11 @@ margin-bottom: 30px;}
 }
 .contacts-form h3{
     font-size:30px;
-    margin-bottom:20px
+    margin-bottom:0px
+}
+.contacts-form p{
+    font-size:19px;
+    margin-bottom:30px
 }
 .contacts-form .form-group{
     margin-bottom:25px
@@ -4860,4 +4877,9 @@ table tr th {
                     margin-left: 30px;
         
                 }
+}
+  @media (min-width: 992px) and (max-width: 1199px){
+.category-list ul li:last-child {
+        margin-bottom: 20px
+    }
 }
