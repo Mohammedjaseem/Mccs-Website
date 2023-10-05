@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="zxx">
-  <!-- Mirrored from templates.hibootstrap.com/sanu/default/campus-life.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Sep 2023 14:20:39 GMT -->
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -31,7 +30,7 @@
     <link rel="stylesheet" href="assets/css/responsive.css" />
     <link rel="icon" type="image/png" href="assets/images/favicon.png" />
 
-    <title>NAAC Qualitative | MCCS</title>
+    <title>News Details | MCCS</title>
     <style>
       #notification-container li {
         list-style-type: none;
@@ -57,89 +56,23 @@
           transform: translateY(-100%);
         }
       }
-      #loading-animation {
-        display: flex;
-        text-align: center;
-        align-self: center;
-        align-items: center;
-        justify-content: center;
-      }
-      table {
-        align-items: center;
-        align-self: center;
-        align-content: center;
-        width: 100%;
-        min-width: 600px;
-        overflow: hidden;
+        .loading-animation {
+        border: 4px solid #f3f3f3;
+        border-top: 4px solid #111d5e;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        animation: spin 2s linear infinite;
+        margin: 20px auto;
+        margin-top: 100px;
       }
 
-      th:nth-child(2) {
-        width: 55vw;
-        max-width: 55vw;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        vertical-align: middle;
-      }
-      th,
-      td {
-        border: 2px solid #e6e6e6;
-        border-color: #e6e6e6;
-        padding: 10px;
-        text-align: center !important;
-      }
-      .doc_file i {
-        color: #545454;
-        font-size: 22px;
-      }
-      .doc_file i:hover {
-        color: #50a2fd;
-      }
-      th:nth-child(3) {
-        width: 15vw;
-        max-width: 12vw;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        vertical-align: middle;
-      }
-      table tr:nth-child(even) {
-        color: #949494;
-      }
-      td a {
-        color: #545454;
-      }
-      td a:hover {
-        color: #50a2fd;
-      }
-      @media screen and (max-width: 767px) {
-        th:nth-child(3) {
-          width: 45vw;
-          max-width: 45vw;
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          vertical-align: middle;
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
         }
-        th {
-          font-size: 14px;
-        }
-        td {
-          font-size: 12px;
-        }
-        .table-wrapper {
-          overflow: auto; /* Enable vertical scrolling when content overflows */
-        }
-        th:nth-child(2) {
-          width: 75vw;
-          max-width: 75vw;
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
-        }
-
-        #dynamic-table {
-          overflow: hidden; /* Hide overflowing content of the table */
+        100% {
+          transform: rotate(360deg);
         }
       }
     </style>
@@ -263,7 +196,9 @@
                       >
                     </li>
                     <li class="nav-item">
-                      <a href="english.html" class="nav-link">Ba English</a>
+                      <a href="english.html" class="nav-link"
+                        >Ba English</a
+                      >
                     </li>
                     <li class="nav-item">
                       <a href="computer-science.html" class="nav-link"
@@ -281,7 +216,7 @@
                   </ul>
                 </li>
                 <li class="nav-item">
-                  <a href="#" class="nav-link dropdown-toggle active"> NAAC</a>
+                  <a class="nav-link dropdown-toggle"> NAAC</a>
                   <ul class="dropdown-menu">
                     <li class="nav-item">
                       <a href="naac-qualitative.html" class="nav-link"
@@ -296,7 +231,7 @@
                   </ul>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link dropdown-toggle"> Activities </a>
+                  <a class="nav-link dropdown-toggle active"> Activities </a>
                   <ul class="dropdown-menu">
                     <li class="nav-item">
                       <a href="gallery.html" class="nav-link">Gallery</a>
@@ -335,7 +270,7 @@
           </button>
           <div class="modal-body">
             <a href="index.html">
-              <img src="assets/images/logo.png" alt="logo" class="main-logo" />
+              <img src="assets/images/logo.png" class="main-logo" alt="logo" />
               <img
                 src="assets/images/white-logo.png"
                 class="white-logo"
@@ -362,10 +297,10 @@
                 <li>
                   <i class="ri-mail-line"></i
                   ><a
-                    href="https://templates.hibootstrap.com/cdn-cgi/l/email-protection#462e232a2a2906352728336825292b"
+                    href="https://templates.hibootstrap.com/cdn-cgi/l/email-protection#fe969b929291be8d9f908bd09d9193"
                     ><span
                       class="__cf_email__"
-                      data-cfemail="ec8489808083ac9f8d8299c28f8381"
+                      data-cfemail="28404d444447685b49465d064b4745"
                       >[email&#160;protected]</span
                     ></a
                   >
@@ -469,28 +404,48 @@
       </div>
     </div>
 
-    <div class="campus-life-area pt-70 pb-70" style="min-height: 70vh">
+
+
+    <div class="news-details-area pt-70 pb-70">
       <div class="container">
-        <div class="section-title">
-          <h2>NAAC Qualitative</h2>
-        </div>
-        <div id="loading-animation" class="loading" style="display: none">
-          <i class="fas fa-spinner fa-spin"></i>&nbsp; Loading...
-        </div>
-        <div class="table-wrapper">
-          <table id="dynamic-table" style="display: none">
-            <thead>
-              <tr>
-                <th>CRITERIA</th>
-                <th>TITLE</th>
-                <th>LAST UPDATED</th>
-                <th>VIEW PDF</th>
-              </tr>
-            </thead>
-            <tbody>
-              <!-- Table body rows will be added here dynamically -->
-            </tbody>
-          </table>
+       
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="category-list">
+              <h3 class="news_subject"></h3>
+              <ul>
+                <li>
+                  <a>Location: <span class="location"></span></a>
+                </li>
+                <li>
+                  <a>Date: <span class="news_date"></span></a>
+                </li>
+                <li>
+                  <a>Added By: <span class="staff_name"></span></a>
+                </li>
+              </ul>
+            </div>
+            <div class="related-post-area">
+              <h5 style="padding-top: 30px; padding-left: 10px">
+                News Description
+              </h5>
+              <div class="related-post-box">
+                <div class="related-post-content related-post-content2">
+                  <p class="news_content"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-8">
+             <div id="loadingAnimation" class="loading-animation"></div>
+            <div class="news-details " >
+              <div class="news-simple-card" id="image-container">
+                
+              </div>
+              
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -688,69 +643,66 @@
       // Call the fetchAndUpdateNotifications function initially
       fetchAndUpdateNotifications();
     </script>
-    <script>
-      const apiUrlNaac =
-        "https://app.conext.in/Docs/Mccs/naac-files/ListQualitative";
+     <script >
+      function getQueryParameter(name) {
+        const urlSearchParams = new URLSearchParams(window.location.search);
+        return urlSearchParams.get(name);
+      } 
+      function formatDate(date) {
+        timestamp = date;
+        const parsedDate = new Date(timestamp);
 
-      function formatDate(dateString) {
-        const date = new Date(dateString);
-        const options = { year: "numeric", month: "long", day: "numeric" };
-        return date.toLocaleDateString("en-US", options);
+        const options = { day: "numeric", month: "short", year: "numeric" };
+        const formattedDate = parsedDate.toLocaleDateString("en-US", options);
+        return formattedDate;
       }
-
-      function populateTable(apiData) {
-        const tableBody = document.querySelector("#dynamic-table tbody");
-
-        apiData.forEach((item) => {
-          const formattedDate = formatDate(item.updated_on);
-          const row = `
-                <tr>
-                    <td class="sub_crt" style="color: #000;"><b>${item.criteria.sub_crt}</b></td>
-                    <td class="title"><a class="doc_file" target="_blank" href="${item.doc_file}"><b>${item.title}</b></a></td>
-                    <td class="updated_on" style="color: #000;font-weight:300">${formattedDate}</td>
-              <td class="view_pdf"><a class="doc_file" target="_blank" href="${item.doc_file}"><i class="flaticon-pdf-file"></i></a></td>
-                </tr>
-            `;
-          tableBody.insertAdjacentHTML("beforeend", row);
-        });
-      }
-      showLoadingAnimation();
-
-      function showLoadingAnimation() {
-        const loadingAnimation = document.getElementById("loading-animation");
-        loadingAnimation.style.display = "block";
-      }
-
-      // Hide loading animation and show the table when the API request is complete
-      function hideLoadingAnimation() {
-        const loadingAnimation = document.getElementById("loading-animation");
-        loadingAnimation.style.display = "none";
-        const tableAnimation = document.getElementById("dynamic-table");
-        tableAnimation.style.display = "inline-table";
-      }
-
-      // Show message when there is no data in the API response
-      function showNoDataMessage() {
-        const noDataMessage = document.getElementById("no-data-message");
-        noDataMessage.style.display = "block";
-      }
-      fetch(apiUrlNaac)
+    
+      const id = getQueryParameter("id");
+      fetch(`https://app.conext.in/news/api/MdcNewsDetiles/?id=${id}`)
         .then((response) => response.json())
         .then((data) => {
-          hideLoadingAnimation();
-          if (data && data.length > 0) {
-            populateTable(data);
+          // Update the image URLs
+          const imageUrls = data.image_urls;
+          const imageContainer = document.getElementById("image-container");
+          if (imageUrls.length != 0) {
+            for (const imageUrl of imageUrls) {
+              const imageElement = document.createElement("img");
+              imageElement.src = imageUrl;
+              imageElement.style.width = '100%';
+              imageElement.style.height = '100%';
+              imageElement.style.objectFit = 'cover';
+
+              // Append the image container to the imageContainer
+              imageContainer.appendChild(imageElement);
+            }
           } else {
-            showNoDataMessage();
+            const imageElement = document.createElement("img");
+            imageElement.src = "assets/images/banner/mdc1.jpg";
+            imageElement.style.width = '100%';
+              imageElement.style.height = '100%';
+               imageContainer.appendChild(imageElement);
           }
+          // Loop through the image URLs and create the container for each image
+
+          // Update other fields from the API response
+          document.querySelector(".news_subject").textContent =
+            data.news_subject;
+          document.querySelector(".location").innerHTML = `<b>${data.location}</b>`;
+          document.querySelector(".news_date").innerHTML = `<b>${formatDate(data.news_date)}</b>` ;
+          document.querySelector(".staff_name").innerHTML = `<b>${data.staff_name}</b> via CONNECT`;
+
+          // Create a temporary div to parse the HTML content
+          let tempDiv = document.createElement("div");
+          tempDiv.innerHTML = data.news_content;
+
+          // Extract the text content from the temporary div
+          let extractedText = tempDiv.textContent;
+
+          // Set the extracted text content to the element with class "news_content"
+          document.querySelector(".news_content").textContent = extractedText;
+           document.getElementById('loadingAnimation').style.display = "none";
         })
-        .catch((error) => {
-          console.error("Error fetching data:", error);
-          hideLoadingAnimation();
-          showNoDataMessage();
-        });
+        .catch((error) => console.error("Error fetching data:", error));
     </script>
   </body>
-
-  <!-- Mirrored from templates.hibootstrap.com/sanu/default/campus-life.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Sep 2023 14:20:42 GMT -->
 </html>
