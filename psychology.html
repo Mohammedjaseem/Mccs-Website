@@ -67,9 +67,23 @@
               <div class="list">
                 <ul style="margin-left: 4rem">
                   <li>
-                    <a href="mailto:info@macity.edu.in">info@macity.edu.in</a>
+                    <a href="mailto:infomccs@macity.edu.in"
+                      ><i
+                        class="ri-mail-fill"
+                        style="color: #3498db; margin-right: 5px"
+                      ></i>
+                      infomccs@macity.edu.in</a
+                    >
                   </li>
-                  <li><a href="tel:+917034999995">+91 7034 999 995</a></li>
+                  <li>
+                    <a href="tel:+917034999995"
+                      ><i
+                        class="ri-phone-fill"
+                        style="color: #2ecc71; margin-right: 5px"
+                      ></i>
+                      +91 7034 999 995</a
+                    >
+                  </li>
                 </ul>
               </div>
             </div>
@@ -85,7 +99,7 @@
               </ul>
               <a
                 class="top-bar-button"
-                href="https://mdc.conext.in/mccs.html"
+                href="https://www.mccsconnect.in/"
                 target="_blank"
                 >MCCS Connect</a
               >
@@ -593,54 +607,12 @@
                                 </div>
                               </div>
                             </div>
-                            <div class="col-lg-6" style="margin-top: 20px">
-                              <div class="instructor-image">
-                                <img
-                                  src="assets/images/courses/psychology-2.jpg"
-                                  style="
-                                    height: 350px;
-                                    object-fit: cover;
-                                    width: 100%;
-                                  "
-                                  alt="Image"
-                                />
-                                <div class="name">
-                                  <h3
-                                    style="
-                                      margin-bottom: 0px !important;
-                                      margin-top: 10px;
-                                    "
-                                  >
-                                    Neethu KP
-                                  </h3>
-                                  <h6>Lecturer</h6>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="col-lg-6" style="margin-top: 20px">
-                              <div class="instructor-image">
-                                <img
-                                  src="assets/images/courses/psychology-3.jpg"
-                                  style="
-                                    height: 350px;
-                                    object-fit: cover;
-                                    width: 100%;
-                                  "
-                                  alt="Image"
-                                />
-                                <div class="name">
-                                  <h3
-                                    style="
-                                      margin-bottom: 0px !important;
-                                      margin-top: 10px;
-                                    "
-                                  >
-                                    Vijitha Nambala
-                                  </h3>
-                                  <h6>Lecturer (Statistics)</h6>
-                                </div>
-                              </div>
-                            </div>
+
+                            <div
+                              class="col-lg-4"
+                              style="margin-top: 20px"
+                              id="staff-list-container"
+                            ></div>
                           </div>
                         </div>
                       </div>
@@ -860,11 +832,11 @@
                     <a href="tel:+917034999995">Phone: +91 7034 999 995</a>
                   </li>
                   <li>
-                    <a href="mailto:info@macity.edu.in" target="_blank"
+                    <a href="mailto:infomccs@macity.edu.in" target="_blank"
                       ><span
                         class="__cf_email__"
                         data-cfemail="afcecbc2c6c1efdccec1da81cacbda"
-                        >Mail: info@macity.edu.in</span
+                        >Mail: infomccs@macity.edu.in</span
                       ></a
                     >
                   </li>
@@ -877,7 +849,6 @@
               <h3>Quick Links</h3>
               <div class="list">
                 <ul>
-                  <li><a href="about.html">About Us</a></li>
                   <li><a href="gallery.html">Gallery</a></li>
                   <li><a href="facilities.html">Facilities</a></li>
                   <li><a href="library.html">Library</a></li>
@@ -895,21 +866,24 @@
                     <a
                       href="https://www.facebook.com/MCCSmanoor/"
                       target="_blank"
-                      >Facebook</a
+                      ><i class="flaticon-facebook" style="color: #4267b2"></i
+                      >&nbsp;Facebook</a
                     >
                   </li>
                   <li>
                     <a
                       href="https://www.instagram.com/malabar_college_manoor/"
                       target="_blank"
-                      >Instagram</a
+                      ><i class="flaticon-instagram" style="color: #ff69b4"></i
+                      >&nbsp;Instagram</a
                     >
                   </li>
                   <li>
                     <a
                       href="https://maps.app.goo.gl/4FQMpHruJVVh5eeT7"
                       target="_blank"
-                      >Maps</a
+                      ><i class="ri-map-pin-line" style="color: #ffc107"></i
+                      >&nbsp;Maps</a
                     >
                   </li>
 
@@ -917,7 +891,8 @@
                     <a
                       href="https://www.thecigworld.com/malabar-college-of-commerce-and-science/"
                       target="_blank"
-                      >Google</a
+                      ><i class="ri-google-fill" style="color: #34a853"></i
+                      >&nbsp;Google</a
                     >
                   </li>
                 </ul>
@@ -945,7 +920,6 @@
         </div>
       </div>
     </div>
-
     <div class="copyright-area">
       <div class="container">
         <div class="copyright">
@@ -953,7 +927,10 @@
             <div class="col-lg-6 col-md-8">
               <div class="copy">
                 <p>
-                  Copyright © 2023 MCCS | <a href="#">Department of IT 💻</a>
+                  Copyright &copy; 2023 MCCS | Developed by
+                  <a href="https://connect.edentu.com/" target="_blank"
+                    >Connect</a
+                  >
                 </p>
               </div>
             </div>
@@ -1021,6 +998,140 @@
 
       // Call the fetchAndUpdateNotifications function initially
       fetchAndUpdateNotifications();
+    </script>
+
+    <script>
+      // Define the API URL to fetch staff list data
+      const apiUrlStaffList =
+        "https://conext.in/custom_users/api/staff_list_dep_wise/74";
+
+      // Function to fetch and display staff list data
+      async function fetchAndDisplayStaffList() {
+        try {
+          const response = await fetch(apiUrlStaffList);
+          const data = await response.json();
+
+          // Check if the status is true and the staff arrays exist
+          if (
+            data.status &&
+            (Array.isArray(data.teaching_staff) ||
+              Array.isArray(data.non_teaching_staff))
+          ) {
+            // Select the container div where the staff list will be displayed
+            const containerDiv = document.querySelector(
+              "#staff-list-container"
+            );
+
+            // Clear any existing content in the container
+            containerDiv.innerHTML = "";
+
+            // Function to create and append staff columns
+            const createStaffColumns = (staffList, headingText) => {
+              staffList.sort((a, b) => a.name.localeCompare(b.name));
+
+              // Create a heading for the staff category
+              const heading = document.createElement("h2");
+              heading.textContent = headingText;
+              heading.style.margin = "30px 0"; // Margin top and bottom
+              heading.style.fontSize = "24px";
+              heading.style.color = "#333";
+              containerDiv.appendChild(heading);
+
+              // Create a row div to hold the staff columns
+              const rowDiv = document.createElement("div");
+              rowDiv.style.display = "grid";
+              rowDiv.style.gridTemplateColumns =
+                "repeat(auto-fit, minmax(300px, 1fr))"; // Responsive columns
+              rowDiv.style.gap = "20px";
+              rowDiv.style.justifyItems = "center"; // Center the grid items
+              containerDiv.appendChild(rowDiv);
+
+              // Iterate over the staff list and create HTML for each staff member
+              staffList.forEach((staff) => {
+                // Create the column div (card)
+                const columnDiv = document.createElement("div");
+                columnDiv.style.boxSizing = "border-box";
+                columnDiv.style.padding = "10px";
+                columnDiv.style.border = "1px solid #ddd";
+                columnDiv.style.borderRadius = "8px";
+                columnDiv.style.backgroundColor = "#fff";
+                columnDiv.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 0.1)";
+                columnDiv.style.display = "flex";
+                columnDiv.style.flexDirection = "column";
+                columnDiv.style.width = "300px"; // Fixed width
+                columnDiv.style.height = "400px"; // Fixed height
+                columnDiv.style.maxWidth = "100%"; // Responsive max-width
+
+                const img = document.createElement("img");
+                img.src = staff.picture;
+                img.alt = `${staff.name}'s picture`;
+                img.style.width = "100%";
+                img.style.height = "auto";
+                img.style.borderRadius = "8px";
+                img.style.objectFit = "cover";
+                img.style.maxHeight = "300px";
+                img.onclick = function () {
+                  window.open(staff.picture, "_blank");
+                };
+
+                // Create the title element
+                const titleElement = document.createElement("div");
+                titleElement.style.textAlign = "center";
+                titleElement.style.marginTop = "15px";
+
+                const h3 = document.createElement("h3");
+                h3.style.fontSize = "18px";
+                h3.style.fontWeight = "600";
+                h3.style.color = "#333";
+                h3.style.margin = "0";
+                h3.textContent = staff.name;
+
+                const span = document.createElement("span");
+                span.style.color = "#3db166";
+                span.style.display = "block";
+                span.style.marginTop = "5px";
+                span.textContent = staff.designation;
+
+                // Append title and designation
+                titleElement.appendChild(h3);
+                titleElement.appendChild(span);
+
+                // Append elements to column div
+                columnDiv.appendChild(img);
+                columnDiv.appendChild(titleElement);
+
+                // Append column div to the row div
+                rowDiv.appendChild(columnDiv);
+              });
+            };
+
+            // Create and display teaching staff section
+            if (
+              Array.isArray(data.teaching_staff) &&
+              data.teaching_staff.length > 0
+            ) {
+              createStaffColumns(data.teaching_staff, "Teaching Staff");
+            }
+
+            // Create and display non-teaching staff section
+            if (
+              Array.isArray(data.non_teaching_staff) &&
+              data.non_teaching_staff.length > 0
+            ) {
+              createStaffColumns(data.non_teaching_staff, "Non-Teaching Staff");
+            }
+          } else {
+            console.error(
+              "Unexpected API response format or no staff available."
+            );
+          }
+        } catch (error) {
+          console.error("Error fetching staff list:", error);
+        }
+      }
+
+      // Call the function to fetch and display the staff list initially
+      fetchAndDisplayStaffList();
     </script>
   </body>
 

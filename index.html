@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Malabar College of Commerce and Science, a premier institution for higher education in commerce and science streams." />
+    <meta name="keywords" content="Malabar College, Commerce, Science, Education, Higher Education, Kerala, Edappal, Malappuram" />
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/css/meanmenu.css" />
     <link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
@@ -24,24 +26,6 @@
         margin: 0px;
         color: white;
         font-weight: 600;
-      }
-      .notification-list {
-        display: inline-block;
-        max-height: 20px;
-        overflow: hidden;
-        position: relative;
-        max-height: 20px;
-      }
-      ul.notification-list {
-        margin-bottom: 0px !important;
-      }
-      @keyframes marquee-up {
-        0% {
-          transform: translateY(0);
-        }
-        100% {
-          transform: translateY(-100%);
-        }
       }
       .notification-list {
         display: inline-block;
@@ -177,9 +161,9 @@
               <div class="list">
                 <ul style="margin-left: 4rem">
                   <li>
-                    <a href="mailto:info@macity.edu.in">info@macity.edu.in</a>
+                    <a href="mailto:infomccs@macity.edu.in"><i class="ri-mail-fill" style="color: #3498db; margin-right: 5px;"></i> infomccs@macity.edu.in</a>
                   </li>
-                  <li><a href="tel:+917034999995">+91 7034 999 995</a></li>
+                  <li><a href="tel:+917034999995"><i class="ri-phone-fill" style="color: #2ecc71; margin-right: 5px;"></i> +91 7034 999 995</a></li>
                 </ul>
               </div>
             </div>
@@ -191,11 +175,11 @@
                 class="notification-list notification"
                 id="notification-container"
               >
-                Loading...
+                
               </ul>
               <a
                 class="top-bar-button"
-                href="https://mdc.conext.in/mccs.html"
+                href="https://www.mccsconnect.in/"
                 target="_blank"
                 >MCCS Connect</a
               >
@@ -228,7 +212,7 @@
       <div class="desktop-nav">
         <div class="container">
           <nav class="navbar navbar-expand-md navbar-light">
-            <a class="navbar-brand" href="index-3.html">
+            <a class="navbar-brand" href="/index.html">
               <img src="assets/images/logo.png" class="main-logo" alt="logo" />
               <img
                 src="assets/images/white-logo.png"
@@ -242,7 +226,7 @@
             >
               <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                  <a href="#" class="nav-link active"> Home </a>
+                  <a href="/index.html" class="nav-link active"> Home </a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link dropdown-toggle"> Academics </a>
@@ -483,24 +467,49 @@
         </div>
       </div>
     </div>
+
     <div class="banner-area">
-      <div class>
+      <div class="slider-container">
+        <!-- Slider Items -->
         <div class="slider-item banner-bg-7">
-          <div class="container-fluid">
-            <div class="slider-content style2">
-              <h1>Welcome to MCCS</h1>
-              <p>
-                What Course will your life Take? Own your future by learning new
+          <div class="slider-content style2">
+            <h1>Welcome to MCCS</h1>
+            <p>
+              What Course will your life Take? Own your future by learning new
                 skills at MCCS. You will get more than learning.
-              </p>
-              <a href="courses.html" class="default-btn btn"
-                >Request an enquiry <i class="flaticon-next"></i
-              ></a>
-            </div>
+            </p>
+            <a
+              href="https://wa.me/9539222233?text=I%20would%20like%20to%20know%20more%20about%20your%20courses"
+              class="default-btn btn"
+            >
+              Request an enquiry <i class="flaticon-next"></i>
+            </a>
           </div>
         </div>
+        <div class="slider-item banner-bg-2">
+          <div class="slider-content style2">
+            <h1>Learn with MCCS</h1>
+            <p>
+              Shape your future with top-notch courses and expert guidance at
+              MCCS.
+            </p>
+            <a
+              href="https://wa.me/9539222233?text=I%20would%20like%20to%20know%20more%20about%20your%20courses"
+              class="default-btn btn"
+            >
+              Request an enquiry <i class="flaticon-next"></i>
+            </a>
+          </div>
+        </div>
+        <!-- Additional slider items here as needed -->
+      </div>
+      <!-- Navigation Controls -->
+      <div class="slider-nav">
+        <span class="prev" onclick="changeSlide(-1)">&#10094;</span>
+        <span class="next" onclick="changeSlide(1)">&#10095;</span>
       </div>
     </div>
+
     <div class="eduction-area pb-70">
       <div class="container-fluid p-0">
         <div class="row g-0">
@@ -517,7 +526,7 @@
                   <i class="flaticon-college"></i>
                 </div>
                 <a><h3>Campus Life</h3></a>
-                <a class="read-more-btn white-color">Overall in here</a>
+                <a href="/campus-life.html" class="read-more-btn white-color">Explore More <i class="flaticon-next"></i></a>
               </div>
             </div>
           </div>
@@ -533,8 +542,8 @@
                 <div class="icon">
                   <i class="flaticon-student-with-graduation-cap"></i>
                 </div>
-                <a><h3>Courses</h3></a>
-                <a class="read-more-btn white-color">BCA, BSc & More</a>
+                <a ><h3>Courses</h3></a>
+                <a href="/courses.html" class="read-more-btn white-color">BCA, BSc & More <i class="flaticon-next"></i></a>
               </div>
             </div>
           </div>
@@ -550,8 +559,8 @@
                 <div class="icon">
                   <i class="flaticon-athletics"></i>
                 </div>
-                <a><h3>Activity</h3></a>
-                <a class="read-more-btn white-color">Clubs & More</a>
+                <a><h3>Our Facilities</h3></a>
+                <a href="/facilities.html" class="read-more-btn white-color">Explore Our Campus <i class="flaticon-next"></i></a>
               </div>
             </div>
           </div>
@@ -577,9 +586,9 @@
                 >
                 <a
                   target="_blank"
-                  href="http://mccs.conext.in/"
+                  href="https://www.mccsconnect.in/"
                   class="read-more-btn white-color"
-                  >MCCS Connect</a
+                  >MCCS Connect <i class="flaticon-next"></i></a
                 >
               </div>
             </div>
@@ -587,7 +596,8 @@
         </div>
       </div>
     </div>
-    <div class="campus-information-area">
+    
+    <div id="about-us" class="campus-information-area">
       <div class="container">
         <div class="row align-items-center">
           <div class="col-lg-6">
@@ -730,8 +740,8 @@
                 Choose a course from our various options and secure your career
                 with the quality of eduction we provide.
               </p>
-              <a href="admission.html" class="default-btn btn"
-                >Appy Now<i class="flaticon-next"></i
+              <a href="contact-us.html" class="default-btn btn"
+                >Contact Us<i class="flaticon-next"></i
               ></a>
             </div>
           </div>
@@ -1216,27 +1226,30 @@
               <h3>Quick Links</h3>
               <ul>
                 <li>
-                  <a target="_blank" href="http://mccs.conext.in/"
-                    >MCCS Connect</a
+                  <a target="_blank" href="https://www.mccsconnect.in/"
+                    ><i class="ri-link"></i> MCCS Connect</a
                   >
                 </li>
                 <li>
-                  <a href="#">Achievements</a>
+                  <a href="/achievements.html"><i class="ri-trophy-line"></i> Achievements</a>
                 </li>
                 <li>
-                  <a href="#">Facilities</a>
+                  <a href="/facilities.html"><i class="ri-building-line"></i> Facilities</a>
                 </li>
                 <li>
-                  <a href="#">Clubs</a>
+                  <a href="/clubs.html"><i class="ri-group-line"></i> Clubs</a>
                 </li>
                 <li>
-                  <a href="#">NAAC</a>
+                  <a href="library.html"><i class="ri-book-line"></i> Library</a>
                 </li>
                 <li>
-                  <a href="#">Library</a>
+                  <a href="gallery.html"><i class="ri-image-line"></i> Gallery</a>
                 </li>
                 <li>
-                  <a href="gallery.html">Gallery</a>
+                  <a href="/naac-quantitative.html"><i class="ri-file-text-line"></i> NAAC Quantitative</a>
+                </li>
+                <li>
+                  <a href="/naac-qualitative.html"><i class="ri-file-text-line"></i> NAAC Qualitative</a>
                 </li>
               </ul>
             </div>
@@ -1395,6 +1408,7 @@
         </div>
       </div>
     </div>
+    
     <div class="footer-area pt-70">
       <div class="container">
         <div class="row">
@@ -1414,11 +1428,11 @@
                     <a href="tel:+917034999995">Phone: +91 7034 999 995</a>
                   </li>
                   <li>
-                    <a href="mailto:info@macity.edu.in" target="_blank"
+                    <a href="mailto:infomccs@macity.edu.in" target="_blank"
                       ><span
                         class="__cf_email__"
                         data-cfemail="afcecbc2c6c1efdccec1da81cacbda"
-                        >Mail: info@macity.edu.in</span
+                        >Mail: infomccs@macity.edu.in</span
                       ></a
                     >
                   </li>
@@ -1431,7 +1445,7 @@
               <h3>Quick Links</h3>
               <div class="list">
                 <ul>
-                  <li><a href="about.html">About Us</a></li>
+                  <li><a href="#about-us">About Us</a></li>
                   <li><a href="gallery.html">Gallery</a></li>
                   <li><a href="facilities.html">Facilities</a></li>
                   <li><a href="library.html">Library</a></li>
@@ -1449,21 +1463,21 @@
                     <a
                       href="https://www.facebook.com/MCCSmanoor/"
                       target="_blank"
-                      >Facebook</a
+                      ><i class="flaticon-facebook" style="color: #4267B2;"></i>&nbsp;Facebook</a
                     >
                   </li>
                   <li>
                     <a
                       href="https://www.instagram.com/malabar_college_manoor/"
                       target="_blank"
-                      >Instagram</a
+                      ><i class="flaticon-instagram" style="color: #FF69B4;"></i>&nbsp;Instagram</a
                     >
                   </li>
                   <li>
                     <a
                       href="https://maps.app.goo.gl/4FQMpHruJVVh5eeT7"
                       target="_blank"
-                      >Maps</a
+                      ><i class="ri-map-pin-line" style="color: #FFC107;"></i>&nbsp;Maps</a
                     >
                   </li>
 
@@ -1471,7 +1485,7 @@
                     <a
                       href="https://www.thecigworld.com/malabar-college-of-commerce-and-science/"
                       target="_blank"
-                      >Google</a
+                      ><i class="ri-google-fill" style="color: #34A853;"></i>&nbsp;Google</a
                     >
                   </li>
                 </ul>
@@ -1506,7 +1520,7 @@
             <div class="col-lg-6 col-md-8">
               <div class="copy">
                 <p>
-                  Copyright © 2023 MCCS | <a href="#">Department of IT 💻</a>
+                  Copyright &copy; 2023 MCCS | Developed by <a href="https://connect.edentu.com/" target="_blank">Connect</a>
                 </p>
               </div>
             </div>
@@ -1893,6 +1907,31 @@
             console.error("Error fetching data: ", error);
           });
       });
+    </script>
+
+    <script>
+      let slideIndex = 0;
+      const slides = document.querySelectorAll(".slider-item");
+      const totalSlides = slides.length;
+
+      function showSlide(index) {
+        slideIndex = (index + totalSlides) % totalSlides;
+        document.querySelector(
+          ".slider-container"
+        ).style.transform = `translateX(-${slideIndex * 100}%)`;
+      }
+
+      function changeSlide(n) {
+        showSlide(slideIndex + n);
+      }
+
+      function autoSlide() {
+        changeSlide(1);
+      }
+
+      // Initial setup and auto-slide every 5 seconds
+      showSlide(slideIndex);
+      setInterval(autoSlide, 5000);
     </script>
   </body>
 </html>
