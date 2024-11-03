@@ -130,7 +130,7 @@ textarea{
         padding-left: 23px;
         padding-right: 23px;
         margin-left: 25px;
-        background: #50A2FD;
+        background: #2E865F; /* Changed to dark green color */
         color: #fff;
         padding-top: 18px;
         margin-top: -18px;
@@ -918,27 +918,27 @@ textarea{
 .section-title.white-title p{
     color:#fff
 }
-.banner-area{
-    background-color:#192f59;
-    overflow:hidden
-}
-.banner-area .container-fluid{
-    padding:0;
-    padding-left:30px;
-    max-width:1720px;
-    margin-right:0;
-    margin-left:auto
-}
-.slider-item{
-    position:relative;
-    background-size:cover;
-    background-position:center center;
-    background-repeat:no-repeat;
-    padding-top:200px;
-    padding-bottom:200px;
-    padding-left:60px;
-    overflow:hidden
-}
+.banner-area {
+    position: relative;
+    background-color: #192f59;
+    overflow: hidden;
+  }
+  
+  .slider-container {
+    position: relative;
+    display: flex;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .slider-item {
+    min-width: 100%;
+    height: 100vh;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+  }
+  
 .slider-item.banner-bg-1{
     background-image:url(../images/banner/banner-img1.jpg)
 }
@@ -963,21 +963,52 @@ textarea{
 .slider-item.banner-bg-8{
     background-image:url(../images/banner/banner-img8.jpg)
 }
-.slider-content{
-    max-width:740px;
-    margin-left:0;
-    margin-right:auto
-}
-.slider-content h1{
-    font-size:65px;
-    color:#fff;
-    margin-bottom:20px
-}
-.slider-content p{
-    color:#fff;
-    margin-bottom:30px
-}
-.slider-content.style2{
+
+.slider-content {
+    position: absolute;
+    bottom: 20%;
+    left: 5%;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    max-width: 600px;
+  }
+  
+  .slider-content h1 {
+    color: #192f59;
+    font-size: 50px;
+    margin-bottom: 10px;
+  }
+  
+  .slider-content p {
+    color: #555;
+    margin-bottom: 15px;
+  }
+  
+  .default-btn {
+    background-color: #1a4c43;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  .slider-nav .prev,
+  .slider-nav .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 24px;
+    padding: 12px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    user-select: none;
+  }
+  
+  .slider-nav .prev { left: 10px; }
+  .slider-nav .next { right: 10px; }
+  .slider-content.style2{
     background-color:#fff;
     padding:50px
 }
