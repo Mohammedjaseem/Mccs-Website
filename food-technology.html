@@ -546,7 +546,7 @@
                             <div class="col-lg-5">
                               <div class="instructor-image">
                                 <img
-                                  src="assets/images/courses/food-tech-1.jpg"
+                                  src="https://connectv2s3.s3.ap-south-1.amazonaws.com/users/picture/3044537c-d1e6-4421-94aa-3c70b1af58d0.jpeg"
                                   alt="Image"
                                 />
                               </div>
@@ -554,22 +554,23 @@
                             <div class="col-lg-7">
                               <div class="instructor-content">
                                 <div class="name">
-                                  <h3>Athira O.N</h3>
+                                  <h3>ATHULYA C</h3>
                                   <h6>Assistant Professor & HOD</h6>
 
                                   <p style="font-size: 13.5px">
-                                    At the helm of our Food Technology
-                                    department stands Athira ON, a remarkable
-                                    leader in her field. She holds a BSc. in
-                                    Food Technology from Assabah Arts and
-                                    Science College, Valayamkulam, where she
-                                    secured an impressive 15th rank at the
-                                    university level. Athira completed her MSc.
-                                    in Food Science and Technology at Calicut
-                                    University campus and joined MCCS on 26th
-                                    September 2022. She is a distinguished HACCP
-                                    level 3 certified professional, embodying
-                                    excellence and expertise in her role.
+                                    Currently serving as department head of BSc
+                                    Food Technology and assistant professor at
+                                    Malabar College of Commerce and Science,
+                                    Manoor with two years of experience in
+                                    teaching postgraduate, undergraduate and
+                                    diploma courses in Food Technology, and
+                                    served as department head and assistant
+                                    professor of MSc Food Science and Technology
+                                    at Tharananellur Arts and Science College,
+                                    Irinjalakkuda,, also got an opportunity to
+                                    work as teaching faculty at DGMMES Mampad
+                                    college for Diploma in Baking Technician
+                                    under NSDC
                                   </p>
                                 </div>
                                 <div class="quick-contact">
@@ -579,18 +580,18 @@
                                       <i class="ri-phone-line"></i
                                       ><span>Phone Number:</span
                                       ><a href="tel:7592915066"
-                                        >+91 7592915066
+                                        >+91 9633868260
                                       </a>
                                     </li>
                                     <li>
                                       <i class="ri-mail-line"></i
                                       ><span>Email:</span
-                                      ><a href="mailto:athiraon@macity.edu.in"
+                                      ><a href="mailto:athulyanandhu@gmail.com"
                                         ><span
                                           class="__cf_email__"
                                           data-cfemail="7a33141c153a1f021b170a161f54191517"
                                         >
-                                          athiraon@macity.edu.in</span
+                                          athulyanandhu@gmail.com</span
                                         ></a
                                       >
                                     </li>
@@ -600,11 +601,10 @@
                             </div>
 
                             <div
-                            class="col-lg-4"
-                            style="margin-top: 20px"
-                            id="staff-list-container"
-                          ></div>
-                          
+                              class="col-lg-10"
+                              style="margin-top: 20px"
+                              id="staff-list-container"
+                            ></div>
                           </div>
                         </div>
                       </div>
@@ -988,123 +988,75 @@
     </script>
 
     <script>
-      // Define the API URL to fetch staff list data
       const apiUrlStaffList =
         "https://conext.in/custom_users/api/staff_list_dep_wise/73";
 
-      // Function to fetch and display staff list data
       async function fetchAndDisplayStaffList() {
         try {
           const response = await fetch(apiUrlStaffList);
           const data = await response.json();
 
-          // Check if the status is true and the staff arrays exist
-          if (
-            data.status &&
-            (Array.isArray(data.teaching_staff) ||
-              Array.isArray(data.non_teaching_staff))
-          ) {
-            // Select the container div where the staff list will be displayed
+          if (data.status) {
             const containerDiv = document.querySelector(
               "#staff-list-container"
             );
-
-            // Clear any existing content in the container
             containerDiv.innerHTML = "";
 
-            // Function to create and append staff columns
             const createStaffColumns = (staffList, headingText) => {
-              staffList.sort((a, b) => a.name.localeCompare(b.name));
+              if (staffList.length > 0) {
+                staffList.sort((a, b) => a.name.localeCompare(b.name));
 
-              // Create a heading for the staff category
-              const heading = document.createElement("h2");
-              heading.textContent = headingText;
-              heading.style.margin = "30px 0"; // Margin top and bottom
-              heading.style.fontSize = "24px";
-              heading.style.color = "#333";
-              containerDiv.appendChild(heading);
+                // Create a heading for the staff category
+                const heading = document.createElement("h2");
+                heading.textContent = headingText;
+                heading.classList.add("staff-heading");
+                containerDiv.appendChild(heading);
 
-              // Create a row div to hold the staff columns
-              const rowDiv = document.createElement("div");
-              rowDiv.style.display = "grid";
-              rowDiv.style.gridTemplateColumns =
-                "repeat(auto-fit, minmax(300px, 1fr))"; // Responsive columns
-              rowDiv.style.gap = "20px";
-              rowDiv.style.justifyItems = "center"; // Center the grid items
-              containerDiv.appendChild(rowDiv);
+                // Create a row div to hold the staff columns
+                const rowDiv = document.createElement("div");
+                rowDiv.classList.add("staff-grid");
+                containerDiv.appendChild(rowDiv);
 
-              // Iterate over the staff list and create HTML for each staff member
-              staffList.forEach((staff) => {
-                // Create the column div (card)
-                const columnDiv = document.createElement("div");
-                columnDiv.style.boxSizing = "border-box";
-                columnDiv.style.padding = "10px";
-                columnDiv.style.border = "1px solid #ddd";
-                columnDiv.style.borderRadius = "8px";
-                columnDiv.style.backgroundColor = "#fff";
-                columnDiv.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 0.1)";
-                columnDiv.style.display = "flex";
-                columnDiv.style.flexDirection = "column";
-                columnDiv.style.width = "300px"; // Fixed width
-                columnDiv.style.height = "400px"; // Fixed height
-                columnDiv.style.maxWidth = "100%"; // Responsive max-width
+                staffList.forEach((staff) => {
+                  // Create the column div (card)
+                  const columnDiv = document.createElement("div");
+                  columnDiv.classList.add("staff-card");
 
-                const img = document.createElement("img");
-                img.src = staff.picture;
-                img.alt = `${staff.name}'s picture`;
-                img.style.width = "100%";
-                img.style.height = "auto";
-                img.style.borderRadius = "8px";
-                img.style.objectFit = "cover";
-                img.style.maxHeight = "300px";
-                img.onclick = function () {
-                  window.open(staff.picture, "_blank");
-                };
+                  const img = document.createElement("img");
+                  img.src = staff.picture;
+                  img.alt = `${staff.name}'s picture`;
+                  img.classList.add("staff-image");
+                  img.onclick = function () {
+                    window.open(staff.picture, "_blank");
+                  };
 
-                // Create the title element
-                const titleElement = document.createElement("div");
-                titleElement.style.textAlign = "center";
-                titleElement.style.marginTop = "15px";
+                  const titleElement = document.createElement("div");
+                  titleElement.classList.add("staff-info");
 
-                const h3 = document.createElement("h3");
-                h3.style.fontSize = "18px";
-                h3.style.fontWeight = "600";
-                h3.style.color = "#333";
-                h3.style.margin = "0";
-                h3.textContent = staff.name;
+                  const h3 = document.createElement("h3");
+                  h3.textContent = staff.name;
+                  h3.classList.add("staff-name");
 
-                const span = document.createElement("span");
-                span.style.color = "#3db166";
-                span.style.display = "block";
-                span.style.marginTop = "5px";
-                span.textContent = staff.designation;
+                  const span = document.createElement("span");
+                  span.textContent = staff.designation;
+                  span.classList.add("staff-designation");
 
-                // Append title and designation
-                titleElement.appendChild(h3);
-                titleElement.appendChild(span);
+                  // Append title and designation
+                  titleElement.appendChild(h3);
+                  titleElement.appendChild(span);
 
-                // Append elements to column div
-                columnDiv.appendChild(img);
-                columnDiv.appendChild(titleElement);
-
-                // Append column div to the row div
-                rowDiv.appendChild(columnDiv);
-              });
+                  columnDiv.appendChild(img);
+                  columnDiv.appendChild(titleElement);
+                  rowDiv.appendChild(columnDiv);
+                });
+              }
             };
 
-            // Create and display teaching staff section
-            if (
-              Array.isArray(data.teaching_staff) &&
-              data.teaching_staff.length > 0
-            ) {
+            if (Array.isArray(data.teaching_staff)) {
               createStaffColumns(data.teaching_staff, "Teaching Staff");
             }
 
-            // Create and display non-teaching staff section
-            if (
-              Array.isArray(data.non_teaching_staff) &&
-              data.non_teaching_staff.length > 0
-            ) {
+            if (Array.isArray(data.non_teaching_staff)) {
               createStaffColumns(data.non_teaching_staff, "Non-Teaching Staff");
             }
           } else {
@@ -1117,7 +1069,6 @@
         }
       }
 
-      // Call the function to fetch and display the staff list initially
       fetchAndDisplayStaffList();
     </script>
   </body>
