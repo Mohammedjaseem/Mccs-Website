@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Meet the Board of Directors of Malabar College of Commerce and Science - Leadership guiding our institution's vision"
+      content="Academic Calendar of Malabar College of Commerce and Science - Important dates and schedules"
     />
     <meta
       name="keywords"
-      content="MCCS Board, College Governors, Management Committee, Malabar College Leadership"
+      content="MCCS academic calendar, college schedule, academic dates, semester timeline"
     />
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/css/meanmenu.css" />
@@ -19,16 +19,15 @@
     <link rel="stylesheet" href="assets/css/magnific-popup.css" />
     <link rel="stylesheet" href="assets/css/flaticon.css" />
     <link rel="stylesheet" href="assets/css/remixicon.css" />
-    <link rel="stylesheet" href="assets/css/odometer.min.css" />
     <link rel="stylesheet" href="assets/css/aos.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/dark.css" />
     <link rel="stylesheet" href="assets/css/responsive.css" />
     <link rel="icon" type="image/png" href="assets/images/favicon.png" />
-    <title>Board of Directors | MCCS</title>
+    <title>Academic Calendar | MCCS</title>
     <style>
-      /* Board Page Specific Styles */
-      .board-hero {
+      /* Calendar Page Specific Styles */
+      .calendar-hero {
         background: linear-gradient(rgba(0, 0, 0, 0.7)),
           url("assets/images/banner/MCCSBanner.jpeg") no-repeat center center;
         background-size: cover;
@@ -37,135 +36,94 @@
         text-align: center;
       }
 
-      .board-hero h1 {
+      .calendar-hero h1 {
         font-size: 3rem;
         margin-bottom: 20px;
         font-weight: 700;
         color: #fff;
       }
 
-      .board-hero p {
+      .calendar-hero p {
         font-size: 1.2rem;
         max-width: 800px;
         margin: 0 auto;
         color: #999;
       }
 
-      .board-intro {
-        padding: 80px 0 40px;
-      }
-
-      .board-members {
-        padding: 60px 0;
-        background-color: #f9f9f9;
-      }
-
-      .member-card {
-        background: #fff;
-        border-radius: 10px;
-        overflow: hidden;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-        margin-bottom: 30px;
-        transition: all 0.3s ease;
-      }
-
-      .member-card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-      }
-
-      .member-img {
-        height: 300px;
-        width: 100%;
-        object-fit: cover;
-      }
-
-      .member-info {
-        padding: 25px;
-      }
-
-      .member-info h3 {
-        color: #084f8c;
-        margin-bottom: 5px;
-      }
-
-      .member-info p.position {
-        color: #2ecc71;
-        font-weight: 600;
-        margin-bottom: 15px;
-      }
-
-      .member-info p.qualification {
-        color: #555;
-        font-size: 0.9rem;
-        margin-bottom: 15px;
-      }
-
-      .member-social {
-        margin-top: 15px;
-      }
-
-      .member-social a {
-        display: inline-block;
-        margin-right: 10px;
-        color: #084f8c;
-        font-size: 1.1rem;
-      }
-
-      .board-functions {
+      .calendar-section {
         padding: 80px 0;
       }
 
-      .function-card {
+      .calendar-card {
         background: #fff;
         border-radius: 10px;
         padding: 30px;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
         margin-bottom: 30px;
-        height: 100%;
+        transition: transform 0.3s ease;
       }
 
-      .function-card i {
-        font-size: 2.5rem;
+      .calendar-card:hover {
+        transform: translateY(-10px);
+      }
+
+      .calendar-card h3 {
         color: #084f8c;
         margin-bottom: 20px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #2ecc71;
       }
 
-      .board-meetings {
-        padding: 80px 0;
-        background-color: #f4f6f9;
+      .document-preview {
+        border: 1px solid #eee;
+        border-radius: 5px;
+        padding: 20px;
+        margin-bottom: 20px;
+        text-align: center;
       }
 
-      .meeting-card {
+      .document-preview img {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+      }
+
+      .view-btn {
+        display: inline-block;
+        background: #084f8c;
+        color: #fff;
+        padding: 8px 20px;
+        border-radius: 5px;
+        margin-top: 10px;
+        transition: all 0.3s ease;
+      }
+
+      .view-btn:hover {
+        background: #27ae60;
+        color: #fff;
+        transform: translateY(-3px);
+      }
+
+      .calendar-notes {
+        padding: 40px 0;
+        background-color: #f9f9f9;
+      }
+
+      .notes-card {
         background: #fff;
         border-radius: 10px;
-        padding: 25px;
+        padding: 30px;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-        margin-bottom: 30px;
-      }
-
-      .meeting-card h4 {
-        color: #084f8c;
-        margin-bottom: 15px;
-      }
-
-      .meeting-card .date {
-        color: #2ecc71;
-        font-weight: 600;
-        margin-bottom: 10px;
       }
 
       @media (max-width: 767px) {
-        .board-hero {
+        .calendar-hero {
           padding: 100px 0 60px;
         }
 
-        .board-hero h1 {
+        .calendar-hero h1 {
           font-size: 2.2rem;
-        }
-
-        .member-img {
-          height: 250px;
         }
       }
     </style>
@@ -303,7 +261,7 @@
                       >
                     </li>
                     <li class="nav-item">
-                      <a href="about-board.html" class="nav-link active"
+                      <a href="about-board.html" class="nav-link"
                         >Board of Directors</a
                       >
                     </li>
@@ -369,7 +327,7 @@
                       <a href="facilities.html" class="nav-link">Facilities</a>
                     </li>
                     <li class="nav-item">
-                      <a href="academic-calendar.html" class="nav-link"
+                      <a href="academic-calendar.html" class="nav-link active"
                         >Academic Calendar</a
                       >
                     </li>
@@ -424,214 +382,104 @@
       <div class="others-option-for-responsive"></div>
     </div>
 
-    <!-- Board Hero Section -->
-    <section class="board-hero">
+    <!-- Calendar Hero Section -->
+    <section class="calendar-hero">
       <div class="container">
-        <h1>Board of Directors</h1>
+        <h1>Academic Calendar</h1>
         <p>
-          Leadership guiding the vision and governance of Malabar College of
-          Commerce and Science
+          Important dates, schedules, and academic timelines for the current
+          academic year
         </p>
       </div>
     </section>
 
-    <!-- Board Introduction Section -->
-    <section class="board-intro">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-lg-6">
-            <div class="about-content">
-              <h2>Our Governing Body</h2>
-              <p>
-                The Board of Directors at Malabar College of Commerce and
-                Science provides strategic leadership and oversight to ensure
-                the institution fulfills its mission of delivering exceptional
-                education.
-              </p>
-              <p>
-                Comprising distinguished professionals from academia, industry,
-                and community leadership, the Board establishes policies,
-                approves strategic plans, and monitors institutional
-                performance.
-              </p>
-              <div class="about-list">
-                <ul>
-                  <li>
-                    <i class="ri-check-fill"></i> Sets the strategic direction
-                    for the college
-                  </li>
-                  <li>
-                    <i class="ri-check-fill"></i> Ensures financial
-                    sustainability
-                  </li>
-                  <li>
-                    <i class="ri-check-fill"></i> Upholds academic standards
-                  </li>
-                  <li>
-                    <i class="ri-check-fill"></i> Represents community interests
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="campus-image">
-              <img
-                src="assets/images/board-group.jpg"
-                alt="Board Members"
-                class="rounded"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Board Members Section -->
-    <section class="board-members">
+    <!-- Calendar Documents Section -->
+    <section class="calendar-section">
       <div class="container">
         <div class="section-title">
-          <h2>Meet Our Board Members</h2>
-          <p>Distinguished leaders guiding our institution</p>
+          <h2>Academic Calendars</h2>
+          <p>Official schedules for the current academic year</p>
         </div>
 
         <div class="row">
-          <div class="col-lg-4 col-md-6">
-            <div class="member-card" data-aos="fade-up" data-aos-delay="100">
-              <img
-                src="assets/images/board-member-1.jpg"
-                class="member-img"
-                alt="Chairman"
-              />
-              <div class="member-info">
-                <h3>Dr. Rajesh Menon</h3>
-                <p class="position">Chairman</p>
-                <p class="qualification">
-                  PhD in Education, Former Vice Chancellor
-                </p>
+          <div class="col-lg-6">
+            <div class="calendar-card" data-aos="fade-up" data-aos-delay="100">
+              <h3>2023-2024 Academic Calendar</h3>
+              <div class="document-preview">
+                <img
+                  src="assets/images/calendar-preview-2023.jpg"
+                  alt="2023-2024 Academic Calendar Preview"
+                />
                 <p>
-                  With over 35 years in higher education administration, Dr.
-                  Menon provides visionary leadership to the Board.
+                  Complete academic schedule for the 2023-2024 academic year
                 </p>
-                <div class="member-social">
-                  <a href="#"><i class="ri-linkedin-fill"></i></a>
-                  <a href="#"><i class="ri-mail-fill"></i></a>
-                </div>
+                <a
+                  href="assets/documents/academic-calendar-2023-2024.pdf"
+                  class="view-btn"
+                  target="_blank"
+                >
+                  <i class="ri-eye-line"></i> View Document
+                </a>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6">
-            <div class="member-card" data-aos="fade-up" data-aos-delay="200">
-              <img
-                src="assets/images/board-member-2.jpg"
-                class="member-img"
-                alt="Vice Chairman"
-              />
-              <div class="member-info">
-                <h3>Adv. Shalini Nair</h3>
-                <p class="position">Vice Chairman</p>
-                <p class="qualification">LLM, Social Activist</p>
-                <p>
-                  Brings expertise in legal matters and community development to
-                  the Board's deliberations.
-                </p>
-                <div class="member-social">
-                  <a href="#"><i class="ri-linkedin-fill"></i></a>
-                  <a href="#"><i class="ri-mail-fill"></i></a>
-                </div>
+          <div class="col-lg-6">
+            <div class="calendar-card" data-aos="fade-up" data-aos-delay="200">
+              <h3>Odd Semester 2023</h3>
+              <div class="document-preview">
+                <img
+                  src="assets/images/calendar-preview-odd.jpg"
+                  alt="Odd Semester 2023 Preview"
+                />
+                <p>Detailed schedule for July-December 2023 semester</p>
+                <a
+                  href="assets/documents/odd-semester-2023.pdf"
+                  class="view-btn"
+                  target="_blank"
+                >
+                  <i class="ri-eye-line"></i> View Document
+                </a>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6">
-            <div class="member-card" data-aos="fade-up" data-aos-delay="300">
-              <img
-                src="assets/images/board-member-3.jpg"
-                class="member-img"
-                alt="Secretary"
-              />
-              <div class="member-info">
-                <h3>Mr. Arun Kumar</h3>
-                <p class="position">Secretary</p>
-                <p class="qualification">MBA, Industrialist</p>
-                <p>
-                  Provides valuable industry perspective and oversees financial
-                  governance matters.
-                </p>
-                <div class="member-social">
-                  <a href="#"><i class="ri-linkedin-fill"></i></a>
-                  <a href="#"><i class="ri-mail-fill"></i></a>
-                </div>
+          <div class="col-lg-6">
+            <div class="calendar-card" data-aos="fade-up" data-aos-delay="100">
+              <h3>Even Semester 2024</h3>
+              <div class="document-preview">
+                <img
+                  src="assets/images/calendar-preview-even.jpg"
+                  alt="Even Semester 2024 Preview"
+                />
+                <p>Detailed schedule for January-May 2024 semester</p>
+                <a
+                  href="assets/documents/even-semester-2024.pdf"
+                  class="view-btn"
+                  target="_blank"
+                >
+                  <i class="ri-eye-line"></i> View Document
+                </a>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6">
-            <div class="member-card" data-aos="fade-up" data-aos-delay="100">
-              <img
-                src="assets/images/board-member-4.jpg"
-                class="member-img"
-                alt="Treasurer"
-              />
-              <div class="member-info">
-                <h3>Mr. Naveen Pillai</h3>
-                <p class="position">Treasurer</p>
-                <p class="qualification">CA, Financial Expert</p>
-                <p>
-                  Oversees the college's financial health and ensures proper
-                  fiscal management.
-                </p>
-                <div class="member-social">
-                  <a href="#"><i class="ri-linkedin-fill"></i></a>
-                  <a href="#"><i class="ri-mail-fill"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6">
-            <div class="member-card" data-aos="fade-up" data-aos-delay="200">
-              <img
-                src="assets/images/board-member-5.jpg"
-                class="member-img"
-                alt="Academic Representative"
-              />
-              <div class="member-info">
-                <h3>Dr. Priya Mohan</h3>
-                <p class="position">Academic Representative</p>
-                <p class="qualification">PhD in Commerce, Educationist</p>
-                <p>
-                  Ensures academic excellence remains central to Board
-                  discussions and decisions.
-                </p>
-                <div class="member-social">
-                  <a href="#"><i class="ri-linkedin-fill"></i></a>
-                  <a href="#"><i class="ri-mail-fill"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6">
-            <div class="member-card" data-aos="fade-up" data-aos-delay="300">
-              <img
-                src="assets/images/board-member-6.jpg"
-                class="member-img"
-                alt="Community Representative"
-              />
-              <div class="member-info">
-                <h3>Ms. Leela Devi</h3>
-                <p class="position">Community Representative</p>
-                <p class="qualification">MSW, Social Worker</p>
-                <p>
-                  Represents community interests and ensures college initiatives
-                  benefit local society.
-                </p>
-                <div class="member-social">
-                  <a href="#"><i class="ri-linkedin-fill"></i></a>
-                  <a href="#"><i class="ri-mail-fill"></i></a>
-                </div>
+          <div class="col-lg-6">
+            <div class="calendar-card" data-aos="fade-up" data-aos-delay="200">
+              <h3>Exam Schedule 2023-2024</h3>
+              <div class="document-preview">
+                <img
+                  src="assets/images/calendar-preview-exams.jpg"
+                  alt="Exam Schedule Preview"
+                />
+                <p>Comprehensive examination timetable for both semesters</p>
+                <a
+                  href="assets/documents/exam-schedule-2023-2024.pdf"
+                  class="view-btn"
+                  target="_blank"
+                >
+                  <i class="ri-eye-line"></i> View Document
+                </a>
               </div>
             </div>
           </div>
@@ -639,154 +487,36 @@
       </div>
     </section>
 
-    <!-- Board Functions Section -->
-    <section class="board-functions">
+    <!-- Important Notes Section -->
+    <section class="calendar-notes">
       <div class="container">
-        <div class="section-title">
-          <h2>Board Responsibilities</h2>
-          <p>Key functions performed by our Board of Directors</p>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-4 col-md-6">
-            <div class="function-card" data-aos="fade-up" data-aos-delay="100">
-              <i class="flaticon-strategy"></i>
-              <h3>Strategic Planning</h3>
-              <p>
-                Establishing the long-term vision and strategic direction for
-                the college's growth and development.
-              </p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6">
-            <div class="function-card" data-aos="fade-up" data-aos-delay="200">
-              <i class="flaticon-budget"></i>
-              <h3>Financial Oversight</h3>
-              <p>
-                Approving budgets, monitoring financial performance, and
-                ensuring proper resource allocation.
-              </p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6">
-            <div class="function-card" data-aos="fade-up" data-aos-delay="300">
-              <i class="flaticon-quality"></i>
-              <h3>Quality Assurance</h3>
-              <p>
-                Setting policies to maintain and enhance academic standards and
-                institutional quality.
-              </p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6">
-            <div class="function-card" data-aos="fade-up" data-aos-delay="100">
-              <i class="flaticon-recruitment"></i>
-              <h3>Leadership Appointment</h3>
-              <p>
-                Selecting and evaluating the performance of the Principal and
-                senior administrators.
-              </p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6">
-            <div class="function-card" data-aos="fade-up" data-aos-delay="200">
-              <i class="flaticon-relationship"></i>
-              <h3>Community Engagement</h3>
-              <p>
-                Building relationships with stakeholders and representing
-                community interests.
-              </p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6">
-            <div class="function-card" data-aos="fade-up" data-aos-delay="300">
-              <i class="flaticon-compliance"></i>
-              <h3>Policy Governance</h3>
-              <p>
-                Establishing policies that guide institutional operations and
-                ensure compliance.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Board Meetings Section -->
-    <section class="board-meetings">
-      <div class="container">
-        <div class="section-title">
-          <h2>Board Meetings & Reports</h2>
-          <p>Transparency in governance and decision-making</p>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-6">
-            <div class="meeting-card" data-aos="fade-up" data-aos-delay="100">
-              <h4>Annual General Meeting 2023</h4>
-              <p class="date">June 15, 2023</p>
-              <p>
-                Reviewed annual performance, approved budget for FY 2023-24, and
-                set strategic priorities for the coming year.
-              </p>
-              <a href="#" class="read-more"
-                >View Minutes <i class="ri-arrow-right-line"></i
-              ></a>
-            </div>
-          </div>
-
-          <div class="col-lg-6">
-            <div class="meeting-card" data-aos="fade-up" data-aos-delay="200">
-              <h4>Strategic Planning Retreat</h4>
-              <p class="date">March 3, 2023</p>
-              <p>
-                Developed 5-year strategic plan focusing on infrastructure
-                development, academic excellence, and community engagement.
-              </p>
-              <a href="#" class="read-more"
-                >View Report <i class="ri-arrow-right-line"></i
-              ></a>
-            </div>
-          </div>
-
-          <div class="col-lg-6">
-            <div class="meeting-card" data-aos="fade-up" data-aos-delay="100">
-              <h4>Quarterly Board Meeting</h4>
-              <p class="date">September 10, 2023</p>
-              <p>
-                Reviewed academic progress, approved new faculty positions, and
-                discussed student welfare initiatives.
-              </p>
-              <a href="#" class="read-more"
-                >View Minutes <i class="ri-arrow-right-line"></i
-              ></a>
-            </div>
-          </div>
-
-          <div class="col-lg-6">
-            <div class="meeting-card" data-aos="fade-up" data-aos-delay="200">
-              <h4>Finance Committee Meeting</h4>
-              <p class="date">November 5, 2023</p>
-              <p>
-                Examined financial performance, approved capital expenditure
-                proposals, and reviewed scholarship fund allocations.
-              </p>
-              <a href="#" class="read-more"
-                >View Report <i class="ri-arrow-right-line"></i
-              ></a>
-            </div>
-          </div>
-        </div>
-
-        <div class="text-center mt-4">
-          <a href="#" class="default-btn btn"
-            >View All Meetings & Reports <i class="flaticon-next"></i
-          ></a>
+        <div class="notes-card">
+          <h3>Important Notes</h3>
+          <ul>
+            <li>
+              The academic calendar is subject to change as per
+              university/college directives
+            </li>
+            <li>
+              All dates mentioned are inclusive of both teaching and
+              non-teaching days
+            </li>
+            <li>
+              Holidays listed are as per the government/university notifications
+            </li>
+            <li>
+              Any changes to the schedule will be notified through official
+              channels
+            </li>
+            <li>
+              Students are advised to regularly check notice boards and college
+              website for updates
+            </li>
+            <li>
+              Department-specific schedules may have additional dates - consult
+              your department office
+            </li>
+          </ul>
         </div>
       </div>
     </section>
@@ -930,7 +660,6 @@
     <script src="assets/js/carousel-thumbs.min.js"></script>
     <script src="assets/js/jquery.magnific-popup.js"></script>
     <script src="assets/js/aos.js"></script>
-    <script src="assets/js/odometer.min.js"></script>
     <script src="assets/js/appear.min.js"></script>
     <script src="assets/js/form-validator.min.js"></script>
     <script src="assets/js/contact-form-script.js"></script>
@@ -938,7 +667,7 @@
     <script src="assets/js/custom.js"></script>
 
     <script>
-      // Notification Script (Same as Home Page)
+      // Notification Script
       const apiUrl =
         "https://app.conext.in/Notifications/api/latest-mccs-top-bar-notification/";
       const notificationContainer = document.getElementById(

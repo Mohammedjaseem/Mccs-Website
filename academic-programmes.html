@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Meet the Board of Directors of Malabar College of Commerce and Science - Leadership guiding our institution's vision"
+      content="Academic Programmes at Malabar College of Commerce and Science - Undergraduate and Postgraduate courses"
     />
     <meta
       name="keywords"
-      content="MCCS Board, College Governors, Management Committee, Malabar College Leadership"
+      content="MCCS courses, degree programmes, UG courses, PG courses, BSc, BA, BCom, MSc"
     />
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/css/meanmenu.css" />
@@ -19,16 +19,15 @@
     <link rel="stylesheet" href="assets/css/magnific-popup.css" />
     <link rel="stylesheet" href="assets/css/flaticon.css" />
     <link rel="stylesheet" href="assets/css/remixicon.css" />
-    <link rel="stylesheet" href="assets/css/odometer.min.css" />
     <link rel="stylesheet" href="assets/css/aos.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/dark.css" />
     <link rel="stylesheet" href="assets/css/responsive.css" />
     <link rel="icon" type="image/png" href="assets/images/favicon.png" />
-    <title>Board of Directors | MCCS</title>
+    <title>Academic Programmes | MCCS</title>
     <style>
-      /* Board Page Specific Styles */
-      .board-hero {
+      /* Programmes Page Specific Styles */
+      .programmes-hero {
         background: linear-gradient(rgba(0, 0, 0, 0.7)),
           url("assets/images/banner/MCCSBanner.jpeg") no-repeat center center;
         background-size: cover;
@@ -37,135 +36,167 @@
         text-align: center;
       }
 
-      .board-hero h1 {
+      .programmes-hero h1 {
         font-size: 3rem;
         margin-bottom: 20px;
         font-weight: 700;
         color: #fff;
       }
 
-      .board-hero p {
+      .programmes-hero p {
         font-size: 1.2rem;
         max-width: 800px;
         margin: 0 auto;
         color: #999;
       }
 
-      .board-intro {
-        padding: 80px 0 40px;
-      }
-
-      .board-members {
-        padding: 60px 0;
-        background-color: #f9f9f9;
-      }
-
-      .member-card {
-        background: #fff;
-        border-radius: 10px;
-        overflow: hidden;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-        margin-bottom: 30px;
-        transition: all 0.3s ease;
-      }
-
-      .member-card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-      }
-
-      .member-img {
-        height: 300px;
-        width: 100%;
-        object-fit: cover;
-      }
-
-      .member-info {
-        padding: 25px;
-      }
-
-      .member-info h3 {
-        color: #084f8c;
-        margin-bottom: 5px;
-      }
-
-      .member-info p.position {
-        color: #2ecc71;
-        font-weight: 600;
-        margin-bottom: 15px;
-      }
-
-      .member-info p.qualification {
-        color: #555;
-        font-size: 0.9rem;
-        margin-bottom: 15px;
-      }
-
-      .member-social {
-        margin-top: 15px;
-      }
-
-      .member-social a {
-        display: inline-block;
-        margin-right: 10px;
-        color: #084f8c;
-        font-size: 1.1rem;
-      }
-
-      .board-functions {
+      .programmes-section {
         padding: 80px 0;
       }
 
-      .function-card {
+      .programme-card {
         background: #fff;
         border-radius: 10px;
         padding: 30px;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
         margin-bottom: 30px;
+        transition: transform 0.3s ease;
         height: 100%;
       }
 
-      .function-card i {
+      .programme-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      }
+
+      .programme-card h3 {
+        color: #084f8c;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #2ecc71;
+      }
+
+      .programme-icon {
         font-size: 2.5rem;
+        color: #2ecc71;
+        margin-bottom: 15px;
+      }
+
+      .programme-duration {
+        background: #f8f9fa;
+        padding: 5px 10px;
+        border-radius: 5px;
+        display: inline-block;
+        margin-bottom: 15px;
+        font-size: 0.9rem;
+      }
+
+      .programme-features {
+        margin-bottom: 20px;
+      }
+
+      .programme-features li {
+        margin-bottom: 8px;
+        position: relative;
+        padding-left: 25px;
+      }
+
+      .programme-features li:before {
+        content: "\f058";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        color: #2ecc71;
+        position: absolute;
+        left: 0;
+      }
+
+      .view-btn {
+        display: inline-block;
+        background: #2ecc71;
+        color: #fff;
+        padding: 8px 20px;
+        border-radius: 5px;
+        margin-top: 10px;
+        transition: all 0.3s ease;
+      }
+
+      .view-btn:hover {
+        background: #27ae60;
+        color: #fff;
+        transform: translateY(-3px);
+      }
+
+      .department-link {
+        color: #084f8c;
+        font-weight: 600;
+        text-decoration: none;
+      }
+
+      .department-link:hover {
+        color: #2ecc71;
+        text-decoration: underline;
+      }
+
+      .eligibility-section {
+        padding: 60px 0;
+        background-color: #f9f9f9;
+      }
+
+      .eligibility-card {
+        background: #fff;
+        border-radius: 10px;
+        padding: 30px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      }
+
+      .eligibility-card h3 {
         color: #084f8c;
         margin-bottom: 20px;
       }
 
-      .board-meetings {
-        padding: 80px 0;
-        background-color: #f4f6f9;
+      .admission-process {
+        padding: 60px 0;
       }
 
-      .meeting-card {
-        background: #fff;
-        border-radius: 10px;
-        padding: 25px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      .process-step {
+        position: relative;
+        padding-left: 80px;
         margin-bottom: 30px;
       }
 
-      .meeting-card h4 {
-        color: #084f8c;
-        margin-bottom: 15px;
-      }
-
-      .meeting-card .date {
-        color: #2ecc71;
-        font-weight: 600;
-        margin-bottom: 10px;
+      .step-number {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 60px;
+        height: 60px;
+        background: #084f8c;
+        color: #fff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        font-weight: 700;
       }
 
       @media (max-width: 767px) {
-        .board-hero {
+        .programmes-hero {
           padding: 100px 0 60px;
         }
 
-        .board-hero h1 {
+        .programmes-hero h1 {
           font-size: 2.2rem;
         }
 
-        .member-img {
-          height: 250px;
+        .process-step {
+          padding-left: 60px;
+        }
+
+        .step-number {
+          width: 45px;
+          height: 45px;
+          font-size: 1.2rem;
         }
       }
     </style>
@@ -303,7 +334,7 @@
                       >
                     </li>
                     <li class="nav-item">
-                      <a href="about-board.html" class="nav-link active"
+                      <a href="about-board.html" class="nav-link"
                         >Board of Directors</a
                       >
                     </li>
@@ -328,7 +359,7 @@
                   <a class="nav-link dropdown-toggle"> Academics </a>
                   <ul class="dropdown-menu">
                     <li class="nav-item">
-                      <a href="academic-programmes.html" class="nav-link"
+                      <a href="academic-programmes.html" class="nav-link active"
                         >Academic Programmes</a
                       >
                     </li>
@@ -424,369 +455,232 @@
       <div class="others-option-for-responsive"></div>
     </div>
 
-    <!-- Board Hero Section -->
-    <section class="board-hero">
+    <!-- Programmes Hero Section -->
+    <section class="programmes-hero">
       <div class="container">
-        <h1>Board of Directors</h1>
+        <h1>Academic Programmes</h1>
         <p>
-          Leadership guiding the vision and governance of Malabar College of
-          Commerce and Science
+          Explore our diverse range of undergraduate programmes designed to
+          shape future leaders and professionals
         </p>
       </div>
     </section>
 
-    <!-- Board Introduction Section -->
-    <section class="board-intro">
+    <!-- Undergraduate Programmes Section -->
+    <section class="programmes-section">
       <div class="container">
-        <div class="row align-items-center">
-          <div class="col-lg-6">
-            <div class="about-content">
-              <h2>Our Governing Body</h2>
-              <p>
-                The Board of Directors at Malabar College of Commerce and
-                Science provides strategic leadership and oversight to ensure
-                the institution fulfills its mission of delivering exceptional
-                education.
-              </p>
-              <p>
-                Comprising distinguished professionals from academia, industry,
-                and community leadership, the Board establishes policies,
-                approves strategic plans, and monitors institutional
-                performance.
-              </p>
-              <div class="about-list">
-                <ul>
-                  <li>
-                    <i class="ri-check-fill"></i> Sets the strategic direction
-                    for the college
-                  </li>
-                  <li>
-                    <i class="ri-check-fill"></i> Ensures financial
-                    sustainability
-                  </li>
-                  <li>
-                    <i class="ri-check-fill"></i> Upholds academic standards
-                  </li>
-                  <li>
-                    <i class="ri-check-fill"></i> Represents community interests
-                  </li>
-                </ul>
+        <div class="section-title">
+          <h2>Undergraduate Programmes</h2>
+          <p>Three-year degree programmes (6 semesters)</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6">
+            <div class="programme-card" data-aos="fade-up" data-aos-delay="100">
+              <div class="programme-icon">
+                <i class="flaticon-microscope"></i>
               </div>
+              <h3>BSc Biochemistry</h3>
+              <span class="programme-duration">Duration: 3 Years</span>
+              <ul class="programme-features">
+                <li>Affiliated to University of Calicut</li>
+                <li>Eligibility: Plus Two with Science</li>
+                <li>Annual Intake: 30 Students</li>
+                <li>Career opportunities in research and healthcare</li>
+              </ul>
+              <a href="biochemistry.html" class="view-btn">More Details</a>
             </div>
           </div>
-          <div class="col-lg-6">
-            <div class="campus-image">
-              <img
-                src="assets/images/board-group.jpg"
-                alt="Board Members"
-                class="rounded"
-              />
+
+          <div class="col-lg-4 col-md-6">
+            <div class="programme-card" data-aos="fade-up" data-aos-delay="200">
+              <div class="programme-icon">
+                <i class="flaticon-computer"></i>
+              </div>
+              <h3>BSc Computer Science</h3>
+              <span class="programme-duration">Duration: 3 Years</span>
+              <ul class="programme-features">
+                <li>Affiliated to University of Calicut</li>
+                <li>Eligibility: Plus Two with Mathematics</li>
+                <li>Annual Intake: 30 Students</li>
+                <li>Focus on software development and IT solutions</li>
+              </ul>
+              <a href="computer-science.html" class="view-btn">More Details</a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="programme-card" data-aos="fade-up" data-aos-delay="300">
+              <div class="programme-icon">
+                <i class="flaticon-book"></i>
+              </div>
+              <h3>BA English</h3>
+              <span class="programme-duration">Duration: 3 Years</span>
+              <ul class="programme-features">
+                <li>Affiliated to University of Calicut</li>
+                <li>Eligibility: Plus Two any stream</li>
+                <li>Annual Intake: 30 Students</li>
+                <li>Emphasis on literature and communication skills</li>
+              </ul>
+              <a href="english.html" class="view-btn">More Details</a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="programme-card" data-aos="fade-up" data-aos-delay="100">
+              <div class="programme-icon">
+                <i class="flaticon-test-tube"></i>
+              </div>
+              <h3>BSc Food Technology</h3>
+              <span class="programme-duration">Duration: 3 Years</span>
+              <ul class="programme-features">
+                <li>Affiliated to University of Calicut</li>
+                <li>Eligibility: Plus Two with Science</li>
+                <li>Annual Intake: 30 Students</li>
+                <li>Specialization in food processing and safety</li>
+              </ul>
+              <a href="food-technology.html" class="view-btn">More Details</a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="programme-card" data-aos="fade-up" data-aos-delay="200">
+              <div class="programme-icon">
+                <i class="flaticon-bacteria"></i>
+              </div>
+              <h3>BSc Microbiology</h3>
+              <span class="programme-duration">Duration: 3 Years</span>
+              <ul class="programme-features">
+                <li>Affiliated to University of Calicut</li>
+                <li>Eligibility: Plus Two with Science</li>
+                <li>Annual Intake: 30 Students</li>
+                <li>Study of microorganisms and their applications</li>
+              </ul>
+              <a href="microbiology.html" class="view-btn">More Details</a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="programme-card" data-aos="fade-up" data-aos-delay="300">
+              <div class="programme-icon">
+                <i class="flaticon-psychology"></i>
+              </div>
+              <h3>BSc Psychology</h3>
+              <span class="programme-duration">Duration: 3 Years</span>
+              <ul class="programme-features">
+                <li>Affiliated to University of Calicut</li>
+                <li>Eligibility: Plus Two any stream</li>
+                <li>Annual Intake: 30 Students</li>
+                <li>Understanding human behavior and mental processes</li>
+              </ul>
+              <a href="psychology.html" class="view-btn">More Details</a>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Board Members Section -->
-    <section class="board-members">
+    <!-- Eligibility Criteria Section -->
+    <section class="eligibility-section">
       <div class="container">
-        <div class="section-title">
-          <h2>Meet Our Board Members</h2>
-          <p>Distinguished leaders guiding our institution</p>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-4 col-md-6">
-            <div class="member-card" data-aos="fade-up" data-aos-delay="100">
-              <img
-                src="assets/images/board-member-1.jpg"
-                class="member-img"
-                alt="Chairman"
-              />
-              <div class="member-info">
-                <h3>Dr. Rajesh Menon</h3>
-                <p class="position">Chairman</p>
-                <p class="qualification">
-                  PhD in Education, Former Vice Chancellor
-                </p>
-                <p>
-                  With over 35 years in higher education administration, Dr.
-                  Menon provides visionary leadership to the Board.
-                </p>
-                <div class="member-social">
-                  <a href="#"><i class="ri-linkedin-fill"></i></a>
-                  <a href="#"><i class="ri-mail-fill"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6">
-            <div class="member-card" data-aos="fade-up" data-aos-delay="200">
-              <img
-                src="assets/images/board-member-2.jpg"
-                class="member-img"
-                alt="Vice Chairman"
-              />
-              <div class="member-info">
-                <h3>Adv. Shalini Nair</h3>
-                <p class="position">Vice Chairman</p>
-                <p class="qualification">LLM, Social Activist</p>
-                <p>
-                  Brings expertise in legal matters and community development to
-                  the Board's deliberations.
-                </p>
-                <div class="member-social">
-                  <a href="#"><i class="ri-linkedin-fill"></i></a>
-                  <a href="#"><i class="ri-mail-fill"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6">
-            <div class="member-card" data-aos="fade-up" data-aos-delay="300">
-              <img
-                src="assets/images/board-member-3.jpg"
-                class="member-img"
-                alt="Secretary"
-              />
-              <div class="member-info">
-                <h3>Mr. Arun Kumar</h3>
-                <p class="position">Secretary</p>
-                <p class="qualification">MBA, Industrialist</p>
-                <p>
-                  Provides valuable industry perspective and oversees financial
-                  governance matters.
-                </p>
-                <div class="member-social">
-                  <a href="#"><i class="ri-linkedin-fill"></i></a>
-                  <a href="#"><i class="ri-mail-fill"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6">
-            <div class="member-card" data-aos="fade-up" data-aos-delay="100">
-              <img
-                src="assets/images/board-member-4.jpg"
-                class="member-img"
-                alt="Treasurer"
-              />
-              <div class="member-info">
-                <h3>Mr. Naveen Pillai</h3>
-                <p class="position">Treasurer</p>
-                <p class="qualification">CA, Financial Expert</p>
-                <p>
-                  Oversees the college's financial health and ensures proper
-                  fiscal management.
-                </p>
-                <div class="member-social">
-                  <a href="#"><i class="ri-linkedin-fill"></i></a>
-                  <a href="#"><i class="ri-mail-fill"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6">
-            <div class="member-card" data-aos="fade-up" data-aos-delay="200">
-              <img
-                src="assets/images/board-member-5.jpg"
-                class="member-img"
-                alt="Academic Representative"
-              />
-              <div class="member-info">
-                <h3>Dr. Priya Mohan</h3>
-                <p class="position">Academic Representative</p>
-                <p class="qualification">PhD in Commerce, Educationist</p>
-                <p>
-                  Ensures academic excellence remains central to Board
-                  discussions and decisions.
-                </p>
-                <div class="member-social">
-                  <a href="#"><i class="ri-linkedin-fill"></i></a>
-                  <a href="#"><i class="ri-mail-fill"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6">
-            <div class="member-card" data-aos="fade-up" data-aos-delay="300">
-              <img
-                src="assets/images/board-member-6.jpg"
-                class="member-img"
-                alt="Community Representative"
-              />
-              <div class="member-info">
-                <h3>Ms. Leela Devi</h3>
-                <p class="position">Community Representative</p>
-                <p class="qualification">MSW, Social Worker</p>
-                <p>
-                  Represents community interests and ensures college initiatives
-                  benefit local society.
-                </p>
-                <div class="member-social">
-                  <a href="#"><i class="ri-linkedin-fill"></i></a>
-                  <a href="#"><i class="ri-mail-fill"></i></a>
-                </div>
-              </div>
+        <div class="eligibility-card" data-aos="fade-up">
+          <h3>General Eligibility Criteria</h3>
+          <div class="row">
+            <div class="col-md-6">
+              <h4>For Undergraduate Programmes:</h4>
+              <ul>
+                <li>
+                  Pass in Higher Secondary Examination (10+2) or equivalent
+                </li>
+                <li>
+                  Science stream required for BSc programmes (except Psychology)
+                </li>
+                <li>
+                  Minimum 50% aggregate marks for general category (45% for
+                  reserved categories)
+                </li>
+                <li>
+                  Mathematics compulsory for BSc Computer Science applicants
+                </li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Board Functions Section -->
-    <section class="board-functions">
+    <!-- Admission Process Section -->
+    <section class="admission-process">
       <div class="container">
         <div class="section-title">
-          <h2>Board Responsibilities</h2>
-          <p>Key functions performed by our Board of Directors</p>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-4 col-md-6">
-            <div class="function-card" data-aos="fade-up" data-aos-delay="100">
-              <i class="flaticon-strategy"></i>
-              <h3>Strategic Planning</h3>
-              <p>
-                Establishing the long-term vision and strategic direction for
-                the college's growth and development.
-              </p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6">
-            <div class="function-card" data-aos="fade-up" data-aos-delay="200">
-              <i class="flaticon-budget"></i>
-              <h3>Financial Oversight</h3>
-              <p>
-                Approving budgets, monitoring financial performance, and
-                ensuring proper resource allocation.
-              </p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6">
-            <div class="function-card" data-aos="fade-up" data-aos-delay="300">
-              <i class="flaticon-quality"></i>
-              <h3>Quality Assurance</h3>
-              <p>
-                Setting policies to maintain and enhance academic standards and
-                institutional quality.
-              </p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6">
-            <div class="function-card" data-aos="fade-up" data-aos-delay="100">
-              <i class="flaticon-recruitment"></i>
-              <h3>Leadership Appointment</h3>
-              <p>
-                Selecting and evaluating the performance of the Principal and
-                senior administrators.
-              </p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6">
-            <div class="function-card" data-aos="fade-up" data-aos-delay="200">
-              <i class="flaticon-relationship"></i>
-              <h3>Community Engagement</h3>
-              <p>
-                Building relationships with stakeholders and representing
-                community interests.
-              </p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6">
-            <div class="function-card" data-aos="fade-up" data-aos-delay="300">
-              <i class="flaticon-compliance"></i>
-              <h3>Policy Governance</h3>
-              <p>
-                Establishing policies that guide institutional operations and
-                ensure compliance.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Board Meetings Section -->
-    <section class="board-meetings">
-      <div class="container">
-        <div class="section-title">
-          <h2>Board Meetings & Reports</h2>
-          <p>Transparency in governance and decision-making</p>
+          <h2>Admission Process</h2>
+          <p>Steps to join MCCS academic programmes</p>
         </div>
 
         <div class="row">
           <div class="col-lg-6">
-            <div class="meeting-card" data-aos="fade-up" data-aos-delay="100">
-              <h4>Annual General Meeting 2023</h4>
-              <p class="date">June 15, 2023</p>
+            <div class="process-step" data-aos="fade-up" data-aos-delay="100">
+              <div class="step-number">1</div>
+              <h4>Application Submission</h4>
               <p>
-                Reviewed annual performance, approved budget for FY 2023-24, and
-                set strategic priorities for the coming year.
+                Complete the online application form available on our website or
+                collect the form from the college office. Submit before the
+                deadline with required documents.
               </p>
-              <a href="#" class="read-more"
-                >View Minutes <i class="ri-arrow-right-line"></i
-              ></a>
             </div>
           </div>
-
           <div class="col-lg-6">
-            <div class="meeting-card" data-aos="fade-up" data-aos-delay="200">
-              <h4>Strategic Planning Retreat</h4>
-              <p class="date">March 3, 2023</p>
+            <div class="process-step" data-aos="fade-up" data-aos-delay="200">
+              <div class="step-number">2</div>
+              <h4>Document Verification</h4>
               <p>
-                Developed 5-year strategic plan focusing on infrastructure
-                development, academic excellence, and community engagement.
+                Bring original certificates and mark sheets for verification.
+                This includes 10th, 12th, and degree certificates (for PG
+                applicants).
               </p>
-              <a href="#" class="read-more"
-                >View Report <i class="ri-arrow-right-line"></i
-              ></a>
             </div>
           </div>
-
           <div class="col-lg-6">
-            <div class="meeting-card" data-aos="fade-up" data-aos-delay="100">
-              <h4>Quarterly Board Meeting</h4>
-              <p class="date">September 10, 2023</p>
+            <div class="process-step" data-aos="fade-up" data-aos-delay="300">
+              <div class="step-number">3</div>
+              <h4>Entrance Test (if applicable)</h4>
               <p>
-                Reviewed academic progress, approved new faculty positions, and
-                discussed student welfare initiatives.
+                Some programmes may require an entrance examination. Details
+                will be communicated after application submission.
               </p>
-              <a href="#" class="read-more"
-                >View Minutes <i class="ri-arrow-right-line"></i
-              ></a>
             </div>
           </div>
-
           <div class="col-lg-6">
-            <div class="meeting-card" data-aos="fade-up" data-aos-delay="200">
-              <h4>Finance Committee Meeting</h4>
-              <p class="date">November 5, 2023</p>
+            <div class="process-step" data-aos="fade-up" data-aos-delay="400">
+              <div class="step-number">4</div>
+              <h4>Merit List Publication</h4>
               <p>
-                Examined financial performance, approved capital expenditure
-                proposals, and reviewed scholarship fund allocations.
+                Merit lists will be published on the college notice board and
+                website based on academic performance and entrance test scores.
               </p>
-              <a href="#" class="read-more"
-                >View Report <i class="ri-arrow-right-line"></i
-              ></a>
             </div>
           </div>
-        </div>
-
-        <div class="text-center mt-4">
-          <a href="#" class="default-btn btn"
-            >View All Meetings & Reports <i class="flaticon-next"></i
-          ></a>
+          <div class="col-lg-6">
+            <div class="process-step" data-aos="fade-up" data-aos-delay="500">
+              <div class="step-number">5</div>
+              <h4>Fee Payment</h4>
+              <p>
+                Selected candidates must pay the admission fee within the
+                stipulated time to confirm their seat.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="process-step" data-aos="fade-up" data-aos-delay="600">
+              <div class="step-number">6</div>
+              <h4>Orientation Programme</h4>
+              <p>
+                Attend the mandatory orientation programme before classes begin
+                to familiarize yourself with college facilities and academic
+                policies.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -930,7 +824,6 @@
     <script src="assets/js/carousel-thumbs.min.js"></script>
     <script src="assets/js/jquery.magnific-popup.js"></script>
     <script src="assets/js/aos.js"></script>
-    <script src="assets/js/odometer.min.js"></script>
     <script src="assets/js/appear.min.js"></script>
     <script src="assets/js/form-validator.min.js"></script>
     <script src="assets/js/contact-form-script.js"></script>
@@ -938,7 +831,7 @@
     <script src="assets/js/custom.js"></script>
 
     <script>
-      // Notification Script (Same as Home Page)
+      // Notification Script
       const apiUrl =
         "https://app.conext.in/Notifications/api/latest-mccs-top-bar-notification/";
       const notificationContainer = document.getElementById(

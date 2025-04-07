@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Meet the Board of Directors of Malabar College of Commerce and Science - Leadership guiding our institution's vision"
+      content="Admission process for Malabar College of Commerce and Science - Steps, requirements, and important dates for prospective students"
     />
     <meta
       name="keywords"
-      content="MCCS Board, College Governors, Management Committee, Malabar College Leadership"
+      content="MCCS admission, college application, admission procedure, course enrollment, eligibility criteria"
     />
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/css/meanmenu.css" />
@@ -25,10 +25,10 @@
     <link rel="stylesheet" href="assets/css/dark.css" />
     <link rel="stylesheet" href="assets/css/responsive.css" />
     <link rel="icon" type="image/png" href="assets/images/favicon.png" />
-    <title>Board of Directors | MCCS</title>
+    <title>Admission Process | MCCS</title>
     <style>
-      /* Board Page Specific Styles */
-      .board-hero {
+      /* Admission Page Specific Styles */
+      .admission-hero {
         background: linear-gradient(rgba(0, 0, 0, 0.7)),
           url("assets/images/banner/MCCSBanner.jpeg") no-repeat center center;
         background-size: cover;
@@ -37,106 +37,111 @@
         text-align: center;
       }
 
-      .board-hero h1 {
+      .admission-hero h1 {
         font-size: 3rem;
         margin-bottom: 20px;
         font-weight: 700;
         color: #fff;
       }
 
-      .board-hero p {
+      .admission-hero p {
         font-size: 1.2rem;
         max-width: 800px;
         margin: 0 auto;
         color: #999;
       }
 
-      .board-intro {
-        padding: 80px 0 40px;
-      }
-
-      .board-members {
-        padding: 60px 0;
-        background-color: #f9f9f9;
-      }
-
-      .member-card {
-        background: #fff;
-        border-radius: 10px;
-        overflow: hidden;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-        margin-bottom: 30px;
-        transition: all 0.3s ease;
-      }
-
-      .member-card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-      }
-
-      .member-img {
-        height: 300px;
-        width: 100%;
-        object-fit: cover;
-      }
-
-      .member-info {
-        padding: 25px;
-      }
-
-      .member-info h3 {
-        color: #084f8c;
-        margin-bottom: 5px;
-      }
-
-      .member-info p.position {
-        color: #2ecc71;
-        font-weight: 600;
-        margin-bottom: 15px;
-      }
-
-      .member-info p.qualification {
-        color: #555;
-        font-size: 0.9rem;
-        margin-bottom: 15px;
-      }
-
-      .member-social {
-        margin-top: 15px;
-      }
-
-      .member-social a {
-        display: inline-block;
-        margin-right: 10px;
-        color: #084f8c;
-        font-size: 1.1rem;
-      }
-
-      .board-functions {
+      .process-steps {
         padding: 80px 0;
       }
 
-      .function-card {
+      .step-card {
         background: #fff;
         border-radius: 10px;
         padding: 30px;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
         margin-bottom: 30px;
-        height: 100%;
+        position: relative;
+        transition: transform 0.3s ease;
       }
 
-      .function-card i {
-        font-size: 2.5rem;
+      .step-card:hover {
+        transform: translateY(-10px);
+      }
+
+      .step-number {
+        position: absolute;
+        top: -20px;
+        left: 30px;
+        background: #084f8c;
+        color: #fff;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+      }
+
+      .eligibility-criteria {
+        padding: 80px 0;
+        background-color: #f9f9f9;
+      }
+
+      .criteria-card {
+        background: #fff;
+        border-radius: 10px;
+        padding: 30px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        margin-bottom: 30px;
+      }
+
+      .criteria-card h3 {
         color: #084f8c;
         margin-bottom: 20px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #2ecc71;
       }
 
-      .board-meetings {
+      .documents-required {
+        padding: 80px 0;
+      }
+
+      .documents-list {
+        background: #fff;
+        border-radius: 10px;
+        padding: 30px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      }
+
+      .documents-list ul {
+        columns: 2;
+        -webkit-columns: 2;
+        -moz-columns: 2;
+      }
+
+      .documents-list li {
+        margin-bottom: 10px;
+        position: relative;
+        padding-left: 25px;
+      }
+
+      .documents-list li:before {
+        content: "\f00c";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        color: #2ecc71;
+        position: absolute;
+        left: 0;
+      }
+
+      .important-dates {
         padding: 80px 0;
         background-color: #f4f6f9;
       }
 
-      .meeting-card {
+      .date-card {
         background: #fff;
         border-radius: 10px;
         padding: 25px;
@@ -144,28 +149,62 @@
         margin-bottom: 30px;
       }
 
-      .meeting-card h4 {
+      .date-card h4 {
         color: #084f8c;
         margin-bottom: 15px;
       }
 
-      .meeting-card .date {
+      .date-card .date {
         color: #2ecc71;
         font-weight: 600;
         margin-bottom: 10px;
       }
 
+      .faq-section {
+        padding: 80px 0;
+      }
+
+      .accordion-item {
+        margin-bottom: 15px;
+        border-radius: 5px !important;
+        overflow: hidden;
+        border: 1px solid #eee;
+      }
+
+      .accordion-button {
+        font-weight: 600;
+        color: #084f8c;
+      }
+
+      .accordion-button:not(.collapsed) {
+        background-color: rgba(8, 79, 140, 0.05);
+        color: #084f8c;
+      }
+
+      .contact-cta {
+        padding: 100px 0;
+        background: linear-gradient(
+          rgba(8, 79, 140, 0.9),
+          url("assets/images/contact-bg.jpg") no-repeat center center
+        );
+        background-size: cover;
+        color: #fff;
+        text-align: center;
+      }
+
       @media (max-width: 767px) {
-        .board-hero {
+        .admission-hero {
           padding: 100px 0 60px;
         }
 
-        .board-hero h1 {
+        .admission-hero h1 {
           font-size: 2.2rem;
         }
 
-        .member-img {
-          height: 250px;
+        .documents-list ul {
+          columns: 1;
+          -webkit-columns: 1;
+          -moz-columns: 1;
         }
       }
     </style>
@@ -303,7 +342,7 @@
                       >
                     </li>
                     <li class="nav-item">
-                      <a href="about-board.html" class="nav-link active"
+                      <a href="about-board.html" class="nav-link"
                         >Board of Directors</a
                       >
                     </li>
@@ -313,7 +352,7 @@
                   <a class="nav-link dropdown-toggle"> Admissions </a>
                   <ul class="dropdown-menu">
                     <li class="nav-item">
-                      <a href="admission-process.html" class="nav-link"
+                      <a href="admission-process.html" class="nav-link active"
                         >Admission Process</a
                       >
                     </li>
@@ -424,292 +463,93 @@
       <div class="others-option-for-responsive"></div>
     </div>
 
-    <!-- Board Hero Section -->
-    <section class="board-hero">
+    <!-- Admission Hero Section -->
+    <section class="admission-hero">
       <div class="container">
-        <h1>Board of Directors</h1>
+        <h1>Admission Process</h1>
         <p>
-          Leadership guiding the vision and governance of Malabar College of
-          Commerce and Science
+          Your journey to becoming an MCCS student starts here. Learn about our
+          straightforward admission procedure and requirements.
         </p>
       </div>
     </section>
 
-    <!-- Board Introduction Section -->
-    <section class="board-intro">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-lg-6">
-            <div class="about-content">
-              <h2>Our Governing Body</h2>
-              <p>
-                The Board of Directors at Malabar College of Commerce and
-                Science provides strategic leadership and oversight to ensure
-                the institution fulfills its mission of delivering exceptional
-                education.
-              </p>
-              <p>
-                Comprising distinguished professionals from academia, industry,
-                and community leadership, the Board establishes policies,
-                approves strategic plans, and monitors institutional
-                performance.
-              </p>
-              <div class="about-list">
-                <ul>
-                  <li>
-                    <i class="ri-check-fill"></i> Sets the strategic direction
-                    for the college
-                  </li>
-                  <li>
-                    <i class="ri-check-fill"></i> Ensures financial
-                    sustainability
-                  </li>
-                  <li>
-                    <i class="ri-check-fill"></i> Upholds academic standards
-                  </li>
-                  <li>
-                    <i class="ri-check-fill"></i> Represents community interests
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="campus-image">
-              <img
-                src="assets/images/board-group.jpg"
-                alt="Board Members"
-                class="rounded"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Board Members Section -->
-    <section class="board-members">
+    <!-- Process Steps Section -->
+    <section class="process-steps">
       <div class="container">
         <div class="section-title">
-          <h2>Meet Our Board Members</h2>
-          <p>Distinguished leaders guiding our institution</p>
+          <h2>Admission Procedure</h2>
+          <p>Follow these simple steps to secure your seat at MCCS</p>
         </div>
 
         <div class="row">
           <div class="col-lg-4 col-md-6">
-            <div class="member-card" data-aos="fade-up" data-aos-delay="100">
-              <img
-                src="assets/images/board-member-1.jpg"
-                class="member-img"
-                alt="Chairman"
-              />
-              <div class="member-info">
-                <h3>Dr. Rajesh Menon</h3>
-                <p class="position">Chairman</p>
-                <p class="qualification">
-                  PhD in Education, Former Vice Chancellor
-                </p>
-                <p>
-                  With over 35 years in higher education administration, Dr.
-                  Menon provides visionary leadership to the Board.
-                </p>
-                <div class="member-social">
-                  <a href="#"><i class="ri-linkedin-fill"></i></a>
-                  <a href="#"><i class="ri-mail-fill"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6">
-            <div class="member-card" data-aos="fade-up" data-aos-delay="200">
-              <img
-                src="assets/images/board-member-2.jpg"
-                class="member-img"
-                alt="Vice Chairman"
-              />
-              <div class="member-info">
-                <h3>Adv. Shalini Nair</h3>
-                <p class="position">Vice Chairman</p>
-                <p class="qualification">LLM, Social Activist</p>
-                <p>
-                  Brings expertise in legal matters and community development to
-                  the Board's deliberations.
-                </p>
-                <div class="member-social">
-                  <a href="#"><i class="ri-linkedin-fill"></i></a>
-                  <a href="#"><i class="ri-mail-fill"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6">
-            <div class="member-card" data-aos="fade-up" data-aos-delay="300">
-              <img
-                src="assets/images/board-member-3.jpg"
-                class="member-img"
-                alt="Secretary"
-              />
-              <div class="member-info">
-                <h3>Mr. Arun Kumar</h3>
-                <p class="position">Secretary</p>
-                <p class="qualification">MBA, Industrialist</p>
-                <p>
-                  Provides valuable industry perspective and oversees financial
-                  governance matters.
-                </p>
-                <div class="member-social">
-                  <a href="#"><i class="ri-linkedin-fill"></i></a>
-                  <a href="#"><i class="ri-mail-fill"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6">
-            <div class="member-card" data-aos="fade-up" data-aos-delay="100">
-              <img
-                src="assets/images/board-member-4.jpg"
-                class="member-img"
-                alt="Treasurer"
-              />
-              <div class="member-info">
-                <h3>Mr. Naveen Pillai</h3>
-                <p class="position">Treasurer</p>
-                <p class="qualification">CA, Financial Expert</p>
-                <p>
-                  Oversees the college's financial health and ensures proper
-                  fiscal management.
-                </p>
-                <div class="member-social">
-                  <a href="#"><i class="ri-linkedin-fill"></i></a>
-                  <a href="#"><i class="ri-mail-fill"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6">
-            <div class="member-card" data-aos="fade-up" data-aos-delay="200">
-              <img
-                src="assets/images/board-member-5.jpg"
-                class="member-img"
-                alt="Academic Representative"
-              />
-              <div class="member-info">
-                <h3>Dr. Priya Mohan</h3>
-                <p class="position">Academic Representative</p>
-                <p class="qualification">PhD in Commerce, Educationist</p>
-                <p>
-                  Ensures academic excellence remains central to Board
-                  discussions and decisions.
-                </p>
-                <div class="member-social">
-                  <a href="#"><i class="ri-linkedin-fill"></i></a>
-                  <a href="#"><i class="ri-mail-fill"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6">
-            <div class="member-card" data-aos="fade-up" data-aos-delay="300">
-              <img
-                src="assets/images/board-member-6.jpg"
-                class="member-img"
-                alt="Community Representative"
-              />
-              <div class="member-info">
-                <h3>Ms. Leela Devi</h3>
-                <p class="position">Community Representative</p>
-                <p class="qualification">MSW, Social Worker</p>
-                <p>
-                  Represents community interests and ensures college initiatives
-                  benefit local society.
-                </p>
-                <div class="member-social">
-                  <a href="#"><i class="ri-linkedin-fill"></i></a>
-                  <a href="#"><i class="ri-mail-fill"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Board Functions Section -->
-    <section class="board-functions">
-      <div class="container">
-        <div class="section-title">
-          <h2>Board Responsibilities</h2>
-          <p>Key functions performed by our Board of Directors</p>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-4 col-md-6">
-            <div class="function-card" data-aos="fade-up" data-aos-delay="100">
-              <i class="flaticon-strategy"></i>
-              <h3>Strategic Planning</h3>
+            <div class="step-card" data-aos="fade-up" data-aos-delay="100">
+              <div class="step-number">1</div>
+              <h3>Application Submission</h3>
               <p>
-                Establishing the long-term vision and strategic direction for
-                the college's growth and development.
+                Complete the online application form available on our website or
+                collect the form from the admission office. Ensure all details
+                are accurately filled.
               </p>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6">
-            <div class="function-card" data-aos="fade-up" data-aos-delay="200">
-              <i class="flaticon-budget"></i>
-              <h3>Financial Oversight</h3>
+            <div class="step-card" data-aos="fade-up" data-aos-delay="200">
+              <div class="step-number">2</div>
+              <h3>Document Verification</h3>
               <p>
-                Approving budgets, monitoring financial performance, and
-                ensuring proper resource allocation.
+                Submit required documents (originals + photocopies) for
+                verification. Our admission team will review your eligibility
+                based on academic records.
               </p>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6">
-            <div class="function-card" data-aos="fade-up" data-aos-delay="300">
-              <i class="flaticon-quality"></i>
-              <h3>Quality Assurance</h3>
+            <div class="step-card" data-aos="fade-up" data-aos-delay="300">
+              <div class="step-number">3</div>
+              <h3>Entrance Test/Interview</h3>
               <p>
-                Setting policies to maintain and enhance academic standards and
-                institutional quality.
+                Appear for course-specific entrance tests or interviews as
+                required. Some programs may have additional assessment
+                components.
               </p>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6">
-            <div class="function-card" data-aos="fade-up" data-aos-delay="100">
-              <i class="flaticon-recruitment"></i>
-              <h3>Leadership Appointment</h3>
+            <div class="step-card" data-aos="fade-up" data-aos-delay="100">
+              <div class="step-number">4</div>
+              <h3>Admission Offer</h3>
               <p>
-                Selecting and evaluating the performance of the Principal and
-                senior administrators.
+                Successful candidates will receive provisional admission offers
+                via email/SMS within 7 working days of assessment.
               </p>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6">
-            <div class="function-card" data-aos="fade-up" data-aos-delay="200">
-              <i class="flaticon-relationship"></i>
-              <h3>Community Engagement</h3>
+            <div class="step-card" data-aos="fade-up" data-aos-delay="200">
+              <div class="step-number">5</div>
+              <h3>Fee Payment</h3>
               <p>
-                Building relationships with stakeholders and representing
-                community interests.
+                Secure your admission by paying the first installment of fees
+                within the stipulated time frame through available payment
+                methods.
               </p>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6">
-            <div class="function-card" data-aos="fade-up" data-aos-delay="300">
-              <i class="flaticon-compliance"></i>
-              <h3>Policy Governance</h3>
+            <div class="step-card" data-aos="fade-up" data-aos-delay="300">
+              <div class="step-number">6</div>
+              <h3>Registration Complete</h3>
               <p>
-                Establishing policies that guide institutional operations and
-                ensure compliance.
+                After fee payment, complete the enrollment formalities and
+                collect your admission kit containing important college
+                information.
               </p>
             </div>
           </div>
@@ -717,76 +557,352 @@
       </div>
     </section>
 
-    <!-- Board Meetings Section -->
-    <section class="board-meetings">
+    <!-- Eligibility Criteria Section -->
+    <section class="eligibility-criteria">
       <div class="container">
         <div class="section-title">
-          <h2>Board Meetings & Reports</h2>
-          <p>Transparency in governance and decision-making</p>
+          <h2>Eligibility Criteria</h2>
+          <p>Academic requirements for our various programs</p>
         </div>
 
         <div class="row">
           <div class="col-lg-6">
-            <div class="meeting-card" data-aos="fade-up" data-aos-delay="100">
-              <h4>Annual General Meeting 2023</h4>
-              <p class="date">June 15, 2023</p>
-              <p>
-                Reviewed annual performance, approved budget for FY 2023-24, and
-                set strategic priorities for the coming year.
-              </p>
-              <a href="#" class="read-more"
-                >View Minutes <i class="ri-arrow-right-line"></i
-              ></a>
+            <div class="criteria-card" data-aos="fade-up" data-aos-delay="100">
+              <h3>Undergraduate Programs</h3>
+              <ul>
+                <li>
+                  Completion of 10+2 or equivalent from a recognized board
+                </li>
+                <li>
+                  Minimum aggregate marks required vary by program (45-60%)
+                </li>
+                <li>Science programs require PCM/PCB in 10+2</li>
+                <li>Commerce programs require Commerce/Mathematics in 10+2</li>
+                <li>BA English requires English as a subject in 10+2</li>
+              </ul>
             </div>
           </div>
 
           <div class="col-lg-6">
-            <div class="meeting-card" data-aos="fade-up" data-aos-delay="200">
-              <h4>Strategic Planning Retreat</h4>
-              <p class="date">March 3, 2023</p>
-              <p>
-                Developed 5-year strategic plan focusing on infrastructure
-                development, academic excellence, and community engagement.
-              </p>
-              <a href="#" class="read-more"
-                >View Report <i class="ri-arrow-right-line"></i
-              ></a>
+            <div class="criteria-card" data-aos="fade-up" data-aos-delay="200">
+              <h3>Lateral Entry Programs</h3>
+              <ul>
+                <li>
+                  Diploma holders in relevant fields may apply for lateral entry
+                </li>
+                <li>Minimum 50% marks in diploma program</li>
+                <li>Relevant work experience considered for some programs</li>
+                <li>Entrance test may be required</li>
+              </ul>
             </div>
           </div>
 
           <div class="col-lg-6">
-            <div class="meeting-card" data-aos="fade-up" data-aos-delay="100">
-              <h4>Quarterly Board Meeting</h4>
-              <p class="date">September 10, 2023</p>
-              <p>
-                Reviewed academic progress, approved new faculty positions, and
-                discussed student welfare initiatives.
-              </p>
-              <a href="#" class="read-more"
-                >View Minutes <i class="ri-arrow-right-line"></i
-              ></a>
+            <div class="criteria-card" data-aos="fade-up" data-aos-delay="100">
+              <h3>International Students</h3>
+              <ul>
+                <li>Equivalent qualification recognized by AIU</li>
+                <li>Valid student visa</li>
+                <li>English proficiency test scores (if applicable)</li>
+                <li>Medical fitness certificate</li>
+              </ul>
             </div>
           </div>
 
           <div class="col-lg-6">
-            <div class="meeting-card" data-aos="fade-up" data-aos-delay="200">
-              <h4>Finance Committee Meeting</h4>
-              <p class="date">November 5, 2023</p>
-              <p>
-                Examined financial performance, approved capital expenditure
-                proposals, and reviewed scholarship fund allocations.
-              </p>
-              <a href="#" class="read-more"
-                >View Report <i class="ri-arrow-right-line"></i
-              ></a>
+            <div class="criteria-card" data-aos="fade-up" data-aos-delay="200">
+              <h3>Special Categories</h3>
+              <ul>
+                <li>
+                  Sports quota: State/national level achievements required
+                </li>
+                <li>NRI quota: Additional documentation needed</li>
+                <li>Management quota: Limited seats available</li>
+                <li>SC/ST/OBC: Relaxation as per government norms</li>
+              </ul>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Documents Required Section -->
+    <section class="documents-required">
+      <div class="container">
+        <div class="section-title">
+          <h2>Documents Required</h2>
+          <p>Checklist of documents needed for admission</p>
+        </div>
+
+        <div class="documents-list" data-aos="fade-up">
+          <ul>
+            <li>Completed application form with passport-size photographs</li>
+            <li>
+              Original mark sheets and certificates of qualifying examinations
+            </li>
+            <li>Transfer Certificate from previous institution</li>
+            <li>Conduct Certificate from previous institution</li>
+            <li>
+              Migration Certificate (for students from other
+              boards/universities)
+            </li>
+            <li>Caste Certificate (if applicable)</li>
+            <li>Income Certificate (for scholarship applicants)</li>
+            <li>Medical Fitness Certificate</li>
+            <li>Aadhaar Card copy</li>
+            <li>Passport copy (for international students)</li>
+            <li>Student visa copy (for international students)</li>
+            <li>Equivalence Certificate (for international qualifications)</li>
+            <li>Sports achievement certificates (for sports quota)</li>
+            <li>Any other relevant certificates</li>
+          </ul>
         </div>
 
         <div class="text-center mt-4">
-          <a href="#" class="default-btn btn"
-            >View All Meetings & Reports <i class="flaticon-next"></i
+          <a href="#" class="default-btn"
+            >Download Document Checklist <i class="flaticon-next"></i
           ></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Important Dates Section -->
+    <section class="important-dates">
+      <div class="container">
+        <div class="section-title">
+          <h2>Important Dates</h2>
+          <p>Key timelines for the admission cycle</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="date-card" data-aos="fade-up" data-aos-delay="100">
+              <h4>Application Window</h4>
+              <p class="date">March 1 - May 31, 2024</p>
+              <p>
+                Online and offline applications accepted during this period.
+                Early applications encouraged.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="date-card" data-aos="fade-up" data-aos-delay="200">
+              <h4>Entrance Tests</h4>
+              <p class="date">June 10-15, 2024</p>
+              <p>
+                Course-specific entrance tests will be conducted. Exact dates
+                will be communicated individually.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="date-card" data-aos="fade-up" data-aos-delay="100">
+              <h4>First Merit List</h4>
+              <p class="date">June 25, 2024</p>
+              <p>
+                Published on college website and notice boards. Selected
+                candidates must confirm within 5 days.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="date-card" data-aos="fade-up" data-aos-delay="200">
+              <h4>Second Merit List</h4>
+              <p class="date">July 5, 2024</p>
+              <p>
+                If seats remain vacant after first round. Confirmation within 3
+                days of publication.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="date-card" data-aos="fade-up" data-aos-delay="100">
+              <h4>Fee Payment Deadline</h4>
+              <p class="date">July 15, 2024</p>
+              <p>
+                Last date for paying first installment fees to secure admission.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="date-card" data-aos="fade-up" data-aos-delay="200">
+              <h4>Orientation Program</h4>
+              <p class="date">August 1, 2024</p>
+              <p>
+                Mandatory for all new students. Academic session begins August
+                2, 2024.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+      <div class="container">
+        <div class="section-title">
+          <h2>Frequently Asked Questions</h2>
+          <p>Quick answers to common admission queries</p>
+        </div>
+
+        <div class="accordion" id="admissionFAQ">
+          <div class="accordion-item" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="accordion-header" id="headingOne">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseOne"
+              >
+                What is the application fee for admission?
+              </button>
+            </h3>
+            <div
+              id="collapseOne"
+              class="accordion-collapse collapse show"
+              aria-labelledby="headingOne"
+              data-bs-parent="#admissionFAQ"
+            >
+              <div class="accordion-body">
+                The application fee is ₹500 for general category applicants and
+                ₹250 for SC/ST candidates. This fee is non-refundable and can be
+                paid online or via demand draft in favor of "Malabar College of
+                Commerce and Science" payable at Edappal.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item" data-aos="fade-up" data-aos-delay="200">
+            <h3 class="accordion-header" id="headingTwo">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseTwo"
+              >
+                Can I apply for multiple programs?
+              </button>
+            </h3>
+            <div
+              id="collapseTwo"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingTwo"
+              data-bs-parent="#admissionFAQ"
+            >
+              <div class="accordion-body">
+                Yes, you can apply for up to 3 programs. However, you need to
+                submit separate application forms for each program and pay the
+                application fee for each. If selected for multiple programs,
+                you'll need to choose one before the confirmation deadline.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item" data-aos="fade-up" data-aos-delay="300">
+            <h3 class="accordion-header" id="headingThree">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseThree"
+              >
+                Is hostel accommodation available?
+              </button>
+            </h3>
+            <div
+              id="collapseThree"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingThree"
+              data-bs-parent="#admissionFAQ"
+            >
+              <div class="accordion-body">
+                Yes, we have separate hostel facilities for boys and girls with
+                limited seats. Hostel admission is separate from academic
+                admission and is granted based on distance from campus and
+                availability. Hostel application forms will be provided after
+                academic admission confirmation.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="accordion-header" id="headingFour">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseFour"
+              >
+                What payment methods are accepted for fees?
+              </button>
+            </h3>
+            <div
+              id="collapseFour"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingFour"
+              data-bs-parent="#admissionFAQ"
+            >
+              <div class="accordion-body">
+                We accept online payments (credit/debit cards, net banking,
+                UPI), demand drafts, and cash payments at the college cash
+                counter. Installment options are available for most programs.
+                International students can pay via wire transfer (details
+                provided upon admission).
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item" data-aos="fade-up" data-aos-delay="200">
+            <h3 class="accordion-header" id="headingFive">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseFive"
+              >
+                Are there any age restrictions for admission?
+              </button>
+            </h3>
+            <div
+              id="collapseFive"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingFive"
+              data-bs-parent="#admissionFAQ"
+            >
+              <div class="accordion-body">
+                For undergraduate programs, candidates should typically be
+                between 17-23 years. However, we consider exceptions for
+                deserving candidates. There's no upper age limit for
+                postgraduate programs. Age relaxation is applicable for reserved
+                categories as per government norms.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact CTA Section -->
+    <section class="contact-cta">
+      <div class="container">
+        <h2 data-aos="fade-up">Need Help With Admission?</h2>
+        <p data-aos="fade-up" data-aos-delay="100">
+          Our admission counselors are ready to assist you with any questions
+          about the process, eligibility, or programs.
+        </p>
+        <div class="mt-4" data-aos="fade-up" data-aos-delay="200">
+          <a href="contact-us.html" class="default-btn me-3"
+            >Contact Admission Office</a
+          >
+          <a href="tel:+917034999995" class="default-btn"
+            >Call Now: +91 7034 999 995</a
+          >
         </div>
       </div>
     </section>
