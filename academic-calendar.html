@@ -171,8 +171,23 @@
           </div>
           <div class="col-lg-8 col-md-8">
             <div class="header-left-content">
+              <!-- Search container moved to the left -->
+              <div class="search-container">
+                <div class="search-box">
+                  <input
+                    type="text"
+                    class="search-input"
+                    placeholder="Search"
+                    id="globalSearch"
+                  />
+                  <button class="search-btn">
+                    <i class="ri-search-line"></i>
+                  </button>
+                </div>
+                <div class="search-results" id="searchResults"></div>
+              </div>
               <ul
-                style="margin: 0px; color: #fff"
+                style="margin: 0px; padding-left: 20px; color: #fff"
                 class="notification-list notification"
                 id="notification-container"
               ></ul>
@@ -283,7 +298,7 @@
                   </ul>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link dropdown-toggle"> Academics </a>
+                  <a class="nav-link dropdown-toggle active"> Academics </a>
                   <ul class="dropdown-menu">
                     <li class="nav-item">
                       <a href="academic-programmes.html" class="nav-link"
@@ -307,8 +322,8 @@
                           <a href="english.html" class="nav-link">BA English</a>
                         </li>
                         <li class="nav-item">
-                          <a href="computer-science.html" class="nav-link"
-                            >Computer Science</a
+                          <a href="computer-application.html" class="nav-link"
+                            >BCA</a
                           >
                         </li>
                         <li class="nav-item">
@@ -394,7 +409,7 @@
     </section>
 
     <!-- Calendar Documents Section -->
-    <section class="calendar-section">
+    <!-- <section class="calendar-section">
       <div class="container">
         <div class="section-title">
           <h2>Academic Calendars</h2>
@@ -485,7 +500,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- Important Notes Section -->
     <section class="calendar-notes">

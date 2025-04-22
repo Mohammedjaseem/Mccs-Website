@@ -147,6 +147,64 @@
         font-weight: bold;
       }
 
+      .no-openings-message {
+        text-align: center;
+        padding: 50px 20px;
+        background: #f9f9f9;
+        border-radius: 10px;
+        margin-top: 30px;
+      }
+
+      .icon-box {
+        font-size: 50px;
+        color: #2f89fc;
+        margin-bottom: 20px;
+      }
+
+      .message-text {
+        font-size: 18px;
+        color: #555;
+        margin-bottom: 30px;
+        line-height: 1.6;
+      }
+
+      .apply-btn {
+        display: inline-block;
+        padding: 12px 30px;
+        background: #2f89fc;
+        color: #fff;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+      }
+
+      .apply-btn:hover {
+        background: #1a73e8;
+        transform: translateY(-3px);
+      }
+
+      .follow-text {
+        margin-top: 40px;
+        color: #777;
+      }
+
+      .social-links {
+        margin-top: 15px;
+      }
+
+      .social-links a {
+        display: inline-block;
+        margin: 0 10px;
+        font-size: 20px;
+        color: #2f89fc;
+        transition: all 0.3s ease;
+      }
+
+      .social-links a:hover {
+        transform: translateY(-3px);
+      }
+
       @media (max-width: 767px) {
         .careers-hero {
           padding: 100px 0 60px;
@@ -208,8 +266,23 @@
           </div>
           <div class="col-lg-8 col-md-8">
             <div class="header-left-content">
+              <!-- Search container moved to the left -->
+              <div class="search-container">
+                <div class="search-box">
+                  <input
+                    type="text"
+                    class="search-input"
+                    placeholder="Search"
+                    id="globalSearch"
+                  />
+                  <button class="search-btn">
+                    <i class="ri-search-line"></i>
+                  </button>
+                </div>
+                <div class="search-results" id="searchResults"></div>
+              </div>
               <ul
-                style="margin: 0px; color: #fff"
+                style="margin: 0px; padding-left: 20px; color: #fff"
                 class="notification-list notification"
                 id="notification-container"
               ></ul>
@@ -344,8 +417,8 @@
                           <a href="english.html" class="nav-link">BA English</a>
                         </li>
                         <li class="nav-item">
-                          <a href="computer-science.html" class="nav-link"
-                            >Computer Science</a
+                          <a href="computer-application.html" class="nav-link"
+                            >BCA</a
                           >
                         </li>
                         <li class="nav-item">
@@ -438,14 +511,33 @@
           <p>Explore opportunities to join our academic community</p>
         </div>
 
-        <div class="row">
+        <div class="no-openings-message">
+          <div class="icon-box">
+            <i class="fas fa-search"></i>
+          </div>
+          <h3>Currently No Open Positions</h3>
+          <p class="message-text">
+            We don't have any job openings at the moment, but great talent is
+            always welcome!<br />
+            Feel free to send us your resume for future consideration.
+          </p>
+
+          <div class="follow-text">
+            <p>
+              Follow us on social media to stay updated on future opportunities!
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="row">
           <div
             class="col-lg-6 col-md-6"
             data-aos="fade-up"
             data-aos-delay="100"
           >
             <div class="job-card">
-              <h3>Assistant Professor - Computer Science</h3>
+              <h3>Assistant Professor - BCA</h3>
               <span class="job-type">Full-time</span>
               <p>
                 <strong>Qualification:</strong> Ph.D. or M.Tech in Computer
@@ -517,7 +609,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
     </section>
 
     <!-- Why Work With Us Section -->
@@ -602,7 +694,7 @@
     </section>
 
     <!-- Testimonials Section -->
-    <section class="courses-area pt-100 pb-70 bg-f4f6f9">
+    <!-- <section class="courses-area pt-100 pb-70 bg-f4f6f9">
       <div class="container">
         <div class="section-title">
           <h2>What Our Staff Say</h2>
@@ -634,7 +726,7 @@
               </p>
               <div class="testimonial-author">
                 <strong>Prof. Rajeev Menon</strong>
-                <p>Head, Department of Computer Science</p>
+                <p>Head, Department of BCA</p>
                 <p>With MCCS since 2012</p>
               </div>
             </div>
@@ -656,7 +748,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- Application Process Section -->
     <section class="courses-area pt-100 pb-70">
@@ -794,7 +886,7 @@
                     >
                     <select class="form-select" id="position" required>
                       <option value="">Select Position</option>
-                      <option>Assistant Professor - Computer Science</option>
+                      <option>Assistant Professor - BCA</option>
                       <option>Lab Assistant - Microbiology</option>
                       <option>Administrative Officer</option>
                       <option>Guest Faculty - Psychology</option>

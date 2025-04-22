@@ -70,6 +70,7 @@
       </div>
     </div>
 
+    <!-- Header Section -->
     <div class="top-header-area d-none d-lg-block">
       <div class="container">
         <div class="row align-items-center">
@@ -78,22 +79,49 @@
               <div class="list">
                 <ul style="margin-left: 4rem">
                   <li>
-                    <a href="mailto:infomccs@macity.edu.in"><i class="ri-mail-fill" style="color: #3498db; margin-right: 5px;"></i> infomccs@macity.edu.in</a>
+                    <a href="mailto:infomccs@macity.edu.in"
+                      ><i
+                        class="ri-mail-fill"
+                        style="color: #3498db; margin-right: 5px"
+                      ></i>
+                      infomccs@macity.edu.in</a
+                    >
                   </li>
-                  <li><a href="tel:+917034999995"><i class="ri-phone-fill" style="color: #2ecc71; margin-right: 5px;"></i> +91 7034 999 995</a></li>
+                  <li>
+                    <a href="tel:+917034999995"
+                      ><i
+                        class="ri-phone-fill"
+                        style="color: #2ecc71; margin-right: 5px"
+                      ></i>
+                      +91 7034 999 995</a
+                    >
+                  </li>
                 </ul>
               </div>
             </div>
           </div>
           <div class="col-lg-8 col-md-8">
             <div class="header-left-content">
+              <!-- Search container moved to the left -->
+              <div class="search-container">
+                <div class="search-box">
+                  <input
+                    type="text"
+                    class="search-input"
+                    placeholder="Search"
+                    id="globalSearch"
+                  />
+                  <button class="search-btn">
+                    <i class="ri-search-line"></i>
+                  </button>
+                </div>
+                <div class="search-results" id="searchResults"></div>
+              </div>
               <ul
-                style="margin: 0px; color: #fff"
+                style="margin: 0px; padding-left: 20px; color: #fff"
                 class="notification-list notification"
                 id="notification-container"
-              >
-                Loading...
-              </ul>
+              ></ul>
               <a
                 class="top-bar-button"
                 href="https://www.mccsconnect.in/"
@@ -141,96 +169,158 @@
               class="collapse navbar-collapse mean-menu"
               id="navbarSupportedContent"
             >
-              <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                  <a href="index.html" class="nav-link"> Home </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link dropdown-toggle"> Academics </a>
-                  <ul class="dropdown-menu">
-                    <li class="nav-item">
-                      <a href="facilities.html" class="nav-link">Faciliites</a>
-                    </li>
-                    <li class="nav-item">
-                      <a href="library.html" class="nav-link">Library</a>
-                    </li>
-                    <li class="nav-item">
-                      <a href="achievements.html" class="nav-link"
-                        >Achievements</a
-                      >
-                    </li>
-                    <li class="nav-item">
-                      <a href="women-cell.html" class="nav-link">Women Cell</a>
-                    </li>
-                  </ul>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link dropdown-toggle"> Department</a>
-                  <ul class="dropdown-menu">
-                    <li class="nav-item">
-                      <a href="food-technology.html" class="nav-link"
-                        >Food Technology</a
-                      >
-                    </li>
-                    <li class="nav-item">
-                      <a href="biochemistry.html" class="nav-link"
-                        >Biochemistry</a
-                      >
-                    </li>
-                    <li class="nav-item">
-                      <a href="english.html" class="nav-link">Ba English</a>
-                    </li>
-                    <li class="nav-item">
-                      <a href="computer-science.html" class="nav-link"
-                        >Computer Science</a
-                      >
-                    </li>
-                    <li class="nav-item">
-                      <a href="microbiology.html" class="nav-link"
-                        >Microbiology</a
-                      >
-                    </li>
-                    <li class="nav-item">
-                      <a href="psychology.html" class="nav-link">Psychology</a>
-                    </li>
-                  </ul>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link dropdown-toggle"> NAAC</a>
-                  <ul class="dropdown-menu">
-                    <li class="nav-item">
-                      <a href="naac-qualitative.html" class="nav-link"
-                        >NAAC-Qualitative</a
-                      >
-                    </li>
-                    <li class="nav-item">
-                      <a href="naac-quantitative.html" class="nav-link"
-                        >NAAC-Quantitative</a
-                      >
-                    </li>
-                  </ul>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link dropdown-toggle"> Activities </a>
-                  <ul class="dropdown-menu">
-                    <li class="nav-item">
-                      <a href="gallery.html" class="nav-link">Gallery</a>
-                    </li>
-                    <li class="nav-item">
-                      <a href="news-page.html" class="nav-link">MCCS News</a>
-                    </li>
-                    <li class="nav-item">
-                      <a href="events.html" class="nav-link">Events</a>
-                    </li>
-                    <li class="nav-item">
-                      <a href="clubs.html" class="nav-link">Clubs</a>
-                    </li>
-                  </ul>
-                </li>
-                <li class="nav-item">
-                  <a href="contact-us.html" class="nav-link">Contact Us</a>
-                </li>
-              </ul>
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a href="index.html" class="nav-link"> Home </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link dropdown-toggle"> About Us </a>
+                <ul class="dropdown-menu">
+                  <li class="nav-item">
+                    <a href="about-overview.html" class="nav-link"
+                      >Overview</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a href="about-vision-mission.html" class="nav-link"
+                      >Vision & Mission</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link dropdown-toggle"> Accreditation</a>
+                    <ul class="dropdown-menu">
+                      <li class="nav-item">
+                        <a href="naac-qualitative.html" class="nav-link"
+                          >NAAC-Qualitative</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a href="naac-quantitative.html" class="nav-link"
+                          >NAAC-Quantitative</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a href="about-principal.html" class="nav-link"
+                      >Principal</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a href="about-board.html" class="nav-link"
+                      >Board of Directors</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link dropdown-toggle"> Admissions </a>
+                <ul class="dropdown-menu">
+                  <li class="nav-item">
+                    <a href="admission-process.html" class="nav-link"
+                      >Admission Process</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a href="courses.html" class="nav-link active"
+                      >Courses Offered</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link dropdown-toggle"> Academics </a>
+                <ul class="dropdown-menu">
+                  <li class="nav-item">
+                    <a href="academic-programmes.html" class="nav-link"
+                      >Academic Programmes</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link dropdown-toggle">Departments</a>
+                    <ul class="dropdown-menu">
+                      <li class="nav-item">
+                        <a href="food-technology.html" class="nav-link"
+                          >Food Technology</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a href="biochemistry.html" class="nav-link"
+                          >Biochemistry</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a href="english.html" class="nav-link">BA English</a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="computer-application.html" class="nav-link"
+                          >BCA</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a href="microbiology.html" class="nav-link"
+                          >Microbiology</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a href="psychology.html" class="nav-link"
+                          >Psychology</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a href="facilities.html" class="nav-link">Facilities</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="academic-calendar.html" class="nav-link"
+                      >Academic Calendar</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a href="library.html" class="nav-link">Library</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="achievements.html" class="nav-link"
+                      >Achievements</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link dropdown-toggle"> Students Zone </a>
+                <ul class="dropdown-menu">
+                  <li class="nav-item">
+                    <a class="nav-link dropdown-toggle"> Activities </a>
+                    <ul class="dropdown-menu">
+                      <li class="nav-item">
+                        <a href="news-page.html" class="nav-link"
+                          >MCCS News</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a href="events.html" class="nav-link">Events</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a href="clubs.html" class="nav-link">Clubs</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="women-cell.html" class="nav-link">Women Cell</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="gallery.html" class="nav-link">Gallery</a>
+              </li>
+              <li class="nav-item">
+                <a href="careers.html" class="nav-link">Careers</a>
+              </li>
+              <li class="nav-item">
+                <a href="contact-us.html" class="nav-link">Contact Us</a>
+              </li>
+            </ul>
             </div>
           </nav>
         </div>
@@ -501,14 +591,14 @@
                 <div class="col-lg-4 col-md-4">
                   <div class="single-courses-card style4">
                     <div class="courses-img">
-                      <a href="computer-science.html"
+                      <a href="computer-application.html"
                         ><img
                           src="assets/images/facilities/facility-13.jpg"
                           alt="Image"
                       /></a>
                     </div>
                     <div class="courses-content">
-                      <a href="computer-science.html"
+                      <a href="computer-application.html"
                         ><h3>BCA</h3></a
                       >
                       <p>

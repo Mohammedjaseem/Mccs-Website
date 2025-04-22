@@ -252,8 +252,23 @@
           </div>
           <div class="col-lg-8 col-md-8">
             <div class="header-left-content">
+              <!-- Search container moved to the left -->
+              <div class="search-container">
+                <div class="search-box">
+                  <input
+                    type="text"
+                    class="search-input"
+                    placeholder="Search"
+                    id="globalSearch"
+                  />
+                  <button class="search-btn">
+                    <i class="ri-search-line"></i>
+                  </button>
+                </div>
+                <div class="search-results" id="searchResults"></div>
+              </div>
               <ul
-                style="margin: 0px; color: #fff"
+                style="margin: 0px; padding-left: 20px; color: #fff"
                 class="notification-list notification"
                 id="notification-container"
               ></ul>
@@ -388,8 +403,8 @@
                           <a href="english.html" class="nav-link">BA English</a>
                         </li>
                         <li class="nav-item">
-                          <a href="computer-science.html" class="nav-link"
-                            >Computer Science</a
+                          <a href="computer-application.html" class="nav-link"
+                            >BCA</a
                           >
                         </li>
                         <li class="nav-item">
@@ -478,7 +493,7 @@
     <section class="process-steps">
       <div class="container">
         <div class="section-title">
-          <h2>Admission Procedure</h2>
+          <h2>Management Admission Procedure</h2>
           <p>Follow these simple steps to secure your seat at MCCS</p>
         </div>
 
@@ -510,11 +525,10 @@
           <div class="col-lg-4 col-md-6">
             <div class="step-card" data-aos="fade-up" data-aos-delay="300">
               <div class="step-number">3</div>
-              <h3>Entrance Test/Interview</h3>
+              <h3>Rank List Publication</h3>
               <p>
-                Appear for course-specific entrance tests or interviews as
-                required. Some programs may have additional assessment
-                components.
+                The rank list will be released based on the candidates
+                performance in the selection process.
               </p>
             </div>
           </div>
@@ -533,7 +547,7 @@
           <div class="col-lg-4 col-md-6">
             <div class="step-card" data-aos="fade-up" data-aos-delay="200">
               <div class="step-number">5</div>
-              <h3>Fee Payment</h3>
+              <h3>Payment (Gov. fees only)</h3>
               <p>
                 Secure your admission by paying the first installment of fees
                 within the stipulated time frame through available payment
@@ -585,32 +599,6 @@
 
           <div class="col-lg-6">
             <div class="criteria-card" data-aos="fade-up" data-aos-delay="200">
-              <h3>Lateral Entry Programs</h3>
-              <ul>
-                <li>
-                  Diploma holders in relevant fields may apply for lateral entry
-                </li>
-                <li>Minimum 50% marks in diploma program</li>
-                <li>Relevant work experience considered for some programs</li>
-                <li>Entrance test may be required</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="col-lg-6">
-            <div class="criteria-card" data-aos="fade-up" data-aos-delay="100">
-              <h3>International Students</h3>
-              <ul>
-                <li>Equivalent qualification recognized by AIU</li>
-                <li>Valid student visa</li>
-                <li>English proficiency test scores (if applicable)</li>
-                <li>Medical fitness certificate</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="col-lg-6">
-            <div class="criteria-card" data-aos="fade-up" data-aos-delay="200">
               <h3>Special Categories</h3>
               <ul>
                 <li>
@@ -647,27 +635,17 @@
               boards/universities)
             </li>
             <li>Caste Certificate (if applicable)</li>
-            <li>Income Certificate (for scholarship applicants)</li>
             <li>Medical Fitness Certificate</li>
             <li>Aadhaar Card copy</li>
-            <li>Passport copy (for international students)</li>
-            <li>Student visa copy (for international students)</li>
-            <li>Equivalence Certificate (for international qualifications)</li>
             <li>Sports achievement certificates (for sports quota)</li>
             <li>Any other relevant certificates</li>
           </ul>
-        </div>
-
-        <div class="text-center mt-4">
-          <a href="#" class="default-btn"
-            >Download Document Checklist <i class="flaticon-next"></i
-          ></a>
         </div>
       </div>
     </section>
 
     <!-- Important Dates Section -->
-    <section class="important-dates">
+    <!-- <section class="important-dates">
       <div class="container">
         <div class="section-title">
           <h2>Important Dates</h2>
@@ -741,10 +719,10 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- FAQ Section -->
-    <section class="faq-section">
+    <!-- <section class="faq-section">
       <div class="container">
         <div class="section-title">
           <h2>Frequently Asked Questions</h2>
@@ -886,7 +864,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- Contact CTA Section -->
     <section class="contact-cta">

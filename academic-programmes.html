@@ -244,8 +244,23 @@
           </div>
           <div class="col-lg-8 col-md-8">
             <div class="header-left-content">
+              <!-- Search container moved to the left -->
+              <div class="search-container">
+                <div class="search-box">
+                  <input
+                    type="text"
+                    class="search-input"
+                    placeholder="Search"
+                    id="globalSearch"
+                  />
+                  <button class="search-btn">
+                    <i class="ri-search-line"></i>
+                  </button>
+                </div>
+                <div class="search-results" id="searchResults"></div>
+              </div>
               <ul
-                style="margin: 0px; color: #fff"
+                style="margin: 0px; padding-left: 20px; color: #fff"
                 class="notification-list notification"
                 id="notification-container"
               ></ul>
@@ -380,8 +395,8 @@
                           <a href="english.html" class="nav-link">BA English</a>
                         </li>
                         <li class="nav-item">
-                          <a href="computer-science.html" class="nav-link"
-                            >Computer Science</a
+                          <a href="computer-application.html" class="nav-link"
+                            >BCA</a
                           >
                         </li>
                         <li class="nav-item">
@@ -480,12 +495,12 @@
               <div class="programme-icon">
                 <i class="flaticon-microscope"></i>
               </div>
-              <h3>BSc Biochemistry</h3>
-              <span class="programme-duration">Duration: 3 Years</span>
+              <h3>BSc Biochemistry (Hons)</h3>
+              <span class="programme-duration">Duration: 3 + 1 Years</span>
               <ul class="programme-features">
                 <li>Affiliated to University of Calicut</li>
                 <li>Eligibility: Plus Two with Science</li>
-                <li>Annual Intake: 30 Students</li>
+                <li>Annual Intake: 24 Students</li>
                 <li>Career opportunities in research and healthcare</li>
               </ul>
               <a href="biochemistry.html" class="view-btn">More Details</a>
@@ -497,15 +512,15 @@
               <div class="programme-icon">
                 <i class="flaticon-computer"></i>
               </div>
-              <h3>BSc Computer Science</h3>
-              <span class="programme-duration">Duration: 3 Years</span>
+              <h3>BCA (AICTE Approved)</h3>
+              <span class="programme-duration">Duration: 3 + 1 Years</span>
               <ul class="programme-features">
                 <li>Affiliated to University of Calicut</li>
                 <li>Eligibility: Plus Two with Mathematics</li>
-                <li>Annual Intake: 30 Students</li>
+                <li>Annual Intake: 24 Students</li>
                 <li>Focus on software development and IT solutions</li>
               </ul>
-              <a href="computer-science.html" class="view-btn">More Details</a>
+              <a href="computer-application.html" class="view-btn">More Details</a>
             </div>
           </div>
 
@@ -514,12 +529,12 @@
               <div class="programme-icon">
                 <i class="flaticon-book"></i>
               </div>
-              <h3>BA English</h3>
-              <span class="programme-duration">Duration: 3 Years</span>
+              <h3>BA English Language & Literature (Hons)</h3>
+              <span class="programme-duration">Duration: 3 + 1 Years</span>
               <ul class="programme-features">
                 <li>Affiliated to University of Calicut</li>
                 <li>Eligibility: Plus Two any stream</li>
-                <li>Annual Intake: 30 Students</li>
+                <li>Annual Intake: 36 Students</li>
                 <li>Emphasis on literature and communication skills</li>
               </ul>
               <a href="english.html" class="view-btn">More Details</a>
@@ -531,12 +546,12 @@
               <div class="programme-icon">
                 <i class="flaticon-test-tube"></i>
               </div>
-              <h3>BSc Food Technology</h3>
-              <span class="programme-duration">Duration: 3 Years</span>
+              <h3>BSc Food Technology (Hons)</h3>
+              <span class="programme-duration">Duration: 3 + 1 Years</span>
               <ul class="programme-features">
                 <li>Affiliated to University of Calicut</li>
                 <li>Eligibility: Plus Two with Science</li>
-                <li>Annual Intake: 30 Students</li>
+                <li>Annual Intake: 24 Students</li>
                 <li>Specialization in food processing and safety</li>
               </ul>
               <a href="food-technology.html" class="view-btn">More Details</a>
@@ -548,12 +563,12 @@
               <div class="programme-icon">
                 <i class="flaticon-bacteria"></i>
               </div>
-              <h3>BSc Microbiology</h3>
-              <span class="programme-duration">Duration: 3 Years</span>
+              <h3>BSc Microbiology (Hons)</h3>
+              <span class="programme-duration">Duration: 3 + 1 Years</span>
               <ul class="programme-features">
                 <li>Affiliated to University of Calicut</li>
                 <li>Eligibility: Plus Two with Science</li>
-                <li>Annual Intake: 30 Students</li>
+                <li>Annual Intake: 36 Students</li>
                 <li>Study of microorganisms and their applications</li>
               </ul>
               <a href="microbiology.html" class="view-btn">More Details</a>
@@ -565,12 +580,12 @@
               <div class="programme-icon">
                 <i class="flaticon-psychology"></i>
               </div>
-              <h3>BSc Psychology</h3>
-              <span class="programme-duration">Duration: 3 Years</span>
+              <h3>BSc Psychology (Hons)</h3>
+              <span class="programme-duration">Duration: 3 + 1 Years</span>
               <ul class="programme-features">
                 <li>Affiliated to University of Calicut</li>
                 <li>Eligibility: Plus Two any stream</li>
-                <li>Annual Intake: 30 Students</li>
+                <li>Annual Intake: 24 Students</li>
                 <li>Understanding human behavior and mental processes</li>
               </ul>
               <a href="psychology.html" class="view-btn">More Details</a>
@@ -600,7 +615,7 @@
                   reserved categories)
                 </li>
                 <li>
-                  Mathematics compulsory for BSc Computer Science applicants
+                  Mathematics compulsory for BCA applicants
                 </li>
               </ul>
             </div>
@@ -641,19 +656,9 @@
             </div>
           </div>
           <div class="col-lg-6">
-            <div class="process-step" data-aos="fade-up" data-aos-delay="300">
-              <div class="step-number">3</div>
-              <h4>Entrance Test (if applicable)</h4>
-              <p>
-                Some programmes may require an entrance examination. Details
-                will be communicated after application submission.
-              </p>
-            </div>
-          </div>
-          <div class="col-lg-6">
             <div class="process-step" data-aos="fade-up" data-aos-delay="400">
-              <div class="step-number">4</div>
-              <h4>Merit List Publication</h4>
+              <div class="step-number">3</div>
+              <h4>Rank List Publication</h4>
               <p>
                 Merit lists will be published on the college notice board and
                 website based on academic performance and entrance test scores.
@@ -662,22 +667,11 @@
           </div>
           <div class="col-lg-6">
             <div class="process-step" data-aos="fade-up" data-aos-delay="500">
-              <div class="step-number">5</div>
-              <h4>Fee Payment</h4>
+              <div class="step-number">4</div>
+              <h4>Fee Payment (Government fees only)</h4>
               <p>
                 Selected candidates must pay the admission fee within the
                 stipulated time to confirm their seat.
-              </p>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="process-step" data-aos="fade-up" data-aos-delay="600">
-              <div class="step-number">6</div>
-              <h4>Orientation Programme</h4>
-              <p>
-                Attend the mandatory orientation programme before classes begin
-                to familiarize yourself with college facilities and academic
-                policies.
               </p>
             </div>
           </div>

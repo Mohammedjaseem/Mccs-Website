@@ -213,8 +213,23 @@
           </div>
           <div class="col-lg-8 col-md-8">
             <div class="header-left-content">
+              <!-- Search container moved to the left -->
+              <div class="search-container">
+                <div class="search-box">
+                  <input
+                    type="text"
+                    class="search-input"
+                    placeholder="Search"
+                    id="globalSearch"
+                  />
+                  <button class="search-btn">
+                    <i class="ri-search-line"></i>
+                  </button>
+                </div>
+                <div class="search-results" id="searchResults"></div>
+              </div>
               <ul
-                style="margin: 0px; color: #fff"
+                style="margin: 0px; padding-left: 20px; color: #fff"
                 class="notification-list notification"
                 id="notification-container"
               ></ul>
@@ -349,8 +364,8 @@
                           <a href="english.html" class="nav-link">BA English</a>
                         </li>
                         <li class="nav-item">
-                          <a href="computer-science.html" class="nav-link"
-                            >Computer Science</a
+                          <a href="computer-application.html" class="nav-link"
+                            >BCA</a
                           >
                         </li>
                         <li class="nav-item">
@@ -477,7 +492,7 @@
           <div class="col-lg-6">
             <div class="campus-image">
               <img
-                src="assets/images/board-group.jpg"
+                src="assets/images/banner/MCCSBanner.jpeg"
                 alt="Board Members"
                 class="rounded"
               />
@@ -496,141 +511,103 @@
         </div>
 
         <div class="row">
-          <div class="col-lg-4 col-md-6">
+          <div class="col-lg-3 col-md-6">
             <div class="member-card" data-aos="fade-up" data-aos-delay="100">
               <img
-                src="assets/images/board-member-1.jpg"
+                src="assets/images/board/chairman.jpg"
                 class="member-img"
                 alt="Chairman"
               />
               <div class="member-info">
-                <h3>Dr. Rajesh Menon</h3>
+                <h3>Dr. C P Ali Bava Haji</h3>
                 <p class="position">Chairman</p>
-                <p class="qualification">
-                  PhD in Education, Former Vice Chancellor
-                </p>
                 <p>
-                  With over 35 years in higher education administration, Dr.
-                  Menon provides visionary leadership to the Board.
+                  He is the Chairman of Eranad Knowledge City, Malabar Academic
+                  City, Malabar Dental college, Al Ameen engineering College, Al
+                  Ameen law college, Modern Higher Secondary School and Crescent
+                  International Group, Dubai.
                 </p>
-                <div class="member-social">
-                  <a href="#"><i class="ri-linkedin-fill"></i></a>
-                  <a href="#"><i class="ri-mail-fill"></i></a>
-                </div>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6">
+          <div class="col-lg-3 col-md-6">
             <div class="member-card" data-aos="fade-up" data-aos-delay="200">
               <img
-                src="assets/images/board-member-2.jpg"
+                src="assets/images/board/vc.png"
                 class="member-img"
                 alt="Vice Chairman"
               />
               <div class="member-info">
-                <h3>Adv. Shalini Nair</h3>
+                <h3>Thufail Mohamed</h3>
                 <p class="position">Vice Chairman</p>
-                <p class="qualification">LLM, Social Activist</p>
+                <p class="qualification">
+                  MBA, Christ University, Banglore, 2018
+                </p>
                 <p>
-                  Brings expertise in legal matters and community development to
-                  the Board's deliberations.
+                  In a successful career with extensive experience and servicing
+                  as a Vice Chairman for past 6 year.
                 </p>
                 <div class="member-social">
-                  <a href="#"><i class="ri-linkedin-fill"></i></a>
-                  <a href="#"><i class="ri-mail-fill"></i></a>
+                  <a href="https://www.linkedin.com/in/thufailm/"
+                    ><i class="ri-linkedin-fill"></i
+                  ></a>
+                  <a href="https://thufail.in/"
+                    ><i class="ri-global-fill"></i
+                  ></a>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6">
+          <div class="col-lg-3 col-md-6">
             <div class="member-card" data-aos="fade-up" data-aos-delay="300">
               <img
-                src="assets/images/board-member-3.jpg"
+                src="assets/images/board/vcp.jpg"
                 class="member-img"
                 alt="Secretary"
               />
               <div class="member-info">
-                <h3>Mr. Arun Kumar</h3>
-                <p class="position">Secretary</p>
-                <p class="qualification">MBA, Industrialist</p>
+                <h3>Sameerah Ali Bava</h3>
+                <p class="position">Vice Chairperson</p>
+                <p class="qualification">
+                  MBA, Symbiosis Centre for Distance Learning, Maharastra, 2022
+                </p>
                 <p>
-                  Provides valuable industry perspective and oversees financial
-                  governance matters.
+                  She is an professional with a strong background in finance,
+                  administration, and educational institutional management.
                 </p>
                 <div class="member-social">
-                  <a href="#"><i class="ri-linkedin-fill"></i></a>
-                  <a href="#"><i class="ri-mail-fill"></i></a>
+                  <a
+                    href="https://www.linkedin.com/in/sameerah-ali-bava-359a55174/"
+                    ><i class="ri-linkedin-fill"></i
+                  ></a>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6">
+          <div class="col-lg-3 col-md-6">
             <div class="member-card" data-aos="fade-up" data-aos-delay="100">
               <img
-                src="assets/images/board-member-4.jpg"
+                src="assets/images/board/ceo.png"
                 class="member-img"
-                alt="Treasurer"
+                alt="CEO"
               />
-              <div class="member-info">
-                <h3>Mr. Naveen Pillai</h3>
-                <p class="position">Treasurer</p>
-                <p class="qualification">CA, Financial Expert</p>
-                <p>
-                  Oversees the college's financial health and ensures proper
-                  fiscal management.
+              <div class="member-info mt-1">
+                <h3>Adv. Shihab Mecheri</h3>
+                <p class="position">CEO</p>
+                <p class="qualification">
+                  LL.M, Banking & Finance, NIMS University, 2021
                 </p>
-                <div class="member-social">
-                  <a href="#"><i class="ri-linkedin-fill"></i></a>
-                  <a href="#"><i class="ri-mail-fill"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6">
-            <div class="member-card" data-aos="fade-up" data-aos-delay="200">
-              <img
-                src="assets/images/board-member-5.jpg"
-                class="member-img"
-                alt="Academic Representative"
-              />
-              <div class="member-info">
-                <h3>Dr. Priya Mohan</h3>
-                <p class="position">Academic Representative</p>
-                <p class="qualification">PhD in Commerce, Educationist</p>
-                <p>
-                  Ensures academic excellence remains central to Board
-                  discussions and decisions.
-                </p>
-                <div class="member-social">
-                  <a href="#"><i class="ri-linkedin-fill"></i></a>
-                  <a href="#"><i class="ri-mail-fill"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6">
-            <div class="member-card" data-aos="fade-up" data-aos-delay="300">
-              <img
-                src="assets/images/board-member-6.jpg"
-                class="member-img"
-                alt="Community Representative"
-              />
-              <div class="member-info">
-                <h3>Ms. Leela Devi</h3>
-                <p class="position">Community Representative</p>
-                <p class="qualification">MSW, Social Worker</p>
-                <p>
-                  Represents community interests and ensures college initiatives
-                  benefit local society.
-                </p>
-                <div class="member-social">
-                  <a href="#"><i class="ri-linkedin-fill"></i></a>
-                  <a href="#"><i class="ri-mail-fill"></i></a>
+                <p>He has expertise in starting and top level Management.</p>
+                <div class="member-social mt-4">
+                  <a href="https://www.linkedin.com/in/shihabmrahman"
+                    ><i class="ri-linkedin-fill"></i
+                  ></a>
+                  <a href="https://www.shihab.in/"
+                    ><i class="ri-global-fill"></i
+                  ></a>
                 </div>
               </div>
             </div>
@@ -718,7 +695,7 @@
     </section>
 
     <!-- Board Meetings Section -->
-    <section class="board-meetings">
+    <!-- <section class="board-meetings">
       <div class="container">
         <div class="section-title">
           <h2>Board Meetings & Reports</h2>
@@ -789,7 +766,7 @@
           ></a>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- Footer Section -->
     <div class="footer-area pt-70">

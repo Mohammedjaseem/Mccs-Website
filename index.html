@@ -147,6 +147,67 @@
       .single-courses-card .courses-content .admin-profile {
         padding-left: 0px;
       }
+      /* Video Background Styles */
+      .video-background {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+      }
+      .video-background video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: -100;
+        transform: translateX(-50%) translateY(-50%);
+        background-size: cover;
+        transition: 1s opacity;
+      }
+      .video-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+      .video-content {
+        position: relative;
+        z-index: 1;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: white;
+        padding: 0 20px;
+      }
+      .video-content h1 {
+        font-size: 3.5rem;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        color: white;
+      }
+      .video-content p {
+        font-size: 1.2rem;
+        max-width: 800px;
+        margin-bottom: 30px;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        color: #d0d0d0;
+      }
+      @media (max-width: 768px) {
+        .video-content h1 {
+          font-size: 2.5rem;
+        }
+        .video-content p {
+          font-size: 1rem;
+        }
+      }
     </style>
   </head>
   <body>
@@ -159,6 +220,7 @@
         </div>
       </div>
     </div>
+    <!-- Header Section -->
     <div class="top-header-area d-none d-lg-block">
       <div class="container">
         <div class="row align-items-center">
@@ -190,8 +252,23 @@
           </div>
           <div class="col-lg-8 col-md-8">
             <div class="header-left-content">
+              <!-- Search container moved to the left -->
+              <div class="search-container">
+                <div class="search-box">
+                  <input
+                    type="text"
+                    class="search-input"
+                    placeholder="Search"
+                    id="globalSearch"
+                  />
+                  <button class="search-btn">
+                    <i class="ri-search-line"></i>
+                  </button>
+                </div>
+                <div class="search-results" id="searchResults"></div>
+              </div>
               <ul
-                style="margin: 0px; color: #fff"
+                style="margin: 0px; padding-left: 20px; color: #fff"
                 class="notification-list notification"
                 id="notification-container"
               ></ul>
@@ -326,8 +403,8 @@
                           <a href="english.html" class="nav-link">BA English</a>
                         </li>
                         <li class="nav-item">
-                          <a href="computer-science.html" class="nav-link"
-                            >Computer Science</a
+                          <a href="computer-application.html" class="nav-link"
+                            >BCA</a
                           >
                         </li>
                         <li class="nav-item">
@@ -401,192 +478,26 @@
       <div class="others-option-for-responsive"></div>
     </div>
 
-    <div
-      class="sidebarModal modal right fade"
-      id="sidebarModal"
-      tabindex="-1"
-      role="dialog"
-    >
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <button type="button" class="close" data-bs-dismiss="modal">
-            <i class="ri-close-line"></i>
-          </button>
-          <div class="modal-body">
-            <a href="index.html">
-              <img src="assets/images/logo.png" class="main-logo" alt="logo" />
-              <img
-                src="assets/images/white-logo.png"
-                class="white-logo"
-                alt="logo"
-              />
-            </a>
-            <div class="sidebar-content">
-              <h3>About Us</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipiscing elit sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
-              <div class="sidebar-btn">
-                <a href="contact.html" class="default-btn">Let’s Talk</a>
-              </div>
-            </div>
-            <div class="sidebar-contact-info">
-              <h3>Contact Information</h3>
-              <ul class="info-list">
-                <li>
-                  <i class="ri-phone-fill"></i>
-                  <a href="tel:9901234567">+990-123-4567</a>
-                </li>
-                <li>
-                  <i class="ri-mail-line"></i
-                  ><a
-                    href="https://templates.hibootstrap.com/cdn-cgi/l/email-protection#abc3cec7c7c4ebd8cac5de85c8c4c6"
-                    ><span
-                      class="__cf_email__"
-                      data-cfemail="b8d0ddd4d4d7f8cbd9d6cd96dbd7d5"
-                      >[email&#160;protected]</span
-                    ></a
-                  >
-                </li>
-                <li>
-                  <i class="ri-map-pin-line"></i> 413 North Las Vegas, NV 89032
-                </li>
-              </ul>
-            </div>
-            <ul class="sidebar-social-list">
-              <li>
-                <a href="https://www.facebook.com/" target="_blank"
-                  ><i class="flaticon-facebook"></i
-                ></a>
-              </li>
-              <li>
-                <a href="https://www.twitter.com/" target="_blank"
-                  ><i class="flaticon-twitter"></i
-                ></a>
-              </li>
-              <li>
-                <a href="https://linkedin.com/?lang=en" target="_blank"
-                  ><i class="flaticon-linkedin"></i
-                ></a>
-              </li>
-              <li>
-                <a href="https://instagram.com/?lang=en" target="_blank"
-                  ><i class="flaticon-instagram"></i
-                ></a>
-              </li>
-            </ul>
-            <div class="contact-form">
-              <h3>Ready to Get Started?</h3>
-              <form id="contactForm">
-                <div class="row">
-                  <div class="col-lg-12 col-md-6">
-                    <div class="form-group">
-                      <input
-                        type="text"
-                        name="name"
-                        class="form-control"
-                        required
-                        data-error="Please enter your name"
-                        placeholder="Your name"
-                      />
-                      <div class="help-block with-errors"></div>
-                    </div>
-                  </div>
-                  <div class="col-lg-12 col-md-6">
-                    <div class="form-group">
-                      <input
-                        type="email"
-                        name="email"
-                        class="form-control"
-                        required
-                        data-error="Please enter your email"
-                        placeholder="Your email address"
-                      />
-                      <div class="help-block with-errors"></div>
-                    </div>
-                  </div>
-                  <div class="col-lg-12 col-md-12">
-                    <div class="form-group">
-                      <input
-                        type="text"
-                        name="phone_number"
-                        class="form-control"
-                        required
-                        data-error="Please enter your phone number"
-                        placeholder="Your phone number"
-                      />
-                      <div class="help-block with-errors"></div>
-                    </div>
-                  </div>
-                  <div class="col-lg-12 col-md-12">
-                    <div class="form-group">
-                      <textarea
-                        name="message"
-                        class="form-control"
-                        cols="30"
-                        rows="6"
-                        required
-                        data-error="Please enter your message"
-                        placeholder="Write your message..."
-                      ></textarea>
-                      <div class="help-block with-errors"></div>
-                    </div>
-                  </div>
-                  <div class="col-lg-12 col-md-12">
-                    <button type="submit" class="default-btn">
-                      Send Message<span></span>
-                    </button>
-                    <div id="msgSubmit" class="h3 text-center hidden"></div>
-                    <div class="clearfix"></div>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="banner-area">
-      <div class="slider-container">
-        <!-- Slider Items -->
-        <div class="slider-item banner-bg-7">
-          <div class="slider-content style2">
-            <h1>Welcome to MCCS</h1>
-            <p>
-              What Course will your life Take? Own your future by learning new
-              skills at MCCS. You will get more than learning.
-            </p>
-            <a
-              href="https://wa.me/9539222233?text=I%20would%20like%20to%20know%20more%20about%20your%20courses"
-              class="default-btn btn"
-            >
-              Request an enquiry <i class="flaticon-next"></i>
-            </a>
-          </div>
-        </div>
-        <div class="slider-item banner-bg-2">
-          <div class="slider-content style2">
-            <h1>Learn with MCCS</h1>
-            <p>
-              Shape your future with top-notch courses and expert guidance at
-              MCCS.
-            </p>
-            <a
-              href="https://wa.me/9539222233?text=I%20would%20like%20to%20know%20more%20about%20your%20courses"
-              class="default-btn btn"
-            >
-              Request an enquiry <i class="flaticon-next"></i>
-            </a>
-          </div>
-        </div>
-        <!-- Additional slider items here as needed -->
-      </div>
-      <!-- Navigation Controls -->
-      <div class="slider-nav">
-        <span class="prev" onclick="changeSlide(-1)">&#10094;</span>
-        <span class="next" onclick="changeSlide(1)">&#10095;</span>
+    <!-- Video Background Section -->
+    <div class="video-background">
+      <video autoplay muted loop playsinline>
+        <source src="assets/videos/hero.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div class="video-overlay"></div>
+      <div class="video-content">
+        <h1>Welcome to MCCS</h1>
+        <p>
+          What Course will your life Take? Own your future by learning new
+          skills at MCCS. You will get more than learning. Shape your future
+          with top-notch courses and expert guidance.
+        </p>
+        <a
+          href="https://wa.me/9539222233?text=I%20would%20like%20to%20know%20more%20about%20your%20courses"
+          class="default-btn btn"
+        >
+          Request an enquiry <i class="flaticon-next"></i>
+        </a>
       </div>
     </div>
 
@@ -606,7 +517,7 @@
                   <i class="flaticon-college"></i>
                 </div>
                 <a><h3>Campus Life</h3></a>
-                <a href="/campus-life.html" class="read-more-btn white-color"
+                <a href="gallery.html" class="read-more-btn white-color"
                   >Explore More <i class="flaticon-next"></i
                 ></a>
               </div>
@@ -625,7 +536,7 @@
                   <i class="flaticon-student-with-graduation-cap"></i>
                 </div>
                 <a><h3>Courses</h3></a>
-                <a href="/courses.html" class="read-more-btn white-color"
+                <a href="courses.html" class="read-more-btn white-color"
                   >BCA, BSc & More <i class="flaticon-next"></i
                 ></a>
               </div>
@@ -644,7 +555,7 @@
                   <i class="flaticon-athletics"></i>
                 </div>
                 <a><h3>Our Facilities</h3></a>
-                <a href="/facilities.html" class="read-more-btn white-color"
+                <a href="facilities.html" class="read-more-btn white-color"
                   >Explore Our Campus <i class="flaticon-next"></i
                 ></a>
               </div>
