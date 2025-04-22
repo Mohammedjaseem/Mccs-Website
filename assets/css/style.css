@@ -133,13 +133,120 @@ textarea {
   font-weight: bold;
   padding-left: 23px;
   padding-right: 23px;
-  margin-left: 25px;
+  margin-left: 20px;
   background: #2e865f; /* Changed to dark green color */
   color: #fff;
   padding-top: 18px;
   margin-top: -18px;
   padding-bottom: 19px;
   margin-bottom: -19px;
+}
+/* Updated search container styles */
+.header-left-content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.search-container {
+  position: relative;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  width: 200px;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.search-input:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.search-input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.search-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  margin-left: -35px;
+}
+
+.search-results {
+  position: absolute;
+  top: calc(100% + 5px);
+  right: 0;
+  width: 300px;
+  max-height: 400px;
+  overflow-y: auto;
+  background: #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  display: none;
+  z-index: 1000;
+}
+
+.search-results a {
+  display: block;
+  padding: 10px 15px;
+  color: #333;
+  text-decoration: none;
+  border-bottom: 1px solid #eee;
+}
+
+.search-results a:hover {
+  background: #f5f5f5;
+}
+
+.search-results .no-results {
+  padding: 10px 15px;
+  color: #666;
+}
+
+.search-results h4 {
+  margin-bottom: 5px;
+  color: #084f8c;
+}
+
+.search-results p {
+  font-size: 14px;
+  color: #666;
+}
+
+.highlight {
+  background-color: yellow;
+  font-weight: bold;
+}
+
+@media (max-width: 992px) {
+  .header-left-content {
+    justify-content: flex-end;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-left-content {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .top-bar-button {
+    text-align: center;
+  }
 }
 .header-left-content {
   text-align: right;
@@ -164,6 +271,116 @@ textarea {
   margin-right: 0;
 }
 
+#notification-container li {
+  list-style-type: none;
+  margin: 0px;
+  color: white;
+  font-weight: 600;
+}
+.notification-list {
+  display: inline-block;
+  max-height: 20px;
+  overflow: hidden;
+  position: relative;
+  max-height: 20px;
+}
+ul.notification-list {
+  margin-bottom: 0px !important;
+}
+@keyframes marquee-up {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+.loading-animation {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #084f8c;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 2s linear infinite;
+  margin: 20px auto;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.gallery-item {
+  position: relative;
+  margin-bottom: 20px;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+.gallery-item:hover {
+  transform: translateY(-5px);
+}
+.gallery-item img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+.gallery-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+.gallery-item:hover .gallery-caption {
+  transform: translateY(0);
+}
+.gallery-caption h5 {
+  margin-bottom: 5px;
+  font-size: 16px;
+  color: white;
+}
+.gallery-caption p {
+  margin: 0;
+  font-size: 12px;
+  color: grey;
+}
+.gallery-type-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #084f8c;
+  color: white;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+.add-gallery-btn {
+  margin-bottom: 20px;
+}
+.modal-body .form-group {
+  margin-bottom: 15px;
+}
+.preview-image-container {
+  margin-top: 15px;
+  text-align: center;
+}
+.preview-image {
+  max-width: 100%;
+  max-height: 200px;
+  border-radius: 5px;
+}
 .navbar-area {
   position: relative;
 }

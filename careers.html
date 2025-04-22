@@ -1,0 +1,1120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Career opportunities at Malabar College of Commerce and Science - Join our team of educators and professionals"
+    />
+    <meta
+      name="keywords"
+      content="MCCS careers, faculty jobs, staff positions, academic jobs, college employment"
+    />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/meanmenu.css" />
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="assets/css/magnific-popup.css" />
+    <link rel="stylesheet" href="assets/css/flaticon.css" />
+    <link rel="stylesheet" href="assets/css/remixicon.css" />
+    <link rel="stylesheet" href="assets/css/aos.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/dark.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+    <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+    <title>Careers | MCCS</title>
+    <style>
+      /* Careers Page Specific Styles */
+      .careers-hero {
+        background: linear-gradient(rgba(0, 0, 0, 0.7)),
+          url("assets/images/banner/MCCSBanner.jpeg") no-repeat center center;
+        background-size: cover;
+        padding: 150px 0 100px;
+        color: #fff;
+        text-align: center;
+      }
+
+      .careers-hero h1 {
+        font-size: 3rem;
+        margin-bottom: 20px;
+        font-weight: 700;
+        color: #fff;
+      }
+
+      .careers-hero p {
+        font-size: 1.2rem;
+        max-width: 800px;
+        margin: 0 auto;
+        color: #999;
+      }
+
+      .job-card {
+        background: #fff;
+        border-radius: 10px;
+        padding: 30px;
+        margin-bottom: 30px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s;
+        height: 100%;
+      }
+
+      .job-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      }
+
+      .job-card h3 {
+        color: #084f8c;
+        border-bottom: 2px solid #2ecc71;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+      }
+
+      .job-type {
+        background: #e3f2fd;
+        color: #084f8c;
+        padding: 3px 10px;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        display: inline-block;
+        margin-bottom: 15px;
+      }
+
+      .apply-btn {
+        background: #2ecc71;
+        color: white;
+        padding: 8px 20px;
+        border-radius: 5px;
+        display: inline-block;
+        margin-top: 15px;
+        transition: all 0.3s;
+      }
+
+      .apply-btn:hover {
+        background: #27ae60;
+        transform: translateY(-3px);
+        color: white;
+      }
+
+      .benefits-section {
+        padding: 80px 0;
+        background: linear-gradient(135deg, #084f8c 0%, #2ecc71 100%);
+        color: white;
+      }
+
+      .benefit-item {
+        text-align: center;
+        padding: 20px;
+        margin-bottom: 30px;
+      }
+
+      .benefit-icon {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+        color: #fff;
+      }
+
+      .testimonial-card {
+        background: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        margin-bottom: 30px;
+        height: 100%;
+      }
+
+      .process-step {
+        position: relative;
+        padding-left: 80px;
+        margin-bottom: 40px;
+      }
+
+      .step-number {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 60px;
+        height: 60px;
+        background: #084f8c;
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+
+      .no-openings-message {
+        text-align: center;
+        padding: 50px 20px;
+        background: #f9f9f9;
+        border-radius: 10px;
+        margin-top: 30px;
+      }
+
+      .icon-box {
+        font-size: 50px;
+        color: #2f89fc;
+        margin-bottom: 20px;
+      }
+
+      .message-text {
+        font-size: 18px;
+        color: #555;
+        margin-bottom: 30px;
+        line-height: 1.6;
+      }
+
+      .apply-btn {
+        display: inline-block;
+        padding: 12px 30px;
+        background: #2f89fc;
+        color: #fff;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+      }
+
+      .apply-btn:hover {
+        background: #1a73e8;
+        transform: translateY(-3px);
+      }
+
+      .follow-text {
+        margin-top: 40px;
+        color: #777;
+      }
+
+      .social-links {
+        margin-top: 15px;
+      }
+
+      .social-links a {
+        display: inline-block;
+        margin: 0 10px;
+        font-size: 20px;
+        color: #2f89fc;
+        transition: all 0.3s ease;
+      }
+
+      .social-links a:hover {
+        transform: translateY(-3px);
+      }
+
+      @media (max-width: 767px) {
+        .careers-hero {
+          padding: 100px 0 60px;
+        }
+        .careers-hero h1 {
+          font-size: 2.2rem;
+        }
+        .process-step {
+          padding-left: 60px;
+        }
+        .step-number {
+          width: 45px;
+          height: 45px;
+          font-size: 1.2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="preloader-area">
+      <div class="spinner">
+        <div class="inner">
+          <div class="disc"></div>
+          <div class="disc"></div>
+          <div class="disc"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Header Section -->
+    <div class="top-header-area d-none d-lg-block">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-4 col-md-4">
+            <div class="header-right-content">
+              <div class="list">
+                <ul style="margin-left: 4rem">
+                  <li>
+                    <a href="mailto:infomccs@macity.edu.in"
+                      ><i
+                        class="ri-mail-fill"
+                        style="color: #3498db; margin-right: 5px"
+                      ></i>
+                      infomccs@macity.edu.in</a
+                    >
+                  </li>
+                  <li>
+                    <a href="tel:+917034999995"
+                      ><i
+                        class="ri-phone-fill"
+                        style="color: #2ecc71; margin-right: 5px"
+                      ></i>
+                      +91 7034 999 995</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-8 col-md-8">
+            <div class="header-left-content">
+              <!-- Search container moved to the left -->
+              <div class="search-container">
+                <div class="search-box">
+                  <input
+                    type="text"
+                    class="search-input"
+                    placeholder="Search"
+                    id="globalSearch"
+                  />
+                  <button class="search-btn">
+                    <i class="ri-search-line"></i>
+                  </button>
+                </div>
+                <div class="search-results" id="searchResults"></div>
+              </div>
+              <ul
+                style="margin: 0px; padding-left: 20px; color: #fff"
+                class="notification-list notification"
+                id="notification-container"
+              ></ul>
+              <a
+                class="top-bar-button"
+                href="https://www.mccsconnect.in/"
+                target="_blank"
+                >MCCS Connect</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="navbar-area nav-bg-2">
+      <div class="mobile-responsive-nav">
+        <div class="container">
+          <div class="mobile-responsive-menu">
+            <div class="logo">
+              <a href="index.html">
+                <img
+                  src="assets/images/logo.png"
+                  class="main-logo"
+                  alt="logo"
+                />
+                <img
+                  src="assets/images/white-logo.png"
+                  class="white-logo"
+                  alt="logo"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="desktop-nav">
+        <div class="container">
+          <nav class="navbar navbar-expand-md navbar-light">
+            <a class="navbar-brand" href="index.html">
+              <img src="assets/images/logo.png" class="main-logo" alt="logo" />
+              <img
+                src="assets/images/white-logo.png"
+                class="white-logo"
+                alt="logo"
+              />
+            </a>
+            <div
+              class="collapse navbar-collapse mean-menu"
+              id="navbarSupportedContent"
+            >
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                  <a href="index.html" class="nav-link"> Home </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link dropdown-toggle"> About Us </a>
+                  <ul class="dropdown-menu">
+                    <li class="nav-item">
+                      <a href="about-overview.html" class="nav-link"
+                        >Overview</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a href="about-vision-mission.html" class="nav-link"
+                        >Vision & Mission</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link dropdown-toggle"> Accreditation</a>
+                      <ul class="dropdown-menu">
+                        <li class="nav-item">
+                          <a href="naac-qualitative.html" class="nav-link"
+                            >NAAC-Qualitative</a
+                          >
+                        </li>
+                        <li class="nav-item">
+                          <a href="naac-quantitative.html" class="nav-link"
+                            >NAAC-Quantitative</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="nav-item">
+                      <a href="about-principal.html" class="nav-link"
+                        >Principal</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a href="about-board.html" class="nav-link"
+                        >Board of Directors</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link dropdown-toggle"> Admissions </a>
+                  <ul class="dropdown-menu">
+                    <li class="nav-item">
+                      <a href="admission-process.html" class="nav-link"
+                        >Admission Process</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a href="courses.html" class="nav-link"
+                        >Courses Offered</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link dropdown-toggle"> Academics </a>
+                  <ul class="dropdown-menu">
+                    <li class="nav-item">
+                      <a href="academic-programmes.html" class="nav-link"
+                        >Academic Programmes</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link dropdown-toggle">Departments</a>
+                      <ul class="dropdown-menu">
+                        <li class="nav-item">
+                          <a href="food-technology.html" class="nav-link"
+                            >Food Technology</a
+                          >
+                        </li>
+                        <li class="nav-item">
+                          <a href="biochemistry.html" class="nav-link"
+                            >Biochemistry</a
+                          >
+                        </li>
+                        <li class="nav-item">
+                          <a href="english.html" class="nav-link">BA English</a>
+                        </li>
+                        <li class="nav-item">
+                          <a href="computer-application.html" class="nav-link"
+                            >BCA</a
+                          >
+                        </li>
+                        <li class="nav-item">
+                          <a href="microbiology.html" class="nav-link"
+                            >Microbiology</a
+                          >
+                        </li>
+                        <li class="nav-item">
+                          <a href="psychology.html" class="nav-link"
+                            >Psychology</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="nav-item">
+                      <a href="facilities.html" class="nav-link">Facilities</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="academic-calendar.html" class="nav-link"
+                        >Academic Calendar</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a href="library.html" class="nav-link">Library</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="achievements.html" class="nav-link"
+                        >Achievements</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link dropdown-toggle"> Students Zone </a>
+                  <ul class="dropdown-menu">
+                    <li class="nav-item">
+                      <a class="nav-link dropdown-toggle"> Activities </a>
+                      <ul class="dropdown-menu">
+                        <li class="nav-item">
+                          <a href="news-page.html" class="nav-link"
+                            >MCCS News</a
+                          >
+                        </li>
+                        <li class="nav-item">
+                          <a href="events.html" class="nav-link">Events</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="nav-item">
+                      <a href="clubs.html" class="nav-link">Clubs</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="women-cell.html" class="nav-link">Women Cell</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a href="gallery.html" class="nav-link">Gallery</a>
+                </li>
+                <li class="nav-item">
+                  <a href="careers.html" class="nav-link active">Careers</a>
+                </li>
+                <li class="nav-item">
+                  <a href="contact-us.html" class="nav-link">Contact Us</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+      <div class="others-option-for-responsive"></div>
+    </div>
+
+    <!-- Careers Hero Section -->
+    <section class="careers-hero">
+      <div class="container">
+        <h1>Build Your Career at MCCS</h1>
+        <p>
+          Join our team of passionate educators and professionals shaping the
+          future of higher education
+        </p>
+      </div>
+    </section>
+
+    <!-- Current Openings Section -->
+    <section class="courses-area pt-100 pb-70">
+      <div class="container">
+        <div class="section-title">
+          <h2>Current Job Openings</h2>
+          <p>Explore opportunities to join our academic community</p>
+        </div>
+
+        <div class="no-openings-message">
+          <div class="icon-box">
+            <i class="fas fa-search"></i>
+          </div>
+          <h3>Currently No Open Positions</h3>
+          <p class="message-text">
+            We don't have any job openings at the moment, but great talent is
+            always welcome!<br />
+            Feel free to send us your resume for future consideration.
+          </p>
+
+          <div class="follow-text">
+            <p>
+              Follow us on social media to stay updated on future opportunities!
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="row">
+          <div
+            class="col-lg-6 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="job-card">
+              <h3>Assistant Professor - BCA</h3>
+              <span class="job-type">Full-time</span>
+              <p>
+                <strong>Qualification:</strong> Ph.D. or M.Tech in Computer
+                Science with NET/SET
+              </p>
+              <p>
+                <strong>Experience:</strong> Minimum 3 years teaching experience
+              </p>
+              <p><strong>Deadline:</strong> 30 November 2023</p>
+              <a href="#apply-now" class="apply-btn">Apply Now</a>
+            </div>
+          </div>
+
+          <div
+            class="col-lg-6 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="job-card">
+              <h3>Lab Assistant - Microbiology</h3>
+              <span class="job-type">Full-time</span>
+              <p>
+                <strong>Qualification:</strong> MSc Microbiology with minimum
+                60% marks
+              </p>
+              <p>
+                <strong>Experience:</strong> 1-2 years lab experience preferred
+              </p>
+              <p><strong>Deadline:</strong> 25 November 2023</p>
+              <a href="#apply-now" class="apply-btn">Apply Now</a>
+            </div>
+          </div>
+
+          <div
+            class="col-lg-6 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="job-card">
+              <h3>Administrative Officer</h3>
+              <span class="job-type">Full-time</span>
+              <p>
+                <strong>Qualification:</strong> MBA or MA with minimum 5 years
+                experience
+              </p>
+              <p>
+                <strong>Skills:</strong> Strong organizational and communication
+                skills
+              </p>
+              <p><strong>Deadline:</strong> 5 December 2023</p>
+              <a href="#apply-now" class="apply-btn">Apply Now</a>
+            </div>
+          </div>
+
+          <div
+            class="col-lg-6 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="job-card">
+              <h3>Guest Faculty - Psychology</h3>
+              <span class="job-type">Part-time</span>
+              <p>
+                <strong>Qualification:</strong> MA/MSc Psychology with NET/SET
+              </p>
+              <p><strong>Availability:</strong> Minimum 15 hours per week</p>
+              <p><strong>Deadline:</strong> Ongoing</p>
+              <a href="#apply-now" class="apply-btn">Apply Now</a>
+            </div>
+          </div>
+        </div>
+      </div> -->
+    </section>
+
+    <!-- Why Work With Us Section -->
+    <section class="benefits-section">
+      <div class="container">
+        <div class="section-title text-center">
+          <h2>Why Work at MCCS?</h2>
+          <p>
+            We value our staff and provide an environment for professional
+            growth
+          </p>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="benefit-item">
+              <div class="benefit-icon">
+                <i class="ri-medal-line"></i>
+              </div>
+              <h4>Professional Development</h4>
+              <p>
+                Regular training programs and funding for conferences and
+                workshops
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="benefit-item">
+              <div class="benefit-icon">
+                <i class="ri-team-line"></i>
+              </div>
+              <h4>Collaborative Environment</h4>
+              <p>
+                Work with passionate educators and researchers in a supportive
+                atmosphere
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="benefit-item">
+              <div class="benefit-icon">
+                <i class="ri-home-heart-line"></i>
+              </div>
+              <h4>Work-Life Balance</h4>
+              <p>Flexible schedules and generous leave policies</p>
+            </div>
+          </div>
+
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="benefit-item">
+              <div class="benefit-icon">
+                <i class="ri-book-read-line"></i>
+              </div>
+              <h4>Research Opportunities</h4>
+              <p>Access to research grants and publication support</p>
+            </div>
+          </div>
+
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="benefit-item">
+              <div class="benefit-icon">
+                <i class="ri-hospital-line"></i>
+              </div>
+              <h4>Health Benefits</h4>
+              <p>Comprehensive health insurance for employees and family</p>
+            </div>
+          </div>
+
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="benefit-item">
+              <div class="benefit-icon">
+                <i class="ri-leaf-line"></i>
+              </div>
+              <h4>Campus Amenities</h4>
+              <p>Beautiful campus with modern facilities and staff lounge</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <!-- <section class="courses-area pt-100 pb-70 bg-f4f6f9">
+      <div class="container">
+        <div class="section-title">
+          <h2>What Our Staff Say</h2>
+          <p>Hear from current MCCS faculty and staff</p>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="testimonial-card">
+              <p>
+                "The collaborative environment at MCCS has allowed me to grow
+                both as an educator and researcher. The support for professional
+                development is exceptional."
+              </p>
+              <div class="testimonial-author">
+                <strong>Dr. Anitha Kumar</strong>
+                <p>Associate Professor, Biochemistry</p>
+                <p>With MCCS since 2015</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="testimonial-card">
+              <p>
+                "What I appreciate most about working at MCCS is the emphasis on
+                work-life balance while maintaining high academic standards.
+                It's truly a rewarding place to work."
+              </p>
+              <div class="testimonial-author">
+                <strong>Prof. Rajeev Menon</strong>
+                <p>Head, Department of BCA</p>
+                <p>With MCCS since 2012</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="testimonial-card">
+              <p>
+                "As administrative staff, I've found MCCS to be an organization
+                that values every team member's contribution. The leadership is
+                approachable and supportive."
+              </p>
+              <div class="testimonial-author">
+                <strong>Ms. Sunitha P.</strong>
+                <p>Office Administrator</p>
+                <p>With MCCS since 2018</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- Application Process Section -->
+    <section class="courses-area pt-100 pb-70">
+      <div class="container">
+        <div class="section-title">
+          <h2>Application Process</h2>
+          <p>How to join the MCCS team</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="process-step">
+              <div class="step-number">1</div>
+              <h4>Submit Application</h4>
+              <p>
+                Complete the online application form and upload your CV, cover
+                letter, and supporting documents.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="process-step">
+              <div class="step-number">2</div>
+              <h4>Review Process</h4>
+              <p>
+                Our HR team will review your application and contact shortlisted
+                candidates within 2 weeks.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="process-step">
+              <div class="step-number">3</div>
+              <h4>Interview</h4>
+              <p>
+                Selected candidates will be invited for an interview with the
+                department head and selection committee.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="process-step">
+              <div class="step-number">4</div>
+              <h4>Demo Class (for faculty)</h4>
+              <p>
+                Teaching candidates will be asked to conduct a demo class on a
+                relevant topic.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="500">
+            <div class="process-step">
+              <div class="step-number">5</div>
+              <h4>Reference Check</h4>
+              <p>
+                We will contact your professional references as part of the
+                evaluation process.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="600">
+            <div class="process-step">
+              <div class="step-number">6</div>
+              <h4>Offer Letter</h4>
+              <p>
+                Successful candidates will receive an offer letter with details
+                of compensation and benefits.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Application Form Section -->
+    <section id="apply-now" class="bg-light py-5">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="card shadow">
+              <div class="card-body p-5">
+                <h2 class="text-center mb-4">Application Form</h2>
+                <form>
+                  <div class="row">
+                    <div class="col-md-6 mb-3">
+                      <label for="firstName" class="form-label"
+                        >First Name</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="firstName"
+                        required
+                      />
+                    </div>
+                    <div class="col-md-6 mb-3">
+                      <label for="lastName" class="form-label">Last Name</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="lastName"
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="email"
+                      required
+                    />
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="phone" class="form-label">Phone Number</label>
+                    <input
+                      type="tel"
+                      class="form-control"
+                      id="phone"
+                      required
+                    />
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="position" class="form-label"
+                      >Position Applying For</label
+                    >
+                    <select class="form-select" id="position" required>
+                      <option value="">Select Position</option>
+                      <option>Assistant Professor - BCA</option>
+                      <option>Lab Assistant - Microbiology</option>
+                      <option>Administrative Officer</option>
+                      <option>Guest Faculty - Psychology</option>
+                      <option>Other</option>
+                    </select>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="cv" class="form-label"
+                      >Upload CV (PDF only)</label
+                    >
+                    <input
+                      type="file"
+                      class="form-control"
+                      id="cv"
+                      accept=".pdf"
+                      required
+                    />
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="coverLetter" class="form-label"
+                      >Cover Letter</label
+                    >
+                    <textarea
+                      class="form-control"
+                      id="coverLetter"
+                      rows="4"
+                    ></textarea>
+                  </div>
+
+                  <div class="d-grid">
+                    <button type="submit" class="default-btn">
+                      Submit Application
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <div class="footer-area pt-70">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-5 col-sm-6">
+            <div class="footer-logo-area">
+              <a href="index.html"
+                ><img src="assets/images/white-logo.png" alt="Image"
+              /></a>
+              <p>
+                Manoor - Chekanoor Road, <br />
+                Manoor, Edappal, Malappuram, <br />
+                Kerala 679578
+              </p>
+              <div class="contact-list">
+                <ul>
+                  <li>
+                    <a href="tel:+917034999995">Phone: +91 7034 999 995</a>
+                  </li>
+                  <li>
+                    <a href="mailto:infomccs@macity.edu.in" target="_blank"
+                      ><span
+                        class="__cf_email__"
+                        data-cfemail="afcecbc2c6c1efdccec1da81cacbda"
+                        >Mail: infomccs@macity.edu.in</span
+                      ></a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-2 col-sm-6">
+            <div class="footer-widjet new-widget">
+              <h3>Quick Links</h3>
+              <div class="list">
+                <ul>
+                  <li><a href="about-overview.html">About Us</a></li>
+                  <li><a href="gallery.html">Gallery</a></li>
+                  <li><a href="facilities.html">Facilities</a></li>
+                  <li><a href="library.html">Library</a></li>
+                  <li><a href="events.html">Events</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-2 col-sm-6">
+            <div class="footer-widjet">
+              <h3>Social Media</h3>
+              <div class="list">
+                <ul>
+                  <li>
+                    <a
+                      href="https://www.facebook.com/MCCSmanoor/"
+                      target="_blank"
+                      ><i class="flaticon-facebook" style="color: #4267b2"></i
+                      >&nbsp;Facebook</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.instagram.com/malabar_college_manoor/"
+                      target="_blank"
+                      ><i class="flaticon-instagram" style="color: #ff69b4"></i
+                      >&nbsp;Instagram</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://maps.app.goo.gl/4FQMpHruJVVh5eeT7"
+                      target="_blank"
+                      ><i class="ri-map-pin-line" style="color: #ffc107"></i
+                      >&nbsp;Maps</a
+                    >
+                  </li>
+
+                  <li>
+                    <a
+                      href="https://www.thecigworld.com/malabar-college-of-commerce-and-science/"
+                      target="_blank"
+                      ><i class="ri-google-fill" style="color: #34a853"></i
+                      >&nbsp;Google</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6">
+            <div class="footer-widjet">
+              <h3>Location</h3>
+              <div class="list">
+                <iframe
+                  width="100%"
+                  height="300"
+                  style="border: 0"
+                  loading="lazy"
+                  allowfullscreen
+                  src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJPc1YxbC5pzsRqtCafmf8d68&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="shape">
+          <img src="assets/images/shape-1.png" alt="Image" />
+        </div>
+      </div>
+    </div>
+    <div class="copyright-area">
+      <div class="container">
+        <div class="copyright">
+          <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;">
+            <div class="col-lg-6 col-md-8">
+              <div class="copy">
+                <p>
+                  Copyright &copy; 2025 MCCS | Developed by
+                  <a href="https://connect.edentu.com/" target="_blank"
+                    >Connect</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div>
+              <p>Last updated on 22-04-2025</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="go-top">
+      <i class="ri-arrow-up-s-line"></i>
+      <i class="ri-arrow-up-s-line"></i>
+    </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/jquery.meanmenu.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/carousel-thumbs.min.js"></script>
+    <script src="assets/js/jquery.magnific-popup.js"></script>
+    <script src="assets/js/aos.js"></script>
+    <script src="assets/js/appear.min.js"></script>
+    <script src="assets/js/form-validator.min.js"></script>
+    <script src="assets/js/contact-form-script.js"></script>
+    <script src="assets/js/ajaxchimp.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+
+    <script>
+      // Notification Script
+      const apiUrl =
+        "https://app.conext.in/Notifications/api/latest-mccs-top-bar-notification/";
+      const notificationContainer = document.getElementById(
+        "notification-container"
+      );
+      let notifications = [];
+      let currentIndex = 0;
+
+      async function fetchAndUpdateNotifications() {
+        try {
+          const response = await fetch(apiUrl);
+          notifications = await response.json();
+          updateNotification();
+          setInterval(updateNotification, 4500);
+        } catch (error) {
+          console.error("Error fetching notifications:", error);
+        }
+      }
+
+      function updateNotification() {
+        if (notifications.length > 0) {
+          const list = notificationContainer;
+          list.innerHTML = `<li>${notifications[currentIndex].notification}</li>`;
+          currentIndex = (currentIndex + 1) % notifications.length;
+        }
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        fetchAndUpdateNotifications();
+        AOS.init({
+          duration: 1200,
+          once: true,
+        });
+      });
+    </script>
+  </body>
+</html>

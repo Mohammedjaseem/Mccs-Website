@@ -4,8 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Malabar College of Commerce and Science, a premier institution for higher education in commerce and science streams." />
-    <meta name="keywords" content="Malabar College, Commerce, Science, Education, Higher Education, Kerala, Edappal, Malappuram" />
+    <meta
+      name="description"
+      content="Malabar College of Commerce and Science, a premier institution for higher education in commerce and science streams."
+    />
+    <meta
+      name="keywords"
+      content="Malabar College, Commerce, Science, Education, Higher Education, Kerala, Edappal, Malappuram"
+    />
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/css/meanmenu.css" />
     <link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
@@ -141,6 +147,67 @@
       .single-courses-card .courses-content .admin-profile {
         padding-left: 0px;
       }
+      /* Video Background Styles */
+      .video-background {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+      }
+      .video-background video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: -100;
+        transform: translateX(-50%) translateY(-50%);
+        background-size: cover;
+        transition: 1s opacity;
+      }
+      .video-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+      .video-content {
+        position: relative;
+        z-index: 1;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: white;
+        padding: 0 20px;
+      }
+      .video-content h1 {
+        font-size: 3.5rem;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        color: white;
+      }
+      .video-content p {
+        font-size: 1.2rem;
+        max-width: 800px;
+        margin-bottom: 30px;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        color: #d0d0d0;
+      }
+      @media (max-width: 768px) {
+        .video-content h1 {
+          font-size: 2.5rem;
+        }
+        .video-content p {
+          font-size: 1rem;
+        }
+      }
     </style>
   </head>
   <body>
@@ -153,6 +220,7 @@
         </div>
       </div>
     </div>
+    <!-- Header Section -->
     <div class="top-header-area d-none d-lg-block">
       <div class="container">
         <div class="row align-items-center">
@@ -161,22 +229,49 @@
               <div class="list">
                 <ul style="margin-left: 4rem">
                   <li>
-                    <a href="mailto:infomccs@macity.edu.in"><i class="ri-mail-fill" style="color: #3498db; margin-right: 5px;"></i> infomccs@macity.edu.in</a>
+                    <a href="mailto:infomccs@macity.edu.in"
+                      ><i
+                        class="ri-mail-fill"
+                        style="color: #3498db; margin-right: 5px"
+                      ></i>
+                      infomccs@macity.edu.in</a
+                    >
                   </li>
-                  <li><a href="tel:+917034999995"><i class="ri-phone-fill" style="color: #2ecc71; margin-right: 5px;"></i> +91 7034 999 995</a></li>
+                  <li>
+                    <a href="tel:+917034999995"
+                      ><i
+                        class="ri-phone-fill"
+                        style="color: #2ecc71; margin-right: 5px"
+                      ></i>
+                      +91 7034 999 995</a
+                    >
+                  </li>
                 </ul>
               </div>
             </div>
           </div>
           <div class="col-lg-8 col-md-8">
             <div class="header-left-content">
+              <!-- Search container moved to the left -->
+              <div class="search-container">
+                <div class="search-box">
+                  <input
+                    type="text"
+                    class="search-input"
+                    placeholder="Search"
+                    id="globalSearch"
+                  />
+                  <button class="search-btn">
+                    <i class="ri-search-line"></i>
+                  </button>
+                </div>
+                <div class="search-results" id="searchResults"></div>
+              </div>
               <ul
-                style="margin: 0px; color: #fff"
+                style="margin: 0px; padding-left: 20px; color: #fff"
                 class="notification-list notification"
                 id="notification-container"
-              >
-                
-              </ul>
+              ></ul>
               <a
                 class="top-bar-button"
                 href="https://www.mccsconnect.in/"
@@ -193,7 +288,7 @@
         <div class="container">
           <div class="mobile-responsive-menu">
             <div class="logo">
-              <a href="index-3.html">
+              <a href="index.html">
                 <img
                   src="assets/images/logo.png"
                   class="main-logo"
@@ -212,7 +307,7 @@
       <div class="desktop-nav">
         <div class="container">
           <nav class="navbar navbar-expand-md navbar-light">
-            <a class="navbar-brand" href="/index.html">
+            <a class="navbar-brand" href="index.html">
               <img src="assets/images/logo.png" class="main-logo" alt="logo" />
               <img
                 src="assets/images/white-logo.png"
@@ -226,13 +321,111 @@
             >
               <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                  <a href="/index.html" class="nav-link active"> Home </a>
+                  <a href="index.html" class="nav-link active"> Home </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link dropdown-toggle"> About Us </a>
+                  <ul class="dropdown-menu">
+                    <li class="nav-item">
+                      <a href="about-overview.html" class="nav-link"
+                        >Overview</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a href="about-vision-mission.html" class="nav-link"
+                        >Vision & Mission</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link dropdown-toggle"> Accreditation</a>
+                      <ul class="dropdown-menu">
+                        <li class="nav-item">
+                          <a href="naac-qualitative.html" class="nav-link"
+                            >NAAC-Qualitative</a
+                          >
+                        </li>
+                        <li class="nav-item">
+                          <a href="naac-quantitative.html" class="nav-link"
+                            >NAAC-Quantitative</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="nav-item">
+                      <a href="about-principal.html" class="nav-link"
+                        >Principal</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a href="about-board.html" class="nav-link"
+                        >Board of Directors</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link dropdown-toggle"> Admissions </a>
+                  <ul class="dropdown-menu">
+                    <li class="nav-item">
+                      <a href="admission-process.html" class="nav-link"
+                        >Admission Process</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a href="courses.html" class="nav-link"
+                        >Courses Offered</a
+                      >
+                    </li>
+                  </ul>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link dropdown-toggle"> Academics </a>
                   <ul class="dropdown-menu">
                     <li class="nav-item">
-                      <a href="facilities.html" class="nav-link">Faciliites</a>
+                      <a href="academic-programmes.html" class="nav-link"
+                        >Academic Programmes</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link dropdown-toggle">Departments</a>
+                      <ul class="dropdown-menu">
+                        <li class="nav-item">
+                          <a href="food-technology.html" class="nav-link"
+                            >Food Technology</a
+                          >
+                        </li>
+                        <li class="nav-item">
+                          <a href="biochemistry.html" class="nav-link"
+                            >Biochemistry</a
+                          >
+                        </li>
+                        <li class="nav-item">
+                          <a href="english.html" class="nav-link">BA English</a>
+                        </li>
+                        <li class="nav-item">
+                          <a href="computer-application.html" class="nav-link"
+                            >BCA</a
+                          >
+                        </li>
+                        <li class="nav-item">
+                          <a href="microbiology.html" class="nav-link"
+                            >Microbiology</a
+                          >
+                        </li>
+                        <li class="nav-item">
+                          <a href="psychology.html" class="nav-link"
+                            >Psychology</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="nav-item">
+                      <a href="facilities.html" class="nav-link">Facilities</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="academic-calendar.html" class="nav-link"
+                        >Academic Calendar</a
+                      >
                     </li>
                     <li class="nav-item">
                       <a href="library.html" class="nav-link">Library</a>
@@ -242,73 +435,37 @@
                         >Achievements</a
                       >
                     </li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link dropdown-toggle"> Students Zone </a>
+                  <ul class="dropdown-menu">
+                    <li class="nav-item">
+                      <a class="nav-link dropdown-toggle"> Activities </a>
+                      <ul class="dropdown-menu">
+                        <li class="nav-item">
+                          <a href="news-page.html" class="nav-link"
+                            >MCCS News</a
+                          >
+                        </li>
+                        <li class="nav-item">
+                          <a href="events.html" class="nav-link">Events</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="nav-item">
+                      <a href="clubs.html" class="nav-link">Clubs</a>
+                    </li>
                     <li class="nav-item">
                       <a href="women-cell.html" class="nav-link">Women Cell</a>
                     </li>
                   </ul>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link dropdown-toggle"> Department</a>
-                  <ul class="dropdown-menu">
-                    <li class="nav-item">
-                      <a href="food-technology.html" class="nav-link"
-                        >Food Technology</a
-                      >
-                    </li>
-                    <li class="nav-item">
-                      <a href="biochemistry.html" class="nav-link"
-                        >Biochemistry</a
-                      >
-                    </li>
-                    <li class="nav-item">
-                      <a href="english.html" class="nav-link">Ba English</a>
-                    </li>
-                    <li class="nav-item">
-                      <a href="computer-science.html" class="nav-link"
-                        >Computer Science</a
-                      >
-                    </li>
-                    <li class="nav-item">
-                      <a href="microbiology.html" class="nav-link"
-                        >Microbiology</a
-                      >
-                    </li>
-                    <li class="nav-item">
-                      <a href="psychology.html" class="nav-link">Psychology</a>
-                    </li>
-                  </ul>
+                  <a href="gallery.html" class="nav-link">Gallery</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link dropdown-toggle"> NAAC</a>
-                  <ul class="dropdown-menu">
-                    <li class="nav-item">
-                      <a href="naac-qualitative.html" class="nav-link"
-                        >NAAC-Qualitative</a
-                      >
-                    </li>
-                    <li class="nav-item">
-                      <a href="naac-quantitative.html" class="nav-link"
-                        >NAAC-Quantitative</a
-                      >
-                    </li>
-                  </ul>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link dropdown-toggle"> Activities </a>
-                  <ul class="dropdown-menu">
-                    <li class="nav-item">
-                      <a href="gallery.html" class="nav-link">Gallery</a>
-                    </li>
-                    <li class="nav-item">
-                      <a href="news-page.html" class="nav-link">MCCS News</a>
-                    </li>
-                    <li class="nav-item">
-                      <a href="events.html" class="nav-link">Events</a>
-                    </li>
-                    <li class="nav-item">
-                      <a href="clubs.html" class="nav-link">Clubs</a>
-                    </li>
-                  </ul>
+                  <a href="careers.html" class="nav-link">Careers</a>
                 </li>
                 <li class="nav-item">
                   <a href="contact-us.html" class="nav-link">Contact Us</a>
@@ -321,192 +478,26 @@
       <div class="others-option-for-responsive"></div>
     </div>
 
-    <div
-      class="sidebarModal modal right fade"
-      id="sidebarModal"
-      tabindex="-1"
-      role="dialog"
-    >
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <button type="button" class="close" data-bs-dismiss="modal">
-            <i class="ri-close-line"></i>
-          </button>
-          <div class="modal-body">
-            <a href="index.html">
-              <img src="assets/images/logo.png" class="main-logo" alt="logo" />
-              <img
-                src="assets/images/white-logo.png"
-                class="white-logo"
-                alt="logo"
-              />
-            </a>
-            <div class="sidebar-content">
-              <h3>About Us</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipiscing elit sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
-              <div class="sidebar-btn">
-                <a href="contact.html" class="default-btn">Let’s Talk</a>
-              </div>
-            </div>
-            <div class="sidebar-contact-info">
-              <h3>Contact Information</h3>
-              <ul class="info-list">
-                <li>
-                  <i class="ri-phone-fill"></i>
-                  <a href="tel:9901234567">+990-123-4567</a>
-                </li>
-                <li>
-                  <i class="ri-mail-line"></i
-                  ><a
-                    href="https://templates.hibootstrap.com/cdn-cgi/l/email-protection#abc3cec7c7c4ebd8cac5de85c8c4c6"
-                    ><span
-                      class="__cf_email__"
-                      data-cfemail="b8d0ddd4d4d7f8cbd9d6cd96dbd7d5"
-                      >[email&#160;protected]</span
-                    ></a
-                  >
-                </li>
-                <li>
-                  <i class="ri-map-pin-line"></i> 413 North Las Vegas, NV 89032
-                </li>
-              </ul>
-            </div>
-            <ul class="sidebar-social-list">
-              <li>
-                <a href="https://www.facebook.com/" target="_blank"
-                  ><i class="flaticon-facebook"></i
-                ></a>
-              </li>
-              <li>
-                <a href="https://www.twitter.com/" target="_blank"
-                  ><i class="flaticon-twitter"></i
-                ></a>
-              </li>
-              <li>
-                <a href="https://linkedin.com/?lang=en" target="_blank"
-                  ><i class="flaticon-linkedin"></i
-                ></a>
-              </li>
-              <li>
-                <a href="https://instagram.com/?lang=en" target="_blank"
-                  ><i class="flaticon-instagram"></i
-                ></a>
-              </li>
-            </ul>
-            <div class="contact-form">
-              <h3>Ready to Get Started?</h3>
-              <form id="contactForm">
-                <div class="row">
-                  <div class="col-lg-12 col-md-6">
-                    <div class="form-group">
-                      <input
-                        type="text"
-                        name="name"
-                        class="form-control"
-                        required
-                        data-error="Please enter your name"
-                        placeholder="Your name"
-                      />
-                      <div class="help-block with-errors"></div>
-                    </div>
-                  </div>
-                  <div class="col-lg-12 col-md-6">
-                    <div class="form-group">
-                      <input
-                        type="email"
-                        name="email"
-                        class="form-control"
-                        required
-                        data-error="Please enter your email"
-                        placeholder="Your email address"
-                      />
-                      <div class="help-block with-errors"></div>
-                    </div>
-                  </div>
-                  <div class="col-lg-12 col-md-12">
-                    <div class="form-group">
-                      <input
-                        type="text"
-                        name="phone_number"
-                        class="form-control"
-                        required
-                        data-error="Please enter your phone number"
-                        placeholder="Your phone number"
-                      />
-                      <div class="help-block with-errors"></div>
-                    </div>
-                  </div>
-                  <div class="col-lg-12 col-md-12">
-                    <div class="form-group">
-                      <textarea
-                        name="message"
-                        class="form-control"
-                        cols="30"
-                        rows="6"
-                        required
-                        data-error="Please enter your message"
-                        placeholder="Write your message..."
-                      ></textarea>
-                      <div class="help-block with-errors"></div>
-                    </div>
-                  </div>
-                  <div class="col-lg-12 col-md-12">
-                    <button type="submit" class="default-btn">
-                      Send Message<span></span>
-                    </button>
-                    <div id="msgSubmit" class="h3 text-center hidden"></div>
-                    <div class="clearfix"></div>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="banner-area">
-      <div class="slider-container">
-        <!-- Slider Items -->
-        <div class="slider-item banner-bg-7">
-          <div class="slider-content style2">
-            <h1>Welcome to MCCS</h1>
-            <p>
-              What Course will your life Take? Own your future by learning new
-                skills at MCCS. You will get more than learning.
-            </p>
-            <a
-              href="https://wa.me/9539222233?text=I%20would%20like%20to%20know%20more%20about%20your%20courses"
-              class="default-btn btn"
-            >
-              Request an enquiry <i class="flaticon-next"></i>
-            </a>
-          </div>
-        </div>
-        <div class="slider-item banner-bg-2">
-          <div class="slider-content style2">
-            <h1>Learn with MCCS</h1>
-            <p>
-              Shape your future with top-notch courses and expert guidance at
-              MCCS.
-            </p>
-            <a
-              href="https://wa.me/9539222233?text=I%20would%20like%20to%20know%20more%20about%20your%20courses"
-              class="default-btn btn"
-            >
-              Request an enquiry <i class="flaticon-next"></i>
-            </a>
-          </div>
-        </div>
-        <!-- Additional slider items here as needed -->
-      </div>
-      <!-- Navigation Controls -->
-      <div class="slider-nav">
-        <span class="prev" onclick="changeSlide(-1)">&#10094;</span>
-        <span class="next" onclick="changeSlide(1)">&#10095;</span>
+    <!-- Video Background Section -->
+    <div class="video-background">
+      <video autoplay muted loop playsinline>
+        <source src="assets/videos/hero.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div class="video-overlay"></div>
+      <div class="video-content">
+        <h1>Welcome to MCCS</h1>
+        <p>
+          What Course will your life Take? Own your future by learning new
+          skills at MCCS. You will get more than learning. Shape your future
+          with top-notch courses and expert guidance.
+        </p>
+        <a
+          href="https://wa.me/9539222233?text=I%20would%20like%20to%20know%20more%20about%20your%20courses"
+          class="default-btn btn"
+        >
+          Request an enquiry <i class="flaticon-next"></i>
+        </a>
       </div>
     </div>
 
@@ -526,7 +517,9 @@
                   <i class="flaticon-college"></i>
                 </div>
                 <a><h3>Campus Life</h3></a>
-                <a href="/campus-life.html" class="read-more-btn white-color">Explore More <i class="flaticon-next"></i></a>
+                <a href="gallery.html" class="read-more-btn white-color"
+                  >Explore More <i class="flaticon-next"></i
+                ></a>
               </div>
             </div>
           </div>
@@ -542,8 +535,10 @@
                 <div class="icon">
                   <i class="flaticon-student-with-graduation-cap"></i>
                 </div>
-                <a ><h3>Courses</h3></a>
-                <a href="/courses.html" class="read-more-btn white-color">BCA, BSc & More <i class="flaticon-next"></i></a>
+                <a><h3>Courses</h3></a>
+                <a href="courses.html" class="read-more-btn white-color"
+                  >BCA, BSc & More <i class="flaticon-next"></i
+                ></a>
               </div>
             </div>
           </div>
@@ -560,7 +555,9 @@
                   <i class="flaticon-athletics"></i>
                 </div>
                 <a><h3>Our Facilities</h3></a>
-                <a href="/facilities.html" class="read-more-btn white-color">Explore Our Campus <i class="flaticon-next"></i></a>
+                <a href="facilities.html" class="read-more-btn white-color"
+                  >Explore Our Campus <i class="flaticon-next"></i
+                ></a>
               </div>
             </div>
           </div>
@@ -588,17 +585,51 @@
                   target="_blank"
                   href="https://www.mccsconnect.in/"
                   class="read-more-btn white-color"
-                  >MCCS Connect <i class="flaticon-next"></i></a
-                >
+                  >MCCS Connect <i class="flaticon-next"></i
+                ></a>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    
+
     <div id="about-us" class="campus-information-area">
       <div class="container">
+        <div class="col-lg-6 pb-100">
+          <div class="about-content">
+            <h2>About US</h2>
+            <p>
+              Malabar College of Commerce and Science (MCCS) is a premier
+              educational institution located in Edappal, Malappuram, Kerala.
+              Established with a vision to provide quality education in commerce
+              and science streams, MCCS has grown to become a center of academic
+              excellence in the region.
+            </p>
+            <p>
+              Our college offers a diverse range of undergraduate programs
+              designed to equip students with both theoretical knowledge and
+              practical skills. With state-of-the-art facilities, experienced
+              faculty, and a vibrant campus life, we are committed to nurturing
+              the next generation of professionals and leaders.
+            </p>
+            <div class="about-list">
+              <ul>
+                <li>
+                  <i class="ri-check-fill"></i> Quality education since
+                  inception
+                </li>
+                <li>
+                  <i class="ri-check-fill"></i> Student-centered learning
+                  approach
+                </li>
+                <li>
+                  <i class="ri-check-fill"></i> Focus on holistic development
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
         <div class="row align-items-center">
           <div class="col-lg-6">
             <div class="campus-image">
@@ -1231,25 +1262,37 @@
                   >
                 </li>
                 <li>
-                  <a href="/achievements.html"><i class="ri-trophy-line"></i> Achievements</a>
+                  <a href="/achievements.html"
+                    ><i class="ri-trophy-line"></i> Achievements</a
+                  >
                 </li>
                 <li>
-                  <a href="/facilities.html"><i class="ri-building-line"></i> Facilities</a>
+                  <a href="/facilities.html"
+                    ><i class="ri-building-line"></i> Facilities</a
+                  >
                 </li>
                 <li>
                   <a href="/clubs.html"><i class="ri-group-line"></i> Clubs</a>
                 </li>
                 <li>
-                  <a href="library.html"><i class="ri-book-line"></i> Library</a>
+                  <a href="library.html"
+                    ><i class="ri-book-line"></i> Library</a
+                  >
                 </li>
                 <li>
-                  <a href="gallery.html"><i class="ri-image-line"></i> Gallery</a>
+                  <a href="gallery.html"
+                    ><i class="ri-image-line"></i> Gallery</a
+                  >
                 </li>
                 <li>
-                  <a href="/naac-quantitative.html"><i class="ri-file-text-line"></i> NAAC Quantitative</a>
+                  <a href="/naac-quantitative.html"
+                    ><i class="ri-file-text-line"></i> NAAC Quantitative</a
+                  >
                 </li>
                 <li>
-                  <a href="/naac-qualitative.html"><i class="ri-file-text-line"></i> NAAC Qualitative</a>
+                  <a href="/naac-qualitative.html"
+                    ><i class="ri-file-text-line"></i> NAAC Qualitative</a
+                  >
                 </li>
               </ul>
             </div>
@@ -1408,7 +1451,7 @@
         </div>
       </div>
     </div>
-    
+
     <div class="footer-area pt-70">
       <div class="container">
         <div class="row">
@@ -1463,21 +1506,24 @@
                     <a
                       href="https://www.facebook.com/MCCSmanoor/"
                       target="_blank"
-                      ><i class="flaticon-facebook" style="color: #4267B2;"></i>&nbsp;Facebook</a
+                      ><i class="flaticon-facebook" style="color: #4267b2"></i
+                      >&nbsp;Facebook</a
                     >
                   </li>
                   <li>
                     <a
                       href="https://www.instagram.com/malabar_college_manoor/"
                       target="_blank"
-                      ><i class="flaticon-instagram" style="color: #FF69B4;"></i>&nbsp;Instagram</a
+                      ><i class="flaticon-instagram" style="color: #ff69b4"></i
+                      >&nbsp;Instagram</a
                     >
                   </li>
                   <li>
                     <a
                       href="https://maps.app.goo.gl/4FQMpHruJVVh5eeT7"
                       target="_blank"
-                      ><i class="ri-map-pin-line" style="color: #FFC107;"></i>&nbsp;Maps</a
+                      ><i class="ri-map-pin-line" style="color: #ffc107"></i
+                      >&nbsp;Maps</a
                     >
                   </li>
 
@@ -1485,7 +1531,8 @@
                     <a
                       href="https://www.thecigworld.com/malabar-college-of-commerce-and-science/"
                       target="_blank"
-                      ><i class="ri-google-fill" style="color: #34A853;"></i>&nbsp;Google</a
+                      ><i class="ri-google-fill" style="color: #34a853"></i
+                      >&nbsp;Google</a
                     >
                   </li>
                 </ul>
@@ -1516,16 +1563,23 @@
     <div class="copyright-area">
       <div class="container">
         <div class="copyright">
-          <div class="row">
+          <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;">
             <div class="col-lg-6 col-md-8">
               <div class="copy">
                 <p>
-                  Copyright &copy; 2023 MCCS | Developed by <a href="https://connect.edentu.com/" target="_blank">Connect</a>
+                  Copyright &copy; 2025 MCCS | Developed by
+                  <a href="https://connect.edentu.com/" target="_blank"
+                    >Connect</a
+                  >
                 </p>
               </div>
             </div>
+            <div>
+              <p>Last updated on 22-04-2025</p>
+            </div>
           </div>
         </div>
+        
       </div>
     </div>
     <div class="go-top">

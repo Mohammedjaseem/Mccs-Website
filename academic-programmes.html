@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Academic Programmes at Malabar College of Commerce and Science - Undergraduate and Postgraduate courses"
+    />
+    <meta
+      name="keywords"
+      content="MCCS courses, degree programmes, UG courses, PG courses, BSc, BA, BCom, MSc"
+    />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/meanmenu.css" />
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="assets/css/magnific-popup.css" />
+    <link rel="stylesheet" href="assets/css/flaticon.css" />
+    <link rel="stylesheet" href="assets/css/remixicon.css" />
+    <link rel="stylesheet" href="assets/css/aos.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/dark.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+    <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+    <title>Academic Programmes | MCCS</title>
+    <style>
+      /* Programmes Page Specific Styles */
+      .programmes-hero {
+        background: linear-gradient(rgba(0, 0, 0, 0.7)),
+          url("assets/images/banner/MCCSBanner.jpeg") no-repeat center center;
+        background-size: cover;
+        padding: 150px 0 100px;
+        color: #fff;
+        text-align: center;
+      }
+
+      .programmes-hero h1 {
+        font-size: 3rem;
+        margin-bottom: 20px;
+        font-weight: 700;
+        color: #fff;
+      }
+
+      .programmes-hero p {
+        font-size: 1.2rem;
+        max-width: 800px;
+        margin: 0 auto;
+        color: #999;
+      }
+
+      .programmes-section {
+        padding: 80px 0;
+      }
+
+      .programme-card {
+        background: #fff;
+        border-radius: 10px;
+        padding: 30px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        margin-bottom: 30px;
+        transition: transform 0.3s ease;
+        height: 100%;
+      }
+
+      .programme-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      }
+
+      .programme-card h3 {
+        color: #084f8c;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #2ecc71;
+      }
+
+      .programme-icon {
+        font-size: 2.5rem;
+        color: #2ecc71;
+        margin-bottom: 15px;
+      }
+
+      .programme-duration {
+        background: #f8f9fa;
+        padding: 5px 10px;
+        border-radius: 5px;
+        display: inline-block;
+        margin-bottom: 15px;
+        font-size: 0.9rem;
+      }
+
+      .programme-features {
+        margin-bottom: 20px;
+      }
+
+      .programme-features li {
+        margin-bottom: 8px;
+        position: relative;
+        padding-left: 25px;
+      }
+
+      .programme-features li:before {
+        content: "\f058";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        color: #2ecc71;
+        position: absolute;
+        left: 0;
+      }
+
+      .view-btn {
+        display: inline-block;
+        background: #2ecc71;
+        color: #fff;
+        padding: 8px 20px;
+        border-radius: 5px;
+        margin-top: 10px;
+        transition: all 0.3s ease;
+      }
+
+      .view-btn:hover {
+        background: #27ae60;
+        color: #fff;
+        transform: translateY(-3px);
+      }
+
+      .department-link {
+        color: #084f8c;
+        font-weight: 600;
+        text-decoration: none;
+      }
+
+      .department-link:hover {
+        color: #2ecc71;
+        text-decoration: underline;
+      }
+
+      .eligibility-section {
+        padding: 60px 0;
+        background-color: #f9f9f9;
+      }
+
+      .eligibility-card {
+        background: #fff;
+        border-radius: 10px;
+        padding: 30px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      }
+
+      .eligibility-card h3 {
+        color: #084f8c;
+        margin-bottom: 20px;
+      }
+
+      .admission-process {
+        padding: 60px 0;
+      }
+
+      .process-step {
+        position: relative;
+        padding-left: 80px;
+        margin-bottom: 30px;
+      }
+
+      .step-number {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 60px;
+        height: 60px;
+        background: #084f8c;
+        color: #fff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        font-weight: 700;
+      }
+
+      @media (max-width: 767px) {
+        .programmes-hero {
+          padding: 100px 0 60px;
+        }
+
+        .programmes-hero h1 {
+          font-size: 2.2rem;
+        }
+
+        .process-step {
+          padding-left: 60px;
+        }
+
+        .step-number {
+          width: 45px;
+          height: 45px;
+          font-size: 1.2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="preloader-area">
+      <div class="spinner">
+        <div class="inner">
+          <div class="disc"></div>
+          <div class="disc"></div>
+          <div class="disc"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Header Section -->
+    <div class="top-header-area d-none d-lg-block">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-4 col-md-4">
+            <div class="header-right-content">
+              <div class="list">
+                <ul style="margin-left: 4rem">
+                  <li>
+                    <a href="mailto:infomccs@macity.edu.in"
+                      ><i
+                        class="ri-mail-fill"
+                        style="color: #3498db; margin-right: 5px"
+                      ></i>
+                      infomccs@macity.edu.in</a
+                    >
+                  </li>
+                  <li>
+                    <a href="tel:+917034999995"
+                      ><i
+                        class="ri-phone-fill"
+                        style="color: #2ecc71; margin-right: 5px"
+                      ></i>
+                      +91 7034 999 995</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-8 col-md-8">
+            <div class="header-left-content">
+              <!-- Search container moved to the left -->
+              <div class="search-container">
+                <div class="search-box">
+                  <input
+                    type="text"
+                    class="search-input"
+                    placeholder="Search"
+                    id="globalSearch"
+                  />
+                  <button class="search-btn">
+                    <i class="ri-search-line"></i>
+                  </button>
+                </div>
+                <div class="search-results" id="searchResults"></div>
+              </div>
+              <ul
+                style="margin: 0px; padding-left: 20px; color: #fff"
+                class="notification-list notification"
+                id="notification-container"
+              ></ul>
+              <a
+                class="top-bar-button"
+                href="https://www.mccsconnect.in/"
+                target="_blank"
+                >MCCS Connect</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="navbar-area nav-bg-2">
+      <div class="mobile-responsive-nav">
+        <div class="container">
+          <div class="mobile-responsive-menu">
+            <div class="logo">
+              <a href="index.html">
+                <img
+                  src="assets/images/logo.png"
+                  class="main-logo"
+                  alt="logo"
+                />
+                <img
+                  src="assets/images/white-logo.png"
+                  class="white-logo"
+                  alt="logo"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="desktop-nav">
+        <div class="container">
+          <nav class="navbar navbar-expand-md navbar-light">
+            <a class="navbar-brand" href="index.html">
+              <img src="assets/images/logo.png" class="main-logo" alt="logo" />
+              <img
+                src="assets/images/white-logo.png"
+                class="white-logo"
+                alt="logo"
+              />
+            </a>
+            <div
+              class="collapse navbar-collapse mean-menu"
+              id="navbarSupportedContent"
+            >
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                  <a href="index.html" class="nav-link"> Home </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link dropdown-toggle"> About Us </a>
+                  <ul class="dropdown-menu">
+                    <li class="nav-item">
+                      <a href="about-overview.html" class="nav-link"
+                        >Overview</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a href="about-vision-mission.html" class="nav-link"
+                        >Vision & Mission</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link dropdown-toggle"> Accreditation</a>
+                      <ul class="dropdown-menu">
+                        <li class="nav-item">
+                          <a href="naac-qualitative.html" class="nav-link"
+                            >NAAC-Qualitative</a
+                          >
+                        </li>
+                        <li class="nav-item">
+                          <a href="naac-quantitative.html" class="nav-link"
+                            >NAAC-Quantitative</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="nav-item">
+                      <a href="about-principal.html" class="nav-link"
+                        >Principal</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a href="about-board.html" class="nav-link"
+                        >Board of Directors</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link dropdown-toggle"> Admissions </a>
+                  <ul class="dropdown-menu">
+                    <li class="nav-item">
+                      <a href="admission-process.html" class="nav-link"
+                        >Admission Process</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a href="courses.html" class="nav-link"
+                        >Courses Offered</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link dropdown-toggle"> Academics </a>
+                  <ul class="dropdown-menu">
+                    <li class="nav-item">
+                      <a href="academic-programmes.html" class="nav-link active"
+                        >Academic Programmes</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link dropdown-toggle">Departments</a>
+                      <ul class="dropdown-menu">
+                        <li class="nav-item">
+                          <a href="food-technology.html" class="nav-link"
+                            >Food Technology</a
+                          >
+                        </li>
+                        <li class="nav-item">
+                          <a href="biochemistry.html" class="nav-link"
+                            >Biochemistry</a
+                          >
+                        </li>
+                        <li class="nav-item">
+                          <a href="english.html" class="nav-link">BA English</a>
+                        </li>
+                        <li class="nav-item">
+                          <a href="computer-application.html" class="nav-link"
+                            >BCA</a
+                          >
+                        </li>
+                        <li class="nav-item">
+                          <a href="microbiology.html" class="nav-link"
+                            >Microbiology</a
+                          >
+                        </li>
+                        <li class="nav-item">
+                          <a href="psychology.html" class="nav-link"
+                            >Psychology</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="nav-item">
+                      <a href="facilities.html" class="nav-link">Facilities</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="academic-calendar.html" class="nav-link"
+                        >Academic Calendar</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a href="library.html" class="nav-link">Library</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="achievements.html" class="nav-link"
+                        >Achievements</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link dropdown-toggle"> Students Zone </a>
+                  <ul class="dropdown-menu">
+                    <li class="nav-item">
+                      <a class="nav-link dropdown-toggle"> Activities </a>
+                      <ul class="dropdown-menu">
+                        <li class="nav-item">
+                          <a href="news-page.html" class="nav-link"
+                            >MCCS News</a
+                          >
+                        </li>
+                        <li class="nav-item">
+                          <a href="events.html" class="nav-link">Events</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="nav-item">
+                      <a href="clubs.html" class="nav-link">Clubs</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="women-cell.html" class="nav-link">Women Cell</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a href="gallery.html" class="nav-link">Gallery</a>
+                </li>
+                <li class="nav-item">
+                  <a href="careers.html" class="nav-link">Careers</a>
+                </li>
+                <li class="nav-item">
+                  <a href="contact-us.html" class="nav-link">Contact Us</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+      <div class="others-option-for-responsive"></div>
+    </div>
+
+    <!-- Programmes Hero Section -->
+    <section class="programmes-hero">
+      <div class="container">
+        <h1>Academic Programmes</h1>
+        <p>
+          Explore our diverse range of undergraduate programmes designed to
+          shape future leaders and professionals
+        </p>
+      </div>
+    </section>
+
+    <!-- Undergraduate Programmes Section -->
+    <section class="programmes-section">
+      <div class="container">
+        <div class="section-title">
+          <h2>Undergraduate Programmes</h2>
+          <p>Three-year degree programmes (6 semesters)</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6">
+            <div class="programme-card" data-aos="fade-up" data-aos-delay="100">
+              <div class="programme-icon">
+                <i class="flaticon-microscope"></i>
+              </div>
+              <h3>BSc Biochemistry (Hons)</h3>
+              <span class="programme-duration">Duration: 3 + 1 Years</span>
+              <ul class="programme-features">
+                <li>Affiliated to University of Calicut</li>
+                <li>Eligibility: Plus Two with Science</li>
+                <li>Annual Intake: 24 Students</li>
+                <li>Career opportunities in research and healthcare</li>
+              </ul>
+              <a href="biochemistry.html" class="view-btn">More Details</a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="programme-card" data-aos="fade-up" data-aos-delay="200">
+              <div class="programme-icon">
+                <i class="flaticon-computer"></i>
+              </div>
+              <h3>BCA (AICTE Approved)</h3>
+              <span class="programme-duration">Duration: 3 + 1 Years</span>
+              <ul class="programme-features">
+                <li>Affiliated to University of Calicut</li>
+                <li>Eligibility: Plus Two with Mathematics</li>
+                <li>Annual Intake: 24 Students</li>
+                <li>Focus on software development and IT solutions</li>
+              </ul>
+              <a href="computer-application.html" class="view-btn">More Details</a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="programme-card" data-aos="fade-up" data-aos-delay="300">
+              <div class="programme-icon">
+                <i class="flaticon-book"></i>
+              </div>
+              <h3>BA English Language & Literature (Hons)</h3>
+              <span class="programme-duration">Duration: 3 + 1 Years</span>
+              <ul class="programme-features">
+                <li>Affiliated to University of Calicut</li>
+                <li>Eligibility: Plus Two any stream</li>
+                <li>Annual Intake: 36 Students</li>
+                <li>Emphasis on literature and communication skills</li>
+              </ul>
+              <a href="english.html" class="view-btn">More Details</a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="programme-card" data-aos="fade-up" data-aos-delay="100">
+              <div class="programme-icon">
+                <i class="flaticon-test-tube"></i>
+              </div>
+              <h3>BSc Food Technology (Hons)</h3>
+              <span class="programme-duration">Duration: 3 + 1 Years</span>
+              <ul class="programme-features">
+                <li>Affiliated to University of Calicut</li>
+                <li>Eligibility: Plus Two with Science</li>
+                <li>Annual Intake: 24 Students</li>
+                <li>Specialization in food processing and safety</li>
+              </ul>
+              <a href="food-technology.html" class="view-btn">More Details</a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="programme-card" data-aos="fade-up" data-aos-delay="200">
+              <div class="programme-icon">
+                <i class="flaticon-bacteria"></i>
+              </div>
+              <h3>BSc Microbiology (Hons)</h3>
+              <span class="programme-duration">Duration: 3 + 1 Years</span>
+              <ul class="programme-features">
+                <li>Affiliated to University of Calicut</li>
+                <li>Eligibility: Plus Two with Science</li>
+                <li>Annual Intake: 36 Students</li>
+                <li>Study of microorganisms and their applications</li>
+              </ul>
+              <a href="microbiology.html" class="view-btn">More Details</a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="programme-card" data-aos="fade-up" data-aos-delay="300">
+              <div class="programme-icon">
+                <i class="flaticon-psychology"></i>
+              </div>
+              <h3>BSc Psychology (Hons)</h3>
+              <span class="programme-duration">Duration: 3 + 1 Years</span>
+              <ul class="programme-features">
+                <li>Affiliated to University of Calicut</li>
+                <li>Eligibility: Plus Two any stream</li>
+                <li>Annual Intake: 24 Students</li>
+                <li>Understanding human behavior and mental processes</li>
+              </ul>
+              <a href="psychology.html" class="view-btn">More Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Add-on Courses Section -->
+    <section class="programmes-section" style="background-color: #f9f9f9;">
+      <div class="container">
+        <div class="section-title">
+          <h2>Add-on Certificate Courses</h2>
+          <p>Specialized skill development programmes alongside degree courses</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6">
+            <div class="programme-card" data-aos="fade-up" data-aos-delay="100">
+              <div class="programme-icon">
+                <i class="flaticon-microscope"></i>
+              </div>
+              <h3>Diploma in Medical Lab Technology (DMLT)</h3>
+              <span class="programme-duration">Duration: 1 Year</span>
+              <ul class="programme-features">
+                <li>Hands-on training in clinical laboratory techniques</li>
+                <li>Eligibility: Plus Two with Science</li>
+                <li>Career opportunities in hospitals and diagnostic labs</li>
+                <li>Practical exposure to modern lab equipment</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="programme-card" data-aos="fade-up" data-aos-delay="200">
+              <div class="programme-icon">
+                <i class="flaticon-x-ray"></i>
+              </div>
+              <h3>Diploma in Radiology & Imaging Technology (DRIT)</h3>
+              <span class="programme-duration">Duration: 1 Year</span>
+              <ul class="programme-features">
+                <li>Training in radiological techniques and equipment</li>
+                <li>Eligibility: Plus Two with Science</li>
+                <li>Opportunities in medical imaging centers</li>
+                <li>Safety protocols in radiology practice</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="programme-card" data-aos="fade-up" data-aos-delay="300">
+              <div class="programme-icon">
+                <i class="flaticon-psychology"></i>
+              </div>
+              <h3>Certificate in Forensic Psychology</h3>
+              <span class="programme-duration">Duration: 6 Months</span>
+              <ul class="programme-features">
+                <li>Understanding psychology in legal contexts</li>
+                <li>Open to all undergraduate students</li>
+                <li>Criminal profiling and behavior analysis</li>
+                <li>Applications in law enforcement and legal systems</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-6 offset-lg-3 col-md-6 mt-4">
+            <div class="programme-card" data-aos="fade-up" data-aos-delay="400">
+              <div class="programme-icon">
+                <i class="flaticon-artificial-intelligence"></i>
+              </div>
+              <h3>Certificate in Machine Learning & AI</h3>
+              <span class="programme-duration">Duration: 6 Months</span>
+              <ul class="programme-features">
+                <li>Fundamentals of artificial intelligence</li>
+                <li>Open to all undergraduate students</li>
+                <li>Practical projects in machine learning</li>
+                <li>Career opportunities in emerging tech fields</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Eligibility Criteria Section -->
+    <!-- <section class="eligibility-section">
+      <div class="container">
+        <div class="eligibility-card" data-aos="fade-up">
+          <h3>General Eligibility Criteria</h3>
+          <div class="row">
+            <div class="col-md-6">
+              <h4>For Undergraduate Programmes:</h4>
+              <ul>
+                <li>
+                  Pass in Higher Secondary Examination (10+2) or equivalent
+                </li>
+                <li>
+                  Science stream required for BSc programmes (except Psychology)
+                </li>
+                <li>
+                  Minimum 50% aggregate marks for general category (45% for
+                  reserved categories)
+                </li>
+                <li>
+                  Mathematics compulsory for BCA applicants
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- Admission Process Section -->
+    <section class="admission-process">
+      <div class="container">
+        <div class="section-title">
+          <h2>Management Admission Process</h2>
+          <p>Steps to join MCCS academic programmes</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="process-step" data-aos="fade-up" data-aos-delay="100">
+              <div class="step-number">1</div>
+              <h4>Application Submission</h4>
+              <p>
+                Complete the online application form available on our website or
+                collect the form from the college office. Submit before the
+                deadline with required documents.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="process-step" data-aos="fade-up" data-aos-delay="200">
+              <div class="step-number">2</div>
+              <h4>Document Verification</h4>
+              <p>
+                Bring original certificates and mark sheets for verification.
+                This includes 10th, 12th, and degree certificates (for PG
+                applicants).
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="process-step" data-aos="fade-up" data-aos-delay="400">
+              <div class="step-number">3</div>
+              <h4>Rank List Publication</h4>
+              <p>
+                Merit lists will be published on the college notice board and
+                website based on academic performance and entrance test scores.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="process-step" data-aos="fade-up" data-aos-delay="500">
+              <div class="step-number">4</div>
+              <h4>Fee Payment (Government fees only)</h4>
+              <p>
+                Selected candidates must pay the admission fee within the
+                stipulated time to confirm their seat.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <div class="footer-area pt-70">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-5 col-sm-6">
+            <div class="footer-logo-area">
+              <a href="index.html"
+                ><img src="assets/images/white-logo.png" alt="Image"
+              /></a>
+              <p>
+                Manoor - Chekanoor Road, <br />
+                Manoor, Edappal, Malappuram, <br />
+                Kerala 679578
+              </p>
+              <div class="contact-list">
+                <ul>
+                  <li>
+                    <a href="tel:+917034999995">Phone: +91 7034 999 995</a>
+                  </li>
+                  <li>
+                    <a href="mailto:infomccs@macity.edu.in" target="_blank"
+                      ><span
+                        class="__cf_email__"
+                        data-cfemail="afcecbc2c6c1efdccec1da81cacbda"
+                        >Mail: infomccs@macity.edu.in</span
+                      ></a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-2 col-sm-6">
+            <div class="footer-widjet new-widget">
+              <h3>Quick Links</h3>
+              <div class="list">
+                <ul>
+                  <li><a href="about-overview.html">About Us</a></li>
+                  <li><a href="gallery.html">Gallery</a></li>
+                  <li><a href="facilities.html">Facilities</a></li>
+                  <li><a href="library.html">Library</a></li>
+                  <li><a href="events.html">Events</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-2 col-sm-6">
+            <div class="footer-widjet">
+              <h3>Social Media</h3>
+              <div class="list">
+                <ul>
+                  <li>
+                    <a
+                      href="https://www.facebook.com/MCCSmanoor/"
+                      target="_blank"
+                      ><i class="flaticon-facebook" style="color: #4267b2"></i
+                      >&nbsp;Facebook</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.instagram.com/malabar_college_manoor/"
+                      target="_blank"
+                      ><i class="flaticon-instagram" style="color: #ff69b4"></i
+                      >&nbsp;Instagram</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://maps.app.goo.gl/4FQMpHruJVVh5eeT7"
+                      target="_blank"
+                      ><i class="ri-map-pin-line" style="color: #ffc107"></i
+                      >&nbsp;Maps</a
+                    >
+                  </li>
+
+                  <li>
+                    <a
+                      href="https://www.thecigworld.com/malabar-college-of-commerce-and-science/"
+                      target="_blank"
+                      ><i class="ri-google-fill" style="color: #34a853"></i
+                      >&nbsp;Google</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6">
+            <div class="footer-widjet">
+              <h3>Location</h3>
+              <div class="list">
+                <iframe
+                  width="100%"
+                  height="300"
+                  style="border: 0"
+                  loading="lazy"
+                  allowfullscreen
+                  src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJPc1YxbC5pzsRqtCafmf8d68&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="shape">
+          <img src="assets/images/shape-1.png" alt="Image" />
+        </div>
+      </div>
+    </div>
+    <div class="copyright-area">
+      <div class="container">
+        <div class="copyright">
+          <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;">
+            <div class="col-lg-6 col-md-8">
+              <div class="copy">
+                <p>
+                  Copyright &copy; 2025 MCCS | Developed by
+                  <a href="https://connect.edentu.com/" target="_blank"
+                    >Connect</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div>
+              <p>Last updated on 22-04-2025</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="go-top">
+      <i class="ri-arrow-up-s-line"></i>
+      <i class="ri-arrow-up-s-line"></i>
+    </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/jquery.meanmenu.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/carousel-thumbs.min.js"></script>
+    <script src="assets/js/jquery.magnific-popup.js"></script>
+    <script src="assets/js/aos.js"></script>
+    <script src="assets/js/appear.min.js"></script>
+    <script src="assets/js/form-validator.min.js"></script>
+    <script src="assets/js/contact-form-script.js"></script>
+    <script src="assets/js/ajaxchimp.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+
+    <script>
+      // Notification Script
+      const apiUrl =
+        "https://app.conext.in/Notifications/api/latest-mccs-top-bar-notification/";
+      const notificationContainer = document.getElementById(
+        "notification-container"
+      );
+      let notifications = [];
+      let currentIndex = 0;
+
+      async function fetchAndUpdateNotifications() {
+        try {
+          const response = await fetch(apiUrl);
+          notifications = await response.json();
+          updateNotification();
+          setInterval(updateNotification, 4500);
+        } catch (error) {
+          console.error("Error fetching notifications:", error);
+        }
+      }
+
+      function updateNotification() {
+        if (notifications.length > 0) {
+          const list = notificationContainer;
+          list.innerHTML = `<li>${notifications[currentIndex].notification}</li>`;
+          currentIndex = (currentIndex + 1) % notifications.length;
+        }
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        fetchAndUpdateNotifications();
+        AOS.init({
+          duration: 1200,
+          once: true,
+        });
+      });
+    </script>
+  </body>
+</html>

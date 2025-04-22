@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Academic Calendar of Malabar College of Commerce and Science - Important dates and schedules"
+    />
+    <meta
+      name="keywords"
+      content="MCCS academic calendar, college schedule, academic dates, semester timeline"
+    />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/meanmenu.css" />
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="assets/css/magnific-popup.css" />
+    <link rel="stylesheet" href="assets/css/flaticon.css" />
+    <link rel="stylesheet" href="assets/css/remixicon.css" />
+    <link rel="stylesheet" href="assets/css/aos.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/dark.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+    <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+    <title>Academic Calendar | MCCS</title>
+    <style>
+      /* Calendar Page Specific Styles */
+      .calendar-hero {
+        background: linear-gradient(rgba(0, 0, 0, 0.7)),
+          url("assets/images/banner/MCCSBanner.jpeg") no-repeat center center;
+        background-size: cover;
+        padding: 150px 0 100px;
+        color: #fff;
+        text-align: center;
+      }
+
+      .calendar-hero h1 {
+        font-size: 3rem;
+        margin-bottom: 20px;
+        font-weight: 700;
+        color: #fff;
+      }
+
+      .calendar-hero p {
+        font-size: 1.2rem;
+        max-width: 800px;
+        margin: 0 auto;
+        color: #999;
+      }
+
+      .calendar-section {
+        padding: 80px 0;
+      }
+
+      .calendar-card {
+        background: #fff;
+        border-radius: 10px;
+        padding: 30px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        margin-bottom: 30px;
+        transition: transform 0.3s ease;
+      }
+
+      .calendar-card:hover {
+        transform: translateY(-10px);
+      }
+
+      .calendar-card h3 {
+        color: #084f8c;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #2ecc71;
+      }
+
+      .document-preview {
+        border: 1px solid #eee;
+        border-radius: 5px;
+        padding: 20px;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      .document-preview img {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+      }
+
+      .view-btn {
+        display: inline-block;
+        background: #084f8c;
+        color: #fff;
+        padding: 8px 20px;
+        border-radius: 5px;
+        margin-top: 10px;
+        transition: all 0.3s ease;
+      }
+
+      .view-btn:hover {
+        background: #27ae60;
+        color: #fff;
+        transform: translateY(-3px);
+      }
+
+      .calendar-notes {
+        padding: 40px 0;
+        background-color: #f9f9f9;
+      }
+
+      .notes-card {
+        background: #fff;
+        border-radius: 10px;
+        padding: 30px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      }
+
+      @media (max-width: 767px) {
+        .calendar-hero {
+          padding: 100px 0 60px;
+        }
+
+        .calendar-hero h1 {
+          font-size: 2.2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="preloader-area">
+      <div class="spinner">
+        <div class="inner">
+          <div class="disc"></div>
+          <div class="disc"></div>
+          <div class="disc"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Header Section -->
+    <div class="top-header-area d-none d-lg-block">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-4 col-md-4">
+            <div class="header-right-content">
+              <div class="list">
+                <ul style="margin-left: 4rem">
+                  <li>
+                    <a href="mailto:infomccs@macity.edu.in"
+                      ><i
+                        class="ri-mail-fill"
+                        style="color: #3498db; margin-right: 5px"
+                      ></i>
+                      infomccs@macity.edu.in</a
+                    >
+                  </li>
+                  <li>
+                    <a href="tel:+917034999995"
+                      ><i
+                        class="ri-phone-fill"
+                        style="color: #2ecc71; margin-right: 5px"
+                      ></i>
+                      +91 7034 999 995</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-8 col-md-8">
+            <div class="header-left-content">
+              <!-- Search container moved to the left -->
+              <div class="search-container">
+                <div class="search-box">
+                  <input
+                    type="text"
+                    class="search-input"
+                    placeholder="Search"
+                    id="globalSearch"
+                  />
+                  <button class="search-btn">
+                    <i class="ri-search-line"></i>
+                  </button>
+                </div>
+                <div class="search-results" id="searchResults"></div>
+              </div>
+              <ul
+                style="margin: 0px; padding-left: 20px; color: #fff"
+                class="notification-list notification"
+                id="notification-container"
+              ></ul>
+              <a
+                class="top-bar-button"
+                href="https://www.mccsconnect.in/"
+                target="_blank"
+                >MCCS Connect</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="navbar-area nav-bg-2">
+      <div class="mobile-responsive-nav">
+        <div class="container">
+          <div class="mobile-responsive-menu">
+            <div class="logo">
+              <a href="index.html">
+                <img
+                  src="assets/images/logo.png"
+                  class="main-logo"
+                  alt="logo"
+                />
+                <img
+                  src="assets/images/white-logo.png"
+                  class="white-logo"
+                  alt="logo"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="desktop-nav">
+        <div class="container">
+          <nav class="navbar navbar-expand-md navbar-light">
+            <a class="navbar-brand" href="index.html">
+              <img src="assets/images/logo.png" class="main-logo" alt="logo" />
+              <img
+                src="assets/images/white-logo.png"
+                class="white-logo"
+                alt="logo"
+              />
+            </a>
+            <div
+              class="collapse navbar-collapse mean-menu"
+              id="navbarSupportedContent"
+            >
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                  <a href="index.html" class="nav-link"> Home </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link dropdown-toggle"> About Us </a>
+                  <ul class="dropdown-menu">
+                    <li class="nav-item">
+                      <a href="about-overview.html" class="nav-link"
+                        >Overview</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a href="about-vision-mission.html" class="nav-link"
+                        >Vision & Mission</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link dropdown-toggle"> Accreditation</a>
+                      <ul class="dropdown-menu">
+                        <li class="nav-item">
+                          <a href="naac-qualitative.html" class="nav-link"
+                            >NAAC-Qualitative</a
+                          >
+                        </li>
+                        <li class="nav-item">
+                          <a href="naac-quantitative.html" class="nav-link"
+                            >NAAC-Quantitative</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="nav-item">
+                      <a href="about-principal.html" class="nav-link"
+                        >Principal</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a href="about-board.html" class="nav-link"
+                        >Board of Directors</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link dropdown-toggle"> Admissions </a>
+                  <ul class="dropdown-menu">
+                    <li class="nav-item">
+                      <a href="admission-process.html" class="nav-link"
+                        >Admission Process</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a href="courses.html" class="nav-link"
+                        >Courses Offered</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link dropdown-toggle active"> Academics </a>
+                  <ul class="dropdown-menu">
+                    <li class="nav-item">
+                      <a href="academic-programmes.html" class="nav-link"
+                        >Academic Programmes</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link dropdown-toggle">Departments</a>
+                      <ul class="dropdown-menu">
+                        <li class="nav-item">
+                          <a href="food-technology.html" class="nav-link"
+                            >Food Technology</a
+                          >
+                        </li>
+                        <li class="nav-item">
+                          <a href="biochemistry.html" class="nav-link"
+                            >Biochemistry</a
+                          >
+                        </li>
+                        <li class="nav-item">
+                          <a href="english.html" class="nav-link">BA English</a>
+                        </li>
+                        <li class="nav-item">
+                          <a href="computer-application.html" class="nav-link"
+                            >BCA</a
+                          >
+                        </li>
+                        <li class="nav-item">
+                          <a href="microbiology.html" class="nav-link"
+                            >Microbiology</a
+                          >
+                        </li>
+                        <li class="nav-item">
+                          <a href="psychology.html" class="nav-link"
+                            >Psychology</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="nav-item">
+                      <a href="facilities.html" class="nav-link">Facilities</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="academic-calendar.html" class="nav-link active"
+                        >Academic Calendar</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a href="library.html" class="nav-link">Library</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="achievements.html" class="nav-link"
+                        >Achievements</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link dropdown-toggle"> Students Zone </a>
+                  <ul class="dropdown-menu">
+                    <li class="nav-item">
+                      <a class="nav-link dropdown-toggle"> Activities </a>
+                      <ul class="dropdown-menu">
+                        <li class="nav-item">
+                          <a href="news-page.html" class="nav-link"
+                            >MCCS News</a
+                          >
+                        </li>
+                        <li class="nav-item">
+                          <a href="events.html" class="nav-link">Events</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="nav-item">
+                      <a href="clubs.html" class="nav-link">Clubs</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="women-cell.html" class="nav-link">Women Cell</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a href="gallery.html" class="nav-link">Gallery</a>
+                </li>
+                <li class="nav-item">
+                  <a href="careers.html" class="nav-link">Careers</a>
+                </li>
+                <li class="nav-item">
+                  <a href="contact-us.html" class="nav-link">Contact Us</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+      <div class="others-option-for-responsive"></div>
+    </div>
+
+    <!-- Calendar Hero Section -->
+    <section class="calendar-hero">
+      <div class="container">
+        <h1>Academic Calendar</h1>
+        <p>
+          Important dates, schedules, and academic timelines for the current
+          academic year
+        </p>
+      </div>
+    </section>
+
+    <!-- Calendar Documents Section -->
+    <!-- <section class="calendar-section">
+      <div class="container">
+        <div class="section-title">
+          <h2>Academic Calendars</h2>
+          <p>Official schedules for the current academic year</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="calendar-card" data-aos="fade-up" data-aos-delay="100">
+              <h3>2023-2024 Academic Calendar</h3>
+              <div class="document-preview">
+                <img
+                  src="assets/images/calendar-preview-2023.jpg"
+                  alt="2023-2024 Academic Calendar Preview"
+                />
+                <p>
+                  Complete academic schedule for the 2023-2024 academic year
+                </p>
+                <a
+                  href="assets/documents/academic-calendar-2023-2024.pdf"
+                  class="view-btn"
+                  target="_blank"
+                >
+                  <i class="ri-eye-line"></i> View Document
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="calendar-card" data-aos="fade-up" data-aos-delay="200">
+              <h3>Odd Semester 2023</h3>
+              <div class="document-preview">
+                <img
+                  src="assets/images/calendar-preview-odd.jpg"
+                  alt="Odd Semester 2023 Preview"
+                />
+                <p>Detailed schedule for July-December 2023 semester</p>
+                <a
+                  href="assets/documents/odd-semester-2023.pdf"
+                  class="view-btn"
+                  target="_blank"
+                >
+                  <i class="ri-eye-line"></i> View Document
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="calendar-card" data-aos="fade-up" data-aos-delay="100">
+              <h3>Even Semester 2024</h3>
+              <div class="document-preview">
+                <img
+                  src="assets/images/calendar-preview-even.jpg"
+                  alt="Even Semester 2024 Preview"
+                />
+                <p>Detailed schedule for January-May 2024 semester</p>
+                <a
+                  href="assets/documents/even-semester-2024.pdf"
+                  class="view-btn"
+                  target="_blank"
+                >
+                  <i class="ri-eye-line"></i> View Document
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="calendar-card" data-aos="fade-up" data-aos-delay="200">
+              <h3>Exam Schedule 2023-2024</h3>
+              <div class="document-preview">
+                <img
+                  src="assets/images/calendar-preview-exams.jpg"
+                  alt="Exam Schedule Preview"
+                />
+                <p>Comprehensive examination timetable for both semesters</p>
+                <a
+                  href="assets/documents/exam-schedule-2023-2024.pdf"
+                  class="view-btn"
+                  target="_blank"
+                >
+                  <i class="ri-eye-line"></i> View Document
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- Important Notes Section -->
+    <section class="calendar-notes">
+      <div class="container">
+        <div class="notes-card">
+          <h3>Important Notes</h3>
+          <ul>
+            <li>
+              The academic calendar is subject to change as per
+              university/college directives
+            </li>
+            <li>
+              All dates mentioned are inclusive of both teaching and
+              non-teaching days
+            </li>
+            <li>
+              Holidays listed are as per the government/university notifications
+            </li>
+            <li>
+              Any changes to the schedule will be notified through official
+              channels
+            </li>
+            <li>
+              Students are advised to regularly check notice boards and college
+              website for updates
+            </li>
+            <li>
+              Department-specific schedules may have additional dates - consult
+              your department office
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <div class="footer-area pt-70">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-5 col-sm-6">
+            <div class="footer-logo-area">
+              <a href="index.html"
+                ><img src="assets/images/white-logo.png" alt="Image"
+              /></a>
+              <p>
+                Manoor - Chekanoor Road, <br />
+                Manoor, Edappal, Malappuram, <br />
+                Kerala 679578
+              </p>
+              <div class="contact-list">
+                <ul>
+                  <li>
+                    <a href="tel:+917034999995">Phone: +91 7034 999 995</a>
+                  </li>
+                  <li>
+                    <a href="mailto:infomccs@macity.edu.in" target="_blank"
+                      ><span
+                        class="__cf_email__"
+                        data-cfemail="afcecbc2c6c1efdccec1da81cacbda"
+                        >Mail: infomccs@macity.edu.in</span
+                      ></a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-2 col-sm-6">
+            <div class="footer-widjet new-widget">
+              <h3>Quick Links</h3>
+              <div class="list">
+                <ul>
+                  <li><a href="about-overview.html">About Us</a></li>
+                  <li><a href="gallery.html">Gallery</a></li>
+                  <li><a href="facilities.html">Facilities</a></li>
+                  <li><a href="library.html">Library</a></li>
+                  <li><a href="events.html">Events</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-2 col-sm-6">
+            <div class="footer-widjet">
+              <h3>Social Media</h3>
+              <div class="list">
+                <ul>
+                  <li>
+                    <a
+                      href="https://www.facebook.com/MCCSmanoor/"
+                      target="_blank"
+                      ><i class="flaticon-facebook" style="color: #4267b2"></i
+                      >&nbsp;Facebook</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.instagram.com/malabar_college_manoor/"
+                      target="_blank"
+                      ><i class="flaticon-instagram" style="color: #ff69b4"></i
+                      >&nbsp;Instagram</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://maps.app.goo.gl/4FQMpHruJVVh5eeT7"
+                      target="_blank"
+                      ><i class="ri-map-pin-line" style="color: #ffc107"></i
+                      >&nbsp;Maps</a
+                    >
+                  </li>
+
+                  <li>
+                    <a
+                      href="https://www.thecigworld.com/malabar-college-of-commerce-and-science/"
+                      target="_blank"
+                      ><i class="ri-google-fill" style="color: #34a853"></i
+                      >&nbsp;Google</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6">
+            <div class="footer-widjet">
+              <h3>Location</h3>
+              <div class="list">
+                <iframe
+                  width="100%"
+                  height="300"
+                  style="border: 0"
+                  loading="lazy"
+                  allowfullscreen
+                  src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJPc1YxbC5pzsRqtCafmf8d68&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="shape">
+          <img src="assets/images/shape-1.png" alt="Image" />
+        </div>
+      </div>
+    </div>
+    <div class="copyright-area">
+      <div class="container">
+        <div class="copyright">
+          <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;">
+            <div class="col-lg-6 col-md-8">
+              <div class="copy">
+                <p>
+                  Copyright &copy; 2025 MCCS | Developed by
+                  <a href="https://connect.edentu.com/" target="_blank"
+                    >Connect</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div>
+              <p>Last updated on 22-04-2025</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="go-top">
+      <i class="ri-arrow-up-s-line"></i>
+      <i class="ri-arrow-up-s-line"></i>
+    </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/jquery.meanmenu.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/carousel-thumbs.min.js"></script>
+    <script src="assets/js/jquery.magnific-popup.js"></script>
+    <script src="assets/js/aos.js"></script>
+    <script src="assets/js/appear.min.js"></script>
+    <script src="assets/js/form-validator.min.js"></script>
+    <script src="assets/js/contact-form-script.js"></script>
+    <script src="assets/js/ajaxchimp.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+
+    <script>
+      // Notification Script
+      const apiUrl =
+        "https://app.conext.in/Notifications/api/latest-mccs-top-bar-notification/";
+      const notificationContainer = document.getElementById(
+        "notification-container"
+      );
+      let notifications = [];
+      let currentIndex = 0;
+
+      async function fetchAndUpdateNotifications() {
+        try {
+          const response = await fetch(apiUrl);
+          notifications = await response.json();
+          updateNotification();
+          setInterval(updateNotification, 4500);
+        } catch (error) {
+          console.error("Error fetching notifications:", error);
+        }
+      }
+
+      function updateNotification() {
+        if (notifications.length > 0) {
+          const list = notificationContainer;
+          list.innerHTML = `<li>${notifications[currentIndex].notification}</li>`;
+          currentIndex = (currentIndex + 1) % notifications.length;
+        }
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        fetchAndUpdateNotifications();
+        AOS.init({
+          duration: 1200,
+          once: true,
+        });
+      });
+    </script>
+  </body>
+</html>
