@@ -175,6 +175,68 @@
         margin-bottom: 10px;
       }
 
+      .initiatives-section {
+        position: relative;
+        overflow: hidden;
+        padding-top: 50px;
+        padding-bottom: 50px;
+      }
+
+      .initiative-card {
+        background: #fff;
+        border-radius: 10px;
+        padding: 30px 25px;
+        text-align: center;
+        height: 100%;
+        box-shadow: 0 5px 30px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s ease;
+        position: relative;
+        margin-bottom: 30px;
+      }
+
+      .initiative-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      .initiative-icon {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 25px;
+        color: #fff;
+        font-size: 2.5rem;
+        transition: all 0.3s ease;
+      }
+
+      .initiative-card:hover .initiative-icon {
+        transform: rotateY(180deg);
+      }
+
+      .initiative-card h3 {
+        margin-bottom: 15px;
+        color: #084f8c;
+      }
+
+      .initiative-card p {
+        color: #666;
+        margin-bottom: 20px;
+      }
+
+      .initiative-badge {
+        display: inline-block;
+        background: #f1f1f1;
+        color: #084f8c;
+        padding: 5px 15px;
+        border-radius: 30px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        margin-top: 10px;
+      }
+
       @media (max-width: 767px) {
         .about-hero {
           padding: 100px 0 60px;
@@ -606,6 +668,96 @@
       </div>
     </section> -->
 
+    <!-- Campus Initiatives Section -->
+    <section
+      class="initiatives-section"
+      style="background-color: #f8f9fa"
+    >
+      <div class="container">
+        <div class="section-title">
+          <h2>Our Campus Initiatives</h2>
+          <p>
+            Creating an environment that fosters learning, safety, and
+            sustainability
+          </p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-3 col-md-6">
+            <div
+              class="initiative-card"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="initiative-icon" style="background-color: #2ecc71">
+                <i class="flaticon-leaf"></i>
+              </div>
+              <h3>Eco Friendly Campus</h3>
+              <p>
+                We're committed to sustainability through waste management,
+                energy conservation, and green spaces.
+              </p>
+              <div class="initiative-badge">Green Certified</div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div
+              class="initiative-card"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div class="initiative-icon" style="background-color: #e74c3c">
+                <i class="flaticon-no-drugs"></i>
+              </div>
+              <h3>Drug Free Campus</h3>
+              <p>
+                Zero tolerance policy against substance abuse with regular
+                awareness programs and counseling.
+              </p>
+              <div class="initiative-badge">100% Clean</div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div
+              class="initiative-card"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <div class="initiative-icon" style="background-color: #3498db">
+                <i class="flaticon-value"></i>
+              </div>
+              <h3>Value Based Education</h3>
+              <p>
+                Our curriculum integrates moral values and ethics to develop
+                responsible citizens.
+              </p>
+              <div class="initiative-badge">Ethical Learning</div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div
+              class="initiative-card"
+              data-aos="fade-up"
+              data-aos-delay="400"
+            >
+              <div class="initiative-icon" style="background-color: #9b59b6">
+                <i class="flaticon-teamwork"></i>
+              </div>
+              <h3>Ragging Free Campus</h3>
+              <p>
+                Strict anti-ragging measures ensure a welcoming and safe
+                environment for all students.
+              </p>
+              <div class="initiative-badge">Safe Space</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Core Values Section -->
     <section class="values-section">
       <div class="container">
@@ -857,16 +1009,26 @@
     <div class="copyright-area">
       <div class="container">
         <div class="copyright">
-          <div class="row">
+          <div
+            style="
+              display: flex;
+              flex-wrap: wrap;
+              align-items: center;
+              justify-content: space-between;
+            "
+          >
             <div class="col-lg-6 col-md-8">
               <div class="copy">
                 <p>
-                  Copyright &copy; 2023 MCCS | Developed by
+                  Copyright &copy; 2025 MCCS | Developed by
                   <a href="https://connect.edentu.com/" target="_blank"
                     >Connect</a
                   >
                 </p>
               </div>
+            </div>
+            <div>
+              <p>Last updated on 22-04-2025</p>
             </div>
           </div>
         </div>
