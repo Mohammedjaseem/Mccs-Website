@@ -192,6 +192,40 @@
         text-align: center;
       }
 
+      /* Fee Structure Styles */
+      .fee-structure {
+        padding: 80px 0;
+        background-color: #f4f6f9;
+      }
+
+      .fee-structure table {
+        background: #fff;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      }
+
+      .fee-structure .table-primary {
+        background-color: #084f8c !important;
+        color: white;
+      }
+
+      .fee-structure th {
+        font-weight: 600;
+        text-align: center;
+      }
+
+      .fee-structure td {
+        text-align: center;
+        vertical-align: middle;
+      }
+
+      .fee-note {
+        text-align: center;
+        color: #666;
+        font-size: 0.9rem;
+      }
+
       @media (max-width: 767px) {
         .admission-hero {
           padding: 100px 0 60px;
@@ -864,6 +898,60 @@
       </div>
     </section> -->
 
+    <!-- Fee Structure Section -->
+    <section class="fee-structure">
+      <div class="container">
+        <div class="section-title">
+          <h2>Fee Structure</h2>
+          <p>Detailed fee breakdown per semester for all programs</p>
+        </div>
+
+        <div class="table-responsive">
+          <table class="table table-bordered table-hover">
+            <thead class="table-primary">
+              <tr>
+                <th>Program</th>
+                <th>Fee per Semester (₹)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>B.Sc. Microbiology</td>
+                <td>21,840</td>
+              </tr>
+              <tr>
+                <td>B.Sc. Food Technology</td>
+                <td>21,840</td>
+              </tr>
+              <tr>
+                <td>B.Sc. Biochemistry</td>
+                <td>21,840</td>
+              </tr>
+              <tr>
+                <td>B.Sc. Psychology</td>
+                <td>12,600</td>
+              </tr>
+              <tr>
+                <td>BCA</td>
+                <td>21,000</td>
+              </tr>
+              <tr>
+                <td>BA English Language and Literature</td>
+                <td>10,080</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- <div class="fee-note mt-4" data-aos="fade-up" data-aos-delay="100">
+          <p>
+            <strong>Note:</strong> Fees are subject to revision as per
+            university/management norms. Additional examination fees may apply.
+          </p>
+        </div> -->
+      </div>
+    </section>
+
     <!-- Contact CTA Section -->
     <section class="contact-cta">
       <div class="container">
@@ -995,7 +1083,14 @@
     <div class="copyright-area">
       <div class="container">
         <div class="copyright">
-          <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;">
+          <div
+            style="
+              display: flex;
+              flex-wrap: wrap;
+              align-items: center;
+              justify-content: space-between;
+            "
+          >
             <div class="col-lg-6 col-md-8">
               <div class="copy">
                 <p>
