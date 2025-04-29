@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="assets/css/meanmenu.css" />
+
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
+
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css" />
+
+    <link rel="stylesheet" href="assets/css/magnific-popup.css" />
+
+    <link rel="stylesheet" href="assets/css/flaticon.css" />
+
+    <link rel="stylesheet" href="assets/css/remixicon.css" />
+
+    <link rel="stylesheet" href="assets/css/odometer.min.css" />
+
+    <link rel="stylesheet" href="assets/css/aos.css" />
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <link rel="stylesheet" href="assets/css/dark.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.7/dist/sweetalert2.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+    <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+
+    <title>Gallery | MCCS</title>
+    <style>
+      .loading-animation {
+        border: 4px solid #f3f3f3;
+        border-top: 4px solid #084f8c;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        animation: spin 2s linear infinite;
+        margin: 20px auto;
+      }
+      #notification-container li {
+        list-style-type: none;
+        margin: 0px;
+        color: white;
+        font-weight: 600;
+      }
+      .notification-list {
+        display: inline-block;
+        max-height: 20px;
+        overflow: hidden;
+        position: relative;
+        max-height: 20px;
+      }
+      ul.notification-list {
+        margin-bottom: 0px !important;
+      }
+      @keyframes marquee-up {
+        0% {
+          transform: translateY(0);
+        }
+        100% {
+          transform: translateY(-100%);
+        }
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="preloader-area">
+      <div class="spinner">
+        <div class="inner">
+          <div class="disc"></div>
+          <div class="disc"></div>
+          <div class="disc"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="top-header-area d-none d-lg-block">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-4 col-md-4">
+            <div class="header-right-content">
+              <div class="list">
+                <ul style="margin-left: 4rem">
+                  <li>
+                    <a href="mailto:infomccs@macity.edu.in"
+                      ><i
+                        class="ri-mail-fill"
+                        style="color: #3498db; margin-right: 5px"
+                      ></i>
+                      infomccs@macity.edu.in</a
+                    >
+                  </li>
+                  <li>
+                    <a href="tel:+917034999995"
+                      ><i
+                        class="ri-phone-fill"
+                        style="color: #2ecc71; margin-right: 5px"
+                      ></i>
+                      +91 7034 999 995</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-8 col-md-8">
+            <div class="header-left-content">
+              <ul
+                style="margin: 0px; color: #fff"
+                class="notification-list notification"
+                id="notification-container"
+              >
+              </ul>
+              <a
+                class="top-bar-button"
+                href="https://www.mccsconnect.in/"
+                target="_blank"
+                >MCCS Connect</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="navbar-area nav-bg-1">
+      <div class="mobile-responsive-nav">
+        <div class="container">
+          <div class="mobile-responsive-menu">
+            <div class="logo">
+              <a href="index.html">
+                <img
+                  src="assets/images/logo.png"
+                  class="main-logo"
+                  alt="logo"
+                />
+                <img
+                  src="assets/images/white-logo.png"
+                  class="white-logo"
+                  alt="logo"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="desktop-nav">
+        <div class="container">
+          <nav class="navbar navbar-expand-md navbar-light">
+            <a class="navbar-brand" href="index.html">
+              <img
+                src="assets/images/white-logo.png"
+                class="main-logo"
+                alt="logo"
+              />
+            </a>
+            <div
+              class="collapse navbar-collapse mean-menu"
+              id="navbarSupportedContent"
+            >
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                  <a href="index.html" class="nav-link"> Home </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link dropdown-toggle"> About Us </a>
+                  <ul class="dropdown-menu">
+                    <li class="nav-item">
+                      <a href="about-overview.html" class="nav-link"
+                        >Overview</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a href="about-vision-mission.html" class="nav-link"
+                        >Vision & Mission</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link dropdown-toggle"> Accreditation</a>
+                      <ul class="dropdown-menu">
+                        <li class="nav-item">
+                          <a href="naac-qualitative.html" class="nav-link"
+                            >NAAC-Qualitative</a
+                          >
+                        </li>
+                        <li class="nav-item">
+                          <a href="naac-quantitative.html" class="nav-link"
+                            >NAAC-Quantitative</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="nav-item">
+                      <a href="about-principal.html" class="nav-link"
+                        >Principal</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a href="about-board.html" class="nav-link"
+                        >Board of Directors</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link dropdown-toggle"> Admissions </a>
+                  <ul class="dropdown-menu">
+                    <li class="nav-item">
+                      <a href="admission-process.html" class="nav-link"
+                        >Admission Process</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a href="courses.html" class="nav-link"
+                        >Courses Offered</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link dropdown-toggle"> Academics </a>
+                  <ul class="dropdown-menu">
+                    <li class="nav-item">
+                      <a href="academic-programmes.html" class="nav-link"
+                        >Academic Programmes</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link dropdown-toggle">Departments</a>
+                      <ul class="dropdown-menu">
+                        <li class="nav-item">
+                          <a href="food-technology.html" class="nav-link"
+                            >Food Technology</a
+                          >
+                        </li>
+                        <li class="nav-item">
+                          <a href="biochemistry.html" class="nav-link"
+                            >Biochemistry</a
+                          >
+                        </li>
+                        <li class="nav-item">
+                          <a href="english.html" class="nav-link">BA English</a>
+                        </li>
+                        <li class="nav-item">
+                          <a href="computer-application.html" class="nav-link"
+                            >BCA</a
+                          >
+                        </li>
+                        <li class="nav-item">
+                          <a href="microbiology.html" class="nav-link"
+                            >Microbiology</a
+                          >
+                        </li>
+                        <li class="nav-item">
+                          <a href="psychology.html" class="nav-link"
+                            >Psychology</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="nav-item">
+                      <a href="facilities.html" class="nav-link">Facilities</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="academic-calendar.html" class="nav-link"
+                        >Academic Calendar</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a href="library.html" class="nav-link">Library</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="achievements.html" class="nav-link"
+                        >Achievements</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link dropdown-toggle"> Students Zone </a>
+                  <ul class="dropdown-menu">
+                    <li class="nav-item">
+                      <a class="nav-link dropdown-toggle"> Activities </a>
+                      <ul class="dropdown-menu">
+                        <li class="nav-item">
+                          <a href="news-page.html" class="nav-link"
+                            >MCCS News</a
+                          >
+                        </li>
+                        <li class="nav-item">
+                          <a href="events.html" class="nav-link">Events</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="nav-item">
+                      <a href="clubs.html" class="nav-link">Clubs</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="women-cell.html" class="nav-link">Women Cell</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a href="gallery.html" class="nav-link active">Gallery</a>
+                </li>
+                <li class="nav-item">
+                  <a href="careers.html" class="nav-link">Careers</a>
+                </li>
+                <li class="nav-item">
+                  <a href="contact-us.html" class="nav-link">Contact Us</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="sidebarModal modal right fade"
+      id="sidebarModal"
+      tabindex="-1"
+      role="dialog"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <button type="button" class="close" data-bs-dismiss="modal">
+            <i class="ri-close-line"></i>
+          </button>
+          <div class="modal-body">
+            <a href="index.html">
+              <img src="assets/images/logo.png" alt="logo" class="main-logo" />
+              <img
+                src="assets/images/white-logo.png"
+                class="white-logo"
+                alt="logo"
+              />
+            </a>
+            <div class="sidebar-content">
+              <h3>About Us</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipiscing elit sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+              <div class="sidebar-btn">
+                <a href="contact.html" class="default-btn">Let’s Talk</a>
+              </div>
+            </div>
+            <div class="sidebar-contact-info">
+              <h3>Contact Information</h3>
+              <ul class="info-list">
+                <li>
+                  <i class="ri-phone-fill"></i>
+                  <a href="tel:9901234567">+990-123-4567</a>
+                </li>
+                <li>
+                  <i class="ri-mail-line"></i
+                  ><a
+                    href="https://templates.hibootstrap.com/cdn-cgi/l/email-protection#462e232a2a2906352728336825292b"
+                    ><span
+                      class="__cf_email__"
+                      data-cfemail="ec8489808083ac9f8d8299c28f8381"
+                      >[email&#160;protected]</span
+                    ></a
+                  >
+                </li>
+                <li>
+                  <i class="ri-map-pin-line"></i> 413 North Las Vegas, NV 89032
+                </li>
+              </ul>
+            </div>
+            <ul class="sidebar-social-list">
+              <li>
+                <a href="https://www.facebook.com/" target="_blank"
+                  ><i class="flaticon-facebook"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://www.twitter.com/" target="_blank"
+                  ><i class="flaticon-twitter"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/?lang=en" target="_blank"
+                  ><i class="flaticon-linkedin"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://instagram.com/?lang=en" target="_blank"
+                  ><i class="flaticon-instagram"></i
+                ></a>
+              </li>
+            </ul>
+            <div class="contact-form">
+              <h3>Ready to Get Started?</h3>
+              <form id="contactForm">
+                <div class="row">
+                  <div class="col-lg-12 col-md-6">
+                    <div class="form-group">
+                      <input
+                        type="text"
+                        name="name"
+                        class="form-control"
+                        required
+                        data-error="Please enter your name"
+                        placeholder="Your name"
+                      />
+                      <div class="help-block with-errors"></div>
+                    </div>
+                  </div>
+                  <div class="col-lg-12 col-md-6">
+                    <div class="form-group">
+                      <input
+                        type="email"
+                        name="email"
+                        class="form-control"
+                        required
+                        data-error="Please enter your email"
+                        placeholder="Your email address"
+                      />
+                      <div class="help-block with-errors"></div>
+                    </div>
+                  </div>
+                  <div class="col-lg-12 col-md-12">
+                    <div class="form-group">
+                      <input
+                        type="text"
+                        name="phone_number"
+                        class="form-control"
+                        required
+                        data-error="Please enter your phone number"
+                        placeholder="Your phone number"
+                      />
+                      <div class="help-block with-errors"></div>
+                    </div>
+                  </div>
+                  <div class="col-lg-12 col-md-12">
+                    <div class="form-group">
+                      <textarea
+                        name="message"
+                        class="form-control"
+                        cols="30"
+                        rows="6"
+                        required
+                        data-error="Please enter your message"
+                        placeholder="Write your message..."
+                      ></textarea>
+                      <div class="help-block with-errors"></div>
+                    </div>
+                  </div>
+                  <div class="col-lg-12 col-md-12">
+                    <button type="submit" class="default-btn">
+                      Send Message<span></span>
+                    </button>
+                    <div id="msgSubmit" class="h3 text-center hidden"></div>
+                    <div class="clearfix"></div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!-- Page Banner -->
+<div class="page-banner-area bg-2">
+    <div class="container">
+      <div class="page-banner-content">
+        <h1>MCCS Non-teaching Staffs</h1>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li>MCCS Non-teaching Staffs</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Staff Listing Section -->
+  <div class="container" style="max-width: 1200px; margin: 40px auto;">
+    <div id="staff-container"></div>
+  </div>
+  
+    <div class="footer-area pt-70">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-5 col-sm-6">
+            <div class="footer-logo-area">
+              <a href="index.html"
+                ><img src="assets/images/white-logo.png" alt="Image"
+              /></a>
+              <p>
+                Manoor - Chekanoor Road, <br />
+                Manoor, Edappal, Malappuram, <br />
+                Kerala 679578
+              </p>
+              <div class="contact-list">
+                <ul>
+                  <li>
+                    <a href="tel:+917034999995">Phone: +91 7034 999 995</a>
+                  </li>
+                  <li>
+                    <a href="mailto:infomccs@macity.edu.in" target="_blank"
+                      ><span
+                        class="__cf_email__"
+                        data-cfemail="afcecbc2c6c1efdccec1da81cacbda"
+                        >Mail: infomccs@macity.edu.in</span
+                      ></a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-2 col-sm-6">
+            <div class="footer-widjet new-widget">
+              <h3>Quick Links</h3>
+              <div class="list">
+                <ul>
+                  <li><a href="gallery.html">Gallery</a></li>
+                  <li><a href="facilities.html">Facilities</a></li>
+                  <li><a href="library.html">Library</a></li>
+                  <li><a href="events.html">Events</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-2 col-sm-6">
+            <div class="footer-widjet">
+              <h3>Social Media</h3>
+              <div class="list">
+                <ul>
+                  <li>
+                    <a
+                      href="https://www.facebook.com/MCCSmanoor/"
+                      target="_blank"
+                      ><i class="flaticon-facebook" style="color: #4267b2"></i
+                      >&nbsp;Facebook</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.instagram.com/malabar_college_manoor/"
+                      target="_blank"
+                      ><i class="flaticon-instagram" style="color: #ff69b4"></i
+                      >&nbsp;Instagram</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://maps.app.goo.gl/4FQMpHruJVVh5eeT7"
+                      target="_blank"
+                      ><i class="ri-map-pin-line" style="color: #ffc107"></i
+                      >&nbsp;Maps</a
+                    >
+                  </li>
+
+                  <li>
+                    <a
+                      href="https://www.thecigworld.com/malabar-college-of-commerce-and-science/"
+                      target="_blank"
+                      ><i class="ri-google-fill" style="color: #34a853"></i
+                      >&nbsp;Google</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6">
+            <div class="footer-widjet">
+              <h3>Location</h3>
+              <div class="list">
+                <iframe
+                  width="100%"
+                  height="300"
+                  style="border: 0"
+                  loading="lazy"
+                  allowfullscreen
+                  src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJPc1YxbC5pzsRqtCafmf8d68&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="shape">
+          <img src="assets/images/shape-1.png" alt="Image" />
+        </div>
+      </div>
+    </div>
+    <div class="copyright-area">
+      <div class="container">
+        <div class="copyright">
+          <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;">
+            <div class="col-lg-6 col-md-8">
+              <div class="copy">
+                <p>
+                  Copyright &copy; 2025 MCCS | Developed by
+                  <a href="https://connect.edentu.com/" target="_blank"
+                    >Connect</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div>
+              <p>Last updated on 22-04-2025</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="go-top">
+      <i class="ri-arrow-up-s-line"></i>
+      <i class="ri-arrow-up-s-line"></i>
+    </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+    <script src="assets/js/jquery.meanmenu.js"></script>
+
+    <script src="assets/js/owl.carousel.min.js"></script>
+
+    <script src="assets/js/carousel-thumbs.min.js"></script>
+
+    <script src="assets/js/jquery.magnific-popup.js"></script>
+
+    <script src="assets/js/aos.js"></script>
+
+    <script src="assets/js/odometer.min.js"></script>
+
+    <script src="assets/js/appear.min.js"></script>
+
+    <script src="assets/js/form-validator.min.js"></script>
+
+    <script src="assets/js/contact-form-script.js"></script>
+
+    <script src="assets/js/ajaxchimp.min.js"></script>
+
+    <script src="assets/js/custom.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.7/dist/sweetalert2.all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <script>
+        const staffContainer = document.getElementById("staff-container");
+      
+        async function fetchNonTeachingStaffs() {
+          try {
+            const response = await axios.get("https://conext.in/custom_users/api/staff_list_non_teaching/MCCS");
+            const staffData = response.data?.data || [];
+      
+            const departmentMap = {};
+            staffData.forEach(staff => {
+              const dept = staff.department || "Unassigned";
+              if (!departmentMap[dept]) departmentMap[dept] = [];
+              departmentMap[dept].push(staff);
+            });
+      
+            // Define department priority
+            const priorityOrder = ["I T Department","Administration", "Office"];
+      
+            // Sort departments based on priority first, then alphabetically
+            const sortedDepartments = Object.keys(departmentMap).sort((a, b) => {
+              const indexA = priorityOrder.indexOf(a);
+              const indexB = priorityOrder.indexOf(b);
+      
+              if (indexA !== -1 && indexB !== -1) return indexA - indexB;
+              if (indexA !== -1) return -1;
+              if (indexB !== -1) return 1;
+              return a.localeCompare(b);
+            });
+      
+            // Render staff department-wise
+            for (const department of sortedDepartments) {
+              const staffs = departmentMap[department];
+      
+              const deptBlock = document.createElement("div");
+              deptBlock.setAttribute("style", "margin-bottom: 50px;");
+      
+              const heading = document.createElement("h2");
+              heading.innerText = department;
+              heading.setAttribute(
+                "style",
+                "font-size: 24px; font-weight: bold; margin-bottom: 20px; border-left: 5px solid #005BAC; padding-left: 15px;"
+              );
+      
+              const grid = document.createElement("div");
+              grid.setAttribute(
+                "style",
+                `display: grid;
+                 grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+                 gap: 25px;`
+              );
+      
+              staffs.forEach(staff => {
+                const card = document.createElement("div");
+                card.setAttribute(
+                  "style",
+                  `background: white;
+                   border-radius: 10px;
+                   padding: 20px;
+                   text-align: center;
+                   box-shadow: 0 2px 8px rgba(0,0,0,0.1);`
+                );
+      
+                card.innerHTML = `
+                  <img src="${staff.picture}" alt="${staff.name}" style="width: 96px; height: 96px; object-fit: cover; border-radius: 50%; margin-bottom: 10px;">
+                  <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 5px;">${staff.name}</h3>
+                  <p style="font-size: 14px; color: #555;">${staff.designation}</p>
+                `;
+      
+                grid.appendChild(card);
+              });
+      
+              deptBlock.appendChild(heading);
+              deptBlock.appendChild(grid);
+              staffContainer.appendChild(deptBlock);
+            }
+          } catch (error) {
+            staffContainer.innerHTML = `<p style="color: red;">Failed to load staff data.</p>`;
+            console.error("API Error:", error);
+          }
+        }
+      
+        fetchNonTeachingStaffs();
+      </script>
+                  
+    <script>
+      // Define the API URL to fetch notification data
+      const apiUrl =
+        "https://app.conext.in/Notifications/api/latest-mccs-top-bar-notification/";
+
+      // Reference to the notification container
+      const notificationContainer = document.getElementById(
+        "notification-container"
+      );
+
+      // Store the notification data and current index
+      let notifications = [];
+      let currentIndex = 0;
+
+      // Function to fetch and update notification data
+      async function fetchAndUpdateNotifications() {
+        try {
+          const response = await fetch(apiUrl);
+          notifications = await response.json();
+
+          // Call the updateNotification function initially
+          updateNotification();
+
+          // Set an interval to update notifications every 1.5 seconds
+          setInterval(updateNotification, 4500);
+        } catch (error) {
+          console.error("Error fetching notifications:", error);
+        }
+      }
+
+      // Function to update the notification text
+      function updateNotification() {
+        if (notifications.length > 0) {
+          const list = notificationContainer;
+          list.innerHTML = `<li>${notifications[currentIndex].notification}</li>`;
+          currentIndex = (currentIndex + 1) % notifications.length;
+        }
+      }
+
+      // Call the fetchAndUpdateNotifications function initially
+      fetchAndUpdateNotifications();
+    </script>
+  </body>
+
+  <!-- Mirrored from templates.hibootstrap.com/sanu/default/campus-life.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Sep 2023 14:20:42 GMT -->
+</html>
