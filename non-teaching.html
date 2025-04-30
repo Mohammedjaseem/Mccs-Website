@@ -33,7 +33,7 @@
     <link rel="stylesheet" href="assets/css/responsive.css" />
     <link rel="icon" type="image/png" href="assets/images/favicon.png" />
 
-    <title>Gallery | MCCS</title>
+    <title>Non Teaching Staffs | MCCS</title>
     <style>
       .loading-animation {
         border: 4px solid #f3f3f3;
@@ -90,6 +90,7 @@
       </div>
     </div>
 
+    <!-- Header Section -->
     <div class="top-header-area d-none d-lg-block">
       <div class="container">
         <div class="row align-items-center">
@@ -121,12 +122,26 @@
           </div>
           <div class="col-lg-8 col-md-8">
             <div class="header-left-content">
+              <!-- Search container moved to the left -->
+              <div class="search-container">
+                <div class="search-box">
+                  <input
+                    type="text"
+                    class="search-input"
+                    placeholder="Search"
+                    id="globalSearch"
+                  />
+                  <button class="search-btn">
+                    <i class="ri-search-line"></i>
+                  </button>
+                </div>
+                <div class="search-results" id="searchResults"></div>
+              </div>
               <ul
-                style="margin: 0px; color: #fff"
+                style="margin: 0px; padding-left: 20px; color: #fff"
                 class="notification-list notification"
                 id="notification-container"
-              >
-              </ul>
+              ></ul>
               <a
                 class="top-bar-button"
                 href="https://www.mccsconnect.in/"
@@ -216,6 +231,16 @@
                         >Board of Directors</a
                       >
                     </li>
+                    <li class="nav-item">
+                      <a href="administrative-staff.html" class="nav-link"
+                        >Administrative Staffs</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a href="non-teaching.html" class="nav-link active"
+                        >Non Teaching Staffs</a
+                      >
+                    </li>
                   </ul>
                 </li>
                 <li class="nav-item">
@@ -272,6 +297,13 @@
                             >Psychology</a
                           >
                         </li>
+                        <li class="nav-item">
+                          <a
+                            href="department-of-languages.html"
+                            class="nav-link"
+                            >Department of Languages</a
+                          >
+                        </li>
                       </ul>
                     </li>
                     <li class="nav-item">
@@ -317,7 +349,7 @@
                   </ul>
                 </li>
                 <li class="nav-item">
-                  <a href="gallery.html" class="nav-link active">Gallery</a>
+                  <a href="gallery.html" class="nav-link">Gallery</a>
                 </li>
                 <li class="nav-item">
                   <a href="careers.html" class="nav-link">Careers</a>
@@ -479,24 +511,24 @@
       </div>
     </div>
 
-<!-- Page Banner -->
-<div class="page-banner-area bg-2">
-    <div class="container">
-      <div class="page-banner-content">
-        <h1>MCCS Non-teaching Staffs</h1>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li>MCCS Non-teaching Staffs</li>
-        </ul>
+    <!-- Page Banner -->
+    <div class="page-banner-area bg-2">
+      <div class="container">
+        <div class="page-banner-content">
+          <h1>MCCS Non-teaching Staffs</h1>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li>MCCS Non-teaching Staffs</li>
+          </ul>
+        </div>
       </div>
     </div>
-  </div>
-  
-  <!-- Staff Listing Section -->
-  <div class="container" style="max-width: 1200px; margin: 40px auto;">
-    <div id="staff-container"></div>
-  </div>
-  
+
+    <!-- Staff Listing Section -->
+    <div class="container" style="max-width: 1200px; margin: 40px auto">
+      <div id="staff-container"></div>
+    </div>
+
     <div class="footer-area pt-70">
       <div class="container">
         <div class="row">
@@ -548,7 +580,7 @@
                 <ul>
                   <li>
                     <a
-                      href="https://www.facebook.com/MCCSmanoor/"
+                      href="https://www.facebook.com/profile.php?id=61575267401401"
                       target="_blank"
                       ><i class="flaticon-facebook" style="color: #4267b2"></i
                       >&nbsp;Facebook</a
@@ -607,7 +639,14 @@
     <div class="copyright-area">
       <div class="container">
         <div class="copyright">
-          <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;">
+          <div
+            style="
+              display: flex;
+              flex-wrap: wrap;
+              align-items: center;
+              justify-content: space-between;
+            "
+          >
             <div class="col-lg-6 col-md-8">
               <div class="copy">
                 <p>
@@ -619,7 +658,7 @@
               </div>
             </div>
             <div>
-              <p>Last updated on 22-04-2025</p>
+              <p>Last updated on 30-04-2025</p>
             </div>
           </div>
         </div>
@@ -661,89 +700,92 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
     <script>
-        const staffContainer = document.getElementById("staff-container");
-      
-        async function fetchNonTeachingStaffs() {
-          try {
-            const response = await axios.get("https://conext.in/custom_users/api/staff_list_non_teaching/MCCS");
-            const staffData = response.data?.data || [];
-      
-            const departmentMap = {};
-            staffData.forEach(staff => {
-              const dept = staff.department || "Unassigned";
-              if (!departmentMap[dept]) departmentMap[dept] = [];
-              departmentMap[dept].push(staff);
-            });
-      
-            // Define department priority
-            const priorityOrder = ["I T Department","Administration", "Office"];
-      
-            // Sort departments based on priority first, then alphabetically
-            const sortedDepartments = Object.keys(departmentMap).sort((a, b) => {
-              const indexA = priorityOrder.indexOf(a);
-              const indexB = priorityOrder.indexOf(b);
-      
-              if (indexA !== -1 && indexB !== -1) return indexA - indexB;
-              if (indexA !== -1) return -1;
-              if (indexB !== -1) return 1;
-              return a.localeCompare(b);
-            });
-      
-            // Render staff department-wise
-            for (const department of sortedDepartments) {
-              const staffs = departmentMap[department];
-      
-              const deptBlock = document.createElement("div");
-              deptBlock.setAttribute("style", "margin-bottom: 50px;");
-      
-              const heading = document.createElement("h2");
-              heading.innerText = department;
-              heading.setAttribute(
-                "style",
-                "font-size: 24px; font-weight: bold; margin-bottom: 20px; border-left: 5px solid #005BAC; padding-left: 15px;"
-              );
-      
-              const grid = document.createElement("div");
-              grid.setAttribute(
-                "style",
-                `display: grid;
+      const staffContainer = document.getElementById("staff-container");
+
+      async function fetchNonTeachingStaffs() {
+        try {
+          const response = await axios.get(
+            "https://conext.in/custom_users/api/staff_list_non_teaching/MCCS"
+          );
+          const staffData = response.data?.data || [];
+
+          const departmentMap = {};
+          staffData.forEach((staff) => {
+            const dept = staff.department || "Unassigned";
+            if (!departmentMap[dept]) departmentMap[dept] = [];
+            departmentMap[dept].push(staff);
+          });
+
+          // Define department priority
+          const priorityOrder = ["I T Department", "Administration", "Office"];
+
+          // Sort departments based on priority first, then alphabetically
+          const sortedDepartments = Object.keys(departmentMap).sort((a, b) => {
+            const indexA = priorityOrder.indexOf(a);
+            const indexB = priorityOrder.indexOf(b);
+
+            if (indexA !== -1 && indexB !== -1) return indexA - indexB;
+            if (indexA !== -1) return -1;
+            if (indexB !== -1) return 1;
+            return a.localeCompare(b);
+          });
+
+          // Render staff department-wise
+          for (const department of sortedDepartments) {
+            if (department === "Administration") continue; // Skip "Administration"
+            const staffs = departmentMap[department];
+
+            const deptBlock = document.createElement("div");
+            deptBlock.setAttribute("style", "margin-bottom: 50px;");
+
+            const heading = document.createElement("h2");
+            heading.innerText = department;
+            heading.setAttribute(
+              "style",
+              "font-size: 24px; font-weight: bold; margin-bottom: 20px; border-left: 5px solid #005BAC; padding-left: 15px;"
+            );
+
+            const grid = document.createElement("div");
+            grid.setAttribute(
+              "style",
+              `display: grid;
                  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
                  gap: 25px;`
-              );
-      
-              staffs.forEach(staff => {
-                const card = document.createElement("div");
-                card.setAttribute(
-                  "style",
-                  `background: white;
+            );
+
+            staffs.forEach((staff) => {
+              const card = document.createElement("div");
+              card.setAttribute(
+                "style",
+                `background: white;
                    border-radius: 10px;
                    padding: 20px;
                    text-align: center;
                    box-shadow: 0 2px 8px rgba(0,0,0,0.1);`
-                );
-      
-                card.innerHTML = `
+              );
+
+              card.innerHTML = `
                   <img src="${staff.picture}" alt="${staff.name}" style="width: 96px; height: 96px; object-fit: cover; border-radius: 50%; margin-bottom: 10px;">
                   <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 5px;">${staff.name}</h3>
                   <p style="font-size: 14px; color: #555;">${staff.designation}</p>
                 `;
-      
-                grid.appendChild(card);
-              });
-      
-              deptBlock.appendChild(heading);
-              deptBlock.appendChild(grid);
-              staffContainer.appendChild(deptBlock);
-            }
-          } catch (error) {
-            staffContainer.innerHTML = `<p style="color: red;">Failed to load staff data.</p>`;
-            console.error("API Error:", error);
+
+              grid.appendChild(card);
+            });
+
+            deptBlock.appendChild(heading);
+            deptBlock.appendChild(grid);
+            staffContainer.appendChild(deptBlock);
           }
+        } catch (error) {
+          staffContainer.innerHTML = `<p style="color: red;">Failed to load staff data.</p>`;
+          console.error("API Error:", error);
         }
-      
-        fetchNonTeachingStaffs();
-      </script>
-                  
+      }
+
+      fetchNonTeachingStaffs();
+    </script>
+
     <script>
       // Define the API URL to fetch notification data
       const apiUrl =
