@@ -226,6 +226,85 @@
         font-size: 0.9rem;
       }
 
+      /* Prospectus Section Styles */
+      .prospectus-section {
+        padding: 80px 0;
+        background: linear-gradient(135deg, #084f8c 0%, #2ecc71 100%);
+        color: white;
+      }
+
+      .prospectus-container {
+        background: white;
+        border-radius: 15px;
+        padding: 40px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+
+      .prospectus-icon {
+        font-size: 60px;
+        color: #084f8c;
+        margin-bottom: 20px;
+      }
+
+      .prospectus-title {
+        color: #084f8c;
+        margin-bottom: 20px;
+        font-weight: 700;
+      }
+
+      .prospectus-description {
+        color: #555;
+        margin-bottom: 30px;
+        font-size: 1.1rem;
+        line-height: 1.6;
+      }
+
+      .prospectus-btn {
+        display: inline-block;
+        padding: 12px 30px;
+        background: #084f8c;
+        color: white;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s;
+        border: 2px solid #084f8c;
+        margin: 0 10px 15px;
+      }
+
+      .prospectus-btn:hover {
+        background: transparent;
+        color: #084f8c;
+      }
+
+      .prospectus-btn.secondary {
+        background: #2ecc71;
+        border-color: #2ecc71;
+      }
+
+      .prospectus-btn.secondary:hover {
+        background: transparent;
+        color: #2ecc71;
+      }
+
+      .prospectus-image {
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        margin-top: 30px;
+      }
+
+      .prospectus-image img {
+        width: 100%;
+        height: auto;
+        transition: transform 0.5s;
+      }
+
+      .prospectus-image:hover img {
+        transform: scale(1.05);
+      }
+
       @media (max-width: 767px) {
         .admission-hero {
           padding: 100px 0 60px;
@@ -239,6 +318,14 @@
           columns: 1;
           -webkit-columns: 1;
           -moz-columns: 1;
+        }
+
+        .prospectus-container {
+          padding: 25px;
+        }
+
+        .prospectus-icon {
+          font-size: 40px;
         }
       }
     </style>
@@ -394,7 +481,7 @@
                       <a href="about-board.html" class="nav-link"
                         >Board of Directors</a
                       >
-                    </li> 
+                    </li>
                     <li class="nav-item">
                       <a href="non-teaching.html" class="nav-link"
                         >Non Teaching Staffs</a
@@ -532,6 +619,57 @@
           Your journey to becoming an MCCS student starts here. Learn about our
           straightforward admission procedure and requirements.
         </p>
+      </div>
+    </section>
+
+    <!-- Admission Prospectus Section -->
+    <section class="prospectus-section">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <div class="prospectus-container" data-aos="fade-right">
+              <div class="prospectus-icon">
+                <i class="ri-book-open-line"></i>
+              </div>
+              <h2 class="prospectus-title">Admission Prospectus 2025-26</h2>
+              <p class="prospectus-description">
+                Download our comprehensive admission prospectus to get complete
+                details about all programs, admission procedures, fee structure,
+                scholarships, campus facilities, and more. Everything you need
+                to know about joining MCCS in one document.
+              </p>
+              <div class="prospectus-buttons">
+                <a
+                  href="assets/docs/MCCS-Prospectus-2025.pdf"
+                  class="prospectus-btn"
+                  target="_blank"
+                >
+                  <i class="ri-download-line"></i> Download Prospectus
+                </a>
+                <a
+                  href="assets/docs/MCCS-Prospectus-2025.pdf"
+                  class="prospectus-btn secondary"
+                  target="_blank"
+                >
+                  <i class="ri-eye-line"></i> View Online
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6" data-aos="fade-left">
+            <div class="prospectus-image">
+              <a
+                href="assets/docs/MCCS-Prospectus-2025.pdf"
+                target="_blank"
+              >
+              <img
+                src="assets/images/prospectus-cover.png"
+                alt="MCCS Admission Prospectus 2025"
+              />
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -688,228 +826,6 @@
       </div>
     </section>
 
-    <!-- Important Dates Section -->
-    <!-- <section class="important-dates">
-      <div class="container">
-        <div class="section-title">
-          <h2>Important Dates</h2>
-          <p>Key timelines for the admission cycle</p>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-6">
-            <div class="date-card" data-aos="fade-up" data-aos-delay="100">
-              <h4>Application Window</h4>
-              <p class="date">March 1 - May 31, 2024</p>
-              <p>
-                Online and offline applications accepted during this period.
-                Early applications encouraged.
-              </p>
-            </div>
-          </div>
-
-          <div class="col-lg-6">
-            <div class="date-card" data-aos="fade-up" data-aos-delay="200">
-              <h4>Entrance Tests</h4>
-              <p class="date">June 10-15, 2024</p>
-              <p>
-                Course-specific entrance tests will be conducted. Exact dates
-                will be communicated individually.
-              </p>
-            </div>
-          </div>
-
-          <div class="col-lg-6">
-            <div class="date-card" data-aos="fade-up" data-aos-delay="100">
-              <h4>First Merit List</h4>
-              <p class="date">June 25, 2024</p>
-              <p>
-                Published on college website and notice boards. Selected
-                candidates must confirm within 5 days.
-              </p>
-            </div>
-          </div>
-
-          <div class="col-lg-6">
-            <div class="date-card" data-aos="fade-up" data-aos-delay="200">
-              <h4>Second Merit List</h4>
-              <p class="date">July 5, 2024</p>
-              <p>
-                If seats remain vacant after first round. Confirmation within 3
-                days of publication.
-              </p>
-            </div>
-          </div>
-
-          <div class="col-lg-6">
-            <div class="date-card" data-aos="fade-up" data-aos-delay="100">
-              <h4>Fee Payment Deadline</h4>
-              <p class="date">July 15, 2024</p>
-              <p>
-                Last date for paying first installment fees to secure admission.
-              </p>
-            </div>
-          </div>
-
-          <div class="col-lg-6">
-            <div class="date-card" data-aos="fade-up" data-aos-delay="200">
-              <h4>Orientation Program</h4>
-              <p class="date">August 1, 2024</p>
-              <p>
-                Mandatory for all new students. Academic session begins August
-                2, 2024.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> -->
-
-    <!-- FAQ Section -->
-    <!-- <section class="faq-section">
-      <div class="container">
-        <div class="section-title">
-          <h2>Frequently Asked Questions</h2>
-          <p>Quick answers to common admission queries</p>
-        </div>
-
-        <div class="accordion" id="admissionFAQ">
-          <div class="accordion-item" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="accordion-header" id="headingOne">
-              <button
-                class="accordion-button"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseOne"
-              >
-                What is the application fee for admission?
-              </button>
-            </h3>
-            <div
-              id="collapseOne"
-              class="accordion-collapse collapse show"
-              aria-labelledby="headingOne"
-              data-bs-parent="#admissionFAQ"
-            >
-              <div class="accordion-body">
-                The application fee is ₹500 for general category applicants and
-                ₹250 for SC/ST candidates. This fee is non-refundable and can be
-                paid online or via demand draft in favor of "Malabar College of
-                Commerce and Science" payable at Edappal.
-              </div>
-            </div>
-          </div>
-
-          <div class="accordion-item" data-aos="fade-up" data-aos-delay="200">
-            <h3 class="accordion-header" id="headingTwo">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseTwo"
-              >
-                Can I apply for multiple programs?
-              </button>
-            </h3>
-            <div
-              id="collapseTwo"
-              class="accordion-collapse collapse"
-              aria-labelledby="headingTwo"
-              data-bs-parent="#admissionFAQ"
-            >
-              <div class="accordion-body">
-                Yes, you can apply for up to 3 programs. However, you need to
-                submit separate application forms for each program and pay the
-                application fee for each. If selected for multiple programs,
-                you'll need to choose one before the confirmation deadline.
-              </div>
-            </div>
-          </div>
-
-          <div class="accordion-item" data-aos="fade-up" data-aos-delay="300">
-            <h3 class="accordion-header" id="headingThree">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseThree"
-              >
-                Is hostel accommodation available?
-              </button>
-            </h3>
-            <div
-              id="collapseThree"
-              class="accordion-collapse collapse"
-              aria-labelledby="headingThree"
-              data-bs-parent="#admissionFAQ"
-            >
-              <div class="accordion-body">
-                Yes, we have separate hostel facilities for boys and girls with
-                limited seats. Hostel admission is separate from academic
-                admission and is granted based on distance from campus and
-                availability. Hostel application forms will be provided after
-                academic admission confirmation.
-              </div>
-            </div>
-          </div>
-
-          <div class="accordion-item" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="accordion-header" id="headingFour">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseFour"
-              >
-                What payment methods are accepted for fees?
-              </button>
-            </h3>
-            <div
-              id="collapseFour"
-              class="accordion-collapse collapse"
-              aria-labelledby="headingFour"
-              data-bs-parent="#admissionFAQ"
-            >
-              <div class="accordion-body">
-                We accept online payments (credit/debit cards, net banking,
-                UPI), demand drafts, and cash payments at the college cash
-                counter. Installment options are available for most programs.
-                International students can pay via wire transfer (details
-                provided upon admission).
-              </div>
-            </div>
-          </div>
-
-          <div class="accordion-item" data-aos="fade-up" data-aos-delay="200">
-            <h3 class="accordion-header" id="headingFive">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseFive"
-              >
-                Are there any age restrictions for admission?
-              </button>
-            </h3>
-            <div
-              id="collapseFive"
-              class="accordion-collapse collapse"
-              aria-labelledby="headingFive"
-              data-bs-parent="#admissionFAQ"
-            >
-              <div class="accordion-body">
-                For undergraduate programs, candidates should typically be
-                between 17-23 years. However, we consider exceptions for
-                deserving candidates. There's no upper age limit for
-                postgraduate programs. Age relaxation is applicable for reserved
-                categories as per government norms.
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> -->
-
     <!-- Fee Structure Section -->
     <section class="fee-structure">
       <div class="container">
@@ -954,13 +870,6 @@
             </tbody>
           </table>
         </div>
-
-        <!-- <div class="fee-note mt-4" data-aos="fade-up" data-aos-delay="100">
-          <p>
-            <strong>Note:</strong> Fees are subject to revision as per
-            university/management norms. Additional examination fees may apply.
-          </p>
-        </div> -->
       </div>
     </section>
 
@@ -1114,7 +1023,7 @@
               </div>
             </div>
             <div>
-              <p>Last updated on 30-04-2025</p>
+              <p>Last updated on 06-05-2025</p>
             </div>
           </div>
         </div>
