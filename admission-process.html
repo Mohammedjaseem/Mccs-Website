@@ -328,6 +328,66 @@
           font-size: 40px;
         }
       }
+
+      .prospectus-image-hover {
+        position: relative;
+        overflow: hidden;
+        border-radius: 12px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      }
+
+      .prospectus-img {
+        width: 100%;
+        display: block;
+        transition: transform 0.5s ease;
+      }
+
+      .prospectus-image-hover:hover .prospectus-img {
+        transform: scale(1.1);
+      }
+
+      .hover-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          to bottom right,
+          rgba(0, 0, 0, 0.3),
+          rgba(0, 0, 0, 0.6)
+        );
+        opacity: 0;
+        transition: opacity 0.4s ease;
+        z-index: 1;
+      }
+
+      .hover-view-btn {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #ffffff;
+        color: #000;
+        padding: 10px 22px;
+        text-decoration: none;
+        font-weight: 600;
+        border-radius: 25px;
+        border: none;
+        opacity: 0;
+        transition: all 0.4s ease;
+        z-index: 2;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      .prospectus-image-hover:hover .hover-view-btn {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1.05);
+      }
+
+      .prospectus-image-hover:hover .hover-overlay {
+        opacity: 1;
+      }
     </style>
   </head>
   <body>
@@ -631,7 +691,7 @@
               <div class="prospectus-icon">
                 <i class="ri-book-open-line"></i>
               </div>
-              <h2 class="prospectus-title">Admission Prospectus 2025-26</h2>
+              <h2 class="prospectus-title">Admission Prospectus</h2>
               <p class="prospectus-description">
                 Download our comprehensive admission prospectus to get complete
                 details about all programs, admission procedures, fee structure,
@@ -651,22 +711,26 @@
                   class="prospectus-btn secondary"
                   target="_blank"
                 >
-                  <i class="ri-eye-line"></i> View Online
+                  <i class="ri-eye-line"></i> View
                 </a>
               </div>
             </div>
           </div>
           <div class="col-lg-6" data-aos="fade-left">
-            <div class="prospectus-image">
-              <a
-                href="assets/docs/MCCS-Prospectus-2025.pdf"
-                target="_blank"
-              >
+            <div class="prospectus-image-hover">
               <img
                 src="assets/images/prospectus-cover.png"
                 alt="MCCS Admission Prospectus 2025"
+                class="prospectus-img"
               />
+              <a
+                href="assets/docs/MCCS-Prospectus-2025.pdf"
+                class="hover-view-btn"
+                target="_blank"
+              >
+                <i class="ri-eye-line"></i> View
               </a>
+              <div class="hover-overlay"></div>
             </div>
           </div>
         </div>
