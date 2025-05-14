@@ -208,6 +208,78 @@
           font-size: 1rem;
         }
       }
+      /* English Department Section */
+      .english-dept-section {
+        background: #f9fbfc;
+      }
+
+      .english-dept-video-box {
+        max-width: 320px;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+        position: relative;
+      }
+
+      .english-dept-video-wrapper {
+        position: relative;
+        padding-top: 125%; /* 4:5 aspect ratio */
+      }
+
+      .english-dept-video-wrapper video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 16px;
+      }
+
+      .english-dept-overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.4);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.3s;
+        cursor: pointer;
+        z-index: 1;
+      }
+
+      .english-dept-play-btn {
+        width: 60px;
+        height: 60px;
+        background: white;
+        color: #0d6efd;
+        border: none;
+        font-size: 28px;
+        border-radius: 50%;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        transition: transform 0.2s;
+      }
+
+      .english-dept-play-btn:hover {
+        transform: scale(1.1);
+      }
+
+      /* Responsive Text */
+      @media (max-width: 768px) {
+        .english-dept-section h2 {
+          font-size: 1.6rem;
+        }
+
+        .english-dept-section p {
+          font-size: 1rem;
+        }
+
+        .english-dept-play-btn {
+          width: 50px;
+          height: 50px;
+          font-size: 24px;
+        }
+      }
     </style>
   </head>
   <body>
@@ -360,7 +432,7 @@
                       <a href="about-board.html" class="nav-link"
                         >Board of Directors</a
                       >
-                    </li> 
+                    </li>
                     <li class="nav-item">
                       <a href="non-teaching.html" class="nav-link"
                         >Non Teaching Staffs</a
@@ -508,7 +580,10 @@
     <!-- Video Background Section -->
     <div class="video-background">
       <video autoplay muted loop playsinline>
-        <source src="assets/videos/hero.mp4" type="video/mp4" />
+        <source
+          src="https://connectv2s3.s3.ap-south-1.amazonaws.com/mccs_web/promo2.mp4"
+          type="video/mp4"
+        />
         Your browser does not support the video tag.
       </video>
       <div class="video-overlay"></div>
@@ -774,6 +849,57 @@
         </div>
       </div>
     </div>
+    <!-- English Department Section -->
+    <section class="english-dept-section py-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="fw-bold">Department of English Language and Literature</h2>
+          <p class="text-muted mx-auto" style="max-width: 600px">
+            Explore the world of literature, communication, and creativity with
+            our well-curated English program.
+          </p>
+        </div>
+
+        <div class="row justify-content-center align-items-center gy-4">
+          <!-- Video Box -->
+          <div class="col-md-6 col-lg-5">
+            <div class="english-dept-video-box mx-auto">
+              <div class="english-dept-video-wrapper">
+                <video
+                  id="englishDeptVideo"
+                  playsinline
+                  poster="assets/images/english/english-poster.png"
+                >
+                  <source
+                    src="https://connectv2s3.s3.ap-south-1.amazonaws.com/mccs_web/promo.mp4"
+                    type="video/mp4"
+                  />
+                  Your browser does not support the video tag.
+                </video>
+                <div class="english-dept-overlay" id="englishOverlay">
+                  <button class="english-dept-play-btn" id="englishPlayBtn">
+                    <i class="ri-play-fill"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Text & Button -->
+          <div class="col-md-10 col-lg-6 text-center text-lg-start">
+            <p class="lead mb-4">
+              Our department nurtures analytical thinking and expressive skills
+              through immersive study of classic and contemporary works. Enroll
+              today and become a voice of the future.
+            </p>
+            <a href="english.html" class="default-btn btn">
+              Visit Department Page<i class="flaticon-next"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <div class="campus-life-area ptb-100" id="gallery-container">
       <div class="container">
         <div class="section-title">
@@ -1715,6 +1841,32 @@
       }
       // Call the fetchAndUpdateNotifications function initially
       fetchAndUpdateNotifications();
+      document.addEventListener("DOMContentLoaded", function () {
+        const video = document.getElementById("englishDeptVideo");
+        const playBtn = document.getElementById("englishPlayBtn");
+        const overlay = document.getElementById("englishOverlay");
+
+        playBtn.addEventListener("click", function () {
+          if (video.paused) {
+            video.play();
+            overlay.style.opacity = "0";
+            setTimeout(() => (overlay.style.display = "none"), 300);
+          }
+        });
+
+        video.addEventListener("click", function () {
+          if (!video.paused) {
+            video.pause();
+            overlay.style.display = "flex";
+            overlay.style.opacity = "1";
+          }
+        });
+
+        video.addEventListener("ended", function () {
+          overlay.style.display = "flex";
+          overlay.style.opacity = "1";
+        });
+      });
     </script>
     <script>
       // Function to fetch data from the API
