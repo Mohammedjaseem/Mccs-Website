@@ -280,6 +280,27 @@
           font-size: 24px;
         }
       }
+
+      /* Add this to your existing styles */
+      #imageModal .modal-content {
+        background: transparent;
+        border: none;
+      }
+
+      #imageModal .modal-body {
+        padding: 0;
+        text-align: center;
+      }
+
+      #imageModal .close {
+        opacity: 1;
+        color: #000;
+        font-weight: bold;
+      }
+
+      #imageModal .close:hover {
+        color: #555;
+      }
     </style>
   </head>
   <body>
@@ -292,6 +313,7 @@
         </div>
       </div>
     </div>
+
     <!-- Header Section -->
     <div class="top-header-area d-none d-lg-block">
       <div class="container">
@@ -1765,6 +1787,49 @@
         </div>
       </div>
     </div>
+
+    <!-- Add this modal HTML structure right before the closing </body> tag -->
+    <div
+      class="modal fade"
+      id="imageModal"
+      tabindex="-1"
+      role="dialog"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+            style="
+              position: absolute;
+              right: 15px;
+              top: 15px;
+              z-index: 10;
+              background: white;
+              border-radius: 50%;
+              width: 30px;
+              height: 30px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              border: none;
+            "
+          >
+            <span aria-hidden="true" style="font-size: 20px">&times;</span>
+          </button>
+          <div class="modal-body p-0">
+            <img
+              src="assets/images/graduation.jpg"
+              alt="Modal Image"
+              style="width: 100%; height: auto"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/jquery.meanmenu.js"></script>
@@ -1779,6 +1844,16 @@
     <script src="assets/js/ajaxchimp.min.js"></script>
     <script src="assets/js/custom.js"></script>
     <script>
+      $(document).ready(function () {
+        // Show the modal when page loads
+        $("#imageModal").modal("show");
+
+        // Close button functionality
+        $(".close").click(function () {
+          $("#imageModal").modal("hide");
+        });
+      });
+
       document.addEventListener("DOMContentLoaded", function () {
         fetch(
           "https://app.conext.in/Notifications/api/latest-mccs-notification/"
