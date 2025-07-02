@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Malabar College of Commerce and Science - Internal Marks Portal"
+    />
+    <meta
+      name="keywords"
+      content="MCCS, Internal Marks, Student Portal, Parents Portal, Department Portal"
+    />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/meanmenu.css" />
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="assets/css/magnific-popup.css" />
+    <link rel="stylesheet" href="assets/css/flaticon.css" />
+    <link rel="stylesheet" href="assets/css/remixicon.css" />
+    <link rel="stylesheet" href="assets/css/odometer.min.css" />
+    <link rel="stylesheet" href="assets/css/aos.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/dark.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+    <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+    <title>Internal Marks | MCCS</title>
+    <style>
+      .login-options {
+        padding: 80px 0;
+      }
+      .login-card {
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        padding: 30px;
+        text-align: center;
+        transition: all 0.3s ease;
+        height: 100%;
+        border-top: 4px solid #084f8c;
+      }
+      .login-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+      }
+      .login-card i {
+        font-size: 50px;
+        color: #084f8c;
+        margin-bottom: 20px;
+      }
+      .login-card h3 {
+        color: #084f8c;
+        margin-bottom: 20px;
+      }
+      .login-card p {
+        color: #666;
+        margin-bottom: 25px;
+      }
+      .login-btn {
+        background: #084f8c;
+        color: #fff;
+        border: none;
+        padding: 10px 25px;
+        border-radius: 5px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+      }
+      .login-btn:hover {
+        background: #063a6b;
+        color: #fff;
+        transform: translateY(-3px);
+      }
+      .page-title {
+        background: #084f8c;
+        padding: 50px 0;
+        margin-bottom: 50px;
+      }
+      .page-title h1 {
+        font-weight: 700;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="preloader-area">
+      <div class="spinner">
+        <div class="inner">
+          <div class="disc"></div>
+          <div class="disc"></div>
+          <div class="disc"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Header Section -->
+    <div class="top-header-area d-none d-lg-block">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-4 col-md-4">
+            <div class="header-right-content">
+              <div class="list">
+                <ul style="margin-left: 4rem">
+                  <li>
+                    <a href="mailto:infomccs@macity.edu.in"
+                      ><i
+                        class="ri-mail-fill"
+                        style="color: #3498db; margin-right: 5px"
+                      ></i>
+                      infomccs@macity.edu.in</a
+                    >
+                  </li>
+                  <li>
+                    <a href="tel:+917034999995"
+                      ><i
+                        class="ri-phone-fill"
+                        style="color: #2ecc71; margin-right: 5px"
+                      ></i>
+                      +91 7034 999 995</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-8 col-md-8">
+            <div class="header-left-content">
+              <!-- Search container moved to the left -->
+              <div class="search-container">
+                <div class="search-box">
+                  <input
+                    type="text"
+                    class="search-input"
+                    placeholder="Search"
+                    id="globalSearch"
+                  />
+                  <button class="search-btn">
+                    <i class="ri-search-line"></i>
+                  </button>
+                </div>
+                <div class="search-results" id="searchResults"></div>
+              </div>
+              <ul
+                style="margin: 0px; padding-left: 20px; color: #fff"
+                class="notification-list notification"
+                id="notification-container"
+              ></ul>
+              <a
+                class="top-bar-button"
+                href="https://www.mccsconnect.in/"
+                target="_blank"
+                >MCCS Connect</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="navbar-area nav-bg-2">
+      <div class="mobile-responsive-nav">
+        <div class="container">
+          <div class="mobile-responsive-menu">
+            <div class="logo">
+              <a href="index.html">
+                <img
+                  src="assets/images/logo.png"
+                  class="main-logo"
+                  alt="logo"
+                />
+                <img
+                  src="assets/images/white-logo.png"
+                  class="white-logo"
+                  alt="logo"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="desktop-nav">
+        <div class="container">
+          <nav class="navbar navbar-expand-md navbar-light">
+            <a class="navbar-brand" href="index.html">
+              <img src="assets/images/logo.png" class="main-logo" alt="logo" />
+              <img
+                src="assets/images/white-logo.png"
+                class="white-logo"
+                alt="logo"
+              />
+            </a>
+            <div
+              class="collapse navbar-collapse mean-menu"
+              id="navbarSupportedContent"
+            >
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                  <a href="index.html" class="nav-link"> Home </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link dropdown-toggle"> About Us </a>
+                  <ul class="dropdown-menu">
+                    <li class="nav-item">
+                      <a href="about-overview.html" class="nav-link"
+                        >Overview</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a href="about-vision-mission.html" class="nav-link"
+                        >Vision & Mission</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link dropdown-toggle"> Accreditation</a>
+                      <ul class="dropdown-menu">
+                        <li class="nav-item">
+                          <a href="naac-qualitative.html" class="nav-link"
+                            >NAAC-Qualitative</a
+                          >
+                        </li>
+                        <li class="nav-item">
+                          <a href="naac-quantitative.html" class="nav-link"
+                            >NAAC-Quantitative</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="nav-item">
+                      <a href="about-principal.html" class="nav-link"
+                        >Principal</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a href="about-board.html" class="nav-link"
+                        >Board of Directors</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a href="non-teaching.html" class="nav-link"
+                        >Non Teaching Staffs</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link dropdown-toggle"> Admissions </a>
+                  <ul class="dropdown-menu">
+                    <li class="nav-item">
+                      <a href="admission-process.html" class="nav-link"
+                        >Admission Process</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a href="courses.html" class="nav-link"
+                        >Courses Offered</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link dropdown-toggle"> Academics </a>
+                  <ul class="dropdown-menu">
+                    <li class="nav-item">
+                      <a href="academic-programmes.html" class="nav-link"
+                        >Academic Programmes</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link dropdown-toggle">Departments</a>
+                      <ul class="dropdown-menu">
+                        <li class="nav-item">
+                          <a href="food-technology.html" class="nav-link"
+                            >Food Technology</a
+                          >
+                        </li>
+                        <li class="nav-item">
+                          <a href="biochemistry.html" class="nav-link"
+                            >Biochemistry</a
+                          >
+                        </li>
+                        <li class="nav-item">
+                          <a href="english.html" class="nav-link">BA English</a>
+                        </li>
+                        <li class="nav-item">
+                          <a href="computer-application.html" class="nav-link"
+                            >BCA</a
+                          >
+                        </li>
+                        <li class="nav-item">
+                          <a href="microbiology.html" class="nav-link"
+                            >Microbiology</a
+                          >
+                        </li>
+                        <li class="nav-item">
+                          <a href="psychology.html" class="nav-link"
+                            >Psychology</a
+                          >
+                        </li>
+                        <li class="nav-item">
+                          <a
+                            href="department-of-languages.html"
+                            class="nav-link"
+                            >Department of Languages</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="nav-item">
+                      <a href="facilities.html" class="nav-link">Facilities</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="internal-marks.html" class="nav-link active"
+                        >Internal Marks</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a href="academic-calendar.html" class="nav-link"
+                        >Academic Calendar</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a href="library.html" class="nav-link">Library</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="achievements.html" class="nav-link"
+                        >Achievements</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link dropdown-toggle"> Students Zone </a>
+                  <ul class="dropdown-menu">
+                    <li class="nav-item">
+                      <a class="nav-link dropdown-toggle"> Activities </a>
+                      <ul class="dropdown-menu">
+                        <li class="nav-item">
+                          <a href="news-page.html" class="nav-link"
+                            >MCCS News</a
+                          >
+                        </li>
+                        <li class="nav-item">
+                          <a href="events.html" class="nav-link">Events</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="nav-item">
+                      <a href="clubs.html" class="nav-link">Clubs</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="women-cell.html" class="nav-link">Women Cell</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a href="gallery.html" class="nav-link">Gallery</a>
+                </li>
+                <li class="nav-item">
+                  <a href="careers.html" class="nav-link">Careers</a>
+                </li>
+                <li class="nav-item">
+                  <a href="contact-us.html" class="nav-link">Contact Us</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+      <div class="others-option-for-responsive"></div>
+    </div>
+
+    <!-- Page Title Section -->
+    <div class="page-title">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <h1>Internal Marks Portal</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Login Options Section -->
+    <div class="login-options">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="login-card">
+              <i class="ri-user-3-fill"></i>
+              <h3>Student Login</h3>
+              <p>
+                Access your internal marks, attendance, and academic records
+              </p>
+              <a
+                href="https://www.mccsconnect.in/Internal-Marks"
+                class="btn login-btn"
+                >Login</a
+              >
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="login-card">
+              <i class="ri-parent-fill"></i>
+              <h3>Parents Login</h3>
+              <p>Monitor your ward's academic progress and performance</p>
+              <a
+                href="https://www.mccsconnect.in/parent-login"
+                class="btn login-btn"
+                >Login</a
+              >
+            </div>
+          </div>
+          <!-- <div class="col-lg-4 col-md-6 mb-4">
+            <div class="login-card">
+              <i class="ri-building-2-fill"></i>
+              <h3>Department Login</h3>
+              <p>Faculty portal for uploading and managing student marks</p>
+              <a href="https://dept.mccs.edu.in" class="btn login-btn">Login</a>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer-area pt-70">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-5 col-sm-6">
+            <div class="footer-logo-area">
+              <a href="index.html"
+                ><img src="assets/images/white-logo.png" alt="Image"
+              /></a>
+              <p>
+                Manoor - Chekanoor Road, <br />
+                Manoor, Edappal, Malappuram, <br />
+                Kerala 679578
+              </p>
+              <div class="contact-list">
+                <ul>
+                  <li>
+                    <a href="tel:+917034999995">Phone: +91 7034 999 995</a>
+                  </li>
+                  <li>
+                    <a href="mailto:infomccs@macity.edu.in" target="_blank"
+                      ><span
+                        class="__cf_email__"
+                        data-cfemail="afcecbc2c6c1efdccec1da81cacbda"
+                        >Mail: infomccs@macity.edu.in</span
+                      ></a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-2 col-sm-6">
+            <div class="footer-widjet new-widget">
+              <h3>Quick Links</h3>
+              <div class="list">
+                <ul>
+                  <li><a href="#about-us">About Us</a></li>
+                  <li><a href="gallery.html">Gallery</a></li>
+                  <li><a href="facilities.html">Facilities</a></li>
+                  <li><a href="library.html">Library</a></li>
+                  <li><a href="events.html">Events</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-2 col-sm-6">
+            <div class="footer-widjet">
+              <h3>Social Media</h3>
+              <div class="list">
+                <ul>
+                  <li>
+                    <a
+                      href="https://www.facebook.com/profile.php?id=61575267401401"
+                      target="_blank"
+                      ><i class="flaticon-facebook" style="color: #4267b2"></i
+                      >&nbsp;Facebook</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.instagram.com/malabar_college_manoor/"
+                      target="_blank"
+                      ><i class="flaticon-instagram" style="color: #ff69b4"></i
+                      >&nbsp;Instagram</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://maps.app.goo.gl/4FQMpHruJVVh5eeT7"
+                      target="_blank"
+                      ><i class="ri-map-pin-line" style="color: #ffc107"></i
+                      >&nbsp;Maps</a
+                    >
+                  </li>
+
+                  <li>
+                    <a
+                      href="https://www.thecigworld.com/malabar-college-of-commerce-and-science/"
+                      target="_blank"
+                      ><i class="ri-google-fill" style="color: #34a853"></i
+                      >&nbsp;Google</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6">
+            <div class="footer-widjet">
+              <h3>Location</h3>
+              <div class="list">
+                <iframe
+                  width="100%"
+                  height="300"
+                  style="border: 0"
+                  loading="lazy"
+                  allowfullscreen
+                  src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJPc1YxbC5pzsRqtCafmf8d68&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="shape">
+          <img src="assets/images/shape-1.png" alt="Image" />
+        </div>
+      </div>
+    </div>
+    <div class="copyright-area">
+      <div class="container">
+        <div class="copyright">
+          <div
+            style="
+              display: flex;
+              flex-wrap: wrap;
+              align-items: center;
+              justify-content: space-between;
+            "
+          >
+            <div class="col-lg-6 col-md-8">
+              <div class="copy">
+                <p>
+                  Copyright &copy; 2025 MCCS | Developed by
+                  <a href="https://connect.edentu.com/" target="_blank"
+                    >Connect</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div>
+              <p>Last updated on 06-05-2025</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="go-top">
+      <i class="ri-arrow-up-s-line"></i>
+      <i class="ri-arrow-up-s-line"></i>
+    </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/jquery.meanmenu.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/carousel-thumbs.min.js"></script>
+    <script src="assets/js/jquery.magnific-popup.js"></script>
+    <script src="assets/js/aos.js"></script>
+    <script src="assets/js/odometer.min.js"></script>
+    <script src="assets/js/appear.min.js"></script>
+    <script src="assets/js/form-validator.min.js"></script>
+    <script src="assets/js/contact-form-script.js"></script>
+    <script src="assets/js/ajaxchimp.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script>
+      // Define the API URL to fetch notification data
+      const apiUrl =
+        "https://app.conext.in/Notifications/api/latest-mccs-top-bar-notification/";
+
+      // Reference to the notification container
+      const notificationContainer = document.getElementById(
+        "notification-container"
+      );
+      // Store the notification data and current index
+      let notifications = [];
+      let currentIndex = 0;
+      // Function to fetch and update notification data
+      async function fetchAndUpdateNotifications() {
+        try {
+          const response = await fetch(apiUrl);
+          notifications = await response.json();
+
+          // Call the updateNotification function initially
+          updateNotification();
+
+          // Set an interval to update notifications every 1.5 seconds
+          setInterval(updateNotification, 4500);
+        } catch (error) {
+          console.error("Error fetching notifications:", error);
+        }
+      }
+      // Function to update the notification text
+      function updateNotification() {
+        if (notifications.length > 0) {
+          const list = notificationContainer;
+          list.innerHTML = `<li>${notifications[currentIndex].notification}</li>`;
+          currentIndex = (currentIndex + 1) % notifications.length;
+        }
+      }
+      // Call the fetchAndUpdateNotifications function initially
+      fetchAndUpdateNotifications();
+    </script>
+  </body>
+</html>
