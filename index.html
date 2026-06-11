@@ -149,67 +149,60 @@
       }
 
       /* Video Background Styles */
-      .video-background {
-        position: relative;
-        width: 100%;
-        height: 100vh;
-        overflow: hidden;
-      }
+.video-background {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
 
-      .video-background video {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover; /* maintain aspect ratio without zooming */
-        z-index: -100;
-        transition: 1s opacity;
-      }
+.video-background video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  transition: 1s opacity;
+}
 
-      .video-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
-      }
+/* remove dark video shadow/overlay */
+.video-overlay {
+  display: none;
+}
 
-      .video-content {
-        position: relative;
-        z-index: 1;
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        color: white;
-        padding: 0 20px;
-      }
+.video-content {
+  position: absolute;
+  right: 40px;
+  bottom: 40px;
+  z-index: 2;
+  height: auto;
+  padding: 0;
+  display: block;
+  text-align: right;
+}
 
-      .video-content h1 {
-        font-size: 3.5rem;
-        margin-bottom: 20px;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        color: white;
-      }
-      .video-content p {
-        font-size: 1.2rem;
-        max-width: 800px;
-        margin-bottom: 30px;
-        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-        color: #d0d0d0;
-      }
-      @media (max-width: 768px) {
-        .video-content h1 {
-          font-size: 2.5rem;
-        }
-        .video-content p {
-          font-size: 1rem;
-        }
-      }
+.video-content .default-btn {
+  margin: 0;
+  box-shadow: none;
+}
+
+@media (max-width: 768px) {
+  .video-background {
+    height: 70vh;
+  }
+
+  .video-content {
+    right: 15px;
+    bottom: 20px;
+  }
+
+  .video-content .default-btn {
+    font-size: 13px;
+    padding: 10px 16px;
+  }
+}
       /* English Department Section */
       .english-dept-section {
         background: #f9fbfc;
@@ -607,30 +600,24 @@
     </div>
 
     <!-- Video Background Section -->
-    <div class="video-background">
-      <video autoplay muted loop playsinline>
-        <source
-          src="https://connectv2s3.s3.ap-south-1.amazonaws.com/TaskManager/documents/6727bc87-4545-4449-99dc-6a515b242df0.mp4"
-          type="video/mp4"
-        />
-        Your browser does not support the video tag.
-      </video>
-      <div class="video-overlay"></div>
-      <div class="video-content">
-        <h1>Welcome to MCCS</h1>
-        <p>
-          What Course will your life Take? Own your future by learning new
-          skills at MCCS. You will get more than learning. Shape your future
-          with top-notch courses and expert guidance.
-        </p>
-        <a
-          href="https://wa.me/9539222233?text=I%20would%20like%20to%20know%20more%20about%20your%20courses"
-          class="default-btn btn"
-        >
-          Request an enquiry <i class="flaticon-next"></i>
-        </a>
-      </div>
-    </div>
+<div class="video-background">
+  <video autoplay muted loop playsinline>
+    <source
+      src="https://connectv2s3.s3.ap-south-1.amazonaws.com/TaskManager/documents/6727bc87-4545-4449-99dc-6a515b242df0.mp4"
+      type="video/mp4"
+    />
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="video-content">
+    <a
+      href="https://wa.me/9539222233?text=I%20would%20like%20to%20know%20more%20about%20your%20courses"
+      class="default-btn btn"
+    >
+      Request an enquiry <i class="flaticon-next"></i>
+    </a>
+  </div>
+</div>
 
     <div class="eduction-area pb-70">
       <div class="container-fluid p-0">
